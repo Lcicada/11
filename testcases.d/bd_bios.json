@@ -1,0 +1,64 @@
+{
+
+    "BdBiosFwCheck": {
+        "Desc": "",
+        "Tags": "BIOS INFO",
+        "Module": "bd_bios_test",
+        "Class": "BIOS",
+        "Function": "test_checkbiosfw",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdSystemDuidCheck": {
+        "Desc": "Check DUID in SMBIOS TYPE 11",
+        "Tags": "BIOS SETTING",
+        "Module": "bd_bios_test",
+        "Class": "BIOS",
+        "Function": "test_duid_check",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdBiosRasCheck_rn": {
+        "Desc": "Check BIOS RAS settings",
+        "Tags": "BIOS SETTING",
+        "Module": "bd_bios_settings_check",
+        "Class": "BIOSSettingsCheck",
+        "Function": "test_ras_check",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "bios_config": "bios_ras_settings.json",
+            "settings": true
+        }
+    },
+    "BdBiosRasCheck_at": {
+        "Desc": "Check BIOS RAS settings",
+        "Tags": "BIOS SETTING",
+        "Module": "bd_bios_settings_check",
+        "Class": "BIOSSettingsCheck",
+        "Function": "test_ras_check",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "bios_config": "bios_ras_settings.json",
+            "settings": false
+        }
+    },
+    "BdBiosNumaCheck": {
+        "Desc": "Check BIOS numa settings, current = default",
+        "Tags": "BIOS SETTING",
+        "Module": "bd_bios_settings_check",
+        "Class": "BIOSSettingsCheck",
+        "Function": "test_settings_check",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "bios_config": "bios_numa.json",
+            "bios_except": "bios_numa_except.json",
+            "check_cur": true,
+            "check_def": true
+        }
+    }
+}

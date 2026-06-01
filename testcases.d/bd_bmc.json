@@ -1,0 +1,32 @@
+{
+    "BdBmcFwCheck": {
+        "Desc": "",
+        "Tags": "BMC INFO",
+        "Module": "bd_bmc_test",
+        "Class": "BMC",
+        "Function": "test_checkbmcfw",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdBmcFruCheck": {
+        "Desc": "",
+        "Tags": "BMC INFO",
+        "Module": "bd_bmc_test",
+        "Class": "BMC",
+        "Function": "test_all_board_fru",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdBmcMacCheck": {
+        "Desc": "",
+        "Tags": "BMC INFO",
+        "Module": "bd_bmc_test",
+        "Class": "BMC",
+        "Function": "test_get_bmc_mac",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    }
+}

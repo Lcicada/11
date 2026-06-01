@@ -1,0 +1,40 @@
+{
+
+    "QtPciInfoCheck": {
+        "Desc": "",
+        "Tags": "PCI INFO",
+        "Module": "pcie_test",
+        "Class": "PCIe",
+        "Function": "test_pcie_compare_with_golden",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "QtPciInfoCheck_repeat": {
+        "Desc": "",
+        "Tags": "PCI INFO",
+        "Module": "pcie_test",
+        "Class": "PCIe",
+        "Function": "repeat_test",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "repeat_type": "duration",
+            "duration": "3m",
+            "interval": "10",
+            "function": "test_pcie_compare_with_golden",
+            "args": [],
+            "kwargs": {}
+        }
+    },
+    "DPUInfoCheck": {
+        "Desc": "",
+        "Tags": "NIC INFO",
+        "Module": "test_check_dpu",
+        "Class": "DPU",
+        "Function": "test_dpu_info",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    }
+}

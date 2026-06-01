@@ -1,0 +1,22 @@
+{
+	"pt_yunhai_v3_test": {
+		"Version": "v1.0.0",
+		"SequenceList": [
+			"QtSystemConfigCheck",
+			"QtSystemHealthCheck",
+			"QtSystemBiosDuidCheck",
+			"QtSystemBmcCheck",
+			"QtSystemCpuCheck",
+			"QtSystemPsuCheck",
+      "QtSystemSasaddrCheck",
+      "QtSystemHBACheck",
+      "QtSystemShortStress",
+			"QtSystemNicCheck",
+			"QtSystemFanCheck",
+      "QtSystemPwrCurrentVoltage",
+	    "QtSystemConfigCheck",
+			"QtSystemHealthCheck",
+			"QtSystemBmcTest_Clear"
+		]
+	}
+}

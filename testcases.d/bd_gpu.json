@@ -1,0 +1,22 @@
+{
+    "BdGpuInfoCheck": {
+        "Desc": "",
+        "Tags": "GPU INFO",
+        "Module": "bd_gpu_test",
+        "Class": "GPU",
+        "Function": "test_checkinfo",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdGetGpuDetail": {
+        "Desc": "Need GPU Driver installed",
+        "Tags": "GPU INFO",
+        "Module": "bd_gpu_test",
+        "Class": "GPU",
+        "Function": "test_gpu_checkinfo",
+        "Timeout": "30m",
+        "Args": [],
+        "Kwargs": {}
+    }
+}

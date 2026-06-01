@@ -1,0 +1,83 @@
+{
+
+    "QtPsuFunctionTest_Powerbalance": {
+        "Desc": "",
+        "Tags": "PSU INFO",
+        "Module": "test_psu_balance",
+        "Class": "PSU",
+        "Function": "test_psu_balance",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+        "con_efficiency": {
+                "20%": ["15%", "25%"],
+                "15%": ["25%", "100%"]
+        }
+		}
+    },
+    "QtPsuFunctionTest_Balance_repeat": {
+        "Desc": "",
+        "Tags": "PSU INFO",
+        "Module": "test_psu_balance",
+        "Class": "PSU",
+        "Function": "repeat_test",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "repeat_type": "duration",
+            "duration": "3m",
+            "interval": "10",
+            "function": "test_psu_balance",
+            "args": [],
+            "kwargs": {
+			  "con_efficiency": {
+                "20%": ["15%", "25%"],
+                "15%": ["25%", "100%"]
+			}
+			}
+        }
+    },
+    "QtPsuAcalertCheck": {
+        "Desc": "",
+        "Tags": "PSU INFO",
+        "Module": "psu_ac_test",
+        "Class": "PSU",
+        "Function": "test_psu_ac",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "QtPsuFunctionTest_BoxPowerbalance":
+    {
+        "Desc": "QDH Box power balance",
+        "Tags": "QDH Box power balance",
+        "Module": "test_psu_balance",
+        "Class": "PSU",
+        "Function": "test_psu_balance_multipsu",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "config_file":"dh_box_1v1_psu_balance.json"
+        }
+    },
+    "QtPsuFunctionTest_BoxPowerbalance_repeat": {
+        "Desc": "QDH Box power balance",
+        "Tags": "PSU INFO",
+        "Module": "test_psu_balance",
+        "Class": "PSU",
+        "Function": "repeat_test",
+        "Timeout": "7m",
+        "Args": [],
+        "Kwargs": {
+            "repeat_type": "duration",
+            "duration": "5m",
+            "interval": "120",
+            "function": "test_psu_balance_multipsu",
+            "args": [],
+            "kwargs": {
+                "config_file":"dh_box_1v1_psu_balance.json"
+            }
+        }
+    }
+    
+}

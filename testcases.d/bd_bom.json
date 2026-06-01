@@ -1,0 +1,22 @@
+{
+    "BdComponentCheck": {
+        "Desc": "",
+        "Tags": "BOM INFO",
+        "Module": "bd_bom_test",
+        "Class": "BomCheck",
+        "Function": "test_check_components",
+        "Timeout": "15m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdBoardCheck": {
+        "Desc": "",
+        "Tags": "BOM INFO",
+        "Module": "bd_bom_test",
+        "Class": "BomCheck",
+        "Function": "test_check_boards",
+        "Timeout": "15m",
+        "Args": [],
+        "Kwargs": {}
+    }
+}

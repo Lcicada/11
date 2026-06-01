@@ -1,0 +1,49 @@
+{
+    "QtRn01": {
+        "Version": "v1.0.0",
+        "SequenceList": [
+	    "QtSystemFwCheck",
+            "QtSystemBiosSet",
+	    "QtSystemBiosSetCheck",
+	    "QtSystemBiosSet_Bdat",
+	    "QtSystemBiosSetCheck_Bdat",
+            "QtSystemAc3Loop",
+	    "QtSystemBiosRecover_Bdat",
+            "QtSystemBiosCheck_Recoverybdat",
+            "QtSystemAc7Loop",
+	    "QtSystemDc8Loop",
+	    "QtSystemReboot4Loop",
+	    "QtSystemMixstress6h",
+	    "QtSystemDramStress_Memtester",
+	    "QtSystemMixstress4Loop",
+	    "QtSystemMixstress3Loop",
+	    "QtSystemStress_Shc",
+        ]
+    },
+    "QtRn11": {
+        "Version": "v1.0.0",
+        "SequenceList": [
+	    "QtSystemFwCheck",
+            "QtSystemBiosSet",
+	    "QtSystemBiosSetCheck",
+	    "QtSmartnicBiosSet",
+	    "QtSmartnicBiosSetCheck",
+	    "QtSystemBiosSet_Bdat",
+	    "QtSystemBiosSetCheck_Bdat",
+	    "QtSystemAc3Loop",
+	    "QtSystemBiosRecover_Bdat",
+            "QtSystemBiosCheck_Recoverybdat",
+	    "QtSystemAc7Loop",
+	    "QtSystemDc8Loop",
+	    "QtSmartnicReboot4Loop",
+	    "QtSystemPoweron",
+	    "QtSystemReboot4Loop",
+	    "QtSmartnicStressTest",
+	    "QtSystemMixstress6h",
+	    "QtSystemDramStress_Memtester",
+	    "QtSystemMixstress4Loop",
+	    "QtSystemMixstress3Loop",
+	    "QtSystemStress_Shc",
+        ]
+    }
+}

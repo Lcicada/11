@@ -1,0 +1,6 @@
+{
+    "G225-A[0-9A-Z]": "single_node_1.0.0_20240919201459.json",
+    "G230-D[0-9A-Z]": "chongqing_ocp_testflow.json",
+    "G230-D[0-9A-Z]-2": "chongqing_dpu_testflow.json",
+    "G230-D[0-9A-Z]-F": "chongqing_ocp_testflow.json"
+}

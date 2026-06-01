@@ -1,0 +1,12 @@
+{
+    "single_node": {
+        "pt": "QtPt02",
+        "rn": "QtRn02",
+        "at": "QtAt02"
+    },
+    "multi_node": {
+        "pt": "QtPt12",
+        "rn": "QtRn12",
+        "at": "QtAt12",
+    }
+}

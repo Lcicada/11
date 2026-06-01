@@ -1,0 +1,112 @@
+{
+	"QtGenBqcHwInfo": {
+        "TestItems": [
+            {
+                "TestItem": "QtCollectUnitInfo",
+                "TestNode": [
+                    0
+                ],
+                "Parallel": false
+            }
+        ]
+    },	
+	"BdPtSeq": {
+        "TestItems": [
+            {
+                "LinkSequence": "BdPreTest",
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdPsuTest",
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdRnSeq": {
+        "TestItems": [
+			{
+                "TestItem": "QtCollectUnitInfo",
+                "TestNode": [
+                    0
+                ],
+                "Parallel": false
+            },
+            {
+                "LinkSequence": "BdPreTest",
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdPsuTest",
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdPerfSeq_EVA",
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdCommonRn",
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdAtSeq": {
+        "TestItems": [
+            {
+                "LinkSequence": "BdPreTest",
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdPsuTest",
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdDuidTest",
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdCommonAt",
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,501 @@
+{
+    "QtNicInfoCheck": {
+        "Desc": "",
+        "Tags": "NIC INFO",
+        "Module": "test_check_nic",
+        "Class": "NIC",
+        "Function": "test_check_nic_info",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "QtNicInfoCheck_repeat": {
+        "Desc": "",
+        "Tags": "NIC INFO",
+        "Module": "test_check_nic",
+        "Class": "NIC",
+        "Function": "repeat_test",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+           "repeat_type": "duration",
+           "duration": "3m",
+           "interval": "10",
+           "function": "test_check_nic_info",
+           "args": [],
+           "Kwargs": {}
+        }
+    },
+	"QTNicRdmaTest": {
+        "Desc": "NIC RDMA TEST",
+        "Tags": "NIC RDMA TEST",
+        "Module": "nic_rdma_test",
+        "Class": "NicRdmaTest",
+        "Function": "test_nic_rdma",
+        "Timeout": "20m",
+        "Args": [],
+        "Kwargs":
+        {
+            "test_seconds": 900,
+            "device_ids": ["mlx5_0", "mlx5_1"],
+            "spec": {
+                "BW average[Gb/sec]": 180
+            },
+            "Total BW average":180,
+            "tool_name": "ib_write_bw",
+            "tool_parameter": "-d {device_id}  -p {port} -q 8 --report_gbits -F -D 30 --run_infinitely",
+            "start_port": 1000
+        }
+    },
+    "QTNicRdmaTest_5M": {
+        "Desc": "NIC RDMA TEST",
+        "Tags": "NIC RDMA TEST",
+        "Module": "nic_rdma_test",
+        "Class": "NicRdmaTest",
+        "Function": "test_nic_rdma",
+        "Timeout": "120m",
+        "Args": [],
+        "Kwargs":
+        {
+            "test_seconds": 300,
+            "device_ids": ["mlx5_0", "mlx5_3"],
+            "spec": {
+                "BW average[Gb/sec]": 180
+            },
+            "Total BW average":180,
+            "tool_name": "ib_write_bw",
+            "tool_parameter": "-d {device_id}  -p {port} -q 8 --report_gbits -F -D 30 --run_infinitely",
+            "start_port": 1000
+        }
+    },
+	"QTNicRdmaTest_15M": {
+        "Desc": "NIC RDMA TEST",
+        "Tags": "NIC RDMA TEST",
+        "Module": "nic_rdma_test",
+        "Class": "NicRdmaTest",
+        "Function": "test_nic_rdma",
+        "Timeout": "120m",
+        "Args": [],
+        "Kwargs":
+        {
+            "test_seconds": 900,
+            "device_ids": ["mlx5_0", "mlx5_1"],
+            "spec": {
+                "BW average[Gb/sec]": 180
+            },
+            "Total BW average":180,
+            "tool_name": "ib_write_bw",
+            "tool_parameter": "-d {device_id}  -p {port} -q 8 --report_gbits -F -D 30 --run_infinitely",
+            "start_port": 1000
+        }
+    },
+	"QtBoxNicRdmaTest_5M": {
+        "Desc": "NIC RDMA TEST",
+        "Tags": "NIC RDMA TEST",
+        "Module": "nic_rdma_test",
+        "Class": "NicRdmaTest",
+        "Function": "test_nic_rdma",
+        "Timeout": "120m",
+        "Args": [],
+        "Kwargs":
+        {
+            "test_seconds": 300,
+            "device_ids": ["mlx5_4", "mlx5_5", "mlx5_6", "mlx5_7", "mlx5_8", "mlx5_9", "mlx5_10", "mlx5_11"],
+            "spec": {
+                "BW average[Gb/sec]": 350
+            },
+            "Total BW average":360,
+			"use_opensm":"false",
+            "tool_name": "ib_write_bw",
+            "tool_parameter": "-d {device_id} --report_gbits --run_infinitely -D 60 -n 10000 -s 65536 -F -p {port} --qp 32",
+            "start_port": 1000
+        }
+    },
+	"QtBoxNicRdmaTest_60M": {
+        "Desc": "NIC RDMA TEST",
+        "Tags": "NIC RDMA TEST",
+        "Module": "nic_rdma_test",
+        "Class": "NicRdmaTest",
+        "Function": "test_nic_rdma",
+        "Timeout": "120m",
+        "Args": [],
+        "Kwargs":
+        {
+            "test_seconds": 3600,
+            "device_ids": ["mlx5_4", "mlx5_5", "mlx5_6", "mlx5_7", "mlx5_8", "mlx5_9", "mlx5_10", "mlx5_11"],
+            "spec": {
+                "BW average[Gb/sec]": 350
+            },
+            "Total BW average":360,
+            "tool_name": "ib_write_bw",
+            "tool_parameter": "-d {device_id} --report_gbits --run_infinitely -D 30 -n 10000 -s 65536 -F -p {port} --qp 32",
+            "start_port": 1000
+        }
+    },
+	"QtBf3Mini_NicModeSet_Nic": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_set",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x02", "0x04", "0x06"],
+            "set_bf3_mode_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x44 0xdd 0xb3 0x00 {index} 0x03 0x00"
+        }
+    },
+    "QtBf3Mini_NicModeGet_Nic": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_get",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x02", "0x04", "0x06"],
+            "get_bf3_mode_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x43 0xdd 0xb3 0x00 {index} 0x03 0x00 0x00",
+            "exp_bf3_mode_status": "00"
+        }
+    },
+	"QtBf3Mini_ExtendHostPrivilegeSet_Disable": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_set",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x02", "0x04", "0x06"],
+            "set_extend_host_privilege_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x44 0xdd 0xb3 0x00 {index} 0x02 0x80"
+        }
+    },
+    "QtBf3Mini_ExtendHostPrivilegeGet_Disable": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_get",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x02", "0x04", "0x06"],
+            "get_extend_host_privilege_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x43 0xdd 0xb3 0x00 {index} 0x02 0x00 0x00",
+            "exp_extend_host_privilege_status": "80"
+        }
+    },
+	"QtBf3Mini_NicModeSet_Nic_8": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_set",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x01", "0x02", "0x03", "0x04", "0x05", "0x06", "0x07"],
+            "set_bf3_mode_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x44 0xdd 0xb3 0x00 {index} 0x03 0x00"
+        }
+    },
+    "QtBf3Mini_NicModeGet_Nic_8": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_get",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x01", "0x02", "0x03", "0x04", "0x05", "0x06", "0x07"],
+            "get_bf3_mode_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x43 0xdd 0xb3 0x00 {index} 0x03 0x00 0x00",
+            "exp_bf3_mode_status": "00"
+        }
+    },
+	"QtBf3Mini_ExtendHostPrivilegeSet_Disable_8": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_set",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x01", "0x02", "0x03", "0x04", "0x05", "0x06", "0x07"],
+            "set_extend_host_privilege_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x44 0xdd 0xb3 0x00 {index} 0x02 0x80"
+        }
+    },
+    "QtBf3Mini_ExtendHostPrivilegeGet_Disable_8": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_get",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x01", "0x02", "0x03", "0x04", "0x05", "0x06", "0x07"],
+            "get_extend_host_privilege_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x43 0xdd 0xb3 0x00 {index} 0x02 0x00 0x00",
+            "exp_extend_host_privilege_status": "80"
+        }
+    },
+		"QtBf3Mini_ExtendHostPrivilegeSet_Nic": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_set",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x02", "0x04", "0x06"],
+            "set_extend_host_privilege_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x44 0xdd 0xb3 0x00 {index} 0x02 0x80"
+        }
+    },
+    "QtBf3Mini_ExtendHostPrivilegeGet_Nic": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_get",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x02", "0x04", "0x06"],
+            "get_extend_host_privilege_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x43 0xdd 0xb3 0x00 {index} 0x02 0x00 0x00",
+            "exp_extend_host_privilege_status": "80"
+        }
+    },
+    "QtBf3Mini_AdvancedModeSet_Nic": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_set",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x02", "0x04", "0x06"],
+            "set_host_access_cmd": "ipmitool  -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x44 0xdd 0xb3 0x00 {index} 0x01 0x80",
+            "set_extend_host_privilege_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x44 0xdd 0xb3 0x00 {index} 0x02 0x80"
+        }
+    },
+    "QtBf3Mini_AdvancedModeGet_Nic": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_get",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x02", "0x04", "0x06"],
+            "get_host_access_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x43 0xdd 0xb3 0x00 {index} 0x01 0x00 0x00",
+            "exp_host_access_status": "80",
+            "get_extend_host_privilege_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x43 0xdd 0xb3 0x00 {index} 0x02 0x00 0x00",
+            "exp_extend_host_privilege_status": "80"
+        }
+    },
+	"QtBf3Mini_HostAccessEnableSet_Nic": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_set",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x02", "0x04", "0x06"],
+            "set_bf3_mode_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x44 0xdd 0xb3 0x00 {index} 0x01 0x81"
+        }
+    },
+    "QtBf3Mini_HostAccessEnableGet_Nic": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_get",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x02", "0x04", "0x06"],
+            "get_bf3_mode_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x43 0xdd 0xb3 0x00 {index} 0x01 0x00 0x00",
+            "exp_bf3_mode_status": "81"
+        }
+    },
+	"QtBf3Mini_HostAccessEnableSet_Enable": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_set",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x02", "0x04", "0x06"],
+            "set_bf3_mode_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x44 0xdd 0xb3 0x00 {index} 0x01 0x81"
+        }
+    },
+    "QtBf3Mini_HostAccessEnableGet_Enable": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_get",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x02", "0x04", "0x06"],
+            "get_bf3_mode_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x43 0xdd 0xb3 0x00 {index} 0x01 0x00 0x00",
+            "exp_bf3_mode_status": "81"
+        }
+    },
+	"QtBf3Mini_HostAccessEnableSet_Enable_8": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_set",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x01", "0x02", "0x03", "0x04", "0x05", "0x06", "0x07"],
+            "set_bf3_mode_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x44 0xdd 0xb3 0x00 {index} 0x01 0x81"
+        }
+    },
+    "QtBf3Mini_HostAccessEnableGet_Enable_8": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_get",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x01", "0x02", "0x03", "0x04", "0x05", "0x06", "0x07"],
+            "get_bf3_mode_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x43 0xdd 0xb3 0x00 {index} 0x01 0x00 0x00",
+            "exp_bf3_mode_status": "81"
+        }
+    },
+	"QtBf3Mini_HostAccessEnableSet_Disable": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_set",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x02", "0x04", "0x06"],
+            "set_bf3_mode_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x44 0xdd 0xb3 0x00 {index} 0x01 0x80"
+        }
+    },
+    "QtBf3Mini_HostAccessEnableGet_Disable": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_get",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+			"bf3_index_list": ["0x00", "0x02", "0x04", "0x06"],
+            "get_bf3_mode_cmd": "ipmitool -I lanplus -H 192.168.1.10 -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x43 0xdd 0xb3 0x00 {index} 0x01 0x00 0x00",
+            "exp_bf3_mode_status": "80"
+        }
+    },
+	"QtBf3Mini_host_access_Set_En": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_set",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "bf3_index_list": ["0x02", "0x03", "0x04", "0x05"],
+            "set_host_access_cmd": "ipmitool raw 0x3e 0x67 0x01 {index} 0x01"
+        }
+    },
+	"QtBf3Mini_host_access_Get_En": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_get",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "bf3_index_list": ["0x02", "0x03", "0x04", "0x05"],
+            "get_host_access_cmd": "ipmitool raw 0x3e 0x67 0x02 {index}",
+            "exp_host_access_status": "01"
+        }
+    },
+	"QtBf3Mini_host_access_Set_Dis": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_set",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "bf3_index_list": ["0x02", "0x03", "0x04", "0x05"],
+            "set_host_access_cmd": "ipmitool raw 0x3e 0x67 0x01 {index} 0x00"
+        }
+    },
+	"QtBf3Mini_host_access_Get_Dis": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_get",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "bf3_index_list": ["0x02", "0x03", "0x04", "0x05"],
+            "get_host_access_cmd": "ipmitool raw 0x3e 0x67 0x02 {index}",
+            "exp_host_access_status": "00"
+        }
+    },
+	"QtBf3Mini_host_privilege_Set_Dis": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_set",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "bf3_index_list": ["0x02", "0x03", "0x04", "0x05"],
+            "set_extend_host_privilege_cmd": "ipmitool raw 0x3e 0x68 0x01 {index} 0x00"
+        }
+    },
+	"QtBf3Mini_host_privilege_Get_Dis": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "bf3_mini",
+        "Class": "Bf3Mini",
+        "Function": "test_bf3_mode_get",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "bf3_index_list": ["0x02", "0x03", "0x04", "0x05"],
+            "get_extend_host_privilege_cmd": "ipmitool raw 0x3e 0x68 0x02 {index}",
+            "exp_extend_host_privilege_status": "00"
+        }
+    },
+    "QtNicPortCheck": {
+      "Desc": "Qt Nic Port Check",
+      "Tags": "Qt Nic Port Check",
+      "Module": "nicport_check",
+      "Class": "NicPortCheck",
+      "Function": "test_nic_port_check",
+      "Timeout": "5m",
+      "Args": [],
+      "Kwargs": {
+        "100000": ["all"]
+      }
+    }
+}

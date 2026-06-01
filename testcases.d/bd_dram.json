@@ -1,0 +1,49 @@
+{
+    "BdDramInfoCheck": {
+        "Desc": "",
+        "Tags": "DRAM INFO",
+        "Module": "bd_dram_test",
+        "Class": "DRAM",
+        "Function": "test_checkinfo",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdDramTopoCheck": {
+        "Desc": "",
+        "Tags": "DRAM INFO",
+        "Module": "bd_dram_test",
+        "Class": "DRAM",
+        "Function": "test_checktopo",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "Stressapptest": {
+        "Desc": "Dram Stress",
+        "Module": "stressapptest_stress",
+        "Class": "StressappTest",
+        "Function": "test_stressapptest",
+        "Timeout": "20m",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "10m",
+            "test_mem": "",
+            "rev_mem": "8g",
+            "other_para": " -v 20 --remote_numa"
+        }
+    },
+    "BdDramStreamTest": {
+        "Desc": "DRAM Stream Perf",
+        "Tags": "DRAM PERF",
+        "Module": "bd_dram_perf_test",
+        "Class": "MemPerfTest",
+        "Function": "test_stream",
+        "Timeout": "30m",
+        "Args": [],
+        "Kwargs": {
+            "if_check": true,
+            "perf_key": "QTBQC-stream_bandwidth"
+        }
+    }
+}

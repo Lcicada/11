@@ -1,0 +1,1025 @@
+{
+    "QtGpuBundleFwCheck": {
+         "Desc": "Qt Gpu Bundle fw check",
+         "Tags": "Qt Gpu Bundle fw check",
+         "Module": "gpu_fw",
+         "Class": "GpuFw",
+         "Function": "test_donghu_gpu_fw_check",
+         "Timeout": "5m",
+         "Args": [],
+         "Kwargs": {}
+    },
+	"QtGpuHealthCheck": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_check",
+        "Class": "GpuCheck",
+        "Function": "test_gpu_check",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "config_file": "gpu_check.json"
+        },
+		"enable_ce_check": true
+    },
+	"QtPcieAcsDisableTest": {
+		"Desc": "",
+		"Tags": "Pcie Acs Disable Test",
+		"Module": "pcie_acs_disable",
+		"Class": "PcieAcsDisable",
+		"Function": "test_pcie_acs_disable",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+		  "acs_exp": "0000"
+		}
+	},
+	"QtNvidiaGpuPersistence": {
+		"Desc": "",
+		"Tags": "",
+		"Module": "nvidia_gpu_persistence",
+		"Class": "NvidiaGpuPersistence",
+		"Function": "test_gpu_persistence",
+		"Timeout": "20m",
+		"Args": [],
+		"Kwargs": {
+			"persistence_mode_enable_cmd": "nvidia-smi -pm 1"
+		}
+	},
+	"QtNvidiaGpuLockClock": {
+		"Desc": "",
+		"Tags": "",
+		"Module": "nvidia_gpu_lockclock",
+		"Class": "NvidiaGpuLockClock",
+		"Function": "test_gpu_lockclock",
+		"Timeout": "20m",
+		"Args": [],
+		"Kwargs": {
+			"lockclock_cmd": [
+				"nvidia-smi -lgc 2430,2430",
+				"nvidia-smi -ac 12481,2430"
+			]
+		}
+	},
+	"QtGpuTest_NvidiaMfgDiag_2h_H20": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "nvidia_mfg_diag",
+        "Class": "NvidiaMfgDiag",
+        "Function": "test_nvidia_mfg_diag",
+        "Timeout": "150m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_FIELD_DIAG_H200.L20",
+            "tool_tgz": "629-24287-XXXX-FLD-42658.tgz",
+            "run_command": "cd 629-24287-XXXX-FLD-42658 && ./fieldiag.sh --level2 --no_bmc ",
+            "spec": {
+                "Final Result": ["==", "PASS"],
+                "gpu_fieldiag": ["==", 0],
+                "AutomaticRepair": ["==", 0]
+            }
+        }
+    },
+   "QtGpuTest_NvidiaMfgDiag_2h_H200": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "nvidia_mfg_diag",
+        "Class": "NvidiaMfgDiag",
+        "Function": "test_nvidia_mfg_diag",
+        "Timeout": "150m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_FIELD_DIAG_H200.L20",
+            "tool_tgz": "629-24287-XXXX-FLD-42658.tgz",
+            "run_command": "cd 629-24287-XXXX-FLD-42658 && ./fieldiag.sh --level2 --no_bmc ",
+            "spec": {
+                "Final Result": ["==", "PASS"],
+                "gpu_fieldiag": ["==", 0],
+                "AutomaticRepair": ["==", 0]
+            }
+        }
+    },
+	"QtGpuTest_GPUFieldDiag_10h_H20": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_field_diag",
+        "Class": "GPUFieldDiag",
+        "Function": "test_gpu_fieldiag",
+        "Timeout": "660m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_FIELD_DIAG_H200.L20",
+            "tool_tgz": "629-24287-XXXX-FLD-42658.tgz",
+            "run_command": "cd 629-24287-XXXX-FLD-42658 && ./fieldiag.sh --gpufielddiag --gpu_fd_args=gen5",
+            "spec": {
+                "Final Result": ["==", "PASS"],
+                "gpu_fieldiag": ["==", 0],
+                "AutomaticRepair": ["==", 0]
+            }
+        }
+    },
+       "QtGpuTest_GPUFieldDiag_10h_H200": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_field_diag",
+        "Class": "GPUFieldDiag",
+        "Function": "test_gpu_fieldiag",
+        "Timeout": "660m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_FIELD_DIAG_H200.L20",
+            "tool_tgz": "Universal_Tesla_Field_Diag_629-INT27-UNIV-ALL.tgz",
+            "run_command": "./install_module.sh --insert && ./fieldiag skip_nvlink",
+            "spec": {
+                "Final Result": ["==", "PASS"],
+                "gpu_fieldiag": ["==", 0],
+                "AutomaticRepair": ["==", 0]
+            }
+        }
+    },    
+	"QtGpuTest_Nvqual_t1_H20":{
+	"Desc": "",
+    "Tags": "",
+    "Module": "nvqual_test",
+    "Class": "NVQualTest",
+    "Function": "test_nvqual",
+    "Timeout": "180m",
+    "Args": [],
+    "Kwargs": {
+        "tool_name": "GPU_NVQUAL_H20.V05",
+        "tool_version": "NVQual_HGX_H20_8-GPU_QS_PS_MP_x86_141GB_v1.3",
+        "timeout": 6000,
+        "loops": 1,
+        "serial_test": "0",
+        "item_ID": "1",
+        "list_retry": 2,
+        "margin_temp_monitor": {
+            "report_error": "False",
+            "detect_min": [
+                18,
+                42
+            ],
+            "sampling_cmd": "ipmitool -H 192.168.1.10 -I lanplus -U toutiao -P toutiao!@# -p 8623 sdr list",
+            "front_gpu": {
+                "num": [
+                    "1",
+                    "2",
+                    "5",
+                    "6"
+                ],
+                "max_tempdiff": 10
+            },
+            "back_gpu": {
+                "num": [
+                    "0",
+                    "3",
+                    "4",
+                    "7"
+                ],
+                "max_tempdiff": 9
+            }
+        }
+    }
+	},
+    "QtGpuTest_Nvqual_t2_H20":{
+	"Desc": "",
+    "Tags": "",
+    "Module": "nvqual_test",
+    "Class": "NVQualTest",
+    "Function": "test_nvqual",
+    "Timeout": "180m",
+    "Args": [],
+    "Kwargs": {
+        "tool_name": "GPU_NVQUAL_H20.V05",
+        "tool_version": "NVQual_HGX_H20_8-GPU_QS_PS_MP_x86_141GB_v1.3",
+        "timeout": 6000,
+        "loops": 1,
+        "serial_test": "0",
+        "item_ID": "2",
+        "list_retry": 2,
+        "margin_temp_monitor": {
+            "report_error": "False",
+            "detect_min": [
+                18,
+                42
+            ],
+            "sampling_cmd": "ipmitool -H 192.168.1.10 -I lanplus -U toutiao -P toutiao!@# -p 8623 sdr list",
+            "front_gpu": {
+                "num": [
+                    "1",
+                    "2",
+                    "5",
+                    "6"
+                ],
+                "max_tempdiff": 10
+            },
+            "back_gpu": {
+                "num": [
+                    "0",
+                    "3",
+                    "4",
+                    "7"
+                ],
+                "max_tempdiff": 9
+            }
+        }
+    }
+	},
+	"QtGpuTest_Nvqual_t1_H200": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "nvqual_test",
+        "Class": "NVQualTest",
+        "Function": "test_nvqual",
+        "Timeout": "180m",
+        "Args": [],
+		"Kwargs": {
+          "tool_name": "GPU_NVQUAL_H200.L20",
+          "tool_version": "NVQual_HGX_H200_8-GPU_QS_PS_MP_x86_v2.3",
+          "timeout": 2400,
+          "item_ID": "1",
+          "list_retry": 0,
+          "upload_log": "1",
+          "log_cut_pattern": "Error Code ="
+		}
+     },
+    "QtGpuTest_Nvqual_t2_H200": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "nvqual_test",
+        "Class": "NVQualTest",
+        "Function": "test_nvqual",
+        "Timeout": "180m",
+        "Args": [],
+		"Kwargs": {
+          "tool_name": "GPU_NVQUAL_H200.L20",
+          "tool_version": "NVQual_HGX_H200_8-GPU_QS_PS_MP_x86_v2.3",
+          "timeout": 2400,
+          "item_ID": "2",
+          "list_retry": 0,
+          "upload_log": "1",
+          "log_cut_pattern": "Error Code ="
+		  }
+},
+    "QtGpuTest_Nccl_H20": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_nccl",
+        "Class": "GpuNccl",
+        "Function": "test_gpu_nccl",
+        "Timeout": "180m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_NCCL_H20.L20",
+            "cuda_bin_path": "/usr/local/cuda/bin",
+            "cuda_lib_path": "/usr/local/cuda/lib64",
+            "install_deb_cmd_list": [
+                "cd GPU_NCCL_H20.L20 && dpkg -i libnccl2_2.21.5-1+cuda12.4_amd64.deb",
+                "cd GPU_NCCL_H20.L20 && dpkg -i libnccl2-dbgsym_2.21.5-1+cuda12.4_amd64.deb",
+                "cd GPU_NCCL_H20.L20 && dpkg -i libnccl-dev_2.21.5-1+cuda12.4_amd64.deb"
+            ],
+            "nccl_cmd": "./GPU_NCCL_H20.L20/5.15.152.ve.13-amd64/all_reduce_perf -b 1g -e 8g -f 2 -g 8",
+            "busbw_limit": 20.34
+        }
+    },
+    "QtGpuTest_Nccl_H200": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_nccl",
+        "Class": "GpuNccl",
+        "Function": "test_gpu_nccl",
+        "Timeout": "180m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_NCCL_H200.L20",
+            "cuda_bin_path": "/usr/local/cuda/bin",
+            "cuda_lib_path": "/usr/local/cuda/lib64",
+            "install_deb_cmd_list": [
+                "cd GPU_NCCL_H200.L20 && dpkg -i libnccl2_2.29.2-1+cuda13.0_amd64.deb",
+                "cd GPU_NCCL_H200.L20 && dpkg -i libnccl2-dbgsym_2.29.2-1+cuda13.0_amd64.deb",
+                "cd GPU_NCCL_H200.L20 && dpkg -i libnccl-dev_2.29.2-1+cuda13.0_amd64.deb",
+                "cd GPU_NCCL_H200.L20 && dpkg -i libnccl-dev-dbgsym_2.29.2-1+cuda13.0_amd64.deb"
+            ],
+            "nccl_cmd": "./GPU_NCCL_H200.L20/nccl-tests-2.17.8/build/all_reduce_perf -b 1g -e 8g -f 2 -g 8",
+            "busbw_limit": 20.34
+        }
+    },
+    "QtGpuTest_Dcgm_H200": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "nvidia_gpu_dcgm",
+        "Class": "Nvidiagpudcgm",
+        "Function": "test_gpu_dcgm",
+        "Timeout": "180m",
+        "Args": [],
+        "Kwargs": {
+			"tool_name": "GPU_DCGM_H200.L20",
+			"pre_step": {
+				"install_rpm_cmd": [
+				"dpkg -i datacenter-gpu-manager-4-core_4.5.0-1_amd64.deb",
+				"dpkg -i datacenter-gpu-manager-4-proprietary_4.5.0-1_amd64.deb",
+				"dpkg -i datacenter-gpu-manager-4-cuda13_4.5.0-1_amd64.deb",
+				"dpkg -i datacenter-gpu-manager-4-proprietary-cuda13_4.5.0-1_amd64.deb"	
+				],
+				"load_gpu_driver_cmd": [
+					"nv-hostengine"
+				],
+				"persistence_mode_enable": true,
+				"persistence_mode_after_test_disable": true,
+				"persistence_mode_enable_cmd": "nvidia-smi -pm 1",
+				"persistence_mode_disable_cmd": "nvidia-smi -pm 0",
+				"start_service_cmd": []
+			},
+			"tool_para": "diag -r 4 -p memtest.test0=true\\;memtest.test1=true\\;memtest.test2=true\\;memtest.test3=true\\;memtest.test4=true\\;memtest.test5=true\\;memtest.test6=true\\;memtest.test7=true\\;memtest.test8=true\\;memtest.test9=true\\;memtest.test10=true\\;memtest.test_duration=3600",
+			"golden_file": "nvidia_gpu_dcgm_specs_v4.json"
+        }
+    },
+	"QtGpuTest_Dcgm_H20": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "nvidia_gpu_dcgm",
+        "Class": "Nvidiagpudcgm",
+        "Function": "test_gpu_dcgm",
+        "Timeout": "180m",
+        "Args": [],
+        "Kwargs": {
+			"tool_name": "GPU_DCGM_H20.T01",
+			"pre_step": {
+				"install_rpm_cmd": [
+				"dpkg -i datacenter-gpu-manager-4-core_4.4.1-1_amd64.deb",
+				"dpkg -i datacenter-gpu-manager-4-proprietary_4.4.1-1_amd64.deb",
+				"dpkg -i datacenter-gpu-manager-4-cuda12_4.4.1-1_amd64.deb",
+				"dpkg -i datacenter-gpu-manager-4-proprietary-cuda12_4.4.1-1_amd64.deb"	
+				],
+				"load_gpu_driver_cmd": [
+					"nv-hostengine"
+				],
+				"persistence_mode_enable": true,
+				"persistence_mode_after_test_disable": true,
+				"persistence_mode_enable_cmd": "nvidia-smi -pm 1",
+				"persistence_mode_disable_cmd": "nvidia-smi -pm 0",
+				"start_service_cmd": []
+			},
+			"tool_para": "diag -r 4 -p memtest.test0=true\\;memtest.test1=true\\;memtest.test2=true\\;memtest.test3=true\\;memtest.test4=true\\;memtest.test5=true\\;memtest.test6=true\\;memtest.test7=true\\;memtest.test8=true\\;memtest.test9=true\\;memtest.test10=true\\;memtest.test_duration=3600",
+			"golden_file": "nvidia_gpu_dcgm_specs_v4.json"
+        }
+    },
+    "QtGpuTest_Dcgm_nor4_H200": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "nvidia_gpu_dcgm",
+        "Class": "Nvidiagpudcgm",
+        "Function": "test_gpu_dcgm",
+        "Timeout": "180m",
+        "Args": [],
+        "Kwargs": {
+			"tool_name": "GPU_DCGM_H200.L20",
+			"pre_step": {
+				"install_rpm_cmd": [
+				"dpkg -i datacenter-gpu-manager-4-core_4.5.0-1_amd64.deb",
+				"dpkg -i datacenter-gpu-manager-4-proprietary_4.5.0-1_amd64.deb",
+				"dpkg -i datacenter-gpu-manager-4-cuda13_4.5.0-1_amd64.deb",
+				"dpkg -i datacenter-gpu-manager-4-proprietary-cuda13_4.5.0-1_amd64.deb"		
+				],
+				"load_gpu_driver_cmd": [
+					"nv-hostengine"
+				],
+				"persistence_mode_enable": true,
+				"persistence_mode_after_test_disable": true,
+				"persistence_mode_enable_cmd": "nvidia-smi -pm 1",
+				"persistence_mode_disable_cmd": "nvidia-smi -pm 0",
+				"start_service_cmd": []
+			},
+			"tool_para": "diag -r memtest -p memtest.test0=true\\;memtest.test1=true\\;memtest.test2=true\\;memtest.test3=true\\;memtest.test4=true\\;memtest.test5=true\\;memtest.test6=true\\;memtest.test7=true\\;memtest.test8=true\\;memtest.test9=true\\;memtest.test10=true\\;memtest.test_duration=3600",
+			"golden_file": "nvidia_gpu_dcgm_specs_v4_No_R4.json"
+        }
+    },
+	"QtGpuTest_Dcgm_nor4_H20": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "nvidia_gpu_dcgm",
+        "Class": "Nvidiagpudcgm",
+        "Function": "test_gpu_dcgm",
+        "Timeout": "180m",
+        "Args": [],
+        "Kwargs": {
+			"tool_name": "GPU_DCGM_H20.T01",
+			"pre_step": {
+				"install_rpm_cmd": [
+				"dpkg -i datacenter-gpu-manager-4-core_4.4.1-1_amd64.deb",
+				"dpkg -i datacenter-gpu-manager-4-proprietary_4.4.1-1_amd64.deb",
+				"dpkg -i datacenter-gpu-manager-4-cuda12_4.4.1-1_amd64.deb",
+				"dpkg -i datacenter-gpu-manager-4-proprietary-cuda12_4.4.1-1_amd64.deb"	
+				],
+				"load_gpu_driver_cmd": [
+					"nv-hostengine"
+				],
+				"persistence_mode_enable": true,
+				"persistence_mode_after_test_disable": true,
+				"persistence_mode_enable_cmd": "nvidia-smi -pm 1",
+				"persistence_mode_disable_cmd": "nvidia-smi -pm 0",
+				"start_service_cmd": []
+			},
+			"tool_para": "diag -r memtest -p memtest.test0=true\\;memtest.test1=true\\;memtest.test2=true\\;memtest.test3=true\\;memtest.test4=true\\;memtest.test5=true\\;memtest.test6=true\\;memtest.test7=true\\;memtest.test8=true\\;memtest.test9=true\\;memtest.test10=true\\;memtest.test_duration=3600",
+			"golden_file": "nvidia_gpu_dcgm_specs_v4_No_R4.json"
+        }
+    },
+	"QtGpuTest_Cuda_P2P_Bandwith_H20": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "cuda_p2p_bandwidth",
+        "Class": "CUDAP2PBandwidth",
+        "Function": "test_cuda_p2p_bandwidth",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_CUDA_P2P_BANDWIDTH_H20.T01",
+            "command": "./p2pBandwidthLatencyTest",
+            "matrix_title": {
+                "bidirectional_enabled": "Bidirectional P2P=Enabled Bandwidth Matrix (GB/s)"
+            },
+            "allow_partial_rows": true,
+            "spec_file": "bandwidth_specs.json"
+        }
+    },
+    "QtGpuTest_Cuda_P2P_Bandwith_H200": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "cuda_p2p_bandwidth",
+        "Class": "CUDAP2PBandwidth",
+        "Function": "test_cuda_p2p_bandwidth",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_CUDA_P2P_BANDWIDTH_H200.L20",
+            "command": "./nvbandwidth -t device_to_device_bidirectional_memcpy_read_sm",
+            "matrix_title": {
+                "bidirectional_enabled": "memcpy SM GPU(row) <-> GPU(column) Total bandwidth (GB/s)"
+            },
+            "allow_partial_rows": true,
+            "spec_file": "bandwidth_specs.json"
+        }
+    },
+	"QtGpuTest_H2D_Single_NvBandwith": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "cuda_p2p_bandwidth",
+        "Class": "CUDAP2PBandwidth",
+        "Function": "test_cuda_p2p_bandwidth",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_CUDA_P2P_BANDWIDTH_H200.L20",
+            "command": "./nvbandwidth -t host_to_device_memcpy_ce",
+            "matrix_title": {
+                "bidirectional_enabled": "memcpy CE CPU(row) -> GPU(column) bandwidth (GB/s)"
+            },
+            "allow_partial_rows": true,
+            "spec_file": "H2D_Single_Bandwith_specs.json"
+        }
+    },
+    "QtGpuTest_H2D_MultiParallel_NvBandwith": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "cuda_p2p_bandwidth",
+        "Class": "CUDAP2PBandwidth",
+        "Function": "test_cuda_p2p_bandwidth",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_CUDA_P2P_BANDWIDTH_H200.L20",
+            "command": "./nvbandwidth -t host_to_all_memcpy_ce",
+            "matrix_title": {
+                "bidirectional_enabled": "memcpy CE CPU(row) -> GPU(column) bandwidth (GB/s)"
+            },
+            "allow_partial_rows": true,
+            "spec_file": "H2D_MultiParallel_Bandwith_specs.json"
+        }
+    },
+    "QtGpuTest_D2H_Single_NvBandwith": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "cuda_p2p_bandwidth",
+        "Class": "CUDAP2PBandwidth",
+        "Function": "test_cuda_p2p_bandwidth",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_CUDA_P2P_BANDWIDTH_H200.L20",
+            "command": "./nvbandwidth -t device_to_host_memcpy_ce",
+            "matrix_title": {
+                "bidirectional_enabled": "memcpy CE CPU(row) <- GPU(column) bandwidth (GB/s)"
+            },
+            "allow_partial_rows": true,
+            "spec_file": "D2H_Single_Bandwith_specs.json"
+        }
+    },
+    "QtGpuTest_D2H_MultiParallel_NvBandwith": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "cuda_p2p_bandwidth",
+        "Class": "CUDAP2PBandwidth",
+        "Function": "test_cuda_p2p_bandwidth",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_CUDA_P2P_BANDWIDTH_H200.L20",
+            "command": "./nvbandwidth -t all_to_host_memcpy_ce",
+            "matrix_title": {
+                "bidirectional_enabled": "memcpy CE CPU(row) <- GPU(column) bandwidth (GB/s)"
+            },
+            "allow_partial_rows": true,
+            "spec_file": "D2H_MultiParallel_Bandwith_specs.json"
+        }
+    },
+    "QtGpuTest_D2D_read_NvBandwith": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "cuda_p2p_bandwidth",
+        "Class": "CUDAP2PBandwidth",
+        "Function": "test_cuda_p2p_bandwidth",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_CUDA_P2P_BANDWIDTH_H200.L20",
+            "command": "./nvbandwidth -t device_to_device_memcpy_read_ce",
+            "matrix_title": {
+                "bidirectional_enabled": "memcpy CE GPU(row) -> GPU(column) bandwidth (GB/s)"
+            },
+            "allow_partial_rows": true,
+            "spec_file": "D2D_Bandwithread_specs.json"
+        }
+    },
+    "QtGpuTest_D2D_write_NvBandwith": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "cuda_p2p_bandwidth",
+        "Class": "CUDAP2PBandwidth",
+        "Function": "test_cuda_p2p_bandwidth",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_CUDA_P2P_BANDWIDTH_H200.L20",
+            "command": "./nvbandwidth -t device_to_device_memcpy_write_ce",
+            "matrix_title": {
+                "bidirectional_enabled": "memcpy CE GPU(row) <- GPU(column) bandwidth (GB/s)"
+            },
+            "allow_partial_rows": true,
+            "spec_file": "D2D_Bandwithwrite_specs.json"
+        }
+    },
+    "QtGpuTest_D2D_bidirectionalread_NvBandwith": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "cuda_p2p_bandwidth",
+        "Class": "CUDAP2PBandwidth",
+        "Function": "test_cuda_p2p_bandwidth",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_CUDA_P2P_BANDWIDTH_H200.L20",
+            "command": "./nvbandwidth -t device_to_device_bidirectional_memcpy_read_ce",
+            "matrix_title": {
+                "bidirectional_enabled": "memcpy CE GPU(row) <-> GPU(column) Read1 bandwidth (GB/s)"
+            },
+            "allow_partial_rows": true,
+            "spec_file": "D2D_Bandwithbidirectionalread_specs.json"
+        }
+    },
+    "QtGpuTest_D2D_bidirectionalwrite_NvBandwith": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "cuda_p2p_bandwidth",
+        "Class": "CUDAP2PBandwidth",
+        "Function": "test_cuda_p2p_bandwidth",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_CUDA_P2P_BANDWIDTH_H200.L20",
+            "command": "./nvbandwidth -t device_to_device_bidirectional_memcpy_write_ce",
+            "matrix_title": {
+                "bidirectional_enabled": "memcpy CE GPU(row) <-> GPU(column) Write1 bandwidth (GB/s)"
+            },
+            "allow_partial_rows": true,
+            "spec_file": "D2D_Bandwithbidirectionalwrite_specs.json"
+        }
+    },
+    "QtGpuTest_H2D_D2H_H2DSingle_NvBandwith": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "cuda_p2p_bandwidth",
+        "Class": "CUDAP2PBandwidth",
+        "Function": "test_cuda_p2p_bandwidth",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_CUDA_P2P_BANDWIDTH_H200.L20",
+            "command": "./nvbandwidth -t host_to_device_bidirectional_memcpy_ce",
+            "matrix_title": {
+                "bidirectional_enabled": "memcpy CE CPU(row) <-> GPU(column) bandwidth (GB/s)"
+            },
+            "allow_partial_rows": true,
+            "spec_file": "H2D_D2H_H2DSingleParallel_Bandwith_specs.json"
+        }
+    },
+    "QtGpuTest_H2D_D2H_D2HSingle_NvBandwith": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "cuda_p2p_bandwidth",
+        "Class": "CUDAP2PBandwidth",
+        "Function": "test_cuda_p2p_bandwidth",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_CUDA_P2P_BANDWIDTH_H200.L20",
+            "command": "./nvbandwidth -t device_to_host_bidirectional_memcpy_ce",
+            "matrix_title": {
+                "bidirectional_enabled": "memcpy CE CPU(row) <-> GPU(column) bandwidth (GB/s)"
+            },
+            "allow_partial_rows": true,
+            "spec_file": "H2D_D2H_D2HSingleParallel_Bandwith_specs.json"
+        }
+    },
+    "QtGpuTest_H2D_D2H_H2DMulti_NvBandwith": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "cuda_p2p_bandwidth",
+        "Class": "CUDAP2PBandwidth",
+        "Function": "test_cuda_p2p_bandwidth",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_CUDA_P2P_BANDWIDTH_H200.L20",
+            "command": "./nvbandwidth -t host_to_all_bidirectional_memcpy_ce",
+            "matrix_title": {
+                "bidirectional_enabled": "memcpy CE CPU(row) <-> GPU(column) bandwidth (GB/s)"
+            },
+            "allow_partial_rows": true,
+            "spec_file": "H2D_D2H_H2DMultiParallel_Bandwith_specs.json"
+        }
+    },
+    "QtGpuTest_H2D_D2H_D2HMulti_NvBandwith": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "cuda_p2p_bandwidth",
+        "Class": "CUDAP2PBandwidth",
+        "Function": "test_cuda_p2p_bandwidth",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_CUDA_P2P_BANDWIDTH_H200.L20",
+            "command": 
+            "./nvbandwidth -t all_to_host_bidirectional_memcpy_ce",
+            "matrix_title": {
+                "bidirectional_enabled": "memcpy CE CPU(row) <-> GPU(column) bandwidth (GB/s)"
+            },
+            "allow_partial_rows": true,
+            "spec_file": "H2D_D2H_D2HMultiParallel_Bandwith_specs.json"
+        }
+    },
+    "QtGpuTest_Gpu_Bandwith_dtoh": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_bandwidth",
+        "Class": "GpuBandWidth",
+        "Function": "test_gpu_bandwidth",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "tool_path": "/usr/local/cuda-12.4/extras/demo_suite/",
+            "tool_name": "bandwidthTest",
+            "enable_cmd": "nv-fabricmanager",
+            "gpu_count": 8,
+            "mode": "range",
+            "start": 1024000,
+            "end": 102400000,
+            "increment": 1024000,
+            "dtoh": 51.2
+        }
+    },
+    "QtGpuTest_Gpu_Bandwith_dtoh_parallel": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_bandwidth",
+        "Class": "GpuBandWidth",
+        "Function": "test_gpu_bandwidth",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "tool_path": "/usr/local/cuda-12.4/extras/demo_suite/",
+            "tool_name": "bandwidthTest",
+            "enable_cmd": "nv-fabricmanager",
+            "gpu_count": 8,
+            "gpu_parallel": "true",
+            "mode": "range",
+            "start": 1024000,
+            "end": 102400000,
+            "increment": 1024000,
+            "dtoh": null
+        }
+    },
+    "QtGpuTest_Gpu_Bandwith_htod": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_bandwidth",
+        "Class": "GpuBandWidth",
+        "Function": "test_gpu_bandwidth",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "tool_path": "/usr/local/cuda-12.4/extras/demo_suite/",
+            "tool_name": "bandwidthTest",
+            "enable_cmd": "nv-fabricmanager",
+            "gpu_count": 8,
+            "mode": "range",
+            "start": 1024000,
+            "end": 102400000,
+            "increment": 1024000,
+            "htod": 51.2
+        }
+    },
+    "QtGpuTest_Gpu_Bandwith_htod_parallel": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_bandwidth",
+        "Class": "GpuBandWidth",
+        "Function": "test_gpu_bandwidth",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "tool_path": "/usr/local/cuda-12.4/extras/demo_suite/",
+            "tool_name": "bandwidthTest",
+            "enable_cmd": "nv-fabricmanager",
+            "gpu_count": 8,
+            "gpu_parallel": "true",
+            "mode": "range",
+            "start": 1024000,
+            "end": 102400000,
+            "increment": 1024000,
+            "htod": null
+        }
+    },
+    "QtGpuTest_Gpu_Bandwith_dtod": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_bandwidth",
+        "Class": "GpuBandWidth",
+        "Function": "test_gpu_bandwidth",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "tool_path": "/usr/local/cuda-12.4/extras/demo_suite/",
+            "tool_name": "bandwidthTest",
+            "enable_cmd": "nv-fabricmanager",
+            "gpu_count": 8,
+            "mode": "range",
+            "start": 1024000,
+            "end": 102400000,
+            "increment": 1024000,
+            "dtod": 1650
+        }
+    },
+    "QtGpuTest_Gpu_Bandwith_htod_dtoh": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_bandwidth",
+        "Class": "GpuBandWidth",
+        "Function": "test_gpu_bandwidth",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "tool_path": "/usr/local/cuda-12.4/extras/demo_suite/",
+            "tool_name": "bandwidthTest",
+            "enable_cmd": "nv-fabricmanager",
+            "gpu_count": 8,
+            "mode": "range",
+            "start": 1024000,
+            "end": 102400000,
+            "increment": 1024000,
+            "htod_dtoh": 51.2
+        }
+    },
+    "QtGpuTest_Gpu_Bandwith_htod_dtoh_parallel": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_bandwidth",
+        "Class": "GpuBandWidth",
+        "Function": "test_gpu_bandwidth",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "tool_path": "/usr/local/cuda-12.4/extras/demo_suite/",
+            "tool_name": "bandwidthTest",
+            "enable_cmd": "nv-fabricmanager",
+            "gpu_count": 8,
+            "gpu_parallel": "true",
+            "mode": "range",
+            "start": 1024000,
+            "end": 102400000,
+            "increment": 1024000,
+            "htod_dtoh": null
+        }
+    },
+    "QtGpuTest_Gpu_Burn": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_burn",
+        "Class": "Gpuburntest",
+        "Function": "test_gpu_burn",
+        "Timeout": "40m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_BURN_H20.V06",
+            "config": {
+                "-m": "100%",
+                "-tc": true,
+                "test_time": "1800"
+            }
+        }
+    },
+	"QtGpuTest_Gpu_Burn_H20": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_burn",
+        "Class": "Gpuburntest",
+        "Function": "test_gpu_burn",
+        "Timeout": "40m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_BURN_H20.V06",
+            "config": {
+                "-m": "100%",
+                "-tc": true,
+                "test_time": "1800"
+            }
+        }
+    },
+    "QtGpuTest_Gpu_Burn_H200": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_burn",
+        "Class": "Gpuburntest",
+        "Function": "test_gpu_burn",
+        "Timeout": "40m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_BURN_H200.L20",
+            "config": {
+                "-m": "100%",
+                "-tc": true,
+                "test_time": "1800"
+            }
+        }
+    },
+	"QtGpuTest_Gpu_Burn_H200_5m": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_burn",
+        "Class": "Gpuburntest",
+        "Function": "test_gpu_burn",
+        "Timeout": "40m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_BURN_H200.L20",
+            "config": {
+                "-m": "100%",
+                "-tc": true,
+                "test_time": "300"
+            }
+        }
+    },
+		"QtGpuTest_Gpu_Burn_H200_360m": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_burn",
+        "Class": "Gpuburntest",
+        "Function": "test_gpu_burn",
+        "Timeout": "400m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_BURN_H200.L20",
+            "config": {
+                "-m": "100%",
+                "-tc": true,
+                "test_time": "360m"
+            }
+        }
+    },
+	"QtGpuTest_Gpu_Burn_H20_5m": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_burn",
+        "Class": "Gpuburntest",
+        "Function": "test_gpu_burn",
+        "Timeout": "40m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_BURN_H20.V06",
+            "config": {
+                "-m": "100%",
+                "-tc": true,
+                "test_time": "300"
+            }
+        }
+    },
+		"QtGpuTest_Gpu_Burn_H20_360m": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "gpu_burn",
+        "Class": "Gpuburntest",
+        "Function": "test_gpu_burn",
+        "Timeout": "400m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_BURN_H20.V06",
+            "config": {
+                "-m": "100%",
+                "-tc": true,
+                "test_time": "360m"
+            }
+        }
+    },
+    "QtGpuTest_Nvvs": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "nvidia_gpu_nvvs",
+        "Class": "NvidiaGpuNvvs",
+        "Function": "test_nvidia_nvvs",
+        "Timeout": "150m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_DCGM_H20.T01",
+            "nvidia_enabled": "nvidia-smi -pm 1",
+            "nvidia_disabled": "nvidia-smi -pm 0",
+            "nv_enabled": "nv-hostengine",
+            "nv_disabled": "killall nv-hostengine",
+            "deb_name": "datacenter-gpu-manager_3.3.6_amd64.deb",
+            "nvvs_cmd": "./nvvs --specifiedtest memtest --parameters 'memtest.test11=true'",
+            "test_time": 7200,
+            "check_process": "ps -aux |grep nv-",
+            "check_process_time": 6
+        }
+    },
+	"QtGpuTest_Nvvs_H20": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "nvidia_gpu_nvvs",
+        "Class": "NvidiaGpuNvvs",
+        "Function": "test_nvidia_nvvs",
+        "Timeout": "150m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_DCGM_H20.T01",
+            "nvidia_enabled": "nvidia-smi -pm 1",
+            "nvidia_disabled": "nvidia-smi -pm 0",
+            "nv_enabled": "nv-hostengine",
+            "nv_disabled": "killall nv-hostengine",
+            "deb_name": "datacenter-gpu-manager_3.3.6_amd64.deb",
+            "nvvs_cmd": "./nvvs --specifiedtest memtest --parameters 'memtest.test11=true'",
+            "test_time": 7200,
+            "check_process": "ps -aux |grep nv-",
+            "check_process_time": 6
+        }
+    },
+		"QtGpuTest_Nvvs_H200": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "nvidia_gpu_nvvs",
+        "Class": "NvidiaGpuNvvs",
+        "Function": "test_nvidia_nvvs",
+        "Timeout": "150m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_DCGM_H200.T01",
+            "nvidia_enabled": "nvidia-smi -pm 1",
+            "nvidia_disabled": "nvidia-smi -pm 0",
+            "nv_enabled": "nv-hostengine",
+            "nv_disabled": "killall nv-hostengine",
+            "deb_name": "datacenter-gpu-manager_3.3.6_amd64.deb",
+            "nvvs_cmd": "./nvvs --specifiedtest memtest --parameters 'memtest.test11=true'",
+            "test_time": 7200,
+            "check_process": "ps -aux |grep nv-",
+            "check_process_time": 6
+        }
+    },
+   "QtGpuInfoCheck": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "test_check_gpu",
+        "Class": "GPU",
+        "Function": "test_gpu_info",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "QtGpuTopoCheck": {
+        "Desc": " ",
+        "Tags": "",
+        "Module": "gpu_topo_check",
+        "Class": "GpuTopo",
+        "Function": "test_gpu_topo",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    } 
+}

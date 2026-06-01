@@ -1,0 +1,13 @@
+{
+  "QtSMBIOSType9Check": {
+        "Desc": "smbios type 9",
+        "Tags": "SMBIOS TYPE 9",
+        "Module": "smbios_test",
+        "Class": "SMBIOS",
+        "Function": "test_smbios_type_9",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    }
+
+}

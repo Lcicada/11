@@ -1,0 +1,11 @@
+{
+    "BdHcuInfoCheck": {
+        "Desc": "",
+        "Module": "bd_hcu_test",
+        "Class": "HCU",
+        "Function": "test_checkinfo",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    }
+}

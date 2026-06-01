@@ -1,0 +1,23 @@
+{
+	"at_yunhai_v3_test": {
+		"Version": "v1.0.0",
+		"SequenceList": [
+            "QtSystemConfigCheck",
+			"QtSystemHealthCheck",
+            "QtSystemFanCheck",
+			"QtSystemBmcSet_Default",
+			"QtSystemBiosSet_Default",
+			"QtSystemBmcCheck_At",
+			"QtSystemFanCheck",
+			"QtSystemBiosSetCheck_At",
+			"QtSystemBiosDuidCheck",
+			"QtSystemCpuCheck",
+			"QtSystemNicCheck",
+			"QtSystemHBACheck",
+            "QtSystemSasaddrCheck",
+	        "QtSystemConfigCheck",
+			"QtSystemHealthCheck",
+			"QtSystemBmcTest_Clear"
+    ]
+	}
+}

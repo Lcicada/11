@@ -1,0 +1,22 @@
+{
+    "rn_normal": {
+        "Version": "v1.0.0",
+        "SequenceList": [
+	    "QtSystemFwCheck",
+            "QtSystemBiosSet",
+	    "QtSystemBiosSetCheck",
+	    "QtSystemBiosSet_Bdat",
+	    "QtSystemBiosSetCheck_Bdat",
+	    "QtSystemAc3Loop",
+	    "QtSystemBiosRecover_Bdat",
+        "QtSystemAc7Loop",
+	    "QtSystemDc8Loop",
+	    "QtSystemReboot4Loop",
+	    "QtSystemMixstress6h",
+	    "QtSystemDramStress_Memtester",
+	    "QtSystemMixstress4Loop",
+	    "QtSystemMixstress3Loop",
+	    "QtSystemStress_Shc",
+        ]
+    }
+}

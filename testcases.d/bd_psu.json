@@ -1,0 +1,12 @@
+{
+    "BdPsuInfoCheck": {
+        "Desc": "Check PSU info",
+        "Tags": "PSU INFO",
+        "Module": "bd_psu_test",
+        "Class": "PSU",
+        "Function": "test_checkinfo",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    }
+}

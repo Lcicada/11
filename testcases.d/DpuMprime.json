@@ -1,0 +1,16 @@
+{
+    "DpuMprimeTest":{
+        "Desc": "DPU CPU Stress",
+        "Tags": "DPU CPU STRESS",
+        "Module": "dpu_mprime_stress",
+        "Class": "DpuMprimeTest",
+        "Function": "test_mprime",
+        "Timeout": "3h",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "2h",
+            "test_torture": "3",
+            "other_para": ""
+        }
+    }
+}

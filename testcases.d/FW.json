@@ -1,0 +1,477 @@
+{
+	"QtDonghuBoxBMCFWUPGRADE": {
+      "Desc": "Donghu BOX BMC FW upgrade",
+      "Tags": "Donghu BOX BMC FW up",
+      "Module": "test_check_box",
+      "Class": "BOX",
+      "Function": "test_donghu_box_upgrade",
+      "Timeout": "15m",
+      "Args": [],
+      "Kwargs": {
+        "golden_file_name": "box_bmc_fw_donghu.json"
+      }
+    },
+    "QtDonghuBoxCPLDFWUPGRADE": {
+      "Desc": "Donghu BOX CPLD FW upgrade",
+      "Tags": "Donghu BOX CPLD FW up",
+      "Module": "test_check_box",
+      "Class": "BOX",
+      "Function": "test_donghu_box_upgrade",
+      "Timeout": "15m",
+      "Args": [],
+      "Kwargs": {
+        "golden_file_name": "box_cpld_fw_donghu.json"
+      }
+    },
+    "QtDonghuBox6NVMECPLDFWUPGRADE": {
+      "Desc": "Donghu BOX 6NVME CPLD FW upgrade",
+      "Tags": "Donghu BOX 6NVME CPLD FW up",
+      "Module": "test_check_box",
+      "Class": "BOX",
+      "Function": "test_donghu_box_upgrade",
+      "Timeout": "15m",
+      "Args": [],
+      "Kwargs": {
+        "golden_file_name": "box_6nvme_cpld_fw_donghu.json"
+      }
+    },
+    "QtDonghuBox2NVMECPLDFWUPGRADE": {
+      "Desc": "Donghu BOX 2NVME CPLD FW upgrade",
+      "Tags": "Donghu BOX 2NVME CPLD FW up",
+      "Module": "test_check_box",
+      "Class": "BOX",
+      "Function": "test_donghu_box_upgrade",
+      "Timeout": "15m",
+      "Args": [],
+      "Kwargs": {
+        "golden_file_name": "box_2nvme_cpld_fw_donghu.json"
+      }
+    },
+    "QtDonghuBoxFcbCPLDFWUPGRADE": {
+      "Desc": "Donghu BOX FCB CPLD FW upgrade",
+      "Tags": "Donghu BOX FCB CPLD FW up",
+      "Module": "test_check_box",
+      "Class": "BOX",
+      "Function": "test_donghu_box_upgrade",
+      "Timeout": "15m",
+      "Args": [],
+      "Kwargs": {
+        "golden_file_name": "box_fcb_cpld_fw_donghu.json"
+      }
+    },
+    "QtDonghuBoxSwPcieSwitchFWUPGRADE": {
+      "Desc": "Donghu BOX SW PCIE SWITCH FW upgrade",
+      "Tags": "Donghu BOX SW PCIE SWITCH FW up",
+      "Module": "test_check_box",
+      "Class": "BOX",
+      "Function": "test_donghu_box_upgrade",
+      "Timeout": "30m",
+      "Args": [],
+      "Kwargs": {
+        "golden_file_name": "box_pcie_switch_fw_donghu.json"
+      }
+    },
+    "QtDonghuBoxPcieRetimerFWUPGRADE": {
+      "Desc": "Donghu BOX PCIE RETIMER FW upgrade",
+      "Tags": "Donghu BOX PCIE RETIMER FW up",
+      "Module": "test_check_box",
+      "Class": "BOX",
+      "Function": "test_donghu_box_upgrade",
+      "Timeout": "15m",
+      "Args": [],
+      "Kwargs": {
+        "golden_file_name": "box_pcie_retimer_fw_donghu.json"
+      }
+    },
+ 
+    "QtHostBIOSFWUPGRADE": {
+		"Desc": "Bios upgrade",
+		"Tags": "BIOS up",
+		"Module": "test_check_motherboard",
+        "Class": "MOTHERBOARD",
+        "Function": "test_bios_fw_upgrade",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"bios_fw.json"
+        }
+	},
+    "QtHostBMCFWUPGRADE": {
+		"Desc": "BMC FW upgrade",
+		"Tags": "BMC FW up",
+		"Module": "test_check_motherboard",
+        "Class": "MOTHERBOARD",
+        "Function": "test_bmc_fw_upgrade",
+		"Timeout": "12m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"bmc_fw.json"
+        }
+	},
+    "BmcFwScpUp": {
+		"Desc": "BMC FW upgrade",
+		"Tags": "BMC FW up",
+		"Module": "test_check_motherboard",
+        "Class": "MOTHERBOARD",
+        "Function": "test_bmc_scp_fw_upgrade",
+		"Timeout": "15m",
+		"Args": [],
+		"Kwargs": {
+            "action":"fup",
+            "fw_name":"Inventec_S920-E6_BMC_2.02.00.bin",
+            "test_bmc_loaddef_exp": "0",
+            "execution_delay": 300
+        }
+	},
+    "QtHostMLBCPLDFWUPGRADE": {
+		"Desc": "MLB CPLD FW upgrade",
+		"Tags": "MLB CPLD FW up",
+		"Module": "test_check_motherboard",
+        "Class": "MOTHERBOARD",
+        "Function": "test_mlb_cpld_fw_upgrade",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"mlb_cpld_fw.json"
+      }
+	},
+    "QtHostPsuFWUPGRADE": {
+		"Desc": "Host PSU 2000w  2700w FW upgrade",
+		"Tags": "PSU 2000w 2700wFW up",
+		"Module": "test_check_psu",
+        "Class": "PSU",
+        "Function": "test_psu_fw_upgrade",
+		"Timeout": "20m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"psu_fw.json"
+        }
+	},
+    "HbaFwUp": {
+        "Desc": "HBA FW upgrade",
+        "Tags": "HBA FW upgrade",
+        "Module": "hba_fw",
+        "Class": "HbaFw",
+        "Function": "test_hba_fw_upgrade",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "tool_path": "SCRTNYCLI_8.13.2.0-0-5",
+            "tool_name": "scrtnycli.x86_64",
+            "bin_name": "9600-24i_full_fw_vsn_pkg_signed.rom"
+        }
+    },
+    "QtHost2BPCPLDFWUPGRADE": {
+		"Desc": "HOST 2BP cpld fw upgrade",
+		"Tags": "2U2BP FW up",
+		"Module": "test_check_fru",
+        "Class": "FRU",
+        "Function": "test_bp_cpld_fw_upgrade",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"2bp_cpld.json"
+        }
+	},
+    "QtHostFCBCPLDFWUPGRADE": {
+		"Desc": "Host FCB CPLD fw upgrade",
+		"Tags": "Host FCB CPLD FW up",
+		"Module": "test_check_fru",
+        "Class": "FRU",
+        "Function": "test_bp_cpld_fw_upgrade",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"host_fcb_cpld.json"
+        }
+	},
+    "QtHostRetimer0FWUPGRADE": {
+		"Desc": "Host retimer0 CPLD fw upgrade",
+		"Tags": "Host retimer0 CPLD FW up",
+    "Module": "test_check_retimer",
+    "Class": "RETIMER",
+    "Function": "test_retimer_fw_upgrade",
+		"Timeout": "60m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"host_retimer0_cpld.json"
+        }
+	},
+  "QtHostRetimer1FWUPGRADE": {
+		"Desc": "Host retimer1 CPLD fw upgrade",
+		"Tags": "Host retimer1 CPLD FW up",
+    "Module": "test_check_retimer",
+    "Class": "RETIMER",
+    "Function": "test_retimer_fw_upgrade",
+		"Timeout": "60m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"host_retimer1_cpld.json"
+        }
+	},
+  "QtHostRetimer2FWUPGRADE": {
+		"Desc": "Host retimer2 CPLD fw upgrade",
+		"Tags": "Host retimer2 CPLD FW up",
+    "Module": "test_check_retimer",
+    "Class": "RETIMER",
+    "Function": "test_retimer_fw_upgrade",
+		"Timeout": "60m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"host_retimer2_cpld.json"
+        }
+	},
+	 "QtHost6BPCPLDFWUPGRADE": {
+		"Desc": "HOST 6BP cpld fw upgrade",
+		"Tags": "6U2BP FW up",
+		"Module": "test_check_fru",
+        "Class": "FRU",
+        "Function": "test_bp_cpld_fw_upgrade",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"6bp_cpld.json"
+        }
+	},
+  "QtHostRetimer3FWUPGRADE": {
+		"Desc": "Host retimer3 CPLD fw upgrade",
+		"Tags": "Host retimer3 CPLD FW up",
+    "Module": "test_check_retimer",
+    "Class": "RETIMER",
+    "Function": "test_retimer_fw_upgrade",
+		"Timeout": "60m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"host_retimer3_cpld.json"
+        }
+	},
+  "QtHostRetimer4FWUPGRADE": {
+		"Desc": "Host retimer4 CPLD fw upgrade",
+		"Tags": "Host retimer4 CPLD FW up",
+    "Module": "test_check_retimer",
+    "Class": "RETIMER",
+    "Function": "test_retimer_fw_upgrade",
+		"Timeout": "60m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"host_retimer4_cpld.json"
+        }
+	},
+  "QtHostRetimer5FWUPGRADE": {
+		"Desc": "Host retimer5 CPLD fw upgrade",
+		"Tags": "Host retimer5 CPLD FW up",
+    "Module": "test_check_retimer",
+    "Class": "RETIMER",
+    "Function": "test_retimer_fw_upgrade",
+		"Timeout": "60m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"host_retimer5_cpld.json"
+        }
+	},
+  "QtHostRetimer6FWUPGRADE": {
+		"Desc": "Host retimer6 CPLD fw upgrade",
+		"Tags": "Host retimer6 CPLD FW up",
+    "Module": "test_check_retimer",
+    "Class": "RETIMER",
+    "Function": "test_retimer_fw_upgrade",
+		"Timeout": "60m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"host_retimer6_cpld.json"
+        }
+	},
+  "QtHostRetimer7FWUPGRADE": {
+		"Desc": "Host retimer7 CPLD fw upgrade",
+		"Tags": "Host retimer7 CPLD FW up",
+    "Module": "test_check_retimer",
+    "Class": "RETIMER",
+    "Function": "test_retimer_fw_upgrade",
+		"Timeout": "60m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"host_retimer7_cpld.json"
+        }
+	},
+  "QtHostRetimerFWUPGRADE": {
+		"Desc": "Host retimer CPLD fw upgrade",
+		"Tags": "Host retimer CPLD FW up",
+    "Module": "test_check_retimer",
+    "Class": "RETIMER",
+    "Function": "test_retimer_fw_upgrade",
+		"Timeout": "100m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"host_retimer_cpld.json"
+        }
+	},
+    "QtHostNicFWUPGRADE": {
+        "Desc": "NIC FW upgrade",
+        "Tags": "NIC FW upgrade",
+        "Module": "test_check_nic",
+        "Class": "NIC",
+        "Function": "test_nic_fw_upgrade",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+          "mlx": {
+            "MCX753436MS-HEAB": {
+              "up_cmd": "echo y | flint -d {device_name} -i {bin_name} burn",
+              "fw_name": "fw-ConnectX7-rel-28_43_4100-MCX753436MS-HEA_Ax-UEFI-14.37.50-FlexBoot-3.7.500.signed.bin"
+            }
+          },
+          "bcm": {
+            "up_cmd": "",
+            "fw_name": "nvmUpgrade_228.2.169.0_BD_V17_20240914.tar.gz"
+          },
+          "action": "up"
+      }
+  },
+  "NicFwmlx": {
+        "Desc": "NIC FW upgrade",
+        "Tags": "NIC FW upgrade",
+        "Module": "test_check_nic",
+        "Class": "NIC",
+        "Function": "test_nic_fw_upgrade",
+        "Timeout": "10m",
+        "Args": [],
+        "Kwargs": {
+            "up_cmd": "echo y | flint -d {device_name} -i {bin_name} burn",
+            "fw_name": "fw-ConnectX6Dx-rel-22_39_3674-MCX623430MS-CDA_Ax-UEFI-14.32.17-FlexBoot-3.7.300.signed.bin",
+            "action": "fup"
+      }
+  },
+  "HDDFwUp": {
+      "Desc": "HDD FW upgrade",
+      "Tags": "HDD FW upgrade",
+      "Module": "test_check_hdd",
+      "Class": "HDD",
+      "Function": "test_hdd_fw_upgrade",
+      "Timeout": "30m",
+      "Args": [],
+      "Kwargs": {
+        "hdd_model": {
+          "ST32000NM004K-3UB133": {
+            "up_method": "seagate_method",
+            "bin_name": "SE03_MarlinBP_5xxe_ISE_CMR_SATA_Bx32.LOD"
+          },
+          "ST24000NM002H": {
+            "up_method": "seagate_method",
+            "bin_name": "SE06_Summit_ISE_SNAND_STD_OEM_SATA.LOD"
+          },
+		  "ST24000NM002H-3KS133": {
+            "up_method": "seagate_method",
+            "bin_name": "SE06_Summit_ISE_SNAND_STD_OEM_SATA.LOD"
+          },
+		  "WUH722424ALE604": {
+            "up_method": "wdc_method",
+            "bin_name": "LVGAWHAG.fst"
+          }
+        }
+      }
+    },
+  "QtHostU2FWUPGRADE": {
+    "Desc": "Nvme FW upgrade",
+    "Tags": "Nvme FW upgrade",
+    "Module": "test_check_nvme",
+    "Class": "NVME",
+    "Function": "test_nvme_fw_upgrade",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {
+      "nvme_model": {
+        "SAMSUNG MZWL61T9HFLT-00B07": {
+          "up_method": "samsung_nvme",
+          "bin_name": "PM9D3a_LDD5702Q.bin"
+        },
+		"SAMSUNG MZWL63T8HFLT-00B07": {
+          "up_method": "samsung_nvme",
+          "bin_name": "PM9D3a_LDD5702Q.bin"
+        }
+      }
+    }
+  },
+   "QtBoxBMCFWUPGRADE": {
+		"Desc": "BOX BMC FW upgrade",
+		"Tags": "BOX BMC FW up",
+		"Module": "test_check_box",
+        "Class": "BOX",
+        "Function": "test_box_bmc_and_cpld_upgrade",
+		"Timeout": "15m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"box_bmc_fw.json"
+        }
+	},
+  "QtBoxCPLDFWUPGRADE": {
+		"Desc": "BOX CPLD FW upgrade",
+		"Tags": "BOX CPLD FW up",
+		"Module": "test_check_box",
+        "Class": "BOX",
+        "Function": "test_box_bmc_and_cpld_upgrade",
+		"Timeout": "15m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"box_cpld_fw.json"
+        }
+	},
+  "QtBoxFcbCPLDFWUPGRADE": {
+		"Desc": "BOX FCB CPLD FW upgrade",
+		"Tags": "BOX FCB CPLD FW up",
+		"Module": "test_check_box",
+        "Class": "BOX",
+        "Function": "test_box_bmc_and_cpld_upgrade",
+		"Timeout": "15m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"box_fcb_cpld_fw.json"
+        }
+	},
+  "QtSmartnicbundleUPGRADE": {
+		"Desc": "BF3 bundle FW upgrade",
+		"Tags": "BF3 bundle FW upgrade",
+		"Module": "bf3_dpu",
+        "Class": "Bf3_dpu",
+        "Function": "test_bf3_dpu_bundle_fw_upgrade",
+		"Timeout": "60m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"bf3_dpu_bundle_fw.json"
+        }
+	},
+  "QtRetimerFwCheck": {
+        "Desc": "",
+        "Tags": "retimer cpld check",
+        "Module": "test_check_retimer",
+        "Class": "RETIMER",
+        "Function": "test_check_retimer_info",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+        }
+    },
+	"QtSmartniclanswitchUPGRADE": {
+		"Desc": "BF3 nic lan switch FW upgrade",
+		"Tags": "BF3 nic lan switch FW upgrade",
+		"Module": "bf3_dpu",
+        "Class": "Bf3_dpu",
+        "Function": "test_bf3_dpu_nic_lanswitch_fw_upgrade",
+		"Timeout": "20m",
+		"Args": [],
+		"Kwargs": {
+            "golden_file_name":"bf3_dpu_nic_lanswitch_fw.json"
+    }
+	},
+    "QtDongHuGpuBundleFwUp": {
+        "Desc": "Donghu GPU bundle FW upgrade",
+        "Tags": "Donghu GPU bundle FW upgrade",
+        "Module": "gpu_fw",
+        "Class": "GpuFw",
+        "Function": "test_donghu_gpu_bundle_upgrade",
+        "Timeout": "60m",
+        "Args": [],
+        "Kwargs": {
+            "cfg_file": "donghu_gpu_bundle_upgrade.json"
+        }
+    }
+}

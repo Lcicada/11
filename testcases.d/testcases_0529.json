@@ -1,0 +1,68 @@
+{
+    "QtCollectUnitInfo": {
+        "Desc": "Collect unit info",
+        "Tags": "Collect unit info",
+        "Module": "collect_unit_info",
+        "Class": "CollectUnitInfo",
+        "Function": "test_collect_unit_info",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+        }
+    },
+      "QtCollectSmartnicDPUInfo": {
+        "Desc": "Collect unit info",
+        "Tags": "Collect unit info",
+        "Module": "collect_info",
+        "Class": "COLLECT",
+        "Function": "test_collect_smartnic_dpu2",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+        }
+    },
+      "QtCollectSmartnicBf3Info": {
+        "Desc": "Collect unit info",
+        "Tags": "Collect unit info",
+        "Module": "collect_info",
+        "Class": "COLLECT",
+        "Function": "test_collect_smartnic",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+        }
+    },
+      "QtCollectBoxInfo": {
+        "Desc": "Collect unit info",
+        "Tags": "Collect unit info",
+        "Module": "collect_info",
+        "Class": "COLLECT",
+        "Function": "test_collect_box",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+        }
+    },
+    "QtCollectUnitInfo_qdh": {
+        "Desc": "Collect unit info",
+        "Tags": "Collect unit info",
+        "Module": "collect_unit_info_qdh",
+        "Class": "CollectUnitInfo",
+        "Function": "test_collect_unit_info",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+        }
+  },
+  "QtCollectBoxInfo_qdh": {
+        "Desc": "Collect unit info",
+        "Tags": "Collect unit info",
+        "Module": "collect_info",
+        "Class": "COLLECT",
+        "Function": "test_collect_box_qdh",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+        }
+  }
+}

@@ -1,0 +1,57 @@
+{
+    "get_bmc_fw" : {
+        "desc" : "get bmc fw",
+        "cmd" : "ipmitool mc info",
+        "timeout" : 5
+    },
+    "get_fru_0" : {
+        "desc" : "get mb fru",
+        "cmd" : "ipmitool fru print 0",
+        "timeout" : 5
+    },
+    "get_fru_all" : {
+        "desc" : "get all board fru",
+        "cmd" : "ipmitool fru print",
+        "timeout" : 60
+    },
+    "get_fru_by_id" : {
+        "desc" : "get fru by id",
+        "cmd" : "ipmitool fru print %d",
+        "timeout" : 5
+    },
+    "get_bios_fw" : {
+        "desc" : "get bios fw",
+        "cmd" : "dmidecode -t bios",
+        "timeout" : 3
+    },
+    "lscpu" : {
+        "desc" : "",
+        "cmd" : "lscpu",
+        "timeout" : 5
+    },
+    "cat_proc_meminfo" : {
+        "desc" : "",
+        "cmd" : "cat /proc/meminfo",
+        "timeout" : 5
+    },
+    "type_cmd" : {
+        "desc" : "check command is exist or not",
+        "cmd" : "type %s",
+        "timeout" : 3
+    },
+    "get_cpu_info" : {
+        "desc" : "",
+        "cmd" : "dmidecode -t processor",
+        "timeout" : 5
+    },
+    "get_cpu_cache_info" : {
+        "desc" : "",
+        "cmd" : "dmidecode -t cache",
+        "timeout" : 5
+    },
+    "get_dram_info" : {
+        "desc" : "get dram info",
+        "cmd" : "dmidecode -t 17",
+        "timeout" : 3
+    }
+}

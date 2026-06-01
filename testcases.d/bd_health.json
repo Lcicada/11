@@ -1,0 +1,77 @@
+{
+    "BdBatteryFunctionCheck": {
+        "Desc": "Check CMOS battery",
+        "Tags": "HEALTH",
+        "Module": "bd_bmc_test",
+        "Class": "BMC",
+        "Function": "test_bat",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "bat_golden": "2.96"
+        }
+    },
+    "BdHddWcCheck": {
+        "Desc": "hdd write cache check",
+        "Tags": "HDD HEALTH SETTING",
+        "Module": "bd_hdd_test",
+        "Class": "HDD",
+        "Function": "test_check_write_cache_off",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdNvmeHealthCheck": {
+        "Desc": "",
+        "Tags": "NVME HEALTH",
+        "Module": "bd_nvme_test",
+        "Class": "NVME",
+        "Function": "test_healthcheck",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdHddHealthCheck": {
+        "Desc": "",
+        "Tags": "HDD HEALTH",
+        "Module": "bd_hdd_test",
+        "Class": "HDD",
+        "Function": "test_healthcheck",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdSsdHealthCheck": {
+        "Desc": "",
+        "Tags": "SSD HEALTH",
+        "Module": "bd_ssd_test",
+        "Class": "SSD",
+        "Function": "test_healthcheck",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdDiskSmartCheck": {
+        "Desc": "",
+        "Tags": "DISK HEALTH FUNCTION",
+        "Module": "bd_smart_selftest",
+        "Class": "SmartSelftest",
+        "Function": "test_selftest",
+        "Timeout": "15m",
+        "Args": [],
+        "Kwargs": {
+            "disk_type": "all",
+            "test_type": "short"
+        }
+    },
+    "BdGpuHealthCheck": {
+        "Desc": "Need GPU Driver installed",
+        "Tags": "GPU HEALTH",
+        "Module": "bd_gpu_test",
+        "Class": "GPU",
+        "Function": "test_healthcheck",
+        "Timeout": "30m",
+        "Args": [],
+        "Kwargs": {}
+    }
+}

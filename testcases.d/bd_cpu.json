@@ -1,0 +1,77 @@
+{
+
+    "BdCpuInfoCheck": {
+        "Desc": "",
+        "Tags": "CPU INFO",
+        "Module": "bd_cpu_test",
+        "Class": "CPU",
+        "Function": "test_checkinfo",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdCpuStressTest": {
+        "Desc": "Cpu Stress",
+        "Tags": "CPU STRESS",
+        "Module": "bd_cpu_stress",
+        "Class": "CpuStressTest",
+        "Function": "test_cpu_stress",
+        "Timeout": "5h",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "1h",
+            "other_para": ""
+        }
+    },
+    "Mprime": {
+        "Desc": "CPU Stress",
+        "Tags": "CPU STRESS",
+        "Module": "mprime_stress",
+        "Class": "MprimeTest",
+        "Function": "test_mprime",
+        "Timeout": "5h",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "5m",
+            "test_torture": "3",
+            "other_para": ""
+        }
+    },
+    "CpuPerf": {
+        "Desc": "Cpu Perf",
+        "Tags": "CPU STRESS PERF",
+        "Module": "cpu_perf",
+        "Class": "CpuPerfTest",
+        "Function": "test_cpu_perf",
+        "Timeout": "60m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdCpuPerfTest": {
+        "Desc": "Cpu Pi",
+        "Tags": "CPU STRESS PERF",
+        "Module": "bd_cpu_perf_test",
+        "Class": "CpuPerfTest",
+        "Function": "test_pi",
+        "Timeout": "30m",
+        "Args": [],
+        "Kwargs": {
+            "perf_key": "QTBQC-pi",
+            "if_check": true
+        }
+    },
+    "BdCpuFreqCheck": {
+        "Desc": "check cpu freq",
+        "Tags": "CPU FUNCTION",
+        "Module": "bd_run_shell_script",
+        "Class": "RunShellScript",
+        "Function": "test_shell_script",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "script_name": "check_cpu_freq.sh",
+            "paras": "",
+            "timeout": "40"
+        }
+    }
+}

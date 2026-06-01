@@ -1,0 +1,994 @@
+{
+    "QTNvmeDDCheck": {
+        "Desc": "Host Nvme Led test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_nvme_led",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "NVME NUMBER CHECK": {
+                "device": "HOST",
+                "prompt_name": "NVME_LED",
+                "para": "GREEN",
+                "sub_para": "ON",
+                "flag": "number",
+                "total_nvme_number": 5
+            },
+            "NVME LED": {
+                "device": "HOST",
+                "prompt_name": "NVME_LED",
+                "para": "GREEN",
+                "sub_para": "ON",
+                "flag": "",
+                "set_cmd": "dd if=/dev/zero of=/dev/nvme{}n1 bs=4k count=100; sleep 3"
+            }
+        }
+    },
+	"QTNvmeDDCheck_OCP": {
+        "Desc": "Host Nvme Led test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_nvme_led",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "NVME NUMBER CHECK": {
+                "device": "HOST",
+                "prompt_name": "NVME_LED",
+                "para": "GREEN",
+                "sub_para": "ON",
+                "flag": "number",
+                "total_nvme_number": 17
+            },
+            "NVME LED": {
+                "device": "HOST",
+                "prompt_name": "NVME_LED",
+                "para": "GREEN",
+                "sub_para": "ON",
+                "flag": "",
+                "set_cmd": "dd if=/dev/zero of=/dev/nvme{}n1 bs=4k count=100; sleep 3"
+            }
+        }
+    },
+    "QtPSUREDUNDANT": {
+        "Desc": "host psu redundant test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_psu_redundant",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "cmd": "ipmitool ",
+            "HOST_PSU0_unplug": {
+                    "device":"HOST",
+                    "prompt_name":"PSU_CABLE",
+                    "para" :"PlugOut",
+                    "sub_para":"",
+                    "flag":"PSU0",
+                    "sel_keyword":["0x6e | Power Supply AC lost | Asserted"],
+                    "sdr_golden":{
+                        "PSU0_PIn": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": "==",
+                                "lower_limit": 0
+                            }
+                        }
+                    },
+                    "delay_time":25
+                },
+            "HOST_PSU0_plug": {
+                    "device":"HOST",
+                    "prompt_name":"PSU_CABLE",
+                    "para" :"PlugIn",
+                    "sub_para":"",
+                    "flag":"PSU0",
+                    "sel_keyword":["0x6e | Power Supply AC lost | Deasserted"],
+                    "sdr_golden":{
+                        "PSU0_PIn": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": ">",
+                                "lower_limit": 100
+                            }
+                        }
+                    },
+                    "delay_time":125
+                },
+                    "HOST_PSU1_unplug": {
+                    "device":"HOST",
+                    "prompt_name":"PSU_CABLE",
+                    "para" :"PlugOut",
+                    "sub_para":"",
+                    "flag":"PSU1",
+                    "sel_keyword":["0x6f | Power Supply AC lost | Asserted"],
+                    "sdr_golden":{
+                        "PSU1_PIn": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": "==",
+                                "lower_limit": 0
+                            }
+                        }
+                    },
+                    "delay_time":25
+                },
+                    "HOST_PSU1_plug": {
+                    "device":"HOST",
+                    "prompt_name":"PSU_CABLE",
+                    "para" :"PlugIn",
+                    "sub_para":"",
+                    "flag":"PSU1",
+                    "sel_keyword":["#0x6f | Power Supply AC lost | Deasserted"],
+                    "sdr_golden":{
+                        "PSU1_PIn": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": ">",
+                                "lower_limit": 100
+                            }
+                        }
+                    },
+                    "delay_time":125
+            }
+        }
+    },
+	"QtBoxPSUREDUNDANT": {
+        "Desc": "Box psu redundant test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_psu_redundant",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "cmd":"ipmitool -I lanplus -H {UUT_BMCIP} -U 'toutiao' -P 'toutiao!@#' -p 8623",
+            "BOX_PSU0_unplug": {
+                    "device":"BOX",
+                    "prompt_name":"PSU_CABLE",
+                    "para" :"PlugOut",
+                    "sub_para":"",
+                    "flag":"PSU0",
+                    "sel_keyword":["#0x73 | Power Supply AC lost | Asserted"],
+					"sdr_golden":{
+                        "PSU0_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": "==",
+                                "lower_limit": 0
+                            }
+                        },
+						"PSU2_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": "==",
+                                "lower_limit": 0
+                            }
+                        },
+						"PSU4_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": "==",
+                                "lower_limit": 0
+                            }
+                        }
+                    },
+                    "delay_time":20
+                },
+            "BOX_PSU0_plug": {
+                    "device":"BOX",
+                    "prompt_name":"PSU_CABLE",
+                    "para" :"PlugIn",
+                    "sub_para":"",
+                    "flag":"PSU0",
+                    "sel_keyword":["#0x73 | Power Supply AC lost | Deasserted"],
+                    "sdr_golden":{
+                        "PSU0_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": ">",
+                                "lower_limit": 100
+                            }
+                        },
+						"PSU2_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": ">",
+                                "lower_limit": 100
+                            }
+                        },
+						"PSU4_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": ">",
+                                "lower_limit": 100
+                            }
+                        }
+                    },
+                    "delay_time":20
+                },
+            "BOX_PSU1_unplug": {
+                    "device":"BOX",
+                    "prompt_name":"PSU_CABLE",
+                    "para" :"PlugOut",
+                    "sub_para":"",
+                    "flag":"PSU1",
+                    "sel_keyword":["#0x74 | Power Supply AC lost | Asserted"],
+                    "sdr_golden":{
+                        "PSU1_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": "==",
+                                "lower_limit": 0
+                            }
+                        },
+						"PSU3_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": "==",
+                                "lower_limit": 0
+                            }
+                        },
+						"PSU5_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": "==",
+                                "lower_limit": 0
+                            }
+                        }
+                    },
+                    "delay_time":20
+                },
+            "BOX_PSU1_plug": {
+                    "device":"BOX",
+                    "prompt_name":"PSU_CABLE",
+                    "para" :"PlugIn",
+                    "sub_para":"",
+                    "flag":"PSU1",
+                    "sel_keyword":["#0x74 | Power Supply AC lost | Deasserted"],
+                    "sdr_golden":{
+                        "PSU1_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": ">",
+                                "lower_limit": 100
+                            }
+                        },
+						"PSU3_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": ">",
+                                "lower_limit": 100
+                            }
+                        },
+						"PSU5_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": ">",
+                                "lower_limit": 100
+                            }
+                        }
+                    },
+                    "delay_time":20
+            }
+        }
+    },
+    "QtBoxPSUREDUNDANT_DPUSUITE": {
+        "Desc": "Box psu redundant test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_psu_redundant",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "cmd":"sshpass -p 'Duduadmin@1234' ssh -o StrictHostKeyChecking=no root@{DPU_IP} ipmitool -I lanplus -H 192.168.1.10 -U 'toutiao' -P 'toutiao!@#' -p 8623",
+            "BOX_PSU0_unplug": {
+                    "device":"BOX",
+                    "prompt_name":"PSU_CABLE",
+                    "para" :"PlugOut",
+                    "sub_para":"",
+                    "flag":"PSU0",
+                    "sel_keyword":["#0x73 | Power Supply AC lost | Asserted"],
+					"sdr_golden":{
+                        "PSU0_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": "==",
+                                "lower_limit": 0
+                            }
+                        },
+						"PSU2_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": "==",
+                                "lower_limit": 0
+                            }
+                        },
+						"PSU4_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": "==",
+                                "lower_limit": 0
+                            }
+                        }
+                    },
+                    "delay_time":20
+                },
+            "BOX_PSU0_plug": {
+                    "device":"BOX",
+                    "prompt_name":"PSU_CABLE",
+                    "para" :"PlugIn",
+                    "sub_para":"",
+                    "flag":"PSU0",
+                    "sel_keyword":["#0x73 | Power Supply AC lost | Deasserted"],
+                    "sdr_golden":{
+                        "PSU0_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": ">",
+                                "lower_limit": 100
+                            }
+                        },
+						"PSU2_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": ">",
+                                "lower_limit": 100
+                            }
+                        },
+						"PSU4_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": ">",
+                                "lower_limit": 100
+                            }
+                        }
+                    },
+                    "delay_time":20
+                },
+            "BOX_PSU1_unplug": {
+                    "device":"BOX",
+                    "prompt_name":"PSU_CABLE",
+                    "para" :"PlugOut",
+                    "sub_para":"",
+                    "flag":"PSU1",
+                    "sel_keyword":["#0x74 | Power Supply AC lost | Asserted"],
+                    "sdr_golden":{
+                        "PSU1_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": "==",
+                                "lower_limit": 0
+                            }
+                        },
+						"PSU3_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": "==",
+                                "lower_limit": 0
+                            }
+                        },
+						"PSU5_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": "==",
+                                "lower_limit": 0
+                            }
+                        }
+                    },
+                    "delay_time":20
+                },
+            "BOX_PSU1_plug": {
+                    "device":"BOX",
+                    "prompt_name":"PSU_CABLE",
+                    "para" :"PlugIn",
+                    "sub_para":"",
+                    "flag":"PSU1",
+                    "sel_keyword":["#0x74 | Power Supply AC lost | Deasserted"],
+                    "sdr_golden":{
+                        "PSU1_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": ">",
+                                "lower_limit": 100
+                            }
+                        },
+						"PSU3_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": ">",
+                                "lower_limit": 100
+                            }
+                        },
+						"PSU5_Pin": {
+                            "sensor_status": {
+                                "lower_operator": "==",
+                                "lower_limit": "ok"
+                            },
+                            "sensor_value": {
+                                "lower_operator": ">",
+                                "lower_limit": 100
+                            }
+                        }
+                    },
+                    "delay_time":20
+            }
+        }
+    },
+    "QtSerialCheck": {
+        "Desc": "host serial port test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_serial_port",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "serial_connect": {
+                "device": "HOST",
+                "prompt_name": "SERIAL",
+                "para": "INSERT"
+            }
+        }
+    },
+	"QtBoxFrontCheck": {
+        "Desc": "BOX Front LED check",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_led_pannel",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "BOX_FRONT_PANEL_GREEN": [
+                {
+                    "device": "BOX",
+                    "prompt_name": "HEALTH_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                },
+                {
+                    "device": "BOX",
+                    "prompt_name": "BMC_NIC_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                },
+                {
+                    "device": "BOX",
+                    "prompt_name": "NIC_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                }
+            ]
+        }
+    },
+	"QtBoxRearCheck": {
+        "Desc": "BOX Front LED check",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_led_pannel",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "BOX_REAR_PANEL_GREEN": [
+                {
+                    "device": "BOX",
+                    "prompt_name": "HEALTH_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                },
+                {
+                    "device": "BOX",
+                    "prompt_name": "BMC_NIC_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                },
+                {
+                    "device": "BOX",
+                    "prompt_name": "NIC_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                }
+            ]
+        }
+    },
+	"QtBF3SerialCheck": {
+        "Desc": "BF3 DPU serial port test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_serial_port",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "serial_connect": {
+                "device": "DPU",
+                "prompt_name": "SERIAL",
+                "para": "INSERT"
+            }
+        }
+    },
+    "QtVgaColorCheck": {
+        "Desc": "host vga color test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_vga_color",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "VGA": {
+                "device": "HOST",
+                "prompt_name": "VGA",
+                "para": "RED/GREEN/BLUE",
+                "sub_para": "ON"
+            }
+        }
+    },
+    "QtUsbCheck": {
+        "Desc": "host usb test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_usb_port",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "USB PORT": {
+                "device": "HOST",
+                "prompt_name": "USB_DISK",
+                "para": "Insert",
+                "usb_number": 1,
+                "usb_speed": "5000M"
+            }
+        }
+    },
+    "QTGreenFrontCheck": {
+        "Desc": "HOST Front LED pennel  test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_led_pannel",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "HOST_FRONT_PANEL_GREEN": [
+                {
+                    "device": "HOST",
+                    "prompt_name": "HEALTH_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                },
+                {
+                    "device": "HOST",
+                    "prompt_name": "BMC_NIC_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                },
+                {
+                    "device": "HOST",
+                    "prompt_name": "NIC_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                },
+				{
+                    "device": "HOST",
+                    "prompt_name": "BF3_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                }
+            ]
+        }
+    },
+    "QTBF3GreenFrontCheck": {
+        "Desc": "HOST Front LED pennel  test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_led_pannel",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "BF3_HOST_FRONT_PANEL_GREEN": [
+                {
+                    "device": "HOST",
+                    "prompt_name": "HEALTH_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                },
+                {
+                    "device": "HOST",
+                    "prompt_name": "BMC_NIC_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                },
+				{
+                    "device": "HOST",
+                    "prompt_name": "BF3_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                }
+            ]
+        }
+    },
+    "QTGreenRearCheck": {
+        "Desc": "HOST Front LED pennel  test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_led_pannel",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "HOST_REAR_PANEL_GREEN": [
+                {
+                    "device": "HOST",
+                    "prompt_name": "PSU_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                },
+                {
+                    "device": "HOST",
+                    "prompt_name": "FAN_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                }
+            ]
+        }
+    },
+    "QTBoxGreenFrontCheck": {
+        "Desc": "BOX Front LED pennel  test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_led_pannel",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "BOX_FRONT_PANEL_GREEN": [
+                {
+                    "device": "BOX",
+                    "prompt_name": "HEALTH_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                },
+                {
+                    "device": "BOX",
+                    "prompt_name": "BMC_NIC_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                },
+                {
+                    "device": "BOX",
+                    "prompt_name": "NIC_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                }
+            ]
+        }
+    },
+    "QTBoxGreenRearCheck": {
+        "Desc": "Box Rear LED pennel  test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_led_pannel",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "BOX_REAR_PANEL_GREEN": [
+                {
+                    "device": "BOX",
+                    "prompt_name": "PSU_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                },
+                {
+                    "device": "BOX",
+                    "prompt_name": "FAN_LED",
+                    "para": "GREEN",
+                    "sub_para": "on"
+                }
+            ]
+        }
+    },
+    "QtUidCheck": {
+        "Desc": "HOST UID test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_uid_button_led",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "HOST_UID_LED_REAR": {
+                "On": {
+                    "device": "HOST",
+                    "prompt_name": "UID_LED",
+                    "para": "REAR",
+                    "sub_para": "PRESS",
+                    "flag": "on",
+                    "set_cmd": "ipmitool raw 0x3e 0x06 0x01",
+                    "set_exp_val": "",
+                    "check_cmd": "ipmitool raw 0x3e 0x06 0x03",
+                    "check_exp_val": "01"
+                },
+                "off": {
+                    "device": "HOST",
+                    "prompt_name": "UID_LED",
+                    "para": "REAR",
+                    "sub_para": "PRESS",
+                    "flag": "off",
+                    "set_cmd": "ipmitool raw 0x3e 0x06 0x00",
+                    "set_exp_val": "",
+                    "check_cmd": "ipmitool raw 0x3e 0x06 0x03",
+                    "check_exp_val": "00"
+                }
+            },
+            "HOST_UID_BUTTON_REAR": {
+                "On": {
+                    "device": "HOST",
+                    "prompt_name": "UID_BUTTON",
+                    "para": "REAR",
+                    "sub_para": "PRESS",
+                    "flag": "on",
+                    "set_cmd": "ipmitool raw 0x3e 0x06 0x00",
+                    "set_exp_val": "",
+                    "check_cmd": "ipmitool raw 0x3e 0x06 0x03",
+                    "check_exp_val": "01"
+                },
+                "off": {
+                    "device": "HOST",
+                    "prompt_name": "UID_BUTTON",
+                    "para": "REAR",
+                    "sub_para": "PRESS",
+                    "flag": "off",
+                    "set_cmd": "ipmitool raw 0x3e 0x06 0x01",
+                    "set_exp_val": "",
+                    "check_cmd": "ipmitool raw 0x3e 0x06 0x03",
+                    "check_exp_val": "00"
+                }
+            }
+        }
+    },
+	"QtUidCheckFront": {
+        "Desc": "HOST UID test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_uid_button_led",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "HOST_UID_BUTTON_FRONT": {
+                "On": {
+                    "device": "HOST",
+                    "prompt_name": "UID_BUTTON",
+                    "para": "REAR",
+                    "sub_para": "PRESS",
+                    "flag": "on",
+                    "set_cmd": "ipmitool raw 0x3e 0x06 0x00",
+                    "set_exp_val": "",
+                    "check_cmd": "ipmitool raw 0x3e 0x06 0x03",
+                    "check_exp_val": "01"
+                },
+                "off": {
+                    "device": "HOST",
+                    "prompt_name": "UID_BUTTON",
+                    "para": "REAR",
+                    "sub_para": "PRESS",
+                    "flag": "off",
+                    "set_cmd": "ipmitool raw 0x3e 0x06 0x01",
+                    "set_exp_val": "",
+                    "check_cmd": "ipmitool raw 0x3e 0x06 0x03",
+                    "check_exp_val": "00"
+                }
+            }
+        }
+    },
+	"QtBoxUidLedCheck": {
+        "Desc": "BOX uid Led test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_uid_button_led",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "BOX_UID_LED": {
+                "On": {
+                    "device": "BOX",
+                    "prompt_name": "UID_LED",
+                    "para": "FRONT",
+                    "sub_para": "PRESS",
+                    "flag": "on",
+                    "set_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U 'toutiao' -P 'toutiao!@#' -p 8623 chassis identify force",
+                    "set_exp_val": "Chassis identify interval: indefinite",
+                    "check_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U 'toutiao' -P 'toutiao!@#' -p 8623 raw 0x3a 0x2e 0xdd 0xb3 0x00",
+                    "check_exp_val": "01"
+                },
+                "off": {
+                    "device": "BOX",
+                    "prompt_name": "UID_LED",
+                    "para": "FRONT",
+                    "sub_para": "PRESS",
+                    "flag": "off",
+                    "set_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U 'toutiao' -P 'toutiao!@#' -p 8623 chassis identify 0",
+                    "set_exp_val": "Chassis identify interval: off",
+                    "check_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U 'toutiao' -P 'toutiao!@#' -p 8623 raw 0x3a 0x2e 0xdd 0xb3 0x00",
+                    "check_exp_val": "00"
+                }
+            },
+            "BOX_UID_BUTTON": {
+                "On": {
+                    "device": "BOX",
+                    "prompt_name": "UID_BUTTON",
+                    "para": "FRONT",
+                    "sub_para": "PRESS",
+                    "flag": "on",
+                    "set_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U 'toutiao' -P 'toutiao!@#' -p 8623 chassis identify force",
+                    "set_exp_val": "",
+                    "check_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U 'toutiao' -P 'toutiao!@#' -p 8623 raw 0x3a 0x2e 0xdd 0xb3 0x00",
+                    "check_exp_val": "01"
+                },
+                "off": {
+                    "device": "BOX",
+                    "prompt_name": "UID_BUTTON",
+                    "para": "FRONT",
+                    "sub_para": "PRESS",
+                    "flag": "off",
+                    "set_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U 'toutiao' -P 'toutiao!@#' -p 8623 chassis identify 0",
+                    "set_exp_val": "",
+                    "check_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U 'toutiao' -P 'toutiao!@#' -p 8623 raw 0x3a 0x2e 0xdd 0xb3 0x00",
+                    "check_exp_val": "00"
+                }
+            }
+        }
+    },
+    "QtBoxUidLedCheck_DPUSUITE": {
+        "Desc": "BOX uid Led test ",
+        "Tags": "PromptBox",
+        "Module": "interactive_test",
+        "Class": "Interactive",
+        "Function": "test_uid_button_led",
+        "Timeout": "360m",
+        "Args": [],
+        "Kwargs": {
+            "BOX_UID_LED": {
+                "On": {
+                    "device": "BOX",
+                    "prompt_name": "UID_LED",
+                    "para": "FRONT",
+                    "sub_para": "PRESS",
+                    "flag": "on",
+                    "set_cmd": "sshpass -p 'Duduadmin@1234' ssh -o StrictHostKeyChecking=no root@{DPU_IP} ipmitool -I lanplus -H 192.168.1.10 -U 'toutiao' -P 'toutiao!@#' -p 8623 chassis identify force",
+                    "set_exp_val": "Chassis identify interval: indefinite",
+                    "check_cmd": "sshpass -p 'Duduadmin@1234' ssh -o StrictHostKeyChecking=no root@{DPU_IP} ipmitool -I lanplus -H 192.168.1.10 -U 'toutiao' -P 'toutiao!@#' -p 8623 raw 0x3a 0x2e 0xdd 0xb3 0x00",
+                    "check_exp_val": "01"
+                },
+                "off": {
+                    "device": "BOX",
+                    "prompt_name": "UID_LED",
+                    "para": "FRONT",
+                    "sub_para": "PRESS",
+                    "flag": "off",
+                    "set_cmd": "sshpass -p 'Duduadmin@1234' ssh -o StrictHostKeyChecking=no root@{DPU_IP} ipmitool -I lanplus -H 192.168.1.10 -U 'toutiao' -P 'toutiao!@#' -p 8623 chassis identify 0",
+                    "set_exp_val": "Chassis identify interval: off",
+                    "check_cmd": "sshpass -p 'Duduadmin@1234' ssh -o StrictHostKeyChecking=no root@{DPU_IP} ipmitool -I lanplus -H 192.168.1.10 -U 'toutiao' -P 'toutiao!@#' -p 8623 raw 0x3a 0x2e 0xdd 0xb3 0x00",
+                    "check_exp_val": "00"
+                }
+            },
+            "BOX_UID_BUTTON": {
+                "On": {
+                    "device": "BOX",
+                    "prompt_name": "UID_BUTTON",
+                    "para": "FRONT",
+                    "sub_para": "PRESS",
+                    "flag": "on",
+                    "set_cmd": "sshpass -p 'Duduadmin@1234' ssh -o StrictHostKeyChecking=no root@{DPU_IP} ipmitool -I lanplus -H 192.168.1.10 -U 'toutiao' -P 'toutiao!@#' -p 8623 chassis identify force",
+                    "set_exp_val": "",
+                    "check_cmd": "sshpass -p 'Duduadmin@1234' ssh -o StrictHostKeyChecking=no root@{DPU_IP} ipmitool -I lanplus -H 192.168.1.10 -U 'toutiao' -P 'toutiao!@#' -p 8623 raw 0x3a 0x2e 0xdd 0xb3 0x00",
+                    "check_exp_val": "01"
+                },
+                "off": {
+                    "device": "BOX",
+                    "prompt_name": "UID_BUTTON",
+                    "para": "FRONT",
+                    "sub_para": "PRESS",
+                    "flag": "off",
+                    "set_cmd": "sshpass -p 'Duduadmin@1234' ssh -o StrictHostKeyChecking=no root@{DPU_IP} ipmitool -I lanplus -H 192.168.1.10 -U 'toutiao' -P 'toutiao!@#' -p 8623 chassis identify 0",
+                    "set_exp_val": "",
+                    "check_cmd": "sshpass -p 'Duduadmin@1234' ssh -o StrictHostKeyChecking=no root@{DPU_IP} ipmitool -I lanplus -H 192.168.1.10 -U 'toutiao' -P 'toutiao!@#' -p 8623 raw 0x3a 0x2e 0xdd 0xb3 0x00",
+                    "check_exp_val": "00"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "QtSmartnicFpgaStress":{
+        "Desc": "DPU FPGA Stress",
+        "Tags": "DPU FPGA STRESS",
+        "Module": "dpu_fpga_test",
+        "Class": "DpuFpgaTest",
+        "Function": "test_fpga_stress",
+        "Timeout": "3h",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "QtSystemFpgaStress":{
+        "Desc": "Host DPU FPGA Stress",
+        "Tags": "Host DPU FPGA Stress",
+        "Module": "dpu_fpga_test",
+        "Class": "DpuFpgaTest",
+        "Function": "test_host_fpga_stress",
+        "Timeout": "3h",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "QtSmartnicDmaStress":{
+        "Desc": "SOC DPU Dma Stress",
+        "Tags": "Soc DPU Dma Stress",
+        "Module": "dpu_fpga_test",
+        "Class": "DpuFpgaTest",
+        "Function": "test_soc_dma_stress",
+        "Timeout": "3h",
+        "Args": [],
+        "Kwargs": {
+	    "test_time": "5m"
+       	}
+    }
+}

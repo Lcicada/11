@@ -1,0 +1,2708 @@
+{
+    "CreateDate": "20260513170232",
+    "Cmdline": "ByteQC.pyc -nc -ctf -nf -M G225C-1A1B3E6",
+    "SourceProgramVersion": "",
+    "SourceProgramReleaseDate": "",
+    "SourceConfigVersion": "1.0.0",
+    "SourceConfigReleaseDate": "2023-04-07",
+    "Project": "OCP_with_bf3mini_l6",
+    "Station": {
+        "pt": {
+            "StationInst": "pt_OCP_with_bf3mini_l6",
+            "Sequences": [
+                {
+                    "Id": 0,
+                    "Name": "QtHddCheck_OCPL6 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "nvme_test",
+                            "Class": "NVME",
+                            "Function": "test_lava_feature",
+                            "Timeout": "15m",
+                            "Args": [],
+                            "Kwargs": {
+                                "target_version": "0F02030C",
+                                "feature": "0xFE",
+                                "target_value": 4
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtLavaFeatureCheck",
+                            "Parallel": false,
+                            "Id": 0,
+                            "SeqId": 0,
+                            "Inst": "QtLavaFeatureCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "NVME LBA Sizes Format",
+                            "Module": "nvme_test",
+                            "Class": "NVME",
+                            "Function": "test_nvme_format",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtNvmeFormatTest",
+                            "Parallel": false,
+                            "Id": 1,
+                            "SeqId": 0,
+                            "Inst": "QtNvmeFormatTest_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "sata_test",
+                            "Class": "SataTest",
+                            "Function": "test_sata_ssd_format",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "timeout": 300
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtSataSsdFormatTest",
+                            "Parallel": false,
+                            "Id": 2,
+                            "SeqId": 0,
+                            "Inst": "QtSataSsdFormatTest_0"
+                        }
+                    ]
+                },
+                {
+                    "Id": 1,
+                    "Name": "QtSystemnicStressTest_OCPL6 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "PCI INFO",
+                            "Module": "pcie_test",
+                            "Class": "PCIe",
+                            "Function": "test_pcie_compare_with_golden",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtPciInfoCheck",
+                            "Parallel": false,
+                            "Id": 3,
+                            "SeqId": 1,
+                            "Inst": "QtPciInfoCheck_0"
+                        },
+                        {
+                            "Desc": "NIC RDMA TEST",
+                            "Tags": "NIC RDMA TEST",
+                            "Module": "nic_rdma_test",
+                            "Class": "NicRdmaTest",
+                            "Function": "test_nic_rdma",
+                            "Timeout": "20m",
+                            "Args": [],
+                            "Kwargs": {
+                                "test_seconds": 900,
+                                "device_ids": [
+                                    "mlx5_0",
+                                    "mlx5_3"
+                                ],
+                                "spec": {
+                                    "BW average[Gb/sec]": 180
+                                },
+                                "Total BW average": 180,
+                                "tool_name": "ib_write_bw",
+                                "tool_parameter": "-d {device_id}  -p {port} -q 8 --report_gbits -F -D 120 --run_infinitely",
+                                "start_port": 1000
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QTNicRdmaTest",
+                            "Parallel": false,
+                            "Id": 4,
+                            "SeqId": 1,
+                            "Inst": "QTNicRdmaTest_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "HEALTH INFO",
+                            "Module": "sys_event",
+                            "Class": "SysEvent",
+                            "Function": "test_sys_event",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_file": "whitelist_cx7_with_bf3mini_l6.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtSystemBlacklistCheck",
+                            "Parallel": false,
+                            "Id": 5,
+                            "SeqId": 1,
+                            "Inst": "QtSystemBlacklistCheck_0"
+                        }
+                    ]
+                },
+                {
+                    "Id": 2,
+                    "Name": "QtSystemFanCheck_OCP 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "FAN INFO",
+                            "Module": "test_check_fan",
+                            "Class": "FAN",
+                            "Function": "test_fan_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtFanInfoCheck",
+                            "Parallel": false,
+                            "Id": 6,
+                            "SeqId": 2,
+                            "Inst": "QtFanInfoCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "FAN Function",
+                            "Module": "fan_speed",
+                            "Class": "FanSpeed",
+                            "Function": "test_set_fan_mode",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "set_fan_mode_cmd": "raw 0x3e 0x2f 0x01; sleep 3",
+                                "get_fan_mode_cmd": "raw 0x3e 0x30",
+                                "exp_fan_mode": "01"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtFanFunctionSet",
+                            "Parallel": false,
+                            "Id": 7,
+                            "SeqId": 2,
+                            "Inst": "QtFanFunctionSet_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "FAN Function",
+                            "Module": "fan_speed",
+                            "Class": "FanSpeed",
+                            "Function": "test_fan_speed",
+                            "Timeout": "25m",
+                            "Args": [],
+                            "Kwargs": {
+                                "OOB_mode": {},
+                                "sleep_time": 30,
+                                "fan_duty_cmd_info": [
+                                    {
+                                        "fan_duty": "20",
+                                        "set_duty_cmd": "raw 0x3e 0x31 0x00 20"
+                                    },
+                                    {
+                                        "fan_duty": "40",
+                                        "set_duty_cmd": "raw 0x3e 0x31 0x00 40"
+                                    },
+                                    {
+                                        "fan_duty": "60",
+                                        "set_duty_cmd": "raw 0x3e 0x31 0x00 60"
+                                    },
+                                    {
+                                        "fan_duty": "80",
+                                        "set_duty_cmd": "raw 0x3e 0x31 0x00 80"
+                                    },
+                                    {
+                                        "fan_duty": "100",
+                                        "set_duty_cmd": "raw 0x3e 0x31 0x00 100"
+                                    }
+                                ],
+                                "fan_groups": {
+                                    "FAN_F": {
+                                        "consistence_limit": 0.2,
+                                        "fan_list": [
+                                            "FAN0_F_Speed",
+                                            "FAN1_F_Speed",
+                                            "FAN2_F_Speed",
+                                            "FAN3_F_Speed"
+                                        ],
+                                        "duty2speed": {
+                                            "20": "2400-3850",
+                                            "40": "5678-7820",
+                                            "60": "8458-11730",
+                                            "80": "11135-15640",
+                                            "100": "14110-19550"
+                                        }
+                                    },
+                                    "FAN_R": {
+                                        "consistence_limit": 0.2,
+                                        "fan_list": [
+                                            "FAN0_R_Speed",
+                                            "FAN1_R_Speed",
+                                            "FAN2_R_Speed",
+                                            "FAN3_R_Speed"
+                                        ],
+                                        "duty2speed": {
+                                            "20": "2000-3350",
+                                            "40": "4930-6728",
+                                            "60": "7310-10005",
+                                            "80": "9690-13350",
+                                            "100": "12325-16675"
+                                        }
+                                    }
+                                }
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtFanFunctionCheck",
+                            "Parallel": false,
+                            "Id": 8,
+                            "SeqId": 2,
+                            "Inst": "QtFanFunctionCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "FAN Function",
+                            "Module": "fan_speed",
+                            "Class": "FanSpeed",
+                            "Function": "test_set_fan_mode",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "set_fan_mode_cmd": "raw 0x3e 0x2f 0x00; sleep 3",
+                                "get_fan_mode_cmd": "raw 0x3e 0x30",
+                                "exp_fan_mode": "00"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtFanFunctionSet",
+                            "Parallel": false,
+                            "Id": 9,
+                            "SeqId": 2,
+                            "Inst": "QtFanFunctionSet_1"
+                        }
+                    ]
+                },
+                {
+                    "Id": 3,
+                    "Name": "QtBoxFanCheck_OCP 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "fan_speed",
+                            "Class": "FanSpeed",
+                            "Function": "test_set_fan_mode",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "OOB_mode": {
+                                    "bmc_env_name": "UUT_BMCIP",
+                                    "bmc_user": "toutiao",
+                                    "bmc_password": "'toutiao!@#'",
+                                    "port": "8623"
+                                },
+                                "set_fan_mode_cmd": "raw 0x3a 0x25 0xdd 0xb3 0x00 0x01; sleep 3",
+                                "get_fan_mode_cmd": "raw 0x3a 0x26 0xdd 0xb3 0x00",
+                                "exp_fan_mode": "01"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxFanFunctionSetManual",
+                            "Parallel": false,
+                            "Id": 10,
+                            "SeqId": 3,
+                            "Inst": "QtBoxFanFunctionSetManual_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "FAN Function",
+                            "Module": "fan_speed",
+                            "Class": "FanSpeed",
+                            "Function": "test_fan_speed",
+                            "Timeout": "25m",
+                            "Args": [],
+                            "Kwargs": {
+                                "OOB_mode": {
+                                    "bmc_env_name": "UUT_BMCIP",
+                                    "bmc_user": "toutiao",
+                                    "bmc_password": "'toutiao!@#'",
+                                    "port": "8623"
+                                },
+                                "sleep_time": 70,
+                                "fan_duty_cmd_info": [
+                                    {
+                                        "fan_duty": "100",
+                                        "set_duty_cmd": "raw 0x3a 0x27 0xdd 0xb3 0x00 0xff 100"
+                                    },
+                                    {
+                                        "fan_duty": "20",
+                                        "set_duty_cmd": "raw 0x3a 0x27 0xdd 0xb3 0x00 0xff 20"
+                                    },
+                                    {
+                                        "fan_duty": "40",
+                                        "set_duty_cmd": "raw 0x3a 0x27 0xdd 0xb3 0x00 0xff 40"
+                                    },
+                                    {
+                                        "fan_duty": "60",
+                                        "set_duty_cmd": "raw 0x3a 0x27 0xdd 0xb3 0x00 0xff 60"
+                                    },
+                                    {
+                                        "fan_duty": "80",
+                                        "set_duty_cmd": "raw 0x3a 0x27 0xdd 0xb3 0x00 0xff 80"
+                                    },
+                                    {
+                                        "fan_duty": "auto",
+                                        "set_duty_cmd": "raw 0x3a 0x25 0xdd 0xb3 0x00 0x00"
+                                    }
+                                ],
+                                "fan_groups": {
+                                    "FAN_F": {
+                                        "consistence_limit": 0.2,
+                                        "fan_list": [
+                                            "FAN0_F_Speed",
+                                            "FAN1_F_Speed",
+                                            "FAN3_F_Speed",
+                                            "FAN4_F_Speed",
+                                            "FAN6_F_Speed",
+                                            "FAN7_F_Speed",
+                                            "FAN9_F_Speed",
+                                            "FAN10_F_Speed",
+                                            "FAN12_F_Speed",
+                                            "FAN13_F_Speed"
+                                        ],
+                                        "duty2speed": {
+                                            "20": "3024-4290",
+                                            "40": "5859-7392",
+                                            "60": "8289-10989",
+                                            "80": "10638-14751",
+                                            "100": "13068-16896",
+                                            "auto": "2700-16896"
+                                        }
+                                    },
+                                    "FAN_R": {
+                                        "consistence_limit": 0.2,
+                                        "fan_list": [
+                                            "FAN0_R_Speed",
+                                            "FAN1_R_Speed",
+                                            "FAN3_R_Speed",
+                                            "FAN4_R_Speed",
+                                            "FAN6_R_Speed",
+                                            "FAN7_R_Speed",
+                                            "FAN9_R_Speed",
+                                            "FAN10_R_Speed",
+                                            "FAN12_R_Speed",
+                                            "FAN13_R_Speed"
+                                        ],
+                                        "duty2speed": {
+                                            "20": "2862-4719",
+                                            "40": "5751-8052",
+                                            "60": "8613-11319",
+                                            "80": "11421-14553",
+                                            "100": "12285-17490",
+                                            "auto": "2700-15015"
+                                        }
+                                    },
+                                    "8038": {
+                                        "consistence_limit": 0.2,
+                                        "fan_list": [
+                                            "FAN2_Speed",
+                                            "FAN5_Speed",
+                                            "FAN8_Speed",
+                                            "FAN11_Speed",
+                                            "FAN14_Speed"
+                                        ],
+                                        "duty2speed": {
+                                            "20": "3024-3729",
+                                            "40": "6102-7491",
+                                            "60": "9126-11418",
+                                            "80": "11961-14483",
+                                            "100": "14688-18711",
+                                            "auto": "2700-18711"
+                                        }
+                                    }
+                                }
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxFanFunctionCheck",
+                            "Parallel": false,
+                            "Id": 11,
+                            "SeqId": 3,
+                            "Inst": "QtBoxFanFunctionCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "fan_speed",
+                            "Class": "FanSpeed",
+                            "Function": "test_set_fan_mode",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "OOB_mode": {
+                                    "bmc_env_name": "UUT_BMCIP",
+                                    "bmc_user": "toutiao",
+                                    "bmc_password": "'toutiao!@#'",
+                                    "port": "8623"
+                                },
+                                "set_fan_mode_cmd": "raw 0x3a 0x25 0xdd 0xb3 0x00 0x00; sleep 3",
+                                "get_fan_mode_cmd": "raw 0x3a 0x26 0xdd 0xb3 0x00",
+                                "exp_fan_mode": "00"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxFanFunctionSetAuto",
+                            "Parallel": false,
+                            "Id": 12,
+                            "SeqId": 3,
+                            "Inst": "QtBoxFanFunctionSetAuto_0"
+                        }
+                    ]
+                },
+                {
+                    "Id": 4,
+                    "Name": "QtSystemConfigCheck_CX7BF3MINISuite_L6 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "SERVER INFO",
+                            "Module": "test_check_motherboard",
+                            "Class": "MOTHERBOARD",
+                            "Function": "test_server_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtServerInfoCheck",
+                            "Parallel": false,
+                            "Id": 13,
+                            "SeqId": 4,
+                            "Inst": "QtServerInfoCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "MOTHERBOARD INFO",
+                            "Module": "test_check_motherboard",
+                            "Class": "MOTHERBOARD",
+                            "Function": "test_motherboard_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtMbInfoCheck",
+                            "Parallel": false,
+                            "Id": 14,
+                            "SeqId": 4,
+                            "Inst": "QtMbInfoCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "MOTHERBOARD INFO",
+                            "Module": "test_check_motherboard",
+                            "Class": "MOTHERBOARD",
+                            "Function": "test_mbversion_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "tool_path": "InbUpdateTool",
+                                "tool_name": "FwUpdate.sh"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtMbFwCheck",
+                            "Parallel": false,
+                            "Id": 15,
+                            "SeqId": 4,
+                            "Inst": "QtMbFwCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "retimer cpld check",
+                            "Module": "test_check_retimer",
+                            "Class": "RETIMER",
+                            "Function": "test_check_retimer_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtRetimerFwCheck",
+                            "Parallel": false,
+                            "Id": 16,
+                            "SeqId": 4,
+                            "Inst": "QtRetimerFwCheck_0"
+                        },
+                        {
+                            "Desc": "Fru topo check",
+                            "Tags": "Fru topo check",
+                            "Module": "fru_top",
+                            "Class": "FruTop",
+                            "Function": "test_fru_top_check",
+                            "Timeout": "10m",
+                            "Args": [],
+                            "Kwargs": {
+                                "eep_tool_version": "PcieEEpromTool-G225C",
+                                "skip_fru_protection": "false"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBF3HostTopoCheck",
+                            "Parallel": false,
+                            "Id": 17,
+                            "SeqId": 4,
+                            "Inst": "QtBF3HostTopoCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "CPU INFO",
+                            "Module": "test_check_cpu",
+                            "Class": "CPU",
+                            "Function": "test_cpu_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtCpuInfoCheck",
+                            "Parallel": false,
+                            "Id": 18,
+                            "SeqId": 4,
+                            "Inst": "QtCpuInfoCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "DRAM INFO",
+                            "Module": "test_check_dram",
+                            "Class": "DRAM",
+                            "Function": "test_dram_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtDramInfoCheck",
+                            "Parallel": false,
+                            "Id": 19,
+                            "SeqId": 4,
+                            "Inst": "QtDramInfoCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "DISK NVME INFO",
+                            "Module": "test_check_nvme",
+                            "Class": "NVME",
+                            "Function": "test_nvme_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtNvmeInfoCheck",
+                            "Parallel": false,
+                            "Id": 20,
+                            "SeqId": 4,
+                            "Inst": "QtNvmeInfoCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "FRU INFO",
+                            "Module": "test_check_fru",
+                            "Class": "FRU",
+                            "Function": "test_fru_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "golden_file_name": "check_fru_golden.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtFruInfoCheck",
+                            "Parallel": false,
+                            "Id": 21,
+                            "SeqId": 4,
+                            "Inst": "QtFruInfoCheck_0"
+                        },
+                        {
+                            "Desc": "DPU info check on host",
+                            "Tags": "DPU info check on host",
+                            "Module": "test_check_dpu",
+                            "Class": "DPU",
+                            "Function": "test_check_dpu_on_host",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtSmartnicInfoCheck",
+                            "Parallel": false,
+                            "Id": 22,
+                            "SeqId": 4,
+                            "Inst": "QtSmartnicInfoCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "NIC INFO",
+                            "Module": "test_check_nic",
+                            "Class": "NIC",
+                            "Function": "test_check_nic_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtNicInfoCheck",
+                            "Parallel": false,
+                            "Id": 23,
+                            "SeqId": 4,
+                            "Inst": "QtNicInfoCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "PSU INFO",
+                            "Module": "test_check_psu",
+                            "Class": "PSU",
+                            "Function": "test_psu_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "tool_path": "InbUpdateTool",
+                                "tool_name": "FwUpdate.sh"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtPsuInfoCheck",
+                            "Parallel": false,
+                            "Id": 24,
+                            "SeqId": 4,
+                            "Inst": "QtPsuInfoCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "check_sdr",
+                            "Class": "Checksdr",
+                            "Function": "test_sdr_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "golden_file_name": "check_sdr_golden.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBmcSdrCheck",
+                            "Parallel": false,
+                            "Id": 25,
+                            "SeqId": 4,
+                            "Inst": "QtBmcSdrCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "test_check_cmos3v",
+                            "Class": "CMOS",
+                            "Function": "test_cmos3v",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "exp_value": 2.96
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBatteryFunctionTest",
+                            "Parallel": false,
+                            "Id": 26,
+                            "SeqId": 4,
+                            "Inst": "QtBatteryFunctionTest_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "PCI INFO",
+                            "Module": "pcie_test",
+                            "Class": "PCIe",
+                            "Function": "test_pcie_compare_with_golden",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtPciInfoCheck",
+                            "Parallel": false,
+                            "Id": 27,
+                            "SeqId": 4,
+                            "Inst": "QtPciInfoCheck_1"
+                        },
+                        {
+                            "Desc": "smbios type 9",
+                            "Tags": "SMBIOS TYPE 9",
+                            "Module": "smbios_test",
+                            "Class": "SMBIOS",
+                            "Function": "test_smbios_type_9",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtSMBIOSType9Check",
+                            "Parallel": false,
+                            "Id": 28,
+                            "SeqId": 4,
+                            "Inst": "QtSMBIOSType9Check_0"
+                        }
+                    ]
+                },
+                {
+                    "Id": 5,
+                    "Name": "QtBoxConfigCheckDHonHOST_L6 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "check_sdr",
+                            "Class": "Checksdr",
+                            "Function": "test_sdr_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "ipmitool_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U toutiao -P toutiao!@# -p 8623 sdr list",
+                                "golden_file_name": "check_sdr_golden_box_L6.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxSdrCheckL6",
+                            "Parallel": false,
+                            "Id": 29,
+                            "SeqId": 5,
+                            "Inst": "QtBoxSdrCheckL6_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "test_check_box",
+                            "Class": "BOX",
+                            "Function": "test_box_sw_info_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_base_name": "config_base_box_L6.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxSWInfoCheckL6",
+                            "Parallel": false,
+                            "Id": 30,
+                            "SeqId": 5,
+                            "Inst": "QtBoxSWInfoCheckL6_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "test_check_box",
+                            "Class": "BOX",
+                            "Function": "test_donghu_box_sw_fw_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_base_name": "config_base_box_L6.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxSWFwCheckL6",
+                            "Parallel": false,
+                            "Id": 31,
+                            "SeqId": 5,
+                            "Inst": "QtBoxSWFwCheckL6_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "test_check_box",
+                            "Class": "BOX",
+                            "Function": "test_donghu_box_fru_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_base_name": "config_base_box_L6.json",
+                                "golden_file_name": "L6_box_fru.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxFruCheckL6",
+                            "Parallel": false,
+                            "Id": 32,
+                            "SeqId": 5,
+                            "Inst": "QtBoxFruCheckL6_0"
+                        }
+                    ]
+                },
+                {
+                    "Id": 6,
+                    "Name": "QtSystemHealthCheckDH_OCPL6 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "HEALTH INFO",
+                            "Module": "sys_event",
+                            "Class": "SysEvent",
+                            "Function": "test_sys_event",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_file": "whitelist_cx7_with_bf3mini_l6.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtSystemBlacklistCheck",
+                            "Parallel": false,
+                            "Id": 33,
+                            "SeqId": 6,
+                            "Inst": "QtSystemBlacklistCheck_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "HEALTH INFO",
+                            "Module": "smart_test",
+                            "Class": "SmartTest",
+                            "Function": "test_check_smart",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_file": "smart_whitelist.json",
+                                "spec_file": "smart_spec.json",
+                                "upload_increase_type": [],
+                                "check_increase_type": [
+                                    "full_flow"
+                                ]
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtSystemSmartCheck_FullFlow",
+                            "Parallel": false,
+                            "Id": 34,
+                            "SeqId": 6,
+                            "Inst": "QtSystemSmartCheck_FullFlow_0"
+                        }
+                    ]
+                },
+                {
+                    "Id": 7,
+                    "Name": "QtSystemBmcCheck_OCP 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "bmc_fun_test",
+                            "Class": "Bmctest",
+                            "Function": "test_bmc_user",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBmcUserCheck",
+                            "Parallel": false,
+                            "Id": 35,
+                            "SeqId": 7,
+                            "Inst": "QtBmcUserCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "bmc_fun_test",
+                            "Class": "Bmctest",
+                            "Function": "test_bmc_selftest",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBmcSelftestTest",
+                            "Parallel": false,
+                            "Id": 36,
+                            "SeqId": 7,
+                            "Inst": "QtBmcSelftestTest_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "bmc_fun_test",
+                            "Class": "Bmctest",
+                            "Function": "test_Powerpolicy_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtMbBmcsettingsCheck_Powerpolicy",
+                            "Parallel": false,
+                            "Id": 37,
+                            "SeqId": 7,
+                            "Inst": "QtMbBmcsettingsCheck_Powerpolicy_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "bmc_fun_test",
+                            "Class": "Bmctest",
+                            "Function": "test_bmc_time",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "bmc_time_exp": 60
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBmcTime",
+                            "Parallel": false,
+                            "Id": 38,
+                            "SeqId": 7,
+                            "Inst": "QtBmcTime_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "bmc_fun_test",
+                            "Class": "Bmctest",
+                            "Function": "test_bmc_time",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "bmc_time_exp": 60,
+                                "OOB_mode": {
+                                    "bmc_env_name": "UUT_BMCIP",
+                                    "bmc_user": "toutiao",
+                                    "bmc_password": "'toutiao!@#'",
+                                    "port": "8623"
+                                }
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxBmcTimeCheck",
+                            "Parallel": false,
+                            "Id": 39,
+                            "SeqId": 7,
+                            "Inst": "QtBoxBmcTimeCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "bmc_fun_test",
+                            "Class": "Bmctest",
+                            "Function": "test_bmc_mac",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "ip_test_cmd": "ipmitool lan print",
+                                "dedicate_mac_cmd": "ipmitool raw 0x3A 0xa9 0xdd 0xb3 0x00 15 0xa0 8 0x10 0x00",
+                                "share_mac_cmd": "ipmitool raw 0x3A 0xa9 0xdd 0xb3 0x00 15 0xa0 8 0x10 0x08",
+                                "ip_address_exp": "10",
+                                "ip_address_source_exp": "DHCP Address",
+                                "factory_mode": {
+                                    "enter": "ipmitool raw 0x3a 0xa1 0xdd 0xb3 0x00 0x4d 0x43 0x52 0x81",
+                                    "exit": "ipmitool raw 0x3a 0xa1 0xdd 0xb3 0x00 0x4d 0x43 0x52 0x00",
+                                    "exit_check": "ipmitool raw 0x3a 0xa2 0xdd 0xb3 0x00",
+                                    "exit_mode_exp": "00",
+                                    "channel": {
+                                        "switch": "ipmitool raw 0x3A 0xa9 0xdd 0xb3 0x00 15 0xe0 0 0x40",
+                                        "release": "ipmitool raw 0x3A 0xa9 0xdd 0xb3 0x00 15 0xe0 0 0"
+                                    }
+                                }
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBmcMacCheck",
+                            "Parallel": false,
+                            "Id": 40,
+                            "SeqId": 7,
+                            "Inst": "QtBmcMacCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "bmc_fun_test",
+                            "Class": "Bmctest",
+                            "Function": "test_ipv6_duid",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "read_bmc_mac_cmd": "ipmitool lan print 1 | grep 'MAC Address' | awk '{print$4}' | tr [a-z] [A-Z] | sed 's/://g'",
+                                "read_lan6_cmd": "ipmitool lan6 print 1 | grep -A 1 'DUID' | tail -1 | cut -b 15-26 | tr [a-z] [A-Z]",
+                                "need_to_cmp": "on"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBmcDuidCheck",
+                            "Parallel": false,
+                            "Id": 41,
+                            "SeqId": 7,
+                            "Inst": "QtBmcDuidCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "bmc_test",
+                            "Class": "Bmctest",
+                            "Function": "test_check_guid",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBmcGuidCheck",
+                            "Parallel": false,
+                            "Id": 42,
+                            "SeqId": 7,
+                            "Inst": "QtBmcGuidCheck_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "golden_bmc_check",
+                            "Class": "GoldenBMCCheck",
+                            "Function": "test_golden_bmc",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "bmc_reset_cmd": "ipmitool mc reset cold",
+                                "switch_bmc_cmd": "ipmitool raw 0x32 0x8f 0x01 0x02",
+                                "sleep_sec": 180,
+                                "boot_selector_get_cmd": "ipmitool raw 0x32 0x8f 0x02",
+                                "switch_result": "02"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBmcFunctionCheck_Backupimage",
+                            "Parallel": false,
+                            "Id": 43,
+                            "SeqId": 7,
+                            "Inst": "QtBmcFunctionCheck_Backupimage_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "golden_bmc_check",
+                            "Class": "GoldenBMCCheck",
+                            "Function": "test_golden_bmc",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "bmc_reset_cmd": "ipmitool mc reset cold",
+                                "switch_bmc_cmd": "ipmitool raw 0x32 0x8f 0x01 0x01",
+                                "sleep_sec": 180,
+                                "boot_selector_get_cmd": "ipmitool raw 0x32 0x8f 0x02",
+                                "switch_result": "01"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBmcFunctionCheck_Goldenimage",
+                            "Parallel": false,
+                            "Id": 44,
+                            "SeqId": 7,
+                            "Inst": "QtBmcFunctionCheck_Goldenimage_0"
+                        }
+                    ]
+                },
+                {
+                    "Id": 8,
+                    "Name": "QtSystemCpuCheck_OCP 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "check cpu freq",
+                            "Tags": "CPU FUNCTION",
+                            "Module": "test_cpu_freq",
+                            "Class": "CPUFreqCheck",
+                            "Function": "test_cpu_freq_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtCpuFunctionTest_Freq",
+                            "Parallel": false,
+                            "Id": 45,
+                            "SeqId": 8,
+                            "Inst": "QtCpuFunctionTest_Freq_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "check_xgmi",
+                            "Class": "CheckXgmi",
+                            "Function": "test_check_xgmi",
+                            "Timeout": "15m",
+                            "Args": [],
+                            "Kwargs": {
+                                "total_xgmi_count": 6
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtCpuFunctionTest_XGMI",
+                            "Parallel": false,
+                            "Id": 46,
+                            "SeqId": 8,
+                            "Inst": "QtCpuFunctionTest_XGMI_0"
+                        }
+                    ]
+                },
+                {
+                    "Id": 9,
+                    "Name": "QtSystemPsuCheck_OCP 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "QDH Box power balance",
+                            "Tags": "QDH Box power balance",
+                            "Module": "test_psu_balance",
+                            "Class": "PSU",
+                            "Function": "test_psu_balance_multipsu",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_file": "dh_box_1v1_psu_balance.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtPsuFunctionTest_BoxPowerbalance",
+                            "Parallel": false,
+                            "Id": 47,
+                            "SeqId": 9,
+                            "Inst": "QtPsuFunctionTest_BoxPowerbalance_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "PSU INFO",
+                            "Module": "test_psu_balance",
+                            "Class": "PSU",
+                            "Function": "test_psu_balance",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "con_efficiency": {
+                                    "20%": [
+                                        "15%",
+                                        "25%"
+                                    ],
+                                    "15%": [
+                                        "25%",
+                                        "100%"
+                                    ]
+                                }
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtPsuFunctionTest_Powerbalance",
+                            "Parallel": false,
+                            "Id": 48,
+                            "SeqId": 9,
+                            "Inst": "QtPsuFunctionTest_Powerbalance_0"
+                        }
+                    ]
+                },
+                {
+                    "Id": 10,
+                    "Name": "QtSystemNicCheck_OCP 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "Qt Nic Port Check",
+                            "Tags": "Qt Nic Port Check",
+                            "Module": "nicport_check",
+                            "Class": "NicPortCheck",
+                            "Function": "test_nic_port_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "200000": [
+                                    "enp49s0f0np0",
+                                    "enp49s0f1np1",
+                                    "enp193s0f0np0",
+                                    "enp193s0f1np1"
+                                ]
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtNicPortCheck",
+                            "Parallel": false,
+                            "Id": 49,
+                            "SeqId": 10,
+                            "Inst": "QtNicPortCheck_0"
+                        }
+                    ]
+                },
+                {
+                    "Id": 11,
+                    "Name": "QtAmdCpuTurinHsTesting_OCP 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "FAN Function",
+                            "Module": "fan_speed",
+                            "Class": "FanSpeed",
+                            "Function": "test_set_fan_mode",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "set_fan_mode_cmd": "raw 0x3e 0x2f 0x01; sleep 3",
+                                "get_fan_mode_cmd": "raw 0x3e 0x30",
+                                "exp_fan_mode": "01"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtFanFunctionSet",
+                            "Parallel": false,
+                            "Id": 50,
+                            "SeqId": 11,
+                            "Inst": "QtFanFunctionSet_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "amdcpu_turin_hs_test",
+                            "Class": "AmdCpuTurinHsTest",
+                            "Function": "test_amdcpu_turin_hs",
+                            "Timeout": "30m",
+                            "Args": [],
+                            "Kwargs": {
+                                "tool_name": "AVT_Linux_NDA_2.10.1",
+                                "test_time": 1200,
+                                "sampling_interval": 10,
+                                "check_last_cnt": 10,
+                                "fan_duty": {
+                                    "0-35": "ipmitool raw 0x3e 0x31 0 40",
+                                    "36-40": "ipmitool raw 0x3e 0x31 0 55"
+                                },
+                                "spec": {
+                                    "9Y25": {
+                                        "21": {
+                                            "CPU0_temp_upper": 75,
+                                            "CPU1_temp_upper": 74
+                                        },
+                                        "22": {
+                                            "CPU0_temp_upper": 75,
+                                            "CPU1_temp_upper": 74
+                                        },
+                                        "23": {
+                                            "CPU0_temp_upper": 76,
+                                            "CPU1_temp_upper": 75
+                                        },
+                                        "24": {
+                                            "CPU0_temp_upper": 77,
+                                            "CPU1_temp_upper": 76
+                                        },
+                                        "25": {
+                                            "CPU0_temp_upper": 78,
+                                            "CPU1_temp_upper": 77
+                                        },
+                                        "26": {
+                                            "CPU0_temp_upper": 79,
+                                            "CPU1_temp_upper": 78
+                                        },
+                                        "27": {
+                                            "CPU0_temp_upper": 80,
+                                            "CPU1_temp_upper": 79
+                                        },
+                                        "28": {
+                                            "CPU0_temp_upper": 81,
+                                            "CPU1_temp_upper": 80
+                                        },
+                                        "29": {
+                                            "CPU0_temp_upper": 82,
+                                            "CPU1_temp_upper": 81
+                                        },
+                                        "30": {
+                                            "CPU0_temp_upper": 83,
+                                            "CPU1_temp_upper": 82
+                                        },
+                                        "31": {
+                                            "CPU0_temp_upper": 84,
+                                            "CPU1_temp_upper": 83
+                                        },
+                                        "32": {
+                                            "CPU0_temp_upper": 85,
+                                            "CPU1_temp_upper": 84
+                                        },
+                                        "33": {
+                                            "CPU0_temp_upper": 87,
+                                            "CPU1_temp_upper": 85
+                                        },
+                                        "34": {
+                                            "CPU0_temp_upper": 88,
+                                            "CPU1_temp_upper": 86
+                                        },
+                                        "35": {
+                                            "CPU0_temp_upper": 89,
+                                            "CPU1_temp_upper": 88
+                                        },
+                                        "36": {
+                                            "CPU0_temp_upper": 82,
+                                            "CPU1_temp_upper": 82
+                                        },
+                                        "37": {
+                                            "CPU0_temp_upper": 84,
+                                            "CPU1_temp_upper": 83
+                                        },
+                                        "38": {
+                                            "CPU0_temp_upper": 85,
+                                            "CPU1_temp_upper": 84
+                                        },
+                                        "39": {
+                                            "CPU0_temp_upper": 86,
+                                            "CPU1_temp_upper": 85
+                                        },
+                                        "40": {
+                                            "CPU0_temp_upper": 87,
+                                            "CPU1_temp_upper": 87
+                                        }
+                                    },
+                                    "9A75": {
+                                        "21": {
+                                            "CPU0_temp_upper": 72,
+                                            "CPU1_temp_upper": 73
+                                        },
+                                        "22": {
+                                            "CPU0_temp_upper": 72,
+                                            "CPU1_temp_upper": 73
+                                        },
+                                        "23": {
+                                            "CPU0_temp_upper": 73,
+                                            "CPU1_temp_upper": 74
+                                        },
+                                        "24": {
+                                            "CPU0_temp_upper": 74,
+                                            "CPU1_temp_upper": 75
+                                        },
+                                        "25": {
+                                            "CPU0_temp_upper": 75,
+                                            "CPU1_temp_upper": 76
+                                        },
+                                        "26": {
+                                            "CPU0_temp_upper": 76,
+                                            "CPU1_temp_upper": 77
+                                        },
+                                        "27": {
+                                            "CPU0_temp_upper": 77,
+                                            "CPU1_temp_upper": 78
+                                        },
+                                        "28": {
+                                            "CPU0_temp_upper": 78,
+                                            "CPU1_temp_upper": 80
+                                        },
+                                        "29": {
+                                            "CPU0_temp_upper": 80,
+                                            "CPU1_temp_upper": 81
+                                        },
+                                        "30": {
+                                            "CPU0_temp_upper": 81,
+                                            "CPU1_temp_upper": 82
+                                        },
+                                        "31": {
+                                            "CPU0_temp_upper": 82,
+                                            "CPU1_temp_upper": 83
+                                        },
+                                        "32": {
+                                            "CPU0_temp_upper": 83,
+                                            "CPU1_temp_upper": 84
+                                        },
+                                        "33": {
+                                            "CPU0_temp_upper": 84,
+                                            "CPU1_temp_upper": 85
+                                        },
+                                        "34": {
+                                            "CPU0_temp_upper": 85,
+                                            "CPU1_temp_upper": 86
+                                        },
+                                        "35": {
+                                            "CPU0_temp_upper": 86,
+                                            "CPU1_temp_upper": 87
+                                        },
+                                        "36": {
+                                            "CPU0_temp_upper": 81,
+                                            "CPU1_temp_upper": 81
+                                        },
+                                        "37": {
+                                            "CPU0_temp_upper": 82,
+                                            "CPU1_temp_upper": 82
+                                        },
+                                        "38": {
+                                            "CPU0_temp_upper": 83,
+                                            "CPU1_temp_upper": 84
+                                        },
+                                        "39": {
+                                            "CPU0_temp_upper": 84,
+                                            "CPU1_temp_upper": 85
+                                        },
+                                        "40": {
+                                            "CPU0_temp_upper": 85,
+                                            "CPU1_temp_upper": 86
+                                        }
+                                    }
+                                }
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtAmdCpuTurinHsTest",
+                            "Parallel": false,
+                            "Id": 51,
+                            "SeqId": 11,
+                            "Inst": "QtAmdCpuTurinHsTest_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "FAN Function",
+                            "Module": "fan_speed",
+                            "Class": "FanSpeed",
+                            "Function": "test_set_fan_mode",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "set_fan_mode_cmd": "raw 0x3e 0x2f 0x00; sleep 3",
+                                "get_fan_mode_cmd": "raw 0x3e 0x30",
+                                "exp_fan_mode": "00"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtFanFunctionSet",
+                            "Parallel": false,
+                            "Id": 52,
+                            "SeqId": 11,
+                            "Inst": "QtFanFunctionSet_3"
+                        }
+                    ]
+                },
+                {
+                    "Id": 12,
+                    "Name": "QtSystemConfigCheck_CX7BF3MINISuite_L6 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "SERVER INFO",
+                            "Module": "test_check_motherboard",
+                            "Class": "MOTHERBOARD",
+                            "Function": "test_server_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtServerInfoCheck",
+                            "Parallel": false,
+                            "Id": 53,
+                            "SeqId": 12,
+                            "Inst": "QtServerInfoCheck_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "MOTHERBOARD INFO",
+                            "Module": "test_check_motherboard",
+                            "Class": "MOTHERBOARD",
+                            "Function": "test_motherboard_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtMbInfoCheck",
+                            "Parallel": false,
+                            "Id": 54,
+                            "SeqId": 12,
+                            "Inst": "QtMbInfoCheck_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "MOTHERBOARD INFO",
+                            "Module": "test_check_motherboard",
+                            "Class": "MOTHERBOARD",
+                            "Function": "test_mbversion_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "tool_path": "InbUpdateTool",
+                                "tool_name": "FwUpdate.sh"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtMbFwCheck",
+                            "Parallel": false,
+                            "Id": 55,
+                            "SeqId": 12,
+                            "Inst": "QtMbFwCheck_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "retimer cpld check",
+                            "Module": "test_check_retimer",
+                            "Class": "RETIMER",
+                            "Function": "test_check_retimer_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtRetimerFwCheck",
+                            "Parallel": false,
+                            "Id": 56,
+                            "SeqId": 12,
+                            "Inst": "QtRetimerFwCheck_1"
+                        },
+                        {
+                            "Desc": "Fru topo check",
+                            "Tags": "Fru topo check",
+                            "Module": "fru_top",
+                            "Class": "FruTop",
+                            "Function": "test_fru_top_check",
+                            "Timeout": "10m",
+                            "Args": [],
+                            "Kwargs": {
+                                "eep_tool_version": "PcieEEpromTool-G225C",
+                                "skip_fru_protection": "false"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBF3HostTopoCheck",
+                            "Parallel": false,
+                            "Id": 57,
+                            "SeqId": 12,
+                            "Inst": "QtBF3HostTopoCheck_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "CPU INFO",
+                            "Module": "test_check_cpu",
+                            "Class": "CPU",
+                            "Function": "test_cpu_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtCpuInfoCheck",
+                            "Parallel": false,
+                            "Id": 58,
+                            "SeqId": 12,
+                            "Inst": "QtCpuInfoCheck_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "DRAM INFO",
+                            "Module": "test_check_dram",
+                            "Class": "DRAM",
+                            "Function": "test_dram_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtDramInfoCheck",
+                            "Parallel": false,
+                            "Id": 59,
+                            "SeqId": 12,
+                            "Inst": "QtDramInfoCheck_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "DISK NVME INFO",
+                            "Module": "test_check_nvme",
+                            "Class": "NVME",
+                            "Function": "test_nvme_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtNvmeInfoCheck",
+                            "Parallel": false,
+                            "Id": 60,
+                            "SeqId": 12,
+                            "Inst": "QtNvmeInfoCheck_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "FRU INFO",
+                            "Module": "test_check_fru",
+                            "Class": "FRU",
+                            "Function": "test_fru_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "golden_file_name": "check_fru_golden.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtFruInfoCheck",
+                            "Parallel": false,
+                            "Id": 61,
+                            "SeqId": 12,
+                            "Inst": "QtFruInfoCheck_1"
+                        },
+                        {
+                            "Desc": "DPU info check on host",
+                            "Tags": "DPU info check on host",
+                            "Module": "test_check_dpu",
+                            "Class": "DPU",
+                            "Function": "test_check_dpu_on_host",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtSmartnicInfoCheck",
+                            "Parallel": false,
+                            "Id": 62,
+                            "SeqId": 12,
+                            "Inst": "QtSmartnicInfoCheck_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "NIC INFO",
+                            "Module": "test_check_nic",
+                            "Class": "NIC",
+                            "Function": "test_check_nic_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtNicInfoCheck",
+                            "Parallel": false,
+                            "Id": 63,
+                            "SeqId": 12,
+                            "Inst": "QtNicInfoCheck_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "PSU INFO",
+                            "Module": "test_check_psu",
+                            "Class": "PSU",
+                            "Function": "test_psu_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "tool_path": "InbUpdateTool",
+                                "tool_name": "FwUpdate.sh"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtPsuInfoCheck",
+                            "Parallel": false,
+                            "Id": 64,
+                            "SeqId": 12,
+                            "Inst": "QtPsuInfoCheck_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "check_sdr",
+                            "Class": "Checksdr",
+                            "Function": "test_sdr_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "golden_file_name": "check_sdr_golden.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBmcSdrCheck",
+                            "Parallel": false,
+                            "Id": 65,
+                            "SeqId": 12,
+                            "Inst": "QtBmcSdrCheck_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "test_check_cmos3v",
+                            "Class": "CMOS",
+                            "Function": "test_cmos3v",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "exp_value": 2.96
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBatteryFunctionTest",
+                            "Parallel": false,
+                            "Id": 66,
+                            "SeqId": 12,
+                            "Inst": "QtBatteryFunctionTest_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "PCI INFO",
+                            "Module": "pcie_test",
+                            "Class": "PCIe",
+                            "Function": "test_pcie_compare_with_golden",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtPciInfoCheck",
+                            "Parallel": false,
+                            "Id": 67,
+                            "SeqId": 12,
+                            "Inst": "QtPciInfoCheck_2"
+                        },
+                        {
+                            "Desc": "smbios type 9",
+                            "Tags": "SMBIOS TYPE 9",
+                            "Module": "smbios_test",
+                            "Class": "SMBIOS",
+                            "Function": "test_smbios_type_9",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtSMBIOSType9Check",
+                            "Parallel": false,
+                            "Id": 68,
+                            "SeqId": 12,
+                            "Inst": "QtSMBIOSType9Check_1"
+                        }
+                    ]
+                },
+                {
+                    "Id": 13,
+                    "Name": "QtBoxConfigCheckDHonHOST_L6 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "check_sdr",
+                            "Class": "Checksdr",
+                            "Function": "test_sdr_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "ipmitool_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U toutiao -P toutiao!@# -p 8623 sdr list",
+                                "golden_file_name": "check_sdr_golden_box_L6.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxSdrCheckL6",
+                            "Parallel": false,
+                            "Id": 69,
+                            "SeqId": 13,
+                            "Inst": "QtBoxSdrCheckL6_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "test_check_box",
+                            "Class": "BOX",
+                            "Function": "test_box_sw_info_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_base_name": "config_base_box_L6.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxSWInfoCheckL6",
+                            "Parallel": false,
+                            "Id": 70,
+                            "SeqId": 13,
+                            "Inst": "QtBoxSWInfoCheckL6_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "test_check_box",
+                            "Class": "BOX",
+                            "Function": "test_donghu_box_sw_fw_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_base_name": "config_base_box_L6.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxSWFwCheckL6",
+                            "Parallel": false,
+                            "Id": 71,
+                            "SeqId": 13,
+                            "Inst": "QtBoxSWFwCheckL6_1"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "test_check_box",
+                            "Class": "BOX",
+                            "Function": "test_donghu_box_fru_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_base_name": "config_base_box_L6.json",
+                                "golden_file_name": "L6_box_fru.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxFruCheckL6",
+                            "Parallel": false,
+                            "Id": 72,
+                            "SeqId": 13,
+                            "Inst": "QtBoxFruCheckL6_1"
+                        }
+                    ]
+                },
+                {
+                    "Id": 14,
+                    "Name": "QtSystemHealthCheckDH_OCPL6 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "HEALTH INFO",
+                            "Module": "sys_event",
+                            "Class": "SysEvent",
+                            "Function": "test_sys_event",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_file": "whitelist_cx7_with_bf3mini_l6.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtSystemBlacklistCheck",
+                            "Parallel": false,
+                            "Id": 73,
+                            "SeqId": 14,
+                            "Inst": "QtSystemBlacklistCheck_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "HEALTH INFO",
+                            "Module": "smart_test",
+                            "Class": "SmartTest",
+                            "Function": "test_check_smart",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_file": "smart_whitelist.json",
+                                "spec_file": "smart_spec.json",
+                                "upload_increase_type": [],
+                                "check_increase_type": [
+                                    "full_flow"
+                                ]
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtSystemSmartCheck_FullFlow",
+                            "Parallel": false,
+                            "Id": 74,
+                            "SeqId": 14,
+                            "Inst": "QtSystemSmartCheck_FullFlow_1"
+                        }
+                    ]
+                },
+                {
+                    "Id": 15,
+                    "Name": "QtSystemBmcSet_DefaultOCP 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "bmc_fun_test",
+                            "Class": "Bmctest",
+                            "Function": "test_bmc_loaddef",
+                            "Timeout": "12m",
+                            "Args": [],
+                            "Kwargs": {
+                                "test_bmc_loaddef_exp": "0",
+                                "execution_delay": 300
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBmcBmcsettingsSet_Default",
+                            "Parallel": false,
+                            "Id": 75,
+                            "SeqId": 15,
+                            "Inst": "QtBmcBmcsettingsSet_Default_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "bmc_fun_test",
+                            "Class": "Bmctest",
+                            "Function": "test_Powerpolicy_set",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtMbBmcsettingsSet_Powerpolicy",
+                            "Parallel": false,
+                            "Id": 76,
+                            "SeqId": 15,
+                            "Inst": "QtMbBmcsettingsSet_Powerpolicy_0"
+                        }
+                    ]
+                },
+                {
+                    "Id": 16,
+                    "Name": "QtSystemBiosSet_DefaultOCP 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "BIOS Setup Load Default",
+                            "Tags": "BIOS Setup",
+                            "Module": "biossetup_test",
+                            "Class": "BIOSSETUP",
+                            "Function": "test_biossetup_loadefault",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBiosBiossettingsSet_Default",
+                            "Parallel": false,
+                            "Id": 77,
+                            "SeqId": 16,
+                            "Inst": "QtBiosBiossettingsSet_Default_0"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "bios_setting_test",
+                            "Class": "BiosSettingTest",
+                            "Function": "test_bios_setting",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "action": "set",
+                                "sce_tool_name": "SCELNX_64",
+                                "user_password": "",
+                                "bios_setting": [
+                                    {
+                                        "setup_question": "Number of PCI Segments",
+                                        "value": "1"
+                                    }
+                                ]
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBiosBiossettingsSet_singleSegment_CX7",
+                            "Parallel": false,
+                            "Id": 78,
+                            "SeqId": 16,
+                            "Inst": "QtBiosBiossettingsSet_singleSegment_CX7_0"
+                        }
+                    ]
+                },
+                {
+                    "Id": 17,
+                    "Name": "QtSystemDC_OCP 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "Tail Status Check",
+                            "Tags": "Tail Status",
+                            "Module": "cycles_test",
+                            "Class": "CYCLE",
+                            "Function": "test_tail_status_check",
+                            "Timeout": "30m",
+                            "Args": [],
+                            "Kwargs": {
+                                "cycle_type": 1
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "TailStatusCheck",
+                            "Parallel": false,
+                            "Id": 79,
+                            "SeqId": 17,
+                            "Inst": "TailStatusCheck_0"
+                        },
+                        {
+                            "Desc": "Execute Cycle as cycle type",
+                            "Tags": "CYCLE",
+                            "Module": "cycles_test",
+                            "Class": "CYCLE",
+                            "Function": "test_execute_cycle",
+                            "Timeout": "30m",
+                            "Args": [],
+                            "Kwargs": {
+                                "cycle_type": 1
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "ExecuteCycle",
+                            "Parallel": false,
+                            "Id": 80,
+                            "SeqId": 17,
+                            "Inst": "ExecuteCycle_0"
+                        }
+                    ]
+                },
+                {
+                    "Id": 18,
+                    "Name": "QtSystemBiosCheck_DefaultOCP 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "bios_setting_by_file",
+                            "Class": "BiosSettingByFile",
+                            "Function": "test_bios_setting_by_file",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "standard_file": [
+                                    "JiGuangOCP_HOST.txt"
+                                ],
+                                "ignore_reg": [
+                                    "^//.*",
+                                    "^HIICrc32"
+                                ]
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBiosBiossettingsCheck_At",
+                            "Parallel": false,
+                            "Id": 81,
+                            "SeqId": 18,
+                            "Inst": "QtBiosBiossettingsCheck_At_0"
+                        }
+                    ]
+                },
+                {
+                    "Id": 19,
+                    "Name": "QtSystemConfigCheck_CX7BF3MINISuite_L6 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "SERVER INFO",
+                            "Module": "test_check_motherboard",
+                            "Class": "MOTHERBOARD",
+                            "Function": "test_server_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtServerInfoCheck",
+                            "Parallel": false,
+                            "Id": 82,
+                            "SeqId": 19,
+                            "Inst": "QtServerInfoCheck_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "MOTHERBOARD INFO",
+                            "Module": "test_check_motherboard",
+                            "Class": "MOTHERBOARD",
+                            "Function": "test_motherboard_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtMbInfoCheck",
+                            "Parallel": false,
+                            "Id": 83,
+                            "SeqId": 19,
+                            "Inst": "QtMbInfoCheck_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "MOTHERBOARD INFO",
+                            "Module": "test_check_motherboard",
+                            "Class": "MOTHERBOARD",
+                            "Function": "test_mbversion_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "tool_path": "InbUpdateTool",
+                                "tool_name": "FwUpdate.sh"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtMbFwCheck",
+                            "Parallel": false,
+                            "Id": 84,
+                            "SeqId": 19,
+                            "Inst": "QtMbFwCheck_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "retimer cpld check",
+                            "Module": "test_check_retimer",
+                            "Class": "RETIMER",
+                            "Function": "test_check_retimer_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtRetimerFwCheck",
+                            "Parallel": false,
+                            "Id": 85,
+                            "SeqId": 19,
+                            "Inst": "QtRetimerFwCheck_2"
+                        },
+                        {
+                            "Desc": "Fru topo check",
+                            "Tags": "Fru topo check",
+                            "Module": "fru_top",
+                            "Class": "FruTop",
+                            "Function": "test_fru_top_check",
+                            "Timeout": "10m",
+                            "Args": [],
+                            "Kwargs": {
+                                "eep_tool_version": "PcieEEpromTool-G225C",
+                                "skip_fru_protection": "false"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBF3HostTopoCheck",
+                            "Parallel": false,
+                            "Id": 86,
+                            "SeqId": 19,
+                            "Inst": "QtBF3HostTopoCheck_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "CPU INFO",
+                            "Module": "test_check_cpu",
+                            "Class": "CPU",
+                            "Function": "test_cpu_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtCpuInfoCheck",
+                            "Parallel": false,
+                            "Id": 87,
+                            "SeqId": 19,
+                            "Inst": "QtCpuInfoCheck_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "DRAM INFO",
+                            "Module": "test_check_dram",
+                            "Class": "DRAM",
+                            "Function": "test_dram_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtDramInfoCheck",
+                            "Parallel": false,
+                            "Id": 88,
+                            "SeqId": 19,
+                            "Inst": "QtDramInfoCheck_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "DISK NVME INFO",
+                            "Module": "test_check_nvme",
+                            "Class": "NVME",
+                            "Function": "test_nvme_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtNvmeInfoCheck",
+                            "Parallel": false,
+                            "Id": 89,
+                            "SeqId": 19,
+                            "Inst": "QtNvmeInfoCheck_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "FRU INFO",
+                            "Module": "test_check_fru",
+                            "Class": "FRU",
+                            "Function": "test_fru_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "golden_file_name": "check_fru_golden.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtFruInfoCheck",
+                            "Parallel": false,
+                            "Id": 90,
+                            "SeqId": 19,
+                            "Inst": "QtFruInfoCheck_2"
+                        },
+                        {
+                            "Desc": "DPU info check on host",
+                            "Tags": "DPU info check on host",
+                            "Module": "test_check_dpu",
+                            "Class": "DPU",
+                            "Function": "test_check_dpu_on_host",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtSmartnicInfoCheck",
+                            "Parallel": false,
+                            "Id": 91,
+                            "SeqId": 19,
+                            "Inst": "QtSmartnicInfoCheck_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "NIC INFO",
+                            "Module": "test_check_nic",
+                            "Class": "NIC",
+                            "Function": "test_check_nic_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtNicInfoCheck",
+                            "Parallel": false,
+                            "Id": 92,
+                            "SeqId": 19,
+                            "Inst": "QtNicInfoCheck_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "PSU INFO",
+                            "Module": "test_check_psu",
+                            "Class": "PSU",
+                            "Function": "test_psu_info",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "tool_path": "InbUpdateTool",
+                                "tool_name": "FwUpdate.sh"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtPsuInfoCheck",
+                            "Parallel": false,
+                            "Id": 93,
+                            "SeqId": 19,
+                            "Inst": "QtPsuInfoCheck_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "check_sdr",
+                            "Class": "Checksdr",
+                            "Function": "test_sdr_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "golden_file_name": "check_sdr_golden.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBmcSdrCheck",
+                            "Parallel": false,
+                            "Id": 94,
+                            "SeqId": 19,
+                            "Inst": "QtBmcSdrCheck_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "test_check_cmos3v",
+                            "Class": "CMOS",
+                            "Function": "test_cmos3v",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "exp_value": 2.96
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBatteryFunctionTest",
+                            "Parallel": false,
+                            "Id": 95,
+                            "SeqId": 19,
+                            "Inst": "QtBatteryFunctionTest_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "PCI INFO",
+                            "Module": "pcie_test",
+                            "Class": "PCIe",
+                            "Function": "test_pcie_compare_with_golden",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtPciInfoCheck",
+                            "Parallel": false,
+                            "Id": 96,
+                            "SeqId": 19,
+                            "Inst": "QtPciInfoCheck_3"
+                        },
+                        {
+                            "Desc": "smbios type 9",
+                            "Tags": "SMBIOS TYPE 9",
+                            "Module": "smbios_test",
+                            "Class": "SMBIOS",
+                            "Function": "test_smbios_type_9",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {},
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtSMBIOSType9Check",
+                            "Parallel": false,
+                            "Id": 97,
+                            "SeqId": 19,
+                            "Inst": "QtSMBIOSType9Check_2"
+                        }
+                    ]
+                },
+                {
+                    "Id": 20,
+                    "Name": "QtBoxConfigCheckDHonHOST_L6 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "BMC INFO",
+                            "Module": "check_sdr",
+                            "Class": "Checksdr",
+                            "Function": "test_sdr_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "ipmitool_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U toutiao -P toutiao!@# -p 8623 sdr list",
+                                "golden_file_name": "check_sdr_golden_box_L6.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxSdrCheckL6",
+                            "Parallel": false,
+                            "Id": 98,
+                            "SeqId": 20,
+                            "Inst": "QtBoxSdrCheckL6_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "test_check_box",
+                            "Class": "BOX",
+                            "Function": "test_box_sw_info_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_base_name": "config_base_box_L6.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxSWInfoCheckL6",
+                            "Parallel": false,
+                            "Id": 99,
+                            "SeqId": 20,
+                            "Inst": "QtBoxSWInfoCheckL6_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "test_check_box",
+                            "Class": "BOX",
+                            "Function": "test_donghu_box_sw_fw_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_base_name": "config_base_box_L6.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxSWFwCheckL6",
+                            "Parallel": false,
+                            "Id": 100,
+                            "SeqId": 20,
+                            "Inst": "QtBoxSWFwCheckL6_2"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "",
+                            "Module": "test_check_box",
+                            "Class": "BOX",
+                            "Function": "test_donghu_box_fru_check",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_base_name": "config_base_box_L6.json",
+                                "golden_file_name": "L6_box_fru.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtBoxFruCheckL6",
+                            "Parallel": false,
+                            "Id": 101,
+                            "SeqId": 20,
+                            "Inst": "QtBoxFruCheckL6_2"
+                        }
+                    ]
+                },
+                {
+                    "Id": 21,
+                    "Name": "QtSystemHealthCheckDH_OCPL6 1/1",
+                    "TestItems": [
+                        {
+                            "Desc": "",
+                            "Tags": "HEALTH INFO",
+                            "Module": "sys_event",
+                            "Class": "SysEvent",
+                            "Function": "test_sys_event",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_file": "whitelist_cx7_with_bf3mini_l6.json"
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtSystemBlacklistCheck",
+                            "Parallel": false,
+                            "Id": 102,
+                            "SeqId": 21,
+                            "Inst": "QtSystemBlacklistCheck_3"
+                        },
+                        {
+                            "Desc": "",
+                            "Tags": "HEALTH INFO",
+                            "Module": "smart_test",
+                            "Class": "SmartTest",
+                            "Function": "test_check_smart",
+                            "Timeout": "5m",
+                            "Args": [],
+                            "Kwargs": {
+                                "config_file": "smart_whitelist.json",
+                                "spec_file": "smart_spec.json",
+                                "upload_increase_type": [],
+                                "check_increase_type": [
+                                    "full_flow"
+                                ]
+                            },
+                            "Version": "NULL",
+                            "TestNode": [
+                                0
+                            ],
+                            "TestItem": "QtSystemSmartCheck_FullFlow",
+                            "Parallel": false,
+                            "Id": 103,
+                            "SeqId": 21,
+                            "Inst": "QtSystemSmartCheck_FullFlow_2"
+                        }
+                    ]
+                }
+            ],
+            "total_seq_num": 22,
+            "total_tc_num": 104
+        }
+    }
+}

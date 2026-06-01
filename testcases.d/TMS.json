@@ -1,0 +1,475 @@
+{
+  "QtBoxTmsFsblFWUPGRADE": {
+		"Desc": "",
+		"Tags": "Tms Fsbl FW UPGRADE",
+		"Module": "tms_fw",
+		"Class": "TmsFw",
+		"Function": "test_tms_fw_update",
+		"Timeout": "20m",
+		"Args": [],
+		"Kwargs": {
+      "fsbl": {
+        "bin_name": "comet_fsbl_0.13.0_20241113.bin",
+        "switch": "on"
+	    }
+		}
+	},
+  "QtBoxTmsMcuFWUPGRADE": {
+		"Desc": "",
+		"Tags": "Tms Mcu FW UPGRADE",
+		"Module": "tms_fw",
+		"Class": "TmsFw",
+		"Function": "test_tms_fw_update",
+		"Timeout": "60m",
+		"Args": [],
+		"Kwargs": {
+      "mcu": {
+        "bin_name": "mcu_1.18.0f_package.bin",
+        "switch": "on"
+      }
+		}
+	},
+  "QtBoxTmsDebugosFWUPGRADE": {
+		"Desc": "",
+		"Tags": "Tms Debugos FW UPGRADE",
+		"Module": "tms_fw",
+		"Class": "TmsFw",
+		"Function": "test_tms_fw_update",
+		"Timeout": "20m",
+		"Args": [],
+		"Kwargs": {
+      "debugos": {
+        "bin_name": "comet_debug_os_0.0.2_package.bin",
+        "switch": "on"
+      }
+		}
+	},
+  "QtTMSFwCheck": {
+		"Desc": "",
+		"Tags": "Tms Fw Check",
+		"Module": "tms_fw",
+		"Class": "TmsFw",
+		"Function": "test_tms_fw_check",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+
+	"QtTMSLinkCheck": {
+		"Desc": "",
+		"Tags": "Tms Link Check",
+		"Module": "tms_link_check",
+		"Class": "TmsLinkCheck",
+		"Function": "test_tms_link_check",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtTMSFruCheck": {
+    "Desc": "",
+		"Tags": "Tms Fw Check",
+		"Module": "tms_fw",
+		"Class": "TmsFw",
+		"Function": "test_tms_fru_check",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtTmsPcieStatusCheck": {
+		"Desc": "",
+		"Tags": "Tms Pcie Status Check",
+		"Module": "tms_pcie_test",
+		"Class": "TmsPcieTest",
+		"Function": "test_tms_pcie",
+		"Timeout": "25m",
+		"Args": [],
+		"Kwargs": {
+			"test_item": "STATUS"
+		}
+	},
+	"QtTmsPcieRDCheck": {
+		"Desc": "",
+		"Tags": "Tms Pcie RD Check",
+		"Module": "tms_pcie_test",
+		"Class": "TmsPcieTest",
+		"Function": "test_tms_pcie",
+		"Timeout": "60m",
+		"Args": [],
+		"Kwargs": {
+			"test_item": "RD",
+			"test_time": 1800
+		}
+	},
+	"QtTmsPcieWRCheck": {
+		"Desc": "",
+		"Tags": "Tms Pcie WR Check",
+		"Module": "tms_pcie_test",
+		"Class": "TmsPcieTest",
+		"Function": "test_tms_pcie",
+		"Timeout": "60m",
+		"Args": [],
+		"Kwargs": {
+			"test_item": "WR",
+			"test_time": 1800
+		}
+	},
+	"QtTmsPcieRWCheck": {
+		"Desc": "",
+		"Tags": "Tms Pcie RW Check",
+		"Module": "tms_pcie_test",
+		"Class": "TmsPcieTest",
+		"Function": "test_tms_pcie",
+		"Timeout": "60m",
+		"Args": [],
+		"Kwargs": {
+			"test_item": "RW",
+			"test_time": 1800
+		}
+	},
+	"QtTmsCometErrorCheck": {
+		"Desc": "",
+		"Tags": "Tms Comet Error Check",
+		"Module": "tms_comet_error",
+		"Class": "TmsCometError",
+		"Function": "test_tms_comet_error",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+		    "ECC Mode": {
+                "DDR ECC Mode": "On"
+            },
+			"ECC Correctable Errors": {
+				"L1 CE Count": "0",
+				"L2 CE Count": "0",
+				"L3 CE Count": "0",
+				"SYSRAM CE Count": "0",
+				"DDR Inline CE Count": "0",
+				"DDR Link CE Count": "0",
+				"BARRAM CE Count": "0",
+				"DDRSRAM CE Count": "0"
+			},
+			"ECC Uncorrectable Errors": {
+				"L1 UE Count": "0",
+				"L2 UE Count": "0",
+				"L3 UE Count": "0",
+				"SYSRAM UE Count": "0",
+				"DDR Inline UE Count": "0",
+				"DDR Link UE Count": "0",
+				"BARRAM UE Count": "0",
+				"DDRSRAM UE Count": "0"
+			},
+			"SOC RAS Error Statistics": {
+				"Icache Tilelink Bus Error": "0",
+				"Icache or ITIM CE Count": "0",
+				"ITIM UE Count": "0",
+				"Load Store PTW Tilelink bus Error": "0",
+				"Dcache CE Count": "0",
+				"Dcache UE Count": "0",
+				"L2 Cache UE Count": "0",
+				"LLC UE Count": "0",
+				"SYSRAM UE Count": "0",
+				"DDR UE Count": "0",
+				"BARRAM UE Count": "0",
+				"DDRSRAM UE Count": "0",
+				"Watchdog Timeout Count": "0",
+				"NOC Timeout Count": "0",
+				"Thermal Over Count": "0",
+				"VR Hot": "0",
+				"Device Kernel Panic": "No",
+                "Daemon Crash": "No",
+				"Thermal Overheat Count": "0",
+				"Thermal health": "Yes",
+				"Encoder Freq": "1000",
+				"Decoder Freq": "900"
+			}
+		}
+	},
+	"QtTmsCometErrorCheck_DDR": {
+		"Desc": "",
+		"Tags": "Tms Comet Error Check",
+		"Module": "tms_comet_error",
+		"Class": "TmsCometError",
+		"Function": "test_tms_comet_error",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+		    "ECC Mode": {
+                "DDR ECC Mode": "On"
+            },
+			"ECC Correctable Errors": {
+				"L1 CE Count": "0",
+				"L2 CE Count": "0",
+				"L3 CE Count": "0",
+				"SYSRAM CE Count": "0",
+				"DDR Inline CE Count": "0",
+				"DDR Link CE Count": "0",
+				"DDRSRAM CE Count": "0"
+			},
+			"ECC Uncorrectable Errors": {
+				"L1 UE Count": "0",
+				"L2 UE Count": "0",
+				"L3 UE Count": "0",
+				"SYSRAM UE Count": "0",
+				"DDR Inline UE Count": "0",
+				"DDR Link UE Count": "0",
+				"DDRSRAM UE Count": "0"
+			},
+			"SOC RAS Error Statistics": {
+				"Icache Tilelink Bus Error": "0",
+				"Icache or ITIM CE Count": "0",
+				"ITIM UE Count": "0",
+				"Load Store PTW Tilelink bus Error": "0",
+				"Dcache CE Count": "0",
+				"Dcache UE Count": "0",
+				"L2 Cache UE Count": "0",
+				"LLC UE Count": "0",
+				"SYSRAM UE Count": "0",
+				"DDR UE Count": "0",
+				"BARRAM UE Count": "0",
+				"DDRSRAM UE Count": "0",
+				"Watchdog Timeout Count": "0",
+				"NOC Timeout Count": "0",
+				"Thermal Over Count": "0",
+				"VR Hot": "0",
+				"Device Kernel Panic": "No",
+                "Daemon Crash": "No",
+				"Thermal Overheat Count": "0",
+				"Thermal health": "Yes",
+				"Encoder Freq": "1000",
+				"Decoder Freq": "900"
+			}
+		}
+	},
+	"QtTmsPerformanceTest": {
+		"Desc": "",
+		"Tags": "Tms Performance Test",
+		"Module": "tms_performance_test",
+		"Class": "TmsPerformanceTest",
+		"Function": "test_tms_performance",
+		"Timeout": "720m",
+		"Args": [],
+		"Kwargs": {
+			"mode": "serial",
+			"case_cmd": {
+			"enc_h265_480p": "mts video enable transPerf enc_h265_480p all all 30 --device {id}",
+			"dec_h264_480p": "mts video enable transPerf dec_h264_480p all all 30 --device {id}",
+			"dec_h264_1080p": "mts video enable transPerf dec_h264_1080p all all 30 --device {id}",
+			"dec_h264_8k": "mts video enable transPerf dec_h264_8k all all 30 --device {id}",
+			"dec_h264_480p_10bit": "mts video enable transPerf dec_h264_480p_10bit all all 30 --device {id}",
+			"dec_h264_8k_10bit": "mts video enable transPerf dec_h264_8k_10bit all all 30 --device {id}",
+			"dec_hevc_480p": "mts video enable transPerf dec_hevc_480p all all 30 --device {id}",
+			"dec_hevc_8k": "mts video enable transPerf dec_hevc_8k all all 30 --device {id}",
+			"dec_hevc_480p_10bit": "mts video enable transPerf dec_hevc_480p_10bit all all 30 --device {id}",
+			"dec_hevc_8k_10bit": "mts video enable transPerf dec_hevc_8k_10bit all all 30 --device {id}",
+			"dec_vp9_480p": "mts video enable transPerf dec_vp9_480p all all 30 --device {id}",
+			"dec_vp9_8k": "mts video enable transPerf dec_vp9_8k all all 30 --device {id}",
+			"dec_vp9_480p_10bit": "mts video enable transPerf dec_vp9_480p_10bit all all 30 --device {id}",
+			"dec_vp9_8k_10bit": "mts video enable transPerf dec_vp9_8k_10bit all all 30 --device {id}",
+			"dec_av1_480p": "mts video enable transPerf dec_av1_480p all all 30 --device {id}",
+			"dec_av1_8k": "mts video enable transPerf dec_av1_8k all all 30 --device {id}",
+			"dec_av1_480p_10bit": "mts video enable transPerf dec_av1_480p_10bit all all 30 --device {id}",
+			"dec_av1_8k_10bit": "mts video enable transPerf dec_av1_8k_10bit all all 30 --device {id}",
+			"trans_h264_480p": "mts video enable transPerf trans_h264_480p all all 30 --device {id}",
+			"trans_h264_4k": "mts video enable transPerf trans_h264_4k all all 30 --device {id}",
+			"trans_h264_480p_10bit": "mts video enable transPerf trans_h264_480p_10bit all all 30 --device {id}",
+			"trans_h264_4k_10bit": "mts video enable transPerf trans_h264_4k_10bit all all 30 --device {id}",
+			"trans_hevc_480p": "mts video enable transPerf trans_hevc_480p all all 30 --device {id}",
+			"trans_hevc_4k": "mts video enable transPerf trans_hevc_4k all all 30 --device {id}",
+			"trans_hevc_480p_10bit": "mts video enable transPerf trans_hevc_480p_10bit all all 30 --device {id}",
+			"trans_hevc_4k_10bit": "mts video enable transPerf trans_hevc_4k_10bit all all 30 --device {id}",
+			"trans_vp9_480p": "mts video enable transPerf trans_vp9_480p all all 30 --device {id}",
+			"trans_vp9_480p_10bit": "mts video enable transPerf trans_vp9_480p_10bit all all 30 --device {id}",
+			"trans_vp9_4k_10bit": "mts video enable transPerf trans_vp9_4k_10bit all all 30 --device {id}",
+			"trans_av1_480p ": "mts video enable transPerf trans_av1_480p all all 30 --device {id}",
+			"trans_av1_480p_10bit": "mts video enable transPerf trans_av1_480p_10bit all all 30 --device {id}",
+			"trans_av1_4k_10bit": "mts video enable transPerf trans_av1_4k_10bit all all 30 --device {id}",
+			"trans_hevc_1080p_massive_bird": "mts video enable transPerf trans_hevc_1080p_massive_bird all all 30 --device {id}",
+			"trans_hevc_1080p_10bit_massive_bird": "mts video enable transPerf trans_hevc_1080p_10bit_massive_bird all all 30 --device {id}",
+			"trans_av1_720p_10to8bit": "mts video enable transPerf trans_av1_720p_10to8bit all all 30 --device {id}"
+		}
+		}
+	},
+	"QtTmsPerformanceTest_Parallel": {
+		"Desc": "",
+		"Tags": "Tms Performance Test",
+		"Module": "tms_performance_test",
+		"Class": "TmsPerformanceTest",
+		"Function": "test_tms_performance",
+		"Timeout": "720m",
+		"Args": [],
+		"Kwargs": {
+			"mode": "parallel",
+			"interval_time": 30,
+			"case_cmd": {
+				"dec_h264_8k": "mts_video enable transPerf dec_h264_8k all all 3600 --device {id} --extra_args='--threads 52' --extra_timeout 100000000 > dec_h264_8k_{id}.log 2>&1 &",
+				"dec_vp9_8k_10bit": "mts_video enable transPerf dec_vp9_8k_10bit all all 3600 --device {id} --extra_args='--threads 24' --extra_timeout 100000000 > dec_vp9_8k_10bit_{id}.log 2>&1 &",
+				"trans_hevc_1080p_massive_bird": "mts_video enable transPerf trans_hevc_1080p_massive_bird all all 3600 --device {id} --extra_args='--threads 90' --extra_timeout 100000000 > trans_hevc_1080p_massive_bird_{id}.log 2>&1 &",
+				"trans_av1_720p_10to8bit": "mts_video enable transPerf trans_av1_720p_10to8bit all all 3600 --device {id} --extra_args='--threads 160' --extra_timeout 100000000 > trans_av1_720p_10to8bit_{id}.log 2>&1 &"
+			}
+		}
+	},
+  "QtTmsTdpTest": {
+		"Desc": "",
+		"Tags": "Tms Tdp Test",
+		"Module": "tms_tdp_test",
+		"Class": "TmsTdpTest",
+		"Function": "test_tms_tdp",
+		"Timeout": "720m",
+		"Args": [],
+		"Kwargs": {
+        "stress_time": 7200,
+        "delay_time": 20,
+        "start_after_time":20,
+        "end_before_time":20,
+        "exp_power": 90
+		}
+	},
+	"QtTmsStressTest6h": {
+		"Desc": "",
+		"Tags": "Tms Tdp Test",
+		"Module": "tms_tdp_test",
+		"Class": "TmsTdpTest",
+		"Function": "test_tms_tdp",
+		"Timeout": "720m",
+		"Args": [],
+		"Kwargs": {
+        "stress_time": 21600,
+        "delay_time": 20,
+        "start_after_time":20,
+        "end_before_time":20,
+        "exp_power": 90
+		}
+	},
+  "QtTmsStressTest5m": {
+		"Desc": "",
+		"Tags": "Tms Tdp Test",
+		"Module": "tms_tdp_test",
+		"Class": "TmsTdpTest",
+		"Function": "test_tms_tdp",
+		"Timeout": "10m",
+		"Args": [],
+		"Kwargs": {
+       "stress_time": 300,
+        "delay_time": 20,
+        "start_after_time":20,
+        "end_before_time":20,
+        "exp_power": 90
+		}
+	},
+  "QtTmsDdrTtm": {
+		"Desc": "",
+		"Tags": "Tms Ddr Ttm Test",
+		"Module": "tms_ddr_ttm",
+		"Class": "TmsDdrTtm",
+		"Function": "test_tms_ddr_ttm",
+		"Timeout": "200m",
+		"Args": [],
+		"Kwargs": {
+        "ddr_cmd": "mts ddr enable ttm rw 100",
+        "timeout": 72000,
+        "interval_time": 20
+		}
+	},
+
+	"QtTMSSystemCheck_H2D_D2H": {
+			"Desc": "",
+			"Tags": "",
+			"Module": "tms_system_check",
+			"Class": "TmsSystemCheck",
+			"Function": "test_tms_system_h2d_d2h",
+			"Timeout": "15m",
+			"Args": [],
+			"Kwargs": {
+					"test_time": 15,
+					"pass_flag": "PASSED"
+			}
+	},
+	"QtTMSSystemCheck_P2P": {
+			"Desc": "",
+			"Tags": "",
+			"Module": "tms_system_check",
+			"Class": "TmsSystemCheck",
+			"Function": "test_tms_system_p2p",
+			"Timeout": "15m",
+			"Args": [],
+			"Kwargs": {
+					"test_time": 15,
+					"pass_flag": "PASSED"
+			}
+	},
+	"QtTMSSystemCheck_PERF": {
+			"Desc": "",
+			"Tags": "",
+			"Module": "tms_system_check",
+			"Class": "TmsSystemCheck",
+			"Function": "test_tms_system_perf",
+			"Timeout": "15m",
+			"Args": [],
+			"Kwargs": {
+					"groups": {
+							"0": ["0000:18:00.0", "0000:3a:00.0", "0000:9a:00.0", "0000:ba:00.0"],
+							"1": ["0000:19:00.0", "0000:3b:00.0", "0000:9b:00.0", "0000:bb:00.0"],
+							"2": ["0000:4c:00.0", "0000:5d:00.0", "0000:cb:00.0", "0000:db:00.0"],
+							"3": ["0000:4d:00.0", "0000:5e:00.0", "0000:cc:00.0", "0000:dc:00.0"]
+					},
+					"test_time": 120,
+					"interval_time": 5
+			}
+	},
+	"QtTMSSystemCheck_GDR": {
+			"Desc": "",
+			"Tags": "",
+			"Module": "tms_system_check",
+			"Class": "TmsSystemCheck",
+			"Function": "test_tms_system_gdr",
+			"Timeout": "15m",
+			"Args": [],
+			"Kwargs": {
+					"set_ip_cmd": "system_slt_bm rdma --set_ip_static --static_ip_prefix 10.2.3 --netmask_num 24",
+					"gdr_cmd": "mts_system enable gdrBwTest 120 --box=0,1",
+					"check_process_time": 10,
+					"timeout": 60
+			}
+	},
+	"QtTMSSystemCheck_MCU_FW": {
+			"Desc": "",
+			"Tags": "",
+			"Module": "tms_system_check",
+			"Class": "TmsSystemCheck",
+			"Function": "test_tms_system_mcu_fw",
+			"Timeout": "15m",
+			"Args": [],
+			"Kwargs": {
+					"user": "root",
+					"password": "Hell0_c0met"
+			}
+	},
+	"QtTMSSystemCheck_FREQ": {
+			"Desc": "",
+			"Tags": "",
+			"Module": "tms_system_check",
+			"Class": "TmsSystemCheck",
+			"Function": "test_tms_system_freq",
+			"Timeout": "15m",
+			"Args": [],
+			"Kwargs": {
+					"CPU clock": 1200,
+					"Enc clock": 1000,
+					"Dec clock": 900
+			}
+	},
+	"QtTmsVmin": {
+        "Desc": "",
+        "Tags": "Tms Vmin",
+        "Module": "tms_vmin_test",
+        "Class": "TmsVminTest",
+        "Function": "test_tms_vmin",
+        "Timeout": "120m",
+        "Args": [],
+        "Kwargs": {
+            "file_path": "/run/work/TMS_VMIN_TEST.L01/",
+             "loop": 1,
+             "sh_name" : ["test_local_tdp_64_loop.sh" ,"test_local_tdp_64_m1_loop.sh","test_local_tdp_0716_m1_1_loop.sh"]
+        }
+    }
+}

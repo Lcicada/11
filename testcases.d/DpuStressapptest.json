@@ -1,0 +1,17 @@
+{
+    "DpuStressapptest":{
+        "Desc": "DPU DRAM Stress",
+        "Tags": "DPU DRAM STRESS",
+        "Module": "dpu_stressapptest_stress",
+        "Class": "DpuStressapptest",
+        "Function": "test_stressapptest",
+        "Timeout": "3h",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "2h",
+            "test_mem": "",
+            "rev_mem": "3g",
+            "other_para": " -v 20 --remote_numa"
+        }
+    }
+}

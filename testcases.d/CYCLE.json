@@ -1,0 +1,79 @@
+{
+    "HeadStatusCheck": {
+        "Desc": "Head Status Check",
+        "Tags": "Head Status",
+        "Module": "cycles_test",
+        "Class": "CYCLE",
+        "Function": "test_head_status_check",
+        "Timeout": "30m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "TailStatusCheck": {
+        "Desc": "Tail Status Check",
+        "Tags": "Tail Status",
+        "Module": "cycles_test",
+        "Class": "CYCLE",
+        "Function": "test_tail_status_check",
+        "Timeout": "30m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "SubHeadStatusCheck": {
+        "Desc": "Sub Head Status Check",
+        "Tags": "Sub Head Status",
+        "Module": "cycles_test",
+        "Class": "CYCLE",
+        "Function": "test_sub_head_status_check",
+        "Timeout": "50m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "SubTailStatusCheck": {
+        "Desc": "Sub Tail Status Check",
+        "Tags": "Sub Tail Status",
+        "Module": "cycles_test",
+        "Class": "CYCLE",
+        "Function": "test_sub_tail_status_check",
+        "Timeout": "30m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "ExecuteCycle": {
+        "Desc": "Execute Cycle as cycle type",
+        "Tags": "CYCLE",
+        "Module": "cycles_test",
+        "Class": "CYCLE",
+        "Function": "test_execute_cycle",
+        "Timeout": "30m",
+        "Args": [],
+        "Kwargs": {
+            "cycle_type": 1,
+        }
+    },
+	"QtSmartNicBiosSet_Default": {
+        "Desc": "Execute Cycle as cycle type",
+        "Tags": "CYCLE",
+        "Module": "cycles_test",
+        "Class": "CYCLE",
+        "Function": "test_execute_cycle",
+        "Timeout": "30m",
+        "Args": [],
+        "Kwargs": {
+            "cycle_type": 4,
+        }
+    },
+     "ExecuteSubCycle": {
+        "Desc": "Execute Sub Cycle as cycle type",
+        "Tags": "CYCLE",
+        "Module": "cycles_test",
+        "Class": "CYCLE",
+        "Function": "test_sub_execute_cycle",
+        "Timeout": "30m",
+        "Args": [],
+        "Kwargs": {
+            "cycle_type": 999,
+            "sync_log": true
+        }
+    }
+}

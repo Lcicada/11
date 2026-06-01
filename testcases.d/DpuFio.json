@@ -1,0 +1,15 @@
+{
+    "DpuFioStress":{
+        "Desc": "DPU DISK Stress",
+        "Tags": "DPU DISK STRESS",
+        "Module": "dpu_fio_stress",
+        "Class": "DpuFioTest",
+        "Function": "test_fiotest",
+        "Timeout": "20m",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "12m",
+            "other_para": ""
+        }
+    }
+}

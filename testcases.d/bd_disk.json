@@ -1,0 +1,89 @@
+{
+    "BdNvmeInfoCheck": {
+        "Desc": "",
+        "Tags": "DISK NVME INFO",
+        "Module": "bd_nvme_test",
+        "Class": "NVME",
+        "Function": "test_checkinfo",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdHddInfoCheck": {
+        "Desc": "",
+        "Tags": "DISK HDD INFO",
+        "Module": "bd_hdd_test",
+        "Class": "HDD",
+        "Function": "test_checkinfo",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdSsdInfoCheck": {
+        "Desc": "",
+        "Tags": "DISK SSD INFO",
+        "Module": "bd_ssd_test",
+        "Class": "SSD",
+        "Function": "test_checkinfo",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "NvmeStress": {
+        "Desc": "NVMe Stress",
+        "Tags": "DISK NVME STRESS",
+        "Module": "nvme_stress",
+        "Class": "NVMEFIOSTRESS",
+        "Function": "test_nvme_fio",
+        "Timeout": "24h",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "24h",
+            "fio_config": "disk_fio_para.json",
+            "if_format": true,
+            "core_per_dev": "0"
+        }
+    },
+    "BdNvmePerfTest": {
+        "Desc": "NVMe Perf",
+        "Tags": "DISK NVME PERF",
+        "Module": "bd_nvme_perf_test",
+        "Class": "NVMEFIO",
+        "Function": "test_fio",
+        "Timeout": "24h",
+        "Args": [],
+        "Kwargs": {
+            "if_check" : true, 
+            "perf_key": "QTBQC-nvme_perf_test",
+            "fio_config": "QTBQC-nvme_perf_test.json",
+            "core_per_dev": 1
+        }
+    },
+    "BdHddPerfTest": {
+        "Desc": "HDD Pef",
+        "Tags": "DISK HDD PERF",
+        "Module": "bd_hdd_perf_test",
+        "Class": "HDDFIO",
+        "Function": "test_fio",
+        "Timeout": "24h",
+        "Args": [],
+        "Kwargs": {
+            "if_check" : true, 
+            "perf_key": "QTBQC-hdd_perf_test",
+            "fio_config": "QTBQC-hdd_perf_test.json",
+            "core_per_dev": 1
+        }
+    },
+    "Fio": {
+        "Desc": "Disk Stress",
+        "Tags": "DISK HDD SSD NVME STRESS",
+        "Module": "fio_stress",
+        "Class": "FioTest",
+        "Function": "test_fio",
+        "Timeout": "5h",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "1h"
+        }
+    }
+}

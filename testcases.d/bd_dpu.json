@@ -1,0 +1,42 @@
+{
+    "BdDpuFruCheck": {
+        "Desc": "",
+        "Tags": "DPU BMC INFO",
+        "Module": "bd_dpu_test",
+        "Class": "DPUTest",
+        "Function": "test_fru_0",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdDpuFwTest": {
+        "Desc": "",
+        "Tags": "DPU INFO",
+        "Module": "bd_dpu_test",
+        "Class": "DPUTest",
+        "Function": "test_dpu_fw",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdDpuHwTest": {
+        "Desc": "",
+        "Tags": "DPU INFO",
+        "Module": "bd_dpu_test",
+        "Class": "DPUTest",
+        "Function": "test_dpu_hw",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "BdCsSsdCheck": {
+        "Desc": "",
+        "Tags": "DPU INFO",
+        "Module": "bd_dpu_test",
+        "Class": "DPUTest",
+        "Function": "test_cs_m2",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    }
+}

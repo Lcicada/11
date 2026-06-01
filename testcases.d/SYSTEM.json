@@ -1,0 +1,167 @@
+{
+  "QtSdkTestStreamInstall": {
+        "Desc": "",
+        "Tags": "SDK & TestStream Install",
+        "Module": "install_env",
+        "Class": "InstallEnv",
+        "Function": "test_install_env",
+        "Timeout": "20m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_ENV_H200.L20",
+            "command": [
+                "ENVSET.SH"
+            ]
+        }
+    },
+	"QtSdkTestStreamInstall_H20": {
+        "Desc": "",
+        "Tags": "SDK & TestStream Install",
+        "Module": "install_env",
+        "Class": "InstallEnv",
+        "Function": "test_install_env",
+        "Timeout": "20m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_ENV_H20.L20",
+            "command": [
+                "ENVSET.SH"
+            ]
+        }
+    },
+	"QtSdkTestStreamInstall_NVqual": {
+        "Desc": "",
+        "Tags": "SDK & TestStream Install",
+        "Module": "install_env",
+        "Class": "InstallEnv",
+        "Function": "test_install_env",
+        "Timeout": "20m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_ENV_H200.L20",
+            "command": [
+                "ENVSET_NVqual.SH"
+            ]
+        }
+    },
+	 "QtSdkTestStreamUnInstall_H200": {
+        "Desc": "",
+        "Tags": "SDK & TestStream UnInstall",
+        "Module": "install_env",
+        "Class": "InstallEnv",
+        "Function": "test_install_env",
+        "Timeout": "20m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_ENV_H200.L20",
+            "command": [
+                "ENVRM.SH"
+            ]
+        }
+    },
+	"QtSdkTestStreamUnInstall_H20": {
+        "Desc": "",
+        "Tags": "SDK & TestStream UnInstall",
+        "Module": "install_env",
+        "Class": "InstallEnv",
+        "Function": "test_install_env",
+        "Timeout": "20m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_ENV_H20.L20",
+            "command": [
+                "ENVRM.SH"
+            ]
+        }
+    },
+	"QtSdkTestFabricRm_H200": {
+        "Desc": "",
+        "Tags": "SDK & TestStream UnInstall",
+        "Module": "install_env",
+        "Class": "InstallEnv",
+        "Function": "test_install_env",
+        "Timeout": "20m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_ENV_H200.L20",
+            "command": [
+                "ENVSTOP_FAB.SH"
+            ]
+        }
+    },
+	"QtSdkTestFabricRm_H20": {
+        "Desc": "",
+        "Tags": "SDK & TestStream UnInstall",
+        "Module": "install_env",
+        "Class": "InstallEnv",
+        "Function": "test_install_env",
+        "Timeout": "20m",
+        "Args": [],
+        "Kwargs": {
+            "tool_name": "GPU_ENV_H20.L20",
+            "command": [
+                "ENVSTOP_FAB.SH"
+            ]
+        }
+    },
+    "sleep_10m": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "time_sleep",
+    "Class": "TimeSleep",
+    "Function": "test_time_sleep",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {
+      "sleep_second": 600
+    }
+  },
+    "sleep_3m": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "time_sleep",
+    "Class": "TimeSleep",
+    "Function": "test_time_sleep",
+    "Timeout": "7m",
+    "Args": [],
+    "Kwargs": {
+      "sleep_second": 180
+    }
+  },
+  "QtSmartnicSetUart0": {
+        "Desc": "set uart to bmc channel",
+        "Tags": "",
+        "Module": "execute_command",
+        "Class": "ExecuteCommand",
+        "Function": "test_execute_command",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "cmd": "ipmitool raw 0x32 0x6d 00 && ipmitool mc reset cold && sleep 180 && ipmitool raw 0x32 0x6e"
+        }
+    },
+  "QtSmartnicSetUart1": {
+        "Desc": "set uart to bios channel",
+        "Tags": "",
+        "Module": "execute_command",
+        "Class": "ExecuteCommand",
+        "Function": "test_execute_command",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "cmd": "ipmitool raw 0x32 0x6d 01 && ipmitool mc reset cold && sleep 180 && ipmitool raw 0x32 0x6e"
+        }
+    },
+  "QtSmartnicStaticIP": {
+        "Desc": "set bf3 static ip",
+        "Tags": "",
+        "Module": "execute_command",
+        "Class": "ExecuteCommand",
+        "Function": "test_execute_command",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "cmd": "ip link add link oob_net0 name oob_net0.200 type vlan id 200; ip addr add 192.168.1.1/24 brd 192.168.1.255 dev oob_net0.200; ip link set dev oob_net0.200 up"
+        }
+    }
+}

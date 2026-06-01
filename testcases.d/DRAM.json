@@ -1,0 +1,75 @@
+{
+
+    "QtDramInfoCheck": {
+        "Desc": "",
+        "Tags": "DRAM INFO",
+        "Module": "test_check_dram",
+        "Class": "DRAM",
+        "Function": "test_dram_info",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "QtDramInfoCheck_repeat": {
+        "Desc": "",
+        "Tags": "DRAM INFO",
+        "Module": "test_check_dram",
+        "Class": "DRAM",
+        "Function": "repeat_test",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+           "repeat_type": "duration",
+           "duration": "3m",
+           "interval": "10",
+           "function": "test_dram_info",
+           "args": [],
+           "kwargs": {}
+        }
+    },
+    "DramMapCheck": {
+        "Desc": "",
+        "Tags": "DRAM INFO",
+        "Module": "dram_test",
+        "Class": "DRAM",
+        "Function": "test_checktopo",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "QtDramStressTest": {
+        "Desc": "Dram Stress",
+        "Module": "memory_stressapp_test",
+        "Class": "MemoryStressappTest",
+        "Function": "test_stressapp",
+        "Timeout": "25m",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "5m"
+        }
+    },
+    "QtDramStressTest_Memtester": {
+        "Desc": "Dram Stress",
+        "Module": "memory_memtester_test",
+        "Class": "MemoryMemtesterTest",
+        "Function": "test_memtester",
+        "Timeout": "400m",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "360m"
+        }
+    },
+    "QtDramStressTest_Memtester_loop4": {
+        "Desc": "Dram Stress",
+        "Module": "memory_memtester_test",
+        "Class": "MemoryMemtesterTest",
+        "Function": "test_memtester",
+        "Timeout": "40h",
+        "Args": [],
+        "Kwargs": {
+            "test_loop": "4",
+            "rev_mem": "20g",
+			"MEMTESTER_TEST_MASK": "0x27d01"
+        }
+    }
+}

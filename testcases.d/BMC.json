@@ -1,0 +1,1262 @@
+{
+  "QtBmcSdrCheck_repeat": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "check_sdr",
+    "Class": "Checksdr",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_sdr_check",
+      "args": [],
+      "kwargs": {
+        "golden_file_name": "check_sdr_golden.json"
+      }
+    }
+  },
+  "QtBmcSdrCheck": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "check_sdr",
+    "Class": "Checksdr",
+    "Function": "test_sdr_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "golden_file_name": "check_sdr_golden.json"
+    }
+  },
+  "QtOcpBmcSdrCheck": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "check_sdr",
+    "Class": "Checksdr",
+    "Function": "test_sdr_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "golden_file_name": "WC4004G00002_check_sdr_golden.json"
+    }
+  },
+  "QtBatteryFunctionTest": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "test_check_cmos3v",
+    "Class": "CMOS",
+    "Function": "test_cmos3v",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "exp_value": 2.96
+    }
+  },
+  "QtBatteryFunctionTest_repeat": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "test_check_cmos3v",
+    "Class": "CMOS",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_cmos3v",
+      "args": [],
+      "kwargs": {
+        "exp_value": 2.96
+      }
+    }
+  },
+  "QtSmartnicBatteryFunctionTest": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "test_check_cmos3v",
+    "Class": "CMOS",
+    "Function": "test_cmos3v",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "exp_value": 2.96
+    }
+  },
+  "QtSmartniBatteryFunctionTest_repeat": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "test_check_cmos3v",
+    "Class": "CMOS",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_cmos3v",
+      "args": [],
+      "kwargs": {
+        "exp_value": 2.96
+      }
+    }
+  },
+  "QtBmcNicSpeed": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_bmc_nicspeed",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "bmc_speed_exp": "1000Mb/s"
+    }
+  },
+  "QtNcsiAutoCheck": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_bmcncsi_autocheck",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "check_cmd": "ipmitool raw 0x3e 0x41 0x00",
+      "ncsi_auto_exp": "01 00"
+    }
+  },
+  "QtBmcLogClear": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "sel_clear",
+    "Class": "SelClear",
+    "Function": "test_sel_clear",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "pass_flag": "Clearing SEL.  Please allow a few seconds to erase"
+    }
+  },
+  "QtBmcUserCheck": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_bmc_user",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcSelftestTest": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_bmc_selftest",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcMacCheck": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_bmc_mac",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "ip_test_cmd": "ipmitool lan print",
+      "dedicate_mac_cmd": "ipmitool raw 0x3A 0xa9 0xdd 0xb3 0x00 15 0xa0 8 0x10 0x00",
+      "share_mac_cmd": "ipmitool raw 0x3A 0xa9 0xdd 0xb3 0x00 15 0xa0 8 0x10 0x08",
+      "ip_address_exp": "10",
+      "ip_address_source_exp": "DHCP Address",
+      "factory_mode": {
+        "enter": "ipmitool raw 0x3a 0xa1 0xdd 0xb3 0x00 0x4d 0x43 0x52 0x81",
+        "exit": "ipmitool raw 0x3a 0xa1 0xdd 0xb3 0x00 0x4d 0x43 0x52 0x00",
+        "exit_check": "ipmitool raw 0x3a 0xa2 0xdd 0xb3 0x00",
+        "exit_mode_exp": "00",
+        "channel": {
+          "switch": "ipmitool raw 0x3A 0xa9 0xdd 0xb3 0x00 15 0xe0 0 0x40",
+          "release": "ipmitool raw 0x3A 0xa9 0xdd 0xb3 0x00 15 0xe0 0 0"
+        }
+      }
+    }
+  },
+  "QtBmcMacCheck_Static": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_bmc_mac",
+    "Timeout": "8m",
+    "Args": [],
+    "Kwargs": {
+      "ip_test_cmd": "ipmitool lan print",
+      "dedicate_mac_cmd": "ipmitool raw 0x3A 0xa9 0xdd 0xb3 0x00 15 0xa0 8 0x10 0x00",
+      "share_mac_cmd": "ipmitool raw 0x3A 0xa9 0xdd 0xb3 0x00 15 0xa0 8 0x10 0x08",
+      "ip_address_exp": "192",
+      "ip_address_source_exp": "Static Address",
+      "factory_mode": {
+        "enter": "ipmitool raw 0x3a 0xa1 0xdd 0xb3 0x00 0x4d 0x43 0x52 0x81",
+        "exit": "ipmitool raw 0x3a 0xa1 0xdd 0xb3 0x00 0x4d 0x43 0x52 0x00",
+        "exit_check": "ipmitool raw 0x3a 0xa2 0xdd 0xb3 0x00",
+        "exit_mode_exp": "00",
+        "channel": {
+          "switch": "ipmitool raw 0x3A 0xa9 0xdd 0xb3 0x00 15 0xe0 0 0x40",
+          "release": "ipmitool raw 0x3A 0xa9 0xdd 0xb3 0x00 15 0xe0 0 0"
+        }
+      }
+    }
+  },
+  "QtBmcDuidCheck": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_ipv6_duid",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "read_bmc_mac_cmd": "ipmitool lan print 1 | grep 'MAC Address' | awk '{print$4}' | tr [a-z] [A-Z] | sed 's/://g'",
+      "read_lan6_cmd": "ipmitool lan6 print 1 | grep -A 1 'DUID' | tail -1 | cut -b 15-26 | tr [a-z] [A-Z]",
+      "need_to_cmp": "on"
+    }
+  },
+  "QtBmcNcsiTest": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_bmc_ncsi",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtMbBmcsettingsCheck_Devnumber": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_dev_number",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "CPU": {
+        "set": "ipmitool raw 0x3e 0x2d 0x02 {dev_num}",
+        "check": "ipmitool raw 0x3e 0x2e 0x02 |awk -F\" \" '{print $2}'",
+        "mapping": {
+          "1": "0x01",
+          "2": "0x03"
+        }
+      },
+      "PSU": {
+        "set": "ipmitool raw 0x3e 0x2d 0x00 {dev_num}",
+        "check": "ipmitool raw 0x3e 0x2e 0x00 |awk -F\" \" '{print $2}'"
+      }
+    }
+  },
+  "QtBmcFunctionCheck_Backupimage": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "golden_bmc_check",
+    "Class": "GoldenBMCCheck",
+    "Function": "test_golden_bmc",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "bmc_reset_cmd": "ipmitool mc reset cold",
+      "switch_bmc_cmd": "ipmitool raw 0x32 0x8f 0x01 0x02",
+      "sleep_sec": 180,
+      "boot_selector_get_cmd": "ipmitool raw 0x32 0x8f 0x02",
+      "switch_result": "02"
+    }
+  },
+  "QtBmcFunctionCheck_Goldenimage": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "golden_bmc_check",
+    "Class": "GoldenBMCCheck",
+    "Function": "test_golden_bmc",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "bmc_reset_cmd": "ipmitool mc reset cold",
+      "switch_bmc_cmd": "ipmitool raw 0x32 0x8f 0x01 0x01",
+      "sleep_sec": 180,
+      "boot_selector_get_cmd": "ipmitool raw 0x32 0x8f 0x02",
+      "switch_result": "01"
+    }
+  },
+  "QtPsuInfoCheck": {
+    "Desc": "",
+    "Tags": "PSU INFO",
+    "Module": "test_check_psu",
+    "Class": "PSU",
+    "Function": "test_psu_info",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "tool_path": "InbUpdateTool",
+      "tool_name": "FwUpdate.sh"
+    }
+  },
+  "QtPsuInfoCheck_repeat": {
+    "Desc": "",
+    "Tags": "PSU INFO",
+    "Module": "test_check_psu",
+    "Class": "PSU",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_psu_info",
+      "args": [],
+      "kwargs": {}
+    }
+  },
+  "QtFanInfoCheck": {
+    "Desc": "",
+    "Tags": "FAN INFO",
+    "Module": "test_check_fan",
+    "Class": "FAN",
+    "Function": "test_fan_info",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtFanFunctionCheck": {
+    "Desc": "",
+    "Tags": "FAN Function",
+    "Module": "fan_speed",
+    "Class": "FanSpeed",
+    "Function": "test_fan_speed",
+    "Timeout": "25m",
+    "Args": [],
+    "Kwargs": {
+      "OOB_mode": {},
+      "sleep_time": 30,
+      "fan_duty_cmd_info": [
+        {
+          "fan_duty": "20",
+          "set_duty_cmd": "raw 0x3e 0x31 0x00 20"
+        },
+        {
+          "fan_duty": "40",
+          "set_duty_cmd": "raw 0x3e 0x31 0x00 40"
+        },
+        {
+          "fan_duty": "60",
+          "set_duty_cmd": "raw 0x3e 0x31 0x00 60"
+        },
+        {
+          "fan_duty": "80",
+          "set_duty_cmd": "raw 0x3e 0x31 0x00 80"
+        },
+        {
+          "fan_duty": "100",
+          "set_duty_cmd": "raw 0x3e 0x31 0x00 100"
+        }
+      ],
+      "fan_groups": {
+        "FAN_F": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN0_F_Speed",
+            "FAN1_F_Speed",
+            "FAN2_F_Speed",
+            "FAN3_F_Speed"
+          ],
+          "duty2speed": {
+            "20": "2400-3850",
+            "40": "5678-7820",
+            "60": "8458-11730",
+            "80": "11135-15640",
+            "100": "14110-19550"
+          }
+        },
+        "FAN_R": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN0_R_Speed",
+            "FAN1_R_Speed",
+            "FAN2_R_Speed",
+            "FAN3_R_Speed"
+          ],
+          "duty2speed": {
+            "20": "2000-3350",
+            "40": "4930-6728",
+            "60": "7310-10005",
+            "80": "9690-13350",
+            "100": "12325-16675"
+          }
+        }
+      }
+    }
+  },
+  "QtFanFunctionCheck20": {
+    "Desc": "fan duty 20",
+    "Tags": "FAN Function",
+    "Module": "fan_speed",
+    "Class": "FanSpeed",
+    "Function": "test_fan_speed",
+    "Timeout": "25m",
+    "Args": [],
+    "Kwargs": {
+      "OOB_mode": {},
+      "sleep_time": 30,
+      "fan_duty_cmd_info": [
+        {
+          "fan_duty": "20",
+          "set_duty_cmd": "raw 0x3e 0x31 0x00 20"
+        }
+      ],
+      "fan_groups": {
+        "FAN_F": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN0_F_Speed",
+            "FAN1_F_Speed",
+            "FAN2_F_Speed",
+            "FAN3_F_Speed"
+          ],
+          "duty2speed": {
+            "20": "2400-3850"
+          }
+        },
+        "FAN_R": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN0_R_Speed",
+            "FAN1_R_Speed",
+            "FAN2_R_Speed",
+            "FAN3_R_Speed"
+          ],
+          "duty2speed": {
+            "20": "2000-3350"
+          }
+        }
+      }
+    }
+  },
+  "QtFanFunctionCheck40": {
+    "Desc": "fan duty 40",
+    "Tags": "FAN Function",
+    "Module": "fan_speed",
+    "Class": "FanSpeed",
+    "Function": "test_fan_speed",
+    "Timeout": "25m",
+    "Args": [],
+    "Kwargs": {
+      "OOB_mode": {},
+      "sleep_time": 30,
+      "fan_duty_cmd_info": [
+        {
+          "fan_duty": "40",
+          "set_duty_cmd": "raw 0x3e 0x31 0x00 40"
+        }
+      ],
+      "fan_groups": {
+        "FAN_F": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN0_F_Speed",
+            "FAN1_F_Speed",
+            "FAN2_F_Speed",
+            "FAN3_F_Speed"
+          ],
+          "duty2speed": {
+            "40": "5678-7820"
+          }
+        },
+        "FAN_R": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN0_R_Speed",
+            "FAN1_R_Speed",
+            "FAN2_R_Speed",
+            "FAN3_R_Speed"
+          ],
+          "duty2speed": {
+            "40": "4930-6728"
+          }
+        }
+      }
+    }
+  },
+  "QtFanFunctionCheck60": {
+    "Desc": "fan duty 60",
+    "Tags": "FAN Function",
+    "Module": "fan_speed",
+    "Class": "FanSpeed",
+    "Function": "test_fan_speed",
+    "Timeout": "25m",
+    "Args": [],
+    "Kwargs": {
+      "OOB_mode": {},
+      "sleep_time": 30,
+      "fan_duty_cmd_info": [
+        {
+          "fan_duty": "60",
+          "set_duty_cmd": "raw 0x3e 0x31 0x00 60"
+        }
+      ],
+      "fan_groups": {
+        "FAN_F": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN0_F_Speed",
+            "FAN1_F_Speed",
+            "FAN2_F_Speed",
+            "FAN3_F_Speed"
+          ],
+          "duty2speed": {
+            "60": "8458-11730"
+          }
+        },
+        "FAN_R": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN0_R_Speed",
+            "FAN1_R_Speed",
+            "FAN2_R_Speed",
+            "FAN3_R_Speed"
+          ],
+          "duty2speed": {
+            "60": "7310-10005"
+          }
+        }
+      }
+    }
+  },
+  "QtFanFunctionCheck80": {
+    "Desc": "fan duty 80",
+    "Tags": "FAN Function",
+    "Module": "fan_speed",
+    "Class": "FanSpeed",
+    "Function": "test_fan_speed",
+    "Timeout": "25m",
+    "Args": [],
+    "Kwargs": {
+      "OOB_mode": {},
+      "sleep_time": 30,
+      "fan_duty_cmd_info": [
+        {
+          "fan_duty": "80",
+          "set_duty_cmd": "raw 0x3e 0x31 0x00 80"
+        }
+      ],
+      "fan_groups": {
+        "FAN_F": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN0_F_Speed",
+            "FAN1_F_Speed",
+            "FAN2_F_Speed",
+            "FAN3_F_Speed"
+          ],
+          "duty2speed": {
+            "80": "11135-15640"
+          }
+        },
+        "FAN_R": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN0_R_Speed",
+            "FAN1_R_Speed",
+            "FAN2_R_Speed",
+            "FAN3_R_Speed"
+          ],
+          "duty2speed": {
+            "80": "9690-13350"
+          }
+        }
+      }
+    }
+  },
+  "QtFanFunctionCheck100": {
+    "Desc": "fan duty 100",
+    "Tags": "FAN Function",
+    "Module": "fan_speed",
+    "Class": "FanSpeed",
+    "Function": "test_fan_speed",
+    "Timeout": "25m",
+    "Args": [],
+    "Kwargs": {
+      "OOB_mode": {},
+      "sleep_time": 30,
+      "fan_duty_cmd_info": [
+        {
+          "fan_duty": "100",
+          "set_duty_cmd": "raw 0x3e 0x31 0x00 100"
+        }
+      ],
+      "fan_groups": {
+        "FAN_F": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN0_F_Speed",
+            "FAN1_F_Speed",
+            "FAN2_F_Speed",
+            "FAN3_F_Speed"
+          ],
+          "duty2speed": {
+            "100": "14110-19550"
+          }
+        },
+        "FAN_R": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN0_R_Speed",
+            "FAN1_R_Speed",
+            "FAN2_R_Speed",
+            "FAN3_R_Speed"
+          ],
+          "duty2speed": {
+            "100": "12325-16675"
+          }
+        }
+      }
+    }
+  },
+  "QtFanFunctionSet": {
+    "Desc": "",
+    "Tags": "FAN Function",
+    "Module": "fan_speed",
+    "Class": "FanSpeed",
+    "Function": "test_set_fan_mode",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+   "QtFanFunctionSet_Auto": {
+    "Desc": "",
+    "Tags": "FAN Function",
+    "Module": "fan_speed",
+    "Class": "FanSpeed",
+    "Function": "test_set_fan_mode",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+		"set_fan_mode_cmd": "raw 0x3e 0x2f 0x00; sleep 3",
+        "get_fan_mode_cmd": "raw 0x3e 0x30",
+        "exp_fan_mode": "00"
+	}
+  },
+   "QtFanFunctionSet_Manual": {
+    "Desc": "",
+    "Tags": "FAN Function",
+    "Module": "fan_speed",
+    "Class": "FanSpeed",
+    "Function": "test_set_fan_mode",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+		"set_fan_mode_cmd": "raw 0x3e 0x2f 0x01; sleep 3",
+        "get_fan_mode_cmd": "raw 0x3e 0x30",
+        "exp_fan_mode": "01"
+	}
+  },
+  "QtServerInfoCheck": {
+    "Desc": "",
+    "Tags": "SERVER INFO",
+    "Module": "test_check_motherboard",
+    "Class": "MOTHERBOARD",
+    "Function": "test_server_info",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtMbInfoCheck": {
+    "Desc": "",
+    "Tags": "MOTHERBOARD INFO",
+    "Module": "test_check_motherboard",
+    "Class": "MOTHERBOARD",
+    "Function": "test_motherboard_info",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtMbFwCheck": {
+    "Desc": "",
+    "Tags": "MOTHERBOARD INFO",
+    "Module": "test_check_motherboard",
+    "Class": "MOTHERBOARD",
+    "Function": "test_mbversion_info",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "tool_path": "InbUpdateTool",
+      "tool_name": "FwUpdate.sh"
+    }
+  },
+  "QtServerInfoCheck_repeat": {
+    "Desc": "",
+    "Tags": "SERVER INFO",
+    "Module": "test_check_motherboard",
+    "Class": "MOTHERBOARD",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_server_info",
+      "args": [],
+      "Kwargs": {}
+    }
+  },
+  "QtMbInfoCheck_repeat": {
+    "Desc": "",
+    "Tags": "MOTHERBOARD INFO",
+    "Module": "test_check_motherboard",
+    "Class": "MOTHERBOARD",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_motherboard_info",
+      "args": [],
+      "Kwargs": {}
+    }
+  },
+  "MOTHERBOARDVERSIONCheck": {
+    "Desc": "",
+    "Tags": "MOTHERBOARD INFO",
+    "Module": "test_check_motherboard",
+    "Class": "MOTHERBOARD",
+    "Function": "check_mbversion_info",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtFruInfoCheck": {
+    "Desc": "",
+    "Tags": "FRU INFO",
+    "Module": "test_check_fru",
+    "Class": "FRU",
+    "Function": "test_fru_info",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "golden_file_name": "check_fru_golden.json"
+    }
+  },
+  "QtOcpFruInfoCheck": {
+    "Desc": "",
+    "Tags": "FRU INFO",
+    "Module": "test_check_fru",
+    "Class": "FRU",
+    "Function": "test_fru_info",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "golden_file_name": "XND250627P01_check_fru_golden.json"
+    }
+  },
+  "QtFruInfoCheck_repeat": {
+    "Desc": "",
+    "Tags": "FRU INFO",
+    "Module": "test_check_fru",
+    "Class": "FRU",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_fru_info",
+      "args": [],
+      "kwargs": {
+        "golden_file_name": "check_fru_golden.json"
+      }
+    }
+  },
+  "QtBpInfoCheck": {
+    "Desc": "",
+    "Tags": "BACKPLANE INFO",
+    "Module": "test_check_backplane",
+    "Class": "BACKPLANE",
+    "Function": "test_backplane_info",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBpFwCheck": {
+    "Desc": "",
+    "Tags": "BACKPLANE INFO",
+    "Module": "test_check_backplane",
+    "Class": "BACKPLANE",
+    "Function": "test_backplane_fw",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBpInfoCheck_repeat": {
+    "Desc": "",
+    "Tags": "BACKPLANE INFO",
+    "Module": "test_check_backplane",
+    "Class": "BACKPLANE",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_backplane_info",
+      "args": [],
+      "kwargs": {}
+    }
+  },
+  "FANBACKPLANECheck": {
+    "Desc": "",
+    "Tags": "FANBACKPLANE INFO",
+    "Module": "test_check_backplane",
+    "Class": "BACKPLANE",
+    "Function": "check_fanbackplane_info",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "RISERCheck": {
+    "Desc": "",
+    "Tags": "RISER INFO",
+    "Module": "test_check_backplane",
+    "Class": "BACKPLANE",
+    "Function": "check_riser_info",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtMbEepromCheck": {
+    "Desc": "",
+    "Tags": "EEPROM INFO",
+    "Module": "eeprom_check",
+    "Class": "EEP",
+    "Function": "test_eep_info",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcBmcsettingsSet_Default": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_bmc_loaddef",
+    "Timeout": "12m",
+    "Args": [],
+    "Kwargs": {
+      "test_bmc_loaddef_exp": "0",
+      "execution_delay": 300
+    }
+  },
+  "QtMbBmcsettingsCheck_Buttonmode": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_test",
+    "Class": "Bmctest",
+    "Function": "test_bmc_button_mode",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "user_list": "ipmitool raw 0x3e 0x66 0x02"
+    }
+  },
+  "QtMbBmcsettingsCheck_Lanchannel": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_test",
+    "Class": "Bmctest",
+    "Function": "test_bmc_lan_channel",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "user_list": "ipmitool raw 0x3e 0x41 0x00"
+    }
+  },
+  "QtMbBmcsettingsCheck_Fanmode": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_test",
+    "Class": "Bmctest",
+    "Function": "test_fan_model",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "user_list": "ipmitool raw 0x3e 0x49"
+    }
+  },
+  "QtBmcLeakageTest": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_test",
+    "Class": "Bmctest",
+    "Function": "test_leakage_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcGuidCheck": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_test",
+    "Class": "Bmctest",
+    "Function": "test_check_guid",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcFunctionCheck_backupimage": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "golden_bmc_check",
+    "Class": "GoldenBMCCheck",
+    "Function": "test_golden_bmc",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "bmc_reset_cmd": "ipmitool raw 0x06 0x02",
+      "switch_bmc_cmd": "ipmitool raw 0x32 0x8f 0x01 0x02",
+      "sleep_sec": 180,
+      "boot_selector_get_cmd": "ipmitool raw 0x32 0x8f 0x02",
+      "switch_result": "02"
+    }
+  },
+  "QtBmcFunctionCheck_Mainimage": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "golden_bmc_check",
+    "Class": "GoldenBMCCheck",
+    "Function": "test_golden_bmc",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "bmc_reset_cmd": "ipmitool raw 0x06 0x02",
+      "switch_bmc_cmd": "ipmitool raw 0x32 0x8f 0x01 0x01",
+      "sleep_sec": 180,
+      "boot_selector_get_cmd": "ipmitool raw 0x32 0x8f 0x02",
+      "switch_result": "01"
+    }
+  },
+  "QtBmcStressTest": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_stress_test",
+    "Class": "BmcStress",
+    "Function": "test_bmc_stress",
+    "Timeout": "25m",
+    "Args": [],
+    "Kwargs": {
+      "command": [
+        "fru print 0",
+        "sel list",
+        "sdr list"
+      ],
+      "run_time": "300",
+      "time_step": "120"
+    }
+  },
+  "QtMbBmcsettingsSet_Powerpolicy": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_Powerpolicy_set",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+    }
+  },
+  "QtMbBmcsettingsSet_PowerpolicyOff": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_Powerpolicy_set",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "power_restore_policy_exp": "always-off"
+    }
+  },
+  "QtMbBmcsettingsCheck_Powerpolicy": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_Powerpolicy_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+    }
+  },
+  "QtBmcTime": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_bmc_time",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "bmc_time_exp": 60
+    }
+  },
+  "SDRGolden": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "check_sdr",
+    "Class": "Checksdr",
+    "Function": "test_sdr_gen_golden",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSmartnicBmcSet_Default": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_dpu_bmc_loaddef",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "tool_path": "tools/x86_64/cli/bytebmctool/",
+      "dpu_bmc_loaddef_exp": 0
+    }
+  },
+  "QtHostFruWrite": {
+    "Desc": "Host Fru Write",
+    "Tags": "Host Fru Write",
+    "Module": "fru_write",
+    "Class": "FruWrite",
+    "Function": "test_fru_write",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "fru_id": "0",
+      "write_method": {
+        "method": "fru_change",
+        "tool_version": "v1_1_beta"
+      },
+      "delay_second": 10,
+      "OOB_mode": {},
+      "is_box": "false",
+      "component": "MotherBoard",
+      "fru_field_set": {
+        "Chassis Part Number": {
+          "value": "{cPn}",
+          "need_to_write": 1
+        },
+        "Chassis Serial": {
+          "value": "{cSn}",
+          "need_to_write": 1
+        },
+        "Chassis Extra0": {
+          "value": "{cExtra}",
+          "need_to_write": 0
+        },
+        "Board Mfg": {
+          "value": "{manufacturer}",
+          "need_to_write": 0
+        },
+        "Board Product": {
+          "value": "{bPname}",
+          "need_to_write": 0
+        },
+        "Board Serial": {
+          "value": "{bSn}",
+          "need_to_write": 0
+        },
+        "Board Part Number": {
+          "value": "{bPn}",
+          "need_to_write": 0
+        },
+        "Board Extra0": {
+          "value": "PCBA Ver:{bPcbaVersion}",
+          "need_to_write": 0
+        },
+        "Product Manufacturer": {
+          "value": "{pManufacturer}",
+          "need_to_write": 1
+        },
+        "Product Name": {
+          "value": "{pPname}",
+          "need_to_write": 1
+        },
+        "Product Part Number": {
+          "value": "{pPn}",
+          "need_to_write": 1
+        },
+        "Product Version": {
+          "value": "{pVersion}",
+          "need_to_write": 1
+        },
+        "Product Serial": {
+          "value": "{pSn}",
+          "need_to_write": 1
+        },
+        "Product Asset Tag": {
+          "value": "{pAssetTag}",
+          "need_to_write": 1
+        },
+        "Product Extra0": {
+          "value": "Suite:{pSuite}",
+          "need_to_write": 1
+        }
+      }
+    }
+  },
+  "QtHostTopoWrite": {
+    "Desc": "Fru topo write",
+    "Tags": "Fru topo write",
+    "Module": "fru_top",
+    "Class": "FruTop",
+    "Function": "test_fru_top_write",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "eep_tool_version": "PcieEEpromTool-G225C",
+      "skip_fru_protection": "false"
+    }
+  },
+  "QtOcpHostTopoWrite": {
+    "Desc": "Fru topo write",
+    "Tags": "Fru topo write",
+    "Module": "fru_top",
+    "Class": "FruTop",
+    "Function": "test_fru_top_write",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "eep_tool_version": "PcieEEpromTool-G225C",
+      "skip_fru_protection": "false"
+    }
+  },
+  "QtBF3HostTopoWrite": {
+    "Desc": "Fru topo write",
+    "Tags": "Fru topo write",
+    "Module": "fru_top",
+    "Class": "FruTop",
+    "Function": "test_fru_top_write",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "eep_tool_version": "PcieEEpromTool-G225C",
+      "skip_fru_protection": "false"
+    }
+  },
+  "QtHostTopoCheck": {
+    "Desc": "Fru topo check",
+    "Tags": "Fru topo check",
+    "Module": "fru_top",
+    "Class": "FruTop",
+    "Function": "test_fru_top_check",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "eep_tool_version": "PcieEEpromTool-G225C",
+      "skip_fru_protection": "false"
+    }
+  },
+  "QtOcpHostTopoCheck": {
+    "Desc": "Fru topo check",
+    "Tags": "Fru topo check",
+    "Module": "fru_top",
+    "Class": "FruTop",
+    "Function": "test_fru_top_check",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "eep_tool_version": "PcieEEpromTool-G225C",
+      "skip_fru_protection": "false"
+    }
+  },
+  "QtBF3HostTopoCheck": {
+    "Desc": "Fru topo check",
+    "Tags": "Fru topo check",
+    "Module": "fru_top",
+    "Class": "FruTop",
+    "Function": "test_fru_top_check",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "eep_tool_version": "PcieEEpromTool-G225C",
+      "skip_fru_protection": "false"
+    }
+  },
+  "QtBmcSetSensorThresh": {
+    "Desc": "Sensor thresh set",
+    "Tags": "Sensor thresh set",
+    "Module": "set_sensor_thresh",
+    "Class": "BmcSensorThresh",
+    "Function": "test_sensor_thresh_set",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "set_thresh_cmd": "ipmitool sensor thresh \"Inlet_Temp\" upper 45 46 47"
+    }
+  },
+  "QtBmcEepromSetting_Set": {
+    "Desc": "",
+    "Tags": "BMC EEPROM Setting",
+    "Module": "bmc_eeprom_setting",
+    "Class": "BmcEepromSetting",
+    "Function": "test_bmc_eeprom_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "set",
+      "i2c_expand_cmd": "ipmitool -I lanplus -H {} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x98 0x01",
+      "set_box_cmd": {
+        "4NVMEs_4NICs": "ipmitool -I lanplus -H {} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0xcb 0xdd 0xb3 0x00 0x55 0x55",
+        "4NVMEs_8NICs": "ipmitool -I lanplus -H {} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0xcb 0xdd 0xb3 0x00 0x55 0xff",
+        "8NVMEs_4NICs": "ipmitool -I lanplus -H {} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0xcb 0xdd 0xb3 0x00 0xff 0x55",
+        "8NVMEs_8NICs": "ipmitool -I lanplus -H {} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0xcb 0xdd 0xb3 0x00 0xff 0xff"
+      },
+      "check_box_bmc_cmd": "ipmitool -I lanplus -H {} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x06 0x52 0x01 0xa2 0x02 0x02 0x83",
+      "expect_value": {
+        "4NVMEs_4NICs": "55 55",
+        "4NVMEs_8NICs": "55 ff",
+        "8NVMEs_4NICs": "ff 55",
+        "8NVMEs_8NICs": "ff ff"
+      }
+    }
+  },
+  "QtBmcEepromSetting_Check": {
+    "Desc": "",
+    "Tags": "BMC EEPROM Setting",
+    "Module": "bmc_eeprom_setting",
+    "Class": "BmcEepromSetting",
+    "Function": "test_bmc_eeprom_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "check",
+      "i2c_expand_cmd": "ipmitool -I lanplus -H {} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x98 0x01",
+      "check_box_bmc_cmd": "ipmitool -I lanplus -H {} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x06 0x52 0x01 0xa2 0x02 0x02 0x83",
+      "get_nvme_devices_cmd": "ipmitool -I lanplus -H {} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x2c 0xdd 0xb3 0 7",
+      "get_nic_devices_cmd": "ipmitool -I lanplus -H {} -U toutiao -P 'toutiao!@#' -p 8623 raw 0x3a 0x2c 0xdd 0xb3 0 8",
+      "expect_value": {
+        "4NVMEs_4NICs": "55 55",
+        "4NVMEs_8NICs": "55 ff",
+        "8NVMEs_4NICs": "ff 55",
+        "8NVMEs_8NICs": "ff ff"
+      }
+    }
+  }
+}

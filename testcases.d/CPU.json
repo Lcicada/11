@@ -1,0 +1,481 @@
+{
+
+    "QtCpuInfoCheck": {
+        "Desc": "",
+        "Tags": "CPU INFO",
+        "Module": "test_check_cpu",
+        "Class": "CPU",
+        "Function": "test_cpu_info",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "QtCpuInfoCheck_repeat": {
+        "Desc": "",
+        "Tags": "CPU INFO",
+        "Module": "test_check_cpu",
+        "Class": "CPU",
+        "Function": "repeat_test",
+        "Timeout": "15m",
+        "Args": [],
+        "Kwargs": {
+           "repeat_type": "duration",
+           "duration": "60m",
+           "interval": "600",
+           "function": "test_cpu_info",
+           "args": [],
+           "kwargs": {}
+        }
+    },
+    "CpuStress": {
+        "Desc": "Cpu Stress",
+        "Tags": "CPU STRESS",
+        "Module": "cpu_stress",
+        "Class": "CpuStressTest",
+        "Function": "test_cpu_stress",
+        "Timeout": "5h",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "1h",
+            "other_para": ""
+        }
+    },
+    "QtCpuStressTest_Ptu": {
+        "Desc": "Ptu Test",
+        "Tags": "CPU STRESS",
+        "Module": "ptu_stress",
+        "Class": "PtuTest",
+        "Function": "test_ptu",
+        "Timeout": "30m",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "600",
+            "other_para": "-ct 6 -t"
+        }
+    },
+    "QtCpuStressTest_PtunTDP": {
+        "Desc": "Ptu Test",
+        "Tags": "CPU STRESS",
+        "Module": "ptu_stress",
+        "Class": "PtuTest",
+        "Function": "test_ptu_nTDP",
+        "Timeout": "70m",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "600"
+        }
+    },
+    "QtCpuStressTest": {
+        "Desc": "CPU Stress",
+        "Tags": "CPU STRESS",
+        "Module": "cpu_stress_test",
+        "Class": "CPUMprimeTest",
+        "Function": "test_mprime",
+        "Timeout": "25m",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "5m"
+        }
+    },
+    "CpuPerf": {
+        "Desc": "Cpu Perf",
+        "Tags": "CPU STRESS PERF",
+        "Module": "cpu_perf",
+        "Class": "CpuPerfTest",
+        "Function": "test_cpu_perf",
+        "Timeout": "60m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "CpuPi": {
+        "Desc": "Cpu Pi",
+        "Tags": "CPU STRESS PERF",
+        "Module": "cpu_pi",
+        "Class": "CpuPiTest",
+        "Function": "test_pi",
+        "Timeout": "30m",
+        "Args": [],
+        "Kwargs": {
+            "perf_file": "cpu_pi.json",
+            "if_check": true
+        }
+    },
+    "CpuSuperPi": {
+        "Desc": "Cpu SuperPi",
+        "Tags": "CPU STRESS PERF",
+        "Module": "cpu_pi",
+        "Class": "CpuPiTest",
+        "Function": "test_superpi",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "perf_file": "cpu_superpi.json",
+            "if_check": true
+        }
+    },
+    "CpuPiTest": {
+        "Desc": "Cpu Pi",
+        "Tags": "CPU STRESS PERF",
+        "Module": "cpu_pi_test",
+        "Class": "CpuPiTest",
+        "Function": "test_pi",
+        "Timeout": "30m",
+        "Args": [],
+        "Kwargs": {
+            "perf_key": "QTBQC-pi",
+            "if_check": true
+        }
+    },
+    "CpuSuperPiTest": {
+        "Desc": "Cpu SuperPi",
+        "Tags": "CPU STRESS PERF",
+        "Module": "cpu_pi_test",
+        "Class": "CpuPiTest",
+        "Function": "test_superpi",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "perf_key": "superpi",
+            "if_check": true
+        }
+    },
+    "QtCpuFunctionTest_Freq": {
+        "Desc": "check cpu freq",
+        "Tags": "CPU FUNCTION",
+        "Module": "test_cpu_freq",
+        "Class": "CPUFreqCheck",
+        "Function": "test_cpu_freq_check",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "QtCpuFunctionTest_Numa": {
+        "Desc": "check cpu numa",
+        "Tags": "CPU FUNCTION",
+        "Module": "test_cpu_numa",
+        "Class": "CPUNUMACheck",
+        "Function": "test_cpu_numa_check",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "QtCpuStressTest_Shc": {
+        "Desc": "test cpu shc",
+        "Tags": "CPU FUNCTION",
+        "Module": "shc_test",
+        "Class": "SHC",
+        "Function": "test_SHC",
+        "Timeout": "5H",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "QtCpuFunctionTest_UpiStress": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "upi_stress",
+        "Class": "UPIStress",
+        "Function": "test_upi_stress",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "ready_cmd": "modprobe msr;ulimit -n 10000;echo 0 > /proc/sys/kernel/nmi_watchdog",
+            "pcm_cmd": "./pcm.x 1 -i=1",
+            "mlc_version": "mlcv3.9",
+            "stress_time": 60,
+            "time_interval": 2,
+            "sockets_num": 2,
+            "upi_ports_per_socket": 3,
+            "link_precent_limit":  {
+                "70": ["6519"],
+                "90": ["6743"]
+            },
+            "spec_file": "upi_stress_specs.json"
+        }
+    },
+    "QtCpuFunctionTest_UpiCheck": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "upi_check",
+        "Class": "UPICheck",
+        "Function": "test_upi_check",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "pcm_tool": "pcm.x",
+            "pcm_cmd": "./pcm.x 1 -nc -ns -i=1",
+            "ready_cmd": "modprobe msr;echo 0 > /proc/sys/kernel/nmi_watchdog",
+            "spec_file": "upi_check_specs.json"
+        }
+    },
+    "QtCpuStressTest_stressng":{
+        "Desc": "CPU Stressng 4h",
+        "Tags": "CPU Stressng",
+        "Module": "stressng_test",
+        "Class": "stressng",
+        "Function": "test_stressng",
+        "Timeout": "300m",
+        "Args": [],
+        "Kwargs": {
+            "full_parameter": "--matrix 0 --matrix-size 128 --tz -v -t 240m --matrix-method mean"
+        }
+    },
+    "QtCpuStress_Afhc": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "afhc_test",
+        "Class": "AfhcTest",
+        "Function": "test_afhc",
+        "Timeout": "800m",
+        "Args": [],
+        "Kwargs": {
+            "afhc_interval": "35",
+            "fhc_path": "tools/x86_64/cli/FHC/BD_FHC_2",
+            "iteration_timeout": "800",
+            "fail_flag": [
+               "FAILURE:",
+               "testfail",
+               "mcefail"
+            ],
+            "iteration": "4"
+        }
+    },
+    "QtCpuStress_AvtTemp": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "admcpu_avt_test",
+        "Class": "AdmcpuAvtTest",
+        "Function": "test_avt_monitor_temp",
+        "Timeout": "250m",
+        "Args": [],
+        "Kwargs": {
+            "temp_test_time": "4:h",
+            "MonitorInterval": "60",
+            "tool_path": "tools/x86_64/cli/AVT/AVT_Linux_NDA_2.8.56",
+            "log_name": "avttest.csv",
+            "check_times": 5,
+            "temp_check_mode": "ma",
+            "temp_lower_limit": 96
+        }
+    },
+    "QtCpuStress_AvtPower": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "admcpu_avt_test",
+        "Class": "AdmcpuAvtTest",
+        "Function": "test_admcpu_avt",
+        "Timeout": "80m",
+        "Args": [],
+        "Kwargs": {
+		"AVTCMD_tool_path":"AVT/AVT_Linux_NDA_2.10.13/AVTCMD",
+            "power_start": {
+                "200": ["9535","9A75"],
+                "240": ["9Y25"]
+            },
+            "power_end": {
+                "300": ["9535"],
+                "400": ["9A75"],
+                "500": ["9Y25"]
+            },
+            "d_value": 10
+        }
+    },
+    "QtCpuFunctionTest_XGMI": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "check_xgmi",
+        "Class": "CheckXgmi",
+        "Function": "test_check_xgmi",
+        "Timeout": "15m",
+        "Args": [],
+        "Kwargs": {
+			"total_xgmi_count":6
+        }
+    },
+	"QtAmdCpuTurinHsTest": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "amdcpu_turin_hs_test",
+    "Class": "AmdCpuTurinHsTest",
+    "Function": "test_amdcpu_turin_hs",
+    "Timeout": "30m",
+    "Args": [],
+    "Kwargs": {
+       "tool_name": "AVT_Linux_NDA_2.10.1",
+       "test_time": 1200,
+       "sampling_interval": 10,
+       "check_last_cnt": 10,
+       "fan_duty": {
+          "0-35": "ipmitool raw 0x3e 0x31 0 40",
+          "36-40": "ipmitool raw 0x3e 0x31 0 55"
+       },
+       "spec": {
+          "9Y25": {
+		     "21": {
+                "CPU0_temp_upper": 75,
+                "CPU1_temp_upper": 74
+             },
+             "22": {
+                "CPU0_temp_upper": 75,
+                "CPU1_temp_upper": 74
+             },
+             "23": {
+                "CPU0_temp_upper": 76,
+                "CPU1_temp_upper": 75
+             },
+             "24": {
+                "CPU0_temp_upper": 77,
+                "CPU1_temp_upper": 76
+             },
+
+             "25": {
+                "CPU0_temp_upper": 78,
+                "CPU1_temp_upper": 77
+             },
+             "26": {
+                "CPU0_temp_upper": 79,
+                "CPU1_temp_upper": 78
+             },
+             "27": {
+                "CPU0_temp_upper": 80,
+                "CPU1_temp_upper": 79
+             },
+             "28": {
+                "CPU0_temp_upper": 81,
+                "CPU1_temp_upper": 80
+             },
+             "29": {
+                "CPU0_temp_upper": 82,
+                "CPU1_temp_upper": 81
+             },
+             "30": {
+                "CPU0_temp_upper": 83,
+                "CPU1_temp_upper": 82
+             },
+             "31": {
+                "CPU0_temp_upper": 84,
+                "CPU1_temp_upper": 83
+             },
+             "32": {
+                "CPU0_temp_upper": 85,
+                "CPU1_temp_upper": 84
+             },
+             "33": {
+                "CPU0_temp_upper": 87,
+                "CPU1_temp_upper": 85
+             },
+             "34": {
+                "CPU0_temp_upper": 88,
+                "CPU1_temp_upper": 86
+             },
+             "35": {
+                "CPU0_temp_upper": 89,
+                "CPU1_temp_upper": 88
+             },
+             "36": {
+                "CPU0_temp_upper": 82,
+                "CPU1_temp_upper": 82
+             },
+             "37": {
+                "CPU0_temp_upper": 84,
+                "CPU1_temp_upper": 83
+             },
+             "38": {
+                "CPU0_temp_upper": 85,
+                "CPU1_temp_upper": 84
+             },
+             "39": {
+                "CPU0_temp_upper": 86,
+                "CPU1_temp_upper": 85
+             },
+             "40": {
+                "CPU0_temp_upper": 87,
+                "CPU1_temp_upper": 87
+             }
+          },
+		  "9A75": {
+		     "21": {
+                "CPU0_temp_upper": 72,
+                "CPU1_temp_upper": 73
+             },
+             "22": {
+                "CPU0_temp_upper": 72,
+                "CPU1_temp_upper": 73
+             },
+             "23": {
+                "CPU0_temp_upper": 73,
+                "CPU1_temp_upper": 74
+             },
+             "24": {
+                "CPU0_temp_upper": 74,
+                "CPU1_temp_upper": 75
+             },
+
+             "25": {
+                "CPU0_temp_upper": 75,
+                "CPU1_temp_upper": 76
+             },
+             "26": {
+                "CPU0_temp_upper": 76,
+                "CPU1_temp_upper": 77
+             },
+             "27": {
+                "CPU0_temp_upper": 77,
+                "CPU1_temp_upper": 78
+             },
+             "28": {
+                "CPU0_temp_upper": 78,
+                "CPU1_temp_upper": 80
+             },
+             "29": {
+                "CPU0_temp_upper": 80,
+                "CPU1_temp_upper": 81
+             },
+             "30": {
+                "CPU0_temp_upper": 81,
+                "CPU1_temp_upper": 82
+             },
+             "31": {
+                "CPU0_temp_upper": 82,
+                "CPU1_temp_upper": 83
+             },
+             "32": {
+                "CPU0_temp_upper": 83,
+                "CPU1_temp_upper": 84
+             },
+             "33": {
+                "CPU0_temp_upper": 84,
+                "CPU1_temp_upper": 85
+             },
+             "34": {
+                "CPU0_temp_upper": 85,
+                "CPU1_temp_upper": 86
+             },
+             "35": {
+                "CPU0_temp_upper": 86,
+                "CPU1_temp_upper": 87
+             },
+             "36": {
+                "CPU0_temp_upper": 81,
+                "CPU1_temp_upper": 81
+             },
+             "37": {
+                "CPU0_temp_upper": 82,
+                "CPU1_temp_upper": 82
+             },
+             "38": {
+                "CPU0_temp_upper": 83,
+                "CPU1_temp_upper": 84
+             },
+             "39": {
+                "CPU0_temp_upper": 84,
+                "CPU1_temp_upper": 85
+             },
+             "40": {
+                "CPU0_temp_upper": 85,
+                "CPU1_temp_upper": 86
+             }
+          }
+       }
+     }
+ }
+}

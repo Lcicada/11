@@ -1,0 +1,6 @@
+{
+    "G225-A[0-9A-Z]": "single_node",
+    "G230-D[0-9A-Z]": "single_node",
+    "G230-D[0-9A-Z]-2": "multi_node",
+    "G230-D[0-9A-Z]-F": "single_node"
+}

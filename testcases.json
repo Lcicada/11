@@ -1,0 +1,1858 @@
+{
+  "QtMbFwCheck": {
+    "Desc": "MB FW Check",
+    "Tags": "FW Check",
+    "Module": "test_fw_version",
+    "Class": "FWVersionTest",
+    "Function": "test_mb_fw_version",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtVRFwCheck": {
+    "Desc": "MB FW Check",
+    "Tags": "FW Check",
+    "Module": "test_fw_version",
+    "Class": "FWVersionTest",
+    "Function": "test_vr_fw_version",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtFcbFwCheck": {
+    "Desc": "Fcb FW Check",
+    "Tags": "FW Check",
+    "Module": "test_fw_version",
+    "Class": "FWVersionTest",
+    "Function": "test_fanboard_fw_version",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBpFwCheck": {
+    "Desc": "Bp FW Check",
+    "Tags": "FW Check",
+    "Module": "test_fw_version",
+    "Class": "FWVersionTest",
+    "Function": "test_bp_fw_version",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtRj45bFwCheck": {
+    "Desc": "Rj45 FW Check",
+    "Tags": "FW Check",
+    "Module": "test_fw_version",
+    "Class": "FWVersionTest",
+    "Function": "test_rj45_fw_version",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtNvmeFwCheck": {
+    "Desc": "Nvme FW Check",
+    "Tags": "FW Check",
+    "Module": "test_fw_version",
+    "Class": "FWVersionTest",
+    "Function": "test_nvme_fw_version",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtNicFwCheck": {
+    "Desc": "Nic FW Check",
+    "Tags": "FW Check",
+    "Module": "test_fw_version",
+    "Class": "FWVersionTest",
+    "Function": "test_nic_fw_version",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtPsuFwCheck": {
+    "Desc": "Psu FW Check",
+    "Tags": "FW Check",
+    "Module": "test_fw_version",
+    "Class": "FWVersionTest",
+    "Function": "test_psu_fw_version",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSmartnicFwCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_fw_version",
+    "Class": "FWVersionTest",
+    "Function": "test_smart_nic_fw_version",
+    "Timeout": "3m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtNicStressCheck": {
+    "Desc": "Nic Stress Check",
+    "Tags": "Nic Stress Check",
+    "Module": "nic_test",
+    "Class": "NICTest",
+    "Function": "test_nic_stress",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtNicInfoCheck": {
+    "Desc": "Nic exist Check",
+    "Tags": "Nic exist Check",
+    "Module": "nic_test",
+    "Class": "NICTest",
+    "Function": "test_exist",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSmartnicNicInfoCheck": {
+    "Desc": "Nic exist Check",
+    "Tags": "Nic exist Check",
+    "Module": "nic_test",
+    "Class": "NICTest",
+    "Function": "test_exist_dpu",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtPsuFunctionCheck_Powerbalance": {
+    "Desc": "Psu Powerbalance Check",
+    "Tags": "Psu Function Check",
+    "Module": "power_test",
+    "Class": "PowerTest",
+    "Function": "test_even_flow",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtMbFruCheck": {
+    "Desc": "Mb Fru Check",
+    "Tags": "Fru Check",
+    "Module": "test_mb_fru",
+    "Class": "MBFRUTest",
+    "Function": "test_mb_fru",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSmartnicFruCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_mb_fru",
+    "Class": "MBFRUTest",
+    "Function": "test_smart_nic_fru",
+    "Timeout": "3m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtFcbFruCheck": {
+    "Desc": "Fcb Fru Check",
+    "Tags": "Fru Check",
+    "Module": "test_subcard_fru",
+    "Class": "SubcardFRUTest",
+    "Function": "test_fan_fru",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBpFruCheck": {
+    "Desc": "Bp Fru Check",
+    "Tags": "Fru Check",
+    "Module": "test_subcard_fru",
+    "Class": "SubcardFRUTest",
+    "Function": "test_backplane_fru",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtRj45bFruCheck": {
+    "Desc": "Rj45 Fru Check",
+    "Tags": "Fru Check",
+    "Module": "test_subcard_fru",
+    "Class": "SubcardFRUTest",
+    "Function": "test_rj45_fru",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtPdbFruCheck": {
+    "Desc": "Pdb Fru Check",
+    "Tags": "Fru Check",
+    "Module": "test_subcard_fru",
+    "Class": "SubcardFRUTest",
+    "Function": "test_pdb_fru",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtRiserFruCheck": {
+    "Desc": "Riser Fru Check",
+    "Tags": "Fru Check",
+    "Module": "test_subcard_fru",
+    "Class": "SubcardFRUTest",
+    "Function": "test_riser_fru",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBiosSmbiosCheck": {
+    "Desc": "Bios Smbios Check",
+    "Tags": "Bios Smbios Check",
+    "Module": "test_smbios",
+    "Class": "SMBIOSTest",
+    "Function": "test_smbios",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtCpuInfoCheck": {
+    "Desc": "CPU exist test",
+    "Tags": "CPU exist test",
+    "Module": "cpu_test",
+    "Class": "CPUTest",
+    "Function": "test_exist",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtCpuFreqCheck": {
+    "Desc": "CPU test",
+    "Tags": "FUNCTION",
+    "Module": "cpu_test",
+    "Class": "CPUTest",
+    "Function": "test_cpu_freq",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtDramInfoCheck": {
+    "Desc": "Memory exist test",
+    "Tags": "Memory exist test",
+    "Module": "memory_test",
+    "Class": "MemoryTest",
+    "Function": "test_exist",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSmartnicSsdInfoCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "dpu_disk_test",
+    "Class": "DPUDiskTest",
+    "Function": "test_exist_dpu",
+    "Timeout": "3m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSmartnicCpuInfoCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "cpu_test",
+    "Class": "CPUTest",
+    "Function": "test_exist_dpu",
+    "Timeout": "3m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSmartnicDramInfoCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "memory_test",
+    "Class": "MemoryTest",
+    "Function": "test_exist_dpu",
+    "Timeout": "3m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSmartnicBmcSdrCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_sdr",
+    "Class": "SDRTest",
+    "Function": "test_sdr_list_check",
+    "Timeout": "3m",
+    "Args": [],
+    "Kwargs": {"key":"DPU"}
+  },
+  "QtSmartnicBiosSmbiosCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_smbios",
+    "Class": "SMBIOSTest",
+    "Function": "test_dpu_smbios",
+    "Timeout": "3m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSmartnicBmcBatCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "power_test",
+    "Class": "PowerTest",
+    "Function": "test_cmos_battery_dpu",
+    "Timeout": "3m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtNvmeInfoCheck": {
+    "Desc": "Disk exist test",
+    "Tags": "Disk exist test",
+    "Module": "disk_test",
+    "Class": "DiskTest",
+    "Function": "test_exist",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtNvmeLavaFeatureCheck": {
+    "Desc": "Disk exist test",
+    "Tags": "Disk exist test",
+    "Module": "disk_test",
+    "Class": "DiskTest",
+    "Function": "test_lava_feature_set",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtNvmeEqByssModeCheck": {
+    "Desc": "Disk EqBypassMode test",
+    "Tags": "Disk test",
+    "Module": "disk_test",
+    "Class": "DiskTest",
+    "Function": "test_bypass_mode",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtFanInfoCheck": {
+    "Desc": "Fan exist test",
+    "Tags": "Fan exist test",
+    "Module": "fan_test",
+    "Class": "FanTest",
+    "Function": "test_exist",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtPsuInfoCheck": {
+    "Desc": "PSU exist test",
+    "Tags": "PSU exist test",
+    "Module": "power_test",
+    "Class": "PowerTest",
+    "Function": "test_exist",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtIFSTest": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "ifs_test",
+    "Class": "IFSTest",
+    "Function": "test_ifs",
+    "Timeout": "2h",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtPciInfoCheck": {
+    "Desc": "Pcie exist test",
+    "Tags": "Pcie exist test",
+    "Module": "pcie_test",
+    "Class": "PcieTotalTest",
+    "Function": "test_pcie_compare_with_golden",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSmartnicPciInfoCheck": {
+    "Desc": "Pcie exist test",
+    "Tags": "Pcie exist test",
+    "Module": "pcie_test",
+    "Class": "PcieTotalTest",
+    "Function": "test_pcie_compare_with_golden",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {"key":"DPU"}
+  },
+  "QtBmcSdrFullCheck": {
+    "Desc": "BMC SDR Check",
+    "Tags": "BMC SDR Check",
+    "Module": "test_sdr",
+    "Class": "SDRTest",
+    "Function": "test_sdr_list_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBatteryFunctionCheck": {
+    "Desc": "CMOS Battery Check",
+    "Tags": "CMOS Battery Check",
+    "Module": "power_test",
+    "Class": "PowerTest",
+    "Function": "test_cmos_battery",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSmartnicBlacklistCheck": {
+    "Desc": "Blacklist Check",
+    "Tags": "Blacklist Check",
+    "Module": "test_black_list",
+    "Class": "BlackListTest",
+    "Function": "test_check_black",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"mode":"DPU"}
+  },
+  "QtSystemBlacklistCheck": {
+    "Desc": "Blacklist Check",
+    "Tags": "Blacklist Check",
+    "Module": "test_black_list",
+    "Class": "BlackListTest",
+    "Function": "test_check_black",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"mode":"HOST"}
+  },
+  "QtSyslogSaveTest": {
+    "Desc": "Blacklist Check",
+    "Tags": "Blacklist Check",
+    "Module": "test_black_list",
+    "Class": "BlackListTest",
+    "Function": "test_clear_and_save_message",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSystemBlacklistCheck_Ort": {
+    "Desc": "Blacklist Check",
+    "Tags": "Blacklist Check",
+    "Module": "test_black_list",
+    "Class": "BlackListTest",
+    "Function": "test_check_black_for_ort",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtOobBlacklistCheck": {
+    "Desc": "Blacklist Check",
+    "Tags": "Blacklist Check",
+    "Module": "test_black_list",
+    "Class": "BlackListTest",
+    "Function": "test_sel_sdr_blacklist",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcFunctionCheck_Coolingmode": {
+    "Desc": "Cooling mode check",
+    "Tags": "BMC Function Check",
+    "Module": "test_cooling_mode",
+    "Class": "CoolingModeTest",
+    "Function": "test_cooling_mode",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcFunctionCheck_LeakageLine": {
+    "Desc": "Cooling mode check",
+    "Tags": "BMC Function Check",
+    "Module": "test_cooling_mode",
+    "Class": "CoolingModeTest",
+    "Function": "test_leakage_line",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSystemSstppCheck": {
+    "Desc": "SSTPP Check",
+    "Tags": "SSTPP Check",
+    "Module": "test_sst-pp",
+    "Class": "SSTPPTest",
+    "Function": "test_cpu_sst_pp",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtFanFunctionCheck": {
+    "Desc": "Fan Function Check",
+    "Tags": "Fan Function Check",
+    "Module": "fan_test",
+    "Class": "FanTest",
+    "Function": "test_speed",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcFunctionCheck_Flashid": {
+    "Desc": "Flash ID check",
+    "Tags": "BMC Function Check",
+    "Module": "test_flash_id",
+    "Class": "FlashIDTest",
+    "Function": "test_flash_id",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcNcsiTest": {
+    "Desc": "NCSI test",
+    "Tags": "BMC Function Check",
+    "Module": "test_ncsi",
+    "Class": "NcsiTest",
+    "Function": "test_ncsi",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcDedicateTest_host": {
+    "Desc": "Dedicate test",
+    "Tags": "BMC Function Check",
+    "Module": "test_dedicated_speed",
+    "Class": "DedicatedSpeedTest",
+    "Function": "test_dedicated_speed",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcDedicateTest_dpu": {
+    "Desc": "Dedicate test",
+    "Tags": "BMC Function Check",
+    "Module": "test_dedicated_speed",
+    "Class": "DedicatedSpeedTest",
+    "Function": "test_dpu_dedicated_speed",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtEndConfirmTest": {
+    "Desc": "",
+    "Tags": "PromptBox",
+    "Module": "interaction_test",
+    "Class": "InteractionTest",
+    "Function": "test_end_interaction_prompt",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtScanLabelTest": {
+    "Desc": "scan label test",
+    "Tags": "PromptBox",
+    "Module": "interaction_test",
+    "Class": "InteractionTest",
+    "Function": "test_scan_label",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtUIDLedTest": {
+    "Desc": "Led test for uid",
+    "Tags": "PromptBox",
+    "Module": "interaction_test",
+    "Class": "InteractionTest",
+    "Function": "test_uid_button_led",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtNvmeLedTest": {
+    "Desc": "Led test for ssd",
+    "Tags": "PromptBox",
+    "Module": "interaction_test",
+    "Class": "InteractionTest",
+    "Function": "test_nvme_led",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtFanLedTest": {
+    "Desc": "Led test for fan",
+    "Tags": "PromptBox",
+    "Module": "interaction_test",
+    "Class": "InteractionTest",
+    "Function": "test_fan_led",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcLedTest": {
+    "Desc": "Led test for bmc dedicate",
+    "Tags": "PromptBox",
+    "Module": "interaction_test",
+    "Class": "InteractionTest",
+    "Function": "test_bmc_dedicate_led",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtPsuAcalertTest": {
+    "Desc": "Psu ac alert test",
+    "Tags": "PromptBox",
+    "Module": "interaction_test",
+    "Class": "InteractionTest",
+    "Function": "test_ac_lost",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtUsbFunctionTest": {
+    "Desc": "Usb test",
+    "Tags": "PromptBox",
+    "Module": "interaction_test",
+    "Class": "InteractionTest",
+    "Function": "test_usb",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSerialFunctionTest": {
+    "Desc": "Serial test",
+    "Tags": "PromptBox",
+    "Module": "interaction_test",
+    "Class": "InteractionTest",
+    "Function": "test_serial_port",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtHealthLedTest": {
+    "Desc": "Led test for Health",
+    "Tags": "PromptBox",
+    "Module": "interaction_test",
+    "Class": "InteractionTest",
+    "Function": "test_health_led",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtPowerButtonTest": {
+    "Desc": "Power Button Click TEST",
+    "Tags": "PromptBox",
+    "Module": "interaction_test",
+    "Class": "InteractionTest",
+    "Function": "test_power_button",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtVgaTest": {
+    "Desc": "VGA TEST",
+    "Tags": "PromptBox",
+    "Module": "interaction_test",
+    "Class": "InteractionTest",
+    "Function": "test_vga",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtPowerLedTest": {
+    "Desc": "Power LED TEST",
+    "Tags": "PromptBox",
+    "Module": "interaction_test",
+    "Class": "InteractionTest",
+    "Function": "test_power_led",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSystemLogCollect": {
+    "Desc": "Collect sdr/sel/message/dmesg/lspci/SMBIOS log",
+    "Tags": "FUNCTION",
+    "Module": "log_test",
+    "Class": "LogTest",
+    "Function": "test_diag_log",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBMCLogCollect": {
+    "Desc": "Collect BMC log",
+    "Tags": "BMC",
+    "Module": "log_test",
+    "Class": "LogTest",
+    "Function": "test_collect_blackbox",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSystemBmcSelClear": {
+    "Desc": "BMC SEL Clear",
+    "Tags": "FUNCTION",
+    "Module": "log_test",
+    "Class": "LogTest",
+    "Function": "test_bmc_sel_clear",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSystemBdatCollect": {
+    "Desc": "Collect log",
+    "Tags": "FUNCTION",
+    "Module": "log_test",
+    "Class": "LogTest",
+    "Function": "test_collect_bdat_log",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBMCCoredumpCheck": {
+    "Desc": "coredump check",
+    "Tags": "FUNCTION",
+    "Module": "log_test",
+    "Class": "LogTest",
+    "Function": "test_coredump",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSystemFunctionTest_SingleNodeAc_0": {
+    "Desc": "single node ac test",
+    "Tags": "System Function Test",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_single_node_cycle",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"node_id":0,"cycle_type":"AC"}
+  },
+  "QtSystemFunctionTest_SingleNodeAc_1": {
+    "Desc": "single node ac test",
+    "Tags": "System Function Test",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_single_node_cycle",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"node_id":1,"cycle_type":"AC"}
+  },
+  "QtSystemFunctionTest_SingleNodeAc_2": {
+    "Desc": "single node ac test",
+    "Tags": "System Function Test",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_single_node_cycle",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"node_id":2,"cycle_type":"AC"}
+  },
+  "QtHostPoweron": {
+    "Desc": "System Os test",
+    "Tags": "System Function Test",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_host_power_on",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtHostPoweroff": {
+    "Desc": "System Os test",
+    "Tags": "System Function Test",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_host_power_off",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSmartnicDcTest": {
+    "Desc": "single node ac test",
+    "Tags": "System Function Test",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_single_node_cycle",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"node_id":0,"cycle_type":"DC"}
+  },
+  "QtSystemFunctionTest_SingleNodeDc_0": {
+    "Desc": "single node ac test",
+    "Tags": "System Function Test",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_single_node_cycle",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"node_id":0,"cycle_type":"DC"}
+  },
+  "QtSystemFunctionTest_SingleNodeDc_1": {
+    "Desc": "single node ac test",
+    "Tags": "System Function Test",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_single_node_cycle",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"node_id":1,"cycle_type":"DC"}
+  },
+  "QtSystemFunctionTest_SingleNodeDc_2": {
+    "Desc": "single node ac test",
+    "Tags": "System Function Test",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_single_node_cycle",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"node_id":2,"cycle_type":"DC"}
+  },
+  "QtSmartnicRebootTest": {
+    "Desc": "single node ac test",
+    "Tags": "System Function Test",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_single_node_cycle",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"node_id":0,"cycle_type":"Reboot"}
+  },
+  "QtSystemFunctionTest_SingleNodeReboot_0": {
+    "Desc": "single node ac test",
+    "Tags": "System Function Test",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_single_node_cycle",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"node_id":0,"cycle_type":"Reboot"}
+  },
+  "QtSystemFunctionTest_SingleNodeReboot_1": {
+    "Desc": "single node ac test",
+    "Tags": "System Function Test",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_single_node_cycle",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"node_id":1,"cycle_type":"Reboot"}
+  },
+  "QtSystemFunctionTest_SingleNodeReboot_2": {
+    "Desc": "single node ac test",
+    "Tags": "System Function Test",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_single_node_cycle",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"node_id":2,"cycle_type":"Reboot"}
+  },
+  "QtSystemOsCheck": {
+    "Desc": "System Os test",
+    "Tags": "System Function Test",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_sub_node_status_check",
+    "Timeout": "30m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSystemDiskFormatTest": {
+	"Desc": "Disk format check",
+	"Tags": "Disk format check",
+	"Module": "test_disk_format",
+	"Class": "DiskFormatTest",
+	"Function": "test_disk_format",
+	"Timeout": "5m",
+	"Args": [],
+	"Kwargs": {}
+  },
+   "QtSmartnicDiskFormatTest": {
+	"Desc": "Disk format check",
+	"Tags": "Disk format check",
+	"Module": "test_disk_format",
+	"Class": "DiskFormatTest",
+	"Function": "test_dpu_disk_format",
+	"Timeout": "5m",
+	"Args": [],
+	"Kwargs": {}
+  },
+  "QtSmartnicBmcFactoryReset": {
+    "Desc": "bmc factory reset",
+    "Tags": "bmc settings check",
+    "Module": "test_bmc_factory_reset",
+    "Class": "BMCFactoryResetTest",
+    "Function": "test_dpu_bmc_factory_reset",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcFactoryReset": {
+    "Desc": "bmc factory reset",
+    "Tags": "bmc settings check",
+    "Module": "test_bmc_factory_reset",
+    "Class": "BMCFactoryResetTest",
+    "Function": "test_bmc_factory_reset",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {}
+  },
+   "QtBmcFactoryResetCheck": {
+    "Desc": "bmc factory reset",
+    "Tags": "bmc settings check",
+    "Module": "test_bmc_setup_check",
+    "Class": "BMCSetupCheckTest",
+    "Function": "test_bmc_setup_check",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSystemTpmCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bmc_setup_check",
+    "Class": "BMCSetupCheckTest",
+    "Function": "test_tpm_exist",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcStressTest_SdrSel": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bmc_setup_check",
+    "Class": "BMCSetupCheckTest",
+    "Function": "test_bmc_get_sdr_sel",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {
+        "interval_time": 10,
+        "stress_time": 300
+        }
+  },
+  "QtBmcImageSwitchTest": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bmc_setup_check",
+    "Class": "BMCSetupCheckTest",
+    "Function": "test_switch_bmc_image",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtDUIDLLTCheck": {
+    "Desc": "Bios factory reset",
+    "Tags": "Bios settings check",
+    "Module": "test_duid_llt",
+    "Class": "DUIDLLTTest",
+    "Function": "test_duid_llt_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBiosFactoryReset": {
+    "Desc": "Bios factory reset",
+    "Tags": "Bios settings check",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_single_node_cycle",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBiosFactoryResetFullCheckFromFirmware": {
+    "Desc": "Bios factory reset check",
+    "Tags": "Bios settings check",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_bios_option_full_inspection_for_firmware",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBiosFactoryResetFullCheckFromStandard": {
+    "Desc": "Bios factory reset check",
+    "Tags": "Bios settings check",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_bios_option_full_inspection_for_standard",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSystemBmcsettingsSet_Ort": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "ort_test",
+    "Class": "OrtTest",
+    "Function": "test_set_sensor_inlet_temp_threshold",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBmcSelCheck_Ort": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "ort_test",
+    "Class": "OrtTest",
+    "Function": "test_bmc_sel_for_ort",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSystemBiossettingsSet_Amt": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_bios_setup",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"test_type":"AMT"}
+  },
+  "QtSystemBiossettingsSet_Strict": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_bios_setup",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"test_type":"Strict"}
+  },
+  "QtSystemBiossettingsSet_IFS": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_bios_setup",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"test_type":"IFS"}
+  },
+  "QtSystemBiossettingsSet_Bdat": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_bios_setup",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"test_type":"BDAT"}
+  },
+  "QtSmartnicBiossettingsSet_Strict": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_dpu_bios_setup",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSystemBiossettingsCheck_Amt": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_bios_setup_check",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"test_type":"AMT"}
+  },
+  "QtSystemBiossettingsCheck_Strict": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_bios_setup_check",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"test_type":"Strict"}
+  },
+  "QtSystemBiossettingsCheck_IFS": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_bios_setup_check",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"test_type":"IFS"}
+  },
+  "QtSmartnicBiossettingsCheck_Strict": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_dpu_bios_setup_check",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSystemBiossettingsRecover_Amt": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_bios_option_recovery",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"bios_type":"AMT"}
+  },
+  "QtSystemBiossettingsRecover_Ifs": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_bios_option_recovery",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"bios_type":"IFS"}
+  },
+  "QtSystemBiossettingsRecover_Amt_check": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_compare_bios_option_to_default_settings",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"bios_type":"AMT"}
+  },
+  "QtSystemBiossettingsRecover_Ifs_check": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_compare_bios_option_to_default_settings",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"bios_type":"IFS"}
+  },
+  "QtSystemBiossettingsRecover_Bdat": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_bios_option_recovery",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"bios_type":"BDAT"}
+  },
+  "QtSystemBiossettingsCheck_AmtRecover": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_compare_bios_option_to_default_settings",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"bios_type":"AMT"}
+  },
+  "QtSystemBiossettingsCheck_Bdat": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_bios_setup_check",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"test_type":"BDAT"}
+  },
+  "QtSystemBiossettingsCheck_BdatRecover": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_compare_bios_option_to_default_settings",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {"bios_type":"BDAT"}
+  },
+  "QtCpuStressTest_Mprime": {
+      "Desc": "Mprime Test",
+      "Tags": "Mprime Test",
+      "Module": "cpu_test",
+      "Class": "CPUTest",
+      "Function": "test_mprime",
+      "Timeout": "20m",
+      "Args": [],
+      "Kwargs": {
+          "test_time": "10m"
+      }
+  },
+  "QtSmartnicCpuStressTest_Mprime": {
+    "Desc": "Mprime Test",
+    "Tags": "Mprime Test",
+    "Module": "cpu_test",
+    "Class": "CPUTest",
+    "Function": "test_mprime",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {
+        "test_time": "10m"
+    }
+  },
+  "QtDramStressTest_Stressapp": {
+      "Desc": "Stessapp Test",
+      "Tags": "Stessapp Test",
+      "Module": "memory_test",
+      "Class": "MemoryTest",
+      "Function": "test_stressapp",
+      "Timeout": "20m",
+      "Args": [],
+      "Kwargs": {
+          "test_time": "8m",
+          "test_mem": "",
+          "use_mem_per": "",
+          "rev_mem": "8192m",
+          "wait_start": "2m"
+
+      }
+  },
+    "QtSmartnicStressTest_Stressapp": {
+      "Desc": "Stessapp Test",
+      "Tags": "Stessapp Test",
+      "Module": "dpu_memory_test",
+      "Class": "DPUMemoryTest",
+      "Function": "test_dpu_stressapp",
+      "Timeout": "20m",
+      "Args": [],
+      "Kwargs": {
+          "test_time": "8m",
+          "test_mem": "",
+          "use_mem_per": "",
+          "rev_mem": "8192m",
+          "wait_start": "2m"
+
+      }
+  },
+  "QtCpuStressTest_Ptu": {
+      "Desc": "PTU Test",
+      "Tags": "PTU Test",
+      "Module": "cpu_test",
+      "Class": "CPUTest",
+      "Function": "test_ptu_stress",
+      "Timeout": "20m",
+      "Args": [],
+      "Kwargs": {
+          "times_Pmax": 600
+      }
+  },
+  "QtSystemStressTest_Fio": {
+      "Desc": "FIO Test",
+      "Tags": "FIO Test",
+      "Module": "disk_test",
+      "Class": "DiskTest",
+      "Function": "test_disk_stress",
+      "Timeout": "20m",
+      "Args": [],
+      "Kwargs": {
+          "times": "10m"
+      }
+  },
+  "QtSystemStressTest_AllFio": {
+      "Desc": "FIO Test",
+      "Tags": "FIO Test",
+      "Module": "disk_test",
+      "Class": "DiskTest",
+      "Function": "test_all_disk_stress",
+      "Timeout": "20m",
+      "Args": [],
+      "Kwargs": {
+          "times": "10m"
+      }
+  },
+  "QtSmartnicStressTest_Fio": {
+    "Desc": "FIO Test",
+    "Tags": "FIO Test",
+    "Module": "dpu_disk_test",
+    "Class": "DPUDiskTest",
+    "Function": "test_dpu_disk_stress",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {
+        "times": "10m"
+    }
+},
+  "QtDramStressTest_Memtester": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "memory_test",
+    "Class": "MemoryTest",
+    "Function": "test_memtester",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {
+        "test_time": "10m"
+    }
+  },
+  "QtDramMLCTest": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "memory_test",
+    "Class": "MemoryTest",
+    "Function": "test_mlc",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtCpuStressTest_Shc": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "cpu_test",
+    "Class": "CPUTest",
+    "Function": "test_cpu_shc",
+    "Timeout": "500m",
+    "Args": [],
+    "Kwargs": {}
+},
+  "QtSystemStress_Dma": {
+      "Desc": "DMA Test",
+      "Tags": "DMA Test",
+      "Module": "dpu_test",
+      "Class": "DPUTest",
+      "Function": "test_host_dma_stress",
+      "Timeout": "20m",
+      "Args": [],
+      "Kwargs": {
+          "times": 10
+      }
+  },
+  "QtSmartnicStressTest_Dma": {
+    "Desc": "DMA Test",
+    "Tags": "DMA Test",
+    "Module": "dpu_test",
+    "Class": "DPUTest",
+    "Function": "test_soc_dma_stress",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {
+        "times": 10
+    }
+},
+  "QtSystemAcTest": {
+    "Desc": "System AC Cycle",
+    "Tags": "System AC Cycle",
+    "Module": "cycle_test",
+    "Class": "CYCLETest",
+    "Function": "test_power_cycle",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSocI801I2CTest": {
+    "Desc": "SOC I801 I2C Test",
+    "Tags": "SOC I801 I2C Test",
+    "Module": "test_soc_i801_i2c",
+    "Class": "SOCI801I2CTest",
+    "Function": "test_i801_i2c",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtPsuFunctionRepeatCheck_Powerbalance": {
+      "Desc": "Psu Powerbalance Check",
+      "Tags": "Psu Function Check",
+      "Module": "power_test",
+      "Class": "PowerTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_even_flow",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtMbFruRepeatCheck": {
+      "Desc": "Mb Fru Check",
+      "Tags": "Fru Check",
+      "Module": "test_mb_fru",
+      "Class": "MBFRUTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_mb_fru",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtSmartnicFruRepeatCheck": {
+      "Desc": "",
+      "Tags": "",
+      "Module": "test_mb_fru",
+      "Class": "MBFRUTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_smart_nic_fru",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtFcbFruRepeatCheck": {
+      "Desc": "Fcb Fru Check",
+      "Tags": "Fru Check",
+      "Module": "test_subcard_fru",
+      "Class": "SubcardFRUTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_fan_fru",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtBpFruRepeatCheck": {
+      "Desc": "Bp Fru Check",
+      "Tags": "Fru Check",
+      "Module": "test_subcard_fru",
+      "Class": "SubcardFRUTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_backplane_fru",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtRj45bFruRepeatCheck": {
+      "Desc": "Rj45 Fru Check",
+      "Tags": "Fru Check",
+      "Module": "test_subcard_fru",
+      "Class": "SubcardFRUTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_rj45_fru",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtPdbFruRepeatCheck": {
+      "Desc": "Pdb Fru Check",
+      "Tags": "Fru Check",
+      "Module": "test_subcard_fru",
+      "Class": "SubcardFRUTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_pdb_fru",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtRiserFruRepeatCheck": {
+      "Desc": "Riser Fru Check",
+      "Tags": "Fru Check",
+      "Module": "test_subcard_fru",
+      "Class": "SubcardFRUTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_riser_fru",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtBiosSmbiosRepeatCheck": {
+      "Desc": "Bios Smbios Check",
+      "Tags": "Bios Smbios Check",
+      "Module": "test_smbios",
+      "Class": "SMBIOSTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_smbios",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtPciInfoRepeatCheck": {
+      "Desc": "Pcie exist test",
+      "Tags": "Pcie exist test",
+      "Module": "pcie_test",
+      "Class": "PcieTotalTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_pcie_compare_with_golden",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtCpuInfoRepeatCheck": {
+      "Desc": "CPU exist test",
+      "Tags": "CPU exist test",
+      "Module": "cpu_test",
+      "Class": "CPUTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_exist",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtNicInfoRepeatCheck": {
+    "Desc": "NIC exist test",
+    "Tags": "NIC exist test",
+    "Module": "nic_test",
+    "Class": "NICTest",
+    "Function": "repeat_test",
+    "Timeout": "480m",
+    "Args": [],
+    "Kwargs": {
+        "repeat_type": "duration",
+        "duration": "360m",
+        "interval": "20m",
+        "function": "test_exist",
+        "args": [],
+        "kwargs": {}
+    }
+},
+  "QtDramInfoRepeatCheck": {
+      "Desc": "Memory exist test",
+      "Tags": "Memory exist test",
+      "Module": "memory_test",
+      "Class": "MemoryTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_exist",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtNvmeInfoRepeatCheck": {
+      "Desc": "Disk exist test",
+      "Tags": "Disk exist test",
+      "Module": "disk_test",
+      "Class": "DiskTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_exist",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtFanInfoRepeatCheck": {
+      "Desc": "Fan exist test",
+      "Tags": "Fan exist test",
+      "Module": "fan_test",
+      "Class": "FanTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_exist",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtPsuInfoRepeatCheck": {
+      "Desc": "PSU exist test",
+      "Tags": "PSU exist test",
+      "Module": "power_test",
+      "Class": "PowerTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_exist",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtBmcSdrFullRepeatCheck": {
+      "Desc": "BMC SDR Check",
+      "Tags": "BMC SDR Check",
+      "Module": "test_sdr",
+      "Class": "SDRTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_sdr_list_check",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtBatteryFunctionRepeatCheck": {
+      "Desc": "CMOS Battery Check",
+      "Tags": "CMOS Battery Check",
+      "Module": "power_test",
+      "Class": "PowerTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_cmos_battery",
+          "args": [],
+          "kwargs": {}
+      }
+  },
+  "QtSystemBlacklistRepeatCheck": {
+      "Desc": "Blacklist Check",
+      "Tags": "Blacklist Check",
+      "Module": "test_black_list",
+      "Class": "BlackListTest",
+      "Function": "repeat_test",
+      "Timeout": "480m",
+      "Args": [],
+      "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "360m",
+          "interval": "20m",
+          "function": "test_check_black",
+          "args": [],
+          "kwargs": {"mode":"HOST"}
+      }
+  },
+  "QtSmartnicSsdInfoRepeatCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "dpu_disk_test",
+    "Class": "DPUDiskTest",
+    "Function": "repeat_test",
+    "Timeout": "480m",
+    "TestNode": [
+        0
+    ],
+    "Args": [],
+    "Parallel": true,
+    "Kwargs": {
+        "repeat_type": "duration",
+        "duration": "360m",
+        "interval": "20m",
+        "function": "test_exist_dpu",
+        "args": [],
+        "kwargs": {}
+    }
+},
+"QtSmartnicPciInfoRepeatCheck": {
+    "Desc": "Pcie exist test",
+    "Tags": "Pcie exist test",
+    "Module": "pcie_test",
+    "Class": "PcieTotalTest",
+    "Function": "repeat_test",
+    "Timeout": "480m",
+    "TestNode": [
+        0
+    ],
+    "Args": [],
+    "Parallel": true,
+    "Kwargs": {
+        "repeat_type": "duration",
+        "duration": "360m",
+        "interval": "20m",
+        "function": "test_pcie_compare_with_golden",
+        "args": [],
+        "kwargs": {"key":"DPU"}
+    }
+},
+"QtSmartnicCpuInfoRepeatCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "cpu_test",
+    "Class": "CPUTest",
+    "Function": "repeat_test",
+    "Timeout": "480m",
+    "TestNode": [
+        0
+    ],
+    "Args": [],
+    "Parallel": true,
+    "Kwargs": {
+        "repeat_type": "duration",
+        "duration": "360m",
+        "interval": "20m",
+        "function": "test_exist_dpu",
+        "args": [],
+        "kwargs": {}
+    }
+},
+"QtSmartnicDramInfoRepeatCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "memory_test",
+    "Class": "MemoryTest",
+    "Function": "repeat_test",
+    "Timeout": "480m",
+    "TestNode": [
+        0
+    ],
+    "Args": [],
+    "Parallel": false,
+    "Kwargs": {
+        "repeat_type": "duration",
+        "duration": "360m",
+        "interval": "20m",
+        "function": "test_exist_dpu",
+        "args": [],
+        "kwargs": {}
+    }
+},
+"QtSmartnicBmcSdrRepeatCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_sdr",
+    "Class": "SDRTest",
+    "Function": "repeat_test",
+    "Timeout": "480m",
+    "TestNode": [
+        0
+    ],
+    "Args": [],
+    "Parallel": true,
+    "Kwargs": {
+        "repeat_type": "duration",
+        "duration": "360m",
+        "interval": "20m",
+        "function": "test_sdr_list_check",
+        "args": [],
+        "kwargs": {"key":"DPU"}
+    }
+},
+"QtSmartnicBiosSmbiosRepeatCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_smbios",
+    "Class": "SMBIOSTest",
+    "Function": "repeat_test",
+    "Timeout": "480m",
+    "TestNode": [
+        0
+    ],
+    "Args": [],
+    "Parallel": true,
+    "Kwargs": {
+        "repeat_type": "duration",
+        "duration": "360m",
+        "interval": "20m",
+        "function": "test_dpu_smbios",
+        "args": [],
+        "kwargs": {}
+    }
+},
+"QtSmartnicBmcBatRepeatCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "power_test",
+    "Class": "PowerTest",
+    "Function": "repeat_test",
+    "Timeout": "480m",
+    "TestNode": [
+        0
+    ],
+    "Args": [],
+    "Parallel": true,
+    "Kwargs": {
+        "repeat_type": "duration",
+        "duration": "360m",
+        "interval": "20m",
+        "function": "test_cmos_battery_dpu",
+        "args": [],
+        "kwargs": {}
+    }
+},
+"QtSmartnicBlacklistRepeatCheck": {
+    "Desc": "Blacklist Check",
+    "Tags": "Blacklist Check",
+    "Module": "test_black_list",
+    "Class": "BlackListTest",
+    "Function": "repeat_test",
+    "Timeout": "480m",
+    "TestNode": [
+        0
+    ],
+    "Args": [],
+    "Parallel": true,
+    "Kwargs": {
+        "repeat_type": "duration",
+        "duration": "360m",
+        "interval": "20m",
+        "function": "test_check_black",
+        "args": [],
+        "kwargs": {"mode":"DPU"}
+    }
+  },
+  "QtSmartnicBiosRestoreCheck": {
+    "Desc": "Bios restore check",
+    "Tags": "",
+    "Module": "test_bios_setup",
+    "Class": "BIOSSetupTest",
+    "Function": "test_dpu_bios_restore_check",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtFlashLogCollect": {
+      "Desc": "",
+      "Tags": "log",
+      "Module": "upload_flash_logs",
+      "Class": "UploadFlashLogs",
+      "Function": "upload_flash_logs",
+      "Timeout": "5m",
+      "Args": [],
+      "Kwargs": {}
+  }
+}

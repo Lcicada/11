@@ -1,0 +1,25 @@
+{
+    "BdNicInfoCheck": {
+        "Desc": "",
+        "Tags": "NIC INFO",
+        "Module": "bd_nic_test",
+        "Class": "NIC",
+        "Function": "test_checkinfo",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "Netperf": {
+        "Desc": "Netperf Stress",
+        "Tags": "NIC STRESS",
+        "Module": "netperf_stress",
+        "Class": "Netperf",
+        "Function": "test_netperf",
+        "Timeout": "5h",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "5m",
+            "netdevs": "eth0,eth2"
+        }
+    }
+}

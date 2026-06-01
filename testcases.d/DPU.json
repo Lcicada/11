@@ -1,0 +1,1000 @@
+{
+	"QtBF3miniFwCheck": {
+		"Desc": "Qt bf3 mini fw check",
+		"Tags": "Qt bf3 mini fw check",
+		"Module": "test_check_dpu",
+		"Class": "DPU",
+		"Function": "test_donghu_bf3_mini_fw",
+		"Timeout": "30m",
+		"Args": [],
+		"Kwargs": {
+			"action": "check",
+			"deb_name": ["python3-psutil_5.9.4-1+b1_amd64.deb", "python3-tabulate_0.9.0-1_all.deb",
+				"python3-tqdm_4.57.0-2_all.deb"
+			]
+		}
+	},
+	"QtBF3miniFwUp": {
+		"Desc": "Qt bf3 mini fw up",
+		"Tags": "Qt bf3 mini fw up",
+		"Module": "test_check_dpu",
+		"Class": "DPU",
+		"Function": "test_donghu_bf3_mini_fw",
+		"Timeout": "100m",
+		"Args": [],
+		"Kwargs": {
+			"action": "up",
+			"deb_name": ["python3-psutil_5.9.4-1+b1_amd64.deb", "python3-tabulate_0.9.0-1_all.deb",
+				"python3-tqdm_4.57.0-2_all.deb"
+			],
+			"bfb_name": "bf-fwbundle-2.9.4-38-900-9D3D4-00NN-HA0_25.12_prod.bfb"
+		}
+	},
+	"QtSmartnicServerInfoCheck": {
+		"Desc": "",
+		"Tags": "SERVER INFO",
+		"Module": "test_check_motherboard",
+		"Class": "MOTHERBOARD",
+		"Function": "test_server_info",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicServerInfoCheck_repeat": {
+		"Desc": "",
+		"Tags": "SERVER INFO",
+		"Module": "test_check_motherboard",
+		"Class": "MOTHERBOARD",
+		"Function": "repeat_test",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"repeat_type": "duration",
+			"duration": "3m",
+			"interval": "10",
+			"function": "test_server_info",
+			"args": [],
+			"kwargs": {}
+		}
+	},
+	"QtSmartnicMbInfoCheck": {
+		"Desc": "",
+		"Tags": "MOTHERBOARD INFO",
+		"Module": "test_check_motherboard",
+		"Class": "MOTHERBOARD",
+		"Function": "test_motherboard_info",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicMbInfoCheck_repeat": {
+		"Desc": "MOTHERBOARD INFO",
+		"Tags": "dpu motherboard check",
+		"Module": "test_check_motherboard",
+		"Class": "MOTHERBOARD",
+		"Function": "repeat_test",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"repeat_type": "duration",
+			"duration": "3m",
+			"interval": "10",
+			"function": "test_motherboard_info",
+			"args": [],
+			"kwargs": {}
+		}
+	},
+	"QtSmartnicCpuInfoCheck": {
+		"Desc": "",
+		"Tags": "CPU INFO",
+		"Module": "test_check_cpu",
+		"Class": "CPU",
+		"Function": "test_cpu_info",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicCpuInfoCheck_repeat": {
+		"Desc": "CPU INFO",
+		"Tags": "dpu cpu check",
+		"Module": "test_check_cpu",
+		"Class": "CPU",
+		"Function": "repeat_test",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"repeat_type": "duration",
+			"duration": "3m",
+			"interval": "10",
+			"function": "test_cpu_info",
+			"args": [],
+			"kwargs": {}
+		}
+	},
+	"QtSmartnicDramInfoCheck": {
+		"Desc": "",
+		"Tags": "DRAM INFO",
+		"Module": "test_check_dram",
+		"Class": "DRAM",
+		"Function": "test_dram_info",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicDramInfoCheck_repeat": {
+		"Desc": "DRAM INFO",
+		"Tags": "dpu dram check",
+		"Module": "test_check_dram",
+		"Class": "DRAM",
+		"Function": "repeat_test",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"repeat_type": "duration",
+			"duration": "3m",
+			"interval": "10",
+			"function": "test_dram_info",
+			"args": [],
+			"kwargs": {}
+		}
+	},
+	"QtSmartnicNvmeInfoCheck": {
+		"Desc": "",
+		"Tags": "DISK NVME INFO",
+		"Module": "test_check_nvme",
+		"Class": "NVME",
+		"Function": "test_nvme_info",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicNvmeInfoCheck_repeat": {
+		"Desc": "NVME INFO",
+		"Tags": "dpu nvme check",
+		"Module": "test_check_nvme",
+		"Class": "NVME",
+		"Function": "repeat_test",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"repeat_type": "duration",
+			"duration": "3m",
+			"interval": "10",
+			"function": "test_nvme_info",
+			"args": [],
+			"kwargs": {}
+		}
+	},
+	"QtSmartnicSsdInfoCheck": {
+		"Desc": "DISK SSD INFO",
+		"Tags": "DISK SSD INFO",
+		"Module": "test_check_ssd",
+		"Class": "SSD",
+		"Function": "test_ssd_info",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicSsdInfoCheck_repeat": {
+		"Desc": "SSD INFO",
+		"Tags": "dpu ssd check",
+		"Module": "test_check_ssd",
+		"Class": "SSD",
+		"Function": "repeat_test",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"repeat_type": "duration",
+			"duration": "3m",
+			"interval": "10",
+			"function": "test_ssd_info",
+			"args": [],
+			"kwargs": {}
+		}
+	},
+	"QtSmartnicNicInfoCheck": {
+		"Desc": "",
+		"Tags": "NIC INFO",
+		"Module": "test_check_nic",
+		"Class": "NIC",
+		"Function": "test_check_nic_info",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicNicInfoCheck_repeat": {
+		"Desc": "NIC INFO",
+		"Tags": "dpu nic check",
+		"Module": "test_check_nic",
+		"Class": "NIC",
+		"Function": "repeat_test",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"repeat_type": "duration",
+			"duration": "3m",
+			"interval": "10",
+			"function": "test_check_nic_info",
+			"args": [],
+			"kwargs": {}
+		}
+	},
+	"QtSmartnicInfoCheck": {
+		"Desc": "DPU info check on host",
+		"Tags": "DPU info check on host",
+		"Module": "test_check_dpu",
+		"Class": "DPU",
+		"Function": "test_check_dpu_on_host",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicInfoCheck_repeat": {
+		"Desc": "DPU info check on host",
+		"Tags": "DPU info check on host",
+		"Module": "test_check_dpu",
+		"Class": "DPU",
+		"Function": "repeat_test",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"repeat_type": "duration",
+			"duration": "3m",
+			"interval": "10",
+			"function": "test_check_dpu_on_host",
+			"args": [],
+			"kwargs": {}
+		}
+	},
+	"QtSmartnicDpu3FwCheck": {
+		"Desc": "DPU fw check",
+		"Tags": "DPU fw check",
+		"Module": "test_check_motherboard",
+		"Class": "MOTHERBOARD",
+		"Function": "test_dpu3_version_info",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicDpu3FwCheck_repeat": {
+		"Desc": "FW INFO",
+		"Tags": "dpu fw check",
+		"Module": "test_check_motherboard",
+		"Class": "MOTHERBOARD",
+		"Function": "repeat_test",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"repeat_type": "duration",
+			"duration": "3m",
+			"interval": "10",
+			"function": "test_dpu3_version_info",
+			"args": [],
+			"kwargs": {}
+		}
+	},
+	"QtSmartnicFwCheck": {
+		"Desc": "DPU fw check",
+		"Tags": "DPU fw check",
+		"Module": "test_check_motherboard",
+		"Class": "MOTHERBOARD",
+		"Function": "test_dpu_version_info",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicFwCheck_repeat": {
+		"Desc": "FW INFO",
+		"Tags": "dpu fw check",
+		"Module": "test_check_motherboard",
+		"Class": "MOTHERBOARD",
+		"Function": "repeat_test",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"repeat_type": "duration",
+			"duration": "3m",
+			"interval": "10",
+			"function": "test_dpu_version_info",
+			"args": [],
+			"kwargs": {}
+		}
+	},
+	"QtSmartnicPciCheck_repeat": {
+		"Desc": "",
+		"Tags": "PCI INFO",
+		"Module": "pcie_test",
+		"Class": "PCIe",
+		"Function": "repeat_test",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"repeat_type": "duration",
+			"duration": "3m",
+			"interval": "10",
+			"function": "test_dpupcie_compare_with_golden",
+			"args": [],
+			"kwargs": {}
+		}
+	},
+	"QtSmartnicPciCheck": {
+		"Desc": "",
+		"Tags": "PCI INFO",
+		"Module": "pcie_test",
+		"Class": "PCIe",
+		"Function": "test_dpupcie_compare_with_golden",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicBiossettingsSet": {
+		"Desc": "DPU Tighten BIOS Setup",
+		"Tags": "BIOS Setup",
+		"Module": "biossetup_test",
+		"Class": "BIOSSETUP",
+		"Function": "test_dpubiossetup_tighten",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicBiossettingsCheck": {
+		"Desc": "check BIOS Setup tighten result",
+		"Tags": "BIOS Setup",
+		"Module": "biossetup_test",
+		"Class": "BIOSSETUP",
+		"Function": "test_dpubiossetup_tighten_check",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicBiossettingsCheck_At": {
+		"Desc": "BIOS Setup compare with golden",
+		"Tags": "BIOS Setup",
+		"Module": "biossetup_test",
+		"Class": "BIOSSETUP",
+		"Function": "test_biossetup_compare_with_golden",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicBmcsettingsCheck_Powerpolicy": {
+		"Desc": "",
+		"Tags": "BMC INFO",
+		"Module": "bmc_fun_test",
+		"Class": "Bmctest",
+		"Function": "test_power_policy",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"power_restore_policy_exp": {
+				"==": "always-on"
+			}
+		}
+	},
+	"QtSmartnicSdrCheck_repeat": {
+		"Desc": "",
+		"Tags": "BMC INFO",
+		"Module": "check_sdr",
+		"Class": "Checksdr",
+		"Function": "repeat_test",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"repeat_type": "duration",
+			"duration": "3m",
+			"interval": "10",
+			"function": "test_sdr_check",
+			"args": [],
+			"kwargs": {
+				"golden_file_name": "check_dpu_sdr_golden.json"
+			}
+		}
+	},
+	"QtSmartnicSdrCheck": {
+		"Desc": "",
+		"Tags": "BMC INFO",
+		"Module": "check_sdr",
+		"Class": "Checksdr",
+		"Function": "test_sdr_check",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"golden_file_name": "check_dpu_sdr_golden.json"
+		}
+	},
+	"QTSmartnicBF3RtcCheck": {
+		"Desc": "Qt CHECK BF3 RTC",
+		"Tags": "Qt CHECK BF3 RTC",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "rtc",
+		"Timeout": "1m",
+		"Args": [],
+		"Kwargs": {
+			"time_diff_exp": 10
+		}
+	},
+	"QTSmartnicBF3Config": {
+		"Desc": "Qt CHECK BF3 CONFIG INFO",
+		"Tags": "Qt CHECK BF3 CONFIG INFO",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "configcheck",
+		"Timeout": "1m",
+		"Args": [],
+		"Kwargs": {
+			"modelResult_exp": "EMBEDDED_CPU(1)",
+			"offloadResult_exp": "ENABLED(0)",
+			"uefiResult_exp": "True(1)"
+		}
+	},
+	"QTSmartnicBF3BmcCheck": {
+		"Desc": "Qt CHECK BF3 BMC DEFAULT",
+		"Tags": "Qt CHECK BF3 BMC DEFAULT",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "bmcchk",
+		"Timeout": "1m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QTSmartnicBF3EmmcClear": {
+		"Desc": "Qt CLEAR BF3 EMMC",
+		"Tags": "Qt CLEAR BF3 EMMC",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "emmcclear",
+		"Timeout": "1m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QTSmartnicBF3EmmcCheck": {
+		"Desc": "Qt CHECK BF3 EMMC",
+		"Tags": "Qt CHECK BF3 EMMC",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "emmcheck",
+		"Timeout": "1m",
+		"Args": [],
+		"Kwargs": {
+			"mmcblk_value_exp": 3
+		}
+	},
+	"QTSmartnicBF3Eccset": {
+		"Desc": "Qt SET BF3 ECC",
+		"Tags": "Qt SET BF3 ECC",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "eccset",
+		"Timeout": "1m",
+		"Args": [],
+		"Kwargs": {
+			"set_cethreshold_value": 1
+		}
+	},
+	"QTSmartnicBF3EccCheck": {
+		"Desc": "Qt CHECK BF3 ECC",
+		"Tags": "Qt CHECK BF3 ECC",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "ecccheck",
+		"Timeout": "1m",
+		"Args": [],
+		"Kwargs": {
+			"cethreshold_value_exp": 1
+		}
+	},
+	"QTSmartnicBF3EccCheckDefault": {
+		"Desc": "Qt CHECK BF3 ECC",
+		"Tags": "Qt CHECK BF3 ECC",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "ecccheck",
+		"Timeout": "1m",
+		"Args": [],
+		"Kwargs": {
+			"cethreshold_value_exp": 5000
+		}
+	},
+	"QTSmartnicBF3Biosdefault": {
+		"Desc": "Qt LOAD BF3 BIOS TO DEFAULT",
+		"Tags": "Qt LOAD BF3 BIOS TO DEFAULT",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "biosdefault",
+		"Timeout": "1m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QTSmartnicBF3BiosCheck": {
+		"Desc": "Qt CHECK BF3 BIOS",
+		"Tags": "Qt CHECK BF3 BIOS",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "bioscheck",
+		"Timeout": "1m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QTSmartnicBF3DMAStress": {
+		"Desc": "BF3 DMA STRESS",
+		"Tags": "BF3 DMA STRESS",
+		"Module": "bf3_dma",
+		"Class": "Bf3_dma",
+		"Function": "test_dmastress",
+		"Timeout": "120m",
+		"Args": [],
+		"Kwargs": {
+			"--pipeline-steps": "doca_dma",
+			"--core-mask": "0x0001",
+			"--device": [],
+			"--data-provider": "random-data",
+			"--run-limit-seconds": 3600,
+			"--job-output-buffer-size": 2097152,
+			"--uniform-job-size": 2097152,
+			"--data-provider-job-count": 100,
+			"lspci_card_name_regex": [
+				".*BlueField-3 integrated.*\\n"
+			],
+			"Ingress_rate_criterion": [
+				70,
+				200
+			],
+			"Egress_rate_criterion": [
+				70,
+				200
+			]
+		}
+	},
+	"QtSmartnicBF3Uart": {
+		"Desc": "Qt CHECK BF3 UART",
+		"Tags": "Qt CHECK BF3 UART",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "test_bf3_uart_on",
+		"Timeout": "1m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicDPUSetStaticIP": {
+		"Desc": "DPU SET STATIC IP",
+		"Tags": "DPU SET STATIC IP",
+		"Module": "dpu_test",
+		"Class": "DpuTest",
+		"Function": "test_set_static_ip",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"host_static_ip": "192.168.1.10",
+			"port": "eno1"
+		}
+	},
+	"QtSmartnicDPUHostBmcConnect": {
+		"Desc": "DPU HOST BMC CONNECT",
+		"Tags": "DPU HOST BMC CONNECT",
+		"Module": "dpu_test",
+		"Class": "DpuTest",
+		"Function": "test_dpuhost_bmc_connect",
+		"Timeout": "7m",
+		"Args": [],
+		"Kwargs": {
+			"test_time": 300,
+			"interval_time": 5,
+			"bmc_ip_info": {
+				"ip": "192.168.1.10",
+				"user": "toutiao",
+				"password": "'toutiao!@#'"
+			}
+		}
+	},
+	"QtDPUDMAStress": {
+		"Desc": "DPU DMA stress",
+		"Tags": "DPU DMA stress",
+		"Module": "dpu_test",
+		"Class": "DpuTest",
+		"Function": "test_dpu_dmastress",
+		"Timeout": "7m",
+		"Args": [],
+		"Kwargs": {
+			"tool_path": "DPU3/dpu3_ljs_test/soft_app/",
+			"driver_path": "dpu_driver_install/dpu3_drivers_5.15.152.bsk.business.7-amd64",
+			"test_cmd": {
+				"bytedma0": "./boardtest -y ../dpu3.0_tools/tools/config_dma0_300s.yaml",
+				"bytedma1": "./boardtest -y ../dpu3.0_tools/tools/config_dma1_300s.yaml"
+			}
+		}
+	},
+	"QtSmartnicDpuFpgaFlash": {
+		"Desc": "DPU FPGA flash",
+		"Tags": "DPU FPGA flash",
+		"Module": "dpu_test",
+		"Class": "DpuTest",
+		"Function": "test_dpu_fpga_flash",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"tool_path": "tools/x86_64/cli/DPU3/dpu3_ljs_test/soft_app/",
+			"test_cmd": "./boardtest test -o bytedma1 --flash",
+			"pass_flag": "Flash test passed"
+		}
+	},
+	"QtSmartnicDpuFpgaDma": {
+		"Desc": "DPU FPGA dma",
+		"Tags": "DPU FPGA dma",
+		"Module": "dpu_test",
+		"Class": "DpuTest",
+		"Function": "test_dpu_fpga_dma",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"tool_path": "tools/x86_64/cli/DPU3/dpu3_ljs_test/soft_app/",
+			"test_cmd": "./boardtest test -o bytedma1 --dma",
+			"pass_flag": "DMA Perf Test Passed"
+		}
+	},
+	"QtSmartnicDpuFpgaVolt": {
+		"Desc": "DPU FPGA VOLT",
+		"Tags": "DPU FPGA VOLT",
+		"Module": "dpu_test",
+		"Class": "DpuTest",
+		"Function": "test_dpu_fpga_volt",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"tool_path": "tools/x86_64/cli/DPU3/dpu3_ljs_test/soft_app/",
+			"test_cmd": "./vol.sh",
+			"pass_flag": "successfully"
+		}
+	},
+	"QtSmartnicDpuFpgaInfo": {
+		"Desc": "DPU FPGA INFO",
+		"Tags": "DPU FPGA INFO",
+		"Module": "dpu_test",
+		"Class": "DpuTest",
+		"Function": "test_dpu_fpga_info",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"tool_path": "tools/x86_64/cli/DPU3/dpu3_ljs_test/soft_app/",
+			"list_cmd": "./boardtest -l",
+			"info_cmd_list": [
+				"./boardtest -i 1 info --temp",
+				"./boardtest -i 1 info --clk",
+				"./boardtest -i 1 info --seu"
+			],
+			"index_0_Bus:Dev.Func": "0000:15:00.0",
+			"index_0_board": "----",
+			"index_1_Bus:Dev.Func": "0000:16:00.0",
+			"index_1_board": "luojiashan"
+		}
+	},
+	"QtSmartnicDpuFpgaSocDdr": {
+		"Desc": "DPU FPGA ddr",
+		"Tags": "DPU FPGA ddr",
+		"Module": "dpu_test",
+		"Class": "DpuTest",
+		"Function": "test_dpu_fpga_ddr",
+		"Timeout": "90m",
+		"Args": [],
+		"Kwargs": {
+			"cat_log": {
+				"prefix": "ddr_",
+				"date_pattern": "[a-zA-Z]{3}_(.+).log"
+			},
+			"timeout": 4500,
+			"log_name": "fpga.log",
+			"tool_path": "tools/x86_64/cli/DPU3/dpu3.0_tools/",
+			"test_cmd": "./soc_ddr_flash_run_dpu3.sh",
+			"exp_pass": "test pass",
+			"socddr_pass_flag_count": 7
+		}
+	},
+	"QtSystemDPUDMA_ID": {
+		"Desc": "DPU DMA_ID",
+		"Tags": "DPU DMA_ID",
+		"Module": "dpu_test",
+		"Class": "DpuTest",
+		"Function": "test_dpu_dmaid",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"tool_path": "tools/x86_64/cli/DPU3/dpu3_ljs_test/soft_app/",
+			"list_cmd": "./boardtest -l",
+			"index_1_Bus:Dev.Func": "0000:e0:00.0",
+			"index_1_board": "----",
+			"index_2_Bus:Dev.Func": "0000:e1:00.0",
+			"index_2_board": "----"
+		}
+	},
+	"QTSmartnicBF3FlashSwapCheck": {
+		"Desc": "Bf3 Flash Swap Check",
+		"Tags": "Bf3 Flash Swap Check",
+		"Module": "bf3_flash_swap_check",
+		"Class": "Bf3FlashSwapCheck",
+		"Function": "test_bf3_flash_swap_check",
+		"Timeout": "1m",
+		"Args": [],
+		"Kwargs": {
+			"upper_limit": 100,
+			"register_address": "0x1e28.0"
+		}
+	},
+	"QTSmartnicBF3DpuFruWrite": {
+		"Desc": "Bf3 Dpu Fru Write",
+		"Tags": "Bf3 Dpu Fru Write",
+		"Module": "bf3_dpu_fru",
+		"Class": "BF3DpuFru",
+		"Function": "test_bf3_dpu_fru",
+		"Timeout": "10m",
+		"Args": [],
+		"Kwargs": {
+			"action": "write",
+			"bmc_reset_delay": 300,
+			"oob_config": {
+				"bmc_user": "toutiao",
+				"bmc_password": "toutiao!@#",
+				"oob_mode": "False"
+			},
+			"fru_config": {
+				"fru_id": "0",
+				"fru_info": {
+					"P_MFGName": {
+						"value": "Inventec",
+						"need_to_cmp": 1,
+						"need_to_write": 1
+					},
+					"P_Version": {
+						"value": "AMD Turin",
+						"need_to_cmp": 1,
+						"need_to_write": 1
+					},
+					"P_ProdName": {
+						"value": "BlueField-3 DPU",
+						"need_to_cmp": 1,
+						"need_to_write": 0
+					}
+				},
+				"fru_info_in_job_unit": {
+					"C_EXTRA1": {
+						"write_key": "Product:GUID",
+						"var_name": "customermodel",
+						"need_to_cmp": 1,
+						"need_to_write": 1,
+						"node": "rack"
+					},
+					"P_PartNo": {
+						"var_name": "model",
+						"need_to_cmp": 1,
+						"need_to_write": 1,
+						"node": "rack"
+					},
+					"P_Asset_Tag": {
+						"var_name": "assettag",
+						"need_to_cmp": 1,
+						"need_to_write": 1,
+						"node": "rack"
+					},
+					"P_SerialNo": {
+						"var_name": "displaySn",
+						"need_to_cmp": 1,
+						"need_to_write": 1,
+						"node": "rack"
+					},
+					"P_EXTRA1": {
+						"var_name": "suite",
+						"need_to_cmp": 1,
+						"need_to_write": 1,
+						"node": "rack",
+						"prefix_string": "Suite:"
+					}
+				}
+			}
+		}
+	},
+	"QTSmartnicBF3DpuFruCheck": {
+		"Desc": "Bf3 Dpu Fru Check",
+		"Tags": "Bf3 Dpu Fru Check",
+		"Module": "bf3_dpu_fru",
+		"Class": "BF3DpuFru",
+		"Function": "test_bf3_dpu_fru",
+		"Timeout": "10m",
+		"Args": [],
+		"Kwargs": {
+			"action": "check",
+			"bmc_reset_delay": 300,
+			"oob_config": {
+				"bmc_user": "toutiao",
+				"bmc_password": "toutiao!@#",
+				"oob_mode": "False"
+			},
+			"fru_config": {
+				"fru_id": "0",
+				"fru_info": {
+					"P_MFGName": {
+						"value": "Inventec",
+						"need_to_cmp": 1,
+						"need_to_write": 1
+					},
+					"P_Version": {
+						"value": "AMD Turin",
+						"need_to_cmp": 1,
+						"need_to_write": 1
+					}
+				},
+				"fru_info_in_job_unit": {
+					"C_EXTRA1": {
+						"write_key": "Product:GUID",
+						"var_name": "customermodel",
+						"need_to_cmp": 1,
+						"need_to_write": 1,
+						"node": "rack"
+					},
+					"P_PartNo": {
+						"var_name": "model",
+						"need_to_cmp": 1,
+						"need_to_write": 1,
+						"node": "rack"
+					},
+					"P_Asset_Tag": {
+						"var_name": "assettag",
+						"need_to_cmp": 1,
+						"need_to_write": 1,
+						"node": "rack"
+					},
+					"P_SerialNo": {
+						"var_name": "displaySn",
+						"need_to_cmp": 1,
+						"need_to_write": 1,
+						"node": "rack"
+					},
+					"P_EXTRA1": {
+						"var_name": "suite",
+						"need_to_cmp": 1,
+						"need_to_write": 1,
+						"node": "rack",
+						"prefix_string": "Suite:"
+					}
+				}
+			}
+		}
+	},
+	"QtSmartnicBF3UartSet00": {
+		"Desc": "Qt set BF3 UART 00",
+		"Tags": "Qt set BF3 UART 00",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "test_bf3_uart_set_check",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"set_uart_status": "00"
+		}
+	},
+	"QtSmartnicBF3UartSet01": {
+		"Desc": "Qt set BF3 UART 01",
+		"Tags": "Qt set BF3 UART 01",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "test_bf3_uart_set_check",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"set_uart_status": "01"
+		}
+	},
+	"QTSmartnicBF3PingP0net": {
+		"Desc": "BF3 Ping P0net Check",
+		"Tags": "BF3 Ping P0net Check",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "test_bf3_ping_p0net",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QTSmartnicBF3modeCheck": {
+		"Desc": "BF3 mode Check",
+		"Tags": "BF3 mode Check",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "test_bf3_mode_check",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"mode_type": "dpu"
+		}
+	},
+	"QtSmartnicMAC_COMPARE_DPU": {
+		"Desc": "DPU MAC COMPARE Check",
+		"Tags": "DPU MAC COMPARE Check",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "test_dpu_mac_compare",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSystembf3mac_compare": {
+		"Desc": "HOST MAC COMPARE Check",
+		"Tags": "HOST MAC COMPARE Check",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "test_host_mac_compare",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"interfaces": [
+				"enp92s0f0np0"
+			]
+		}
+	},
+	"QtSystembf3_Rshim_Check": {
+		"Desc": "BF3 Rshim Check",
+		"Tags": "BF3 Rshim Check",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "test_rshim",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"bdf_keywords": [
+				"DMA controller",
+				"SoC Management Interface"
+			]
+		}
+	},
+	"QtSystembf3_ip_set_Check": {
+		"Desc": "BF3 ip set Check",
+		"Tags": "BF3 ip set Check",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "test_static_ip_set",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicBF3_Bmc_Reset_Check": {
+		"Desc": "BF3 Bmc Reset Check",
+		"Tags": "BF3 Bmc Reset Check",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "test_bmc_reset",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicBF3_host_sn_Check": {
+		"Desc": "BF3 host sn Check",
+		"Tags": "BF3 host sn Check",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "test_host_sn_chk",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {}
+	},
+	"QtSmartnicBF3_DPU_Option": {
+		"Desc": "BF3 dpu option test",
+		"Tags": "BF3 dpu option test",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "test_bf3_boot_options",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"boot_option_mode": "set"
+		}
+	},
+	"QtSmartnicBF3_DPU_Option": {
+		"Desc": "BF3 dpu option test",
+		"Tags": "BF3 dpu option test",
+		"Module": "bf3_dpu",
+		"Class": "Bf3_dpu",
+		"Function": "test_bf3_boot_options",
+		"Timeout": "5m",
+		"Args": [],
+		"Kwargs": {
+			"boot_option_mode": "check"
+		}
+	}
+}

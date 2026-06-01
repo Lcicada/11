@@ -1,0 +1,844 @@
+{
+  "BIOSFWCheck": {
+    "Desc": "",
+    "Tags": "BIOS INFO",
+    "Module": "bios_test",
+    "Class": "BIOS",
+    "Function": "test_checkbiosfw",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSystemBiosCollect_Bdat": {
+    "Desc": "",
+    "Tags": "BIOS INFO",
+    "Module": "get_bdat_log",
+    "Class": "GetBdatLog",
+    "Function": "get_bdat_log",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "cycle_type": 0
+    }
+  },
+  "QtBiosDuidCheck": {
+    "Desc": "",
+    "Tags": "BIOS INFO",
+    "Module": "test_check_bios",
+    "Class": "BIOS",
+    "Function": "test_duid_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBiosUuidCheck": {
+    "Desc": "",
+    "Tags": "BIOS INFO",
+    "Module": "check_uuid",
+    "Class": "CheckUuid",
+    "Function": "test_uuid_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "rule": "mac_order"
+    }
+  },
+  "CheckDUID": {
+    "Desc": "Check DUID in SMBIOS TYPE 11",
+    "Tags": "BIOS SETTING",
+    "Module": "test_check_bios",
+    "Class": "BIOS",
+    "Function": "test_duid_check",
+    "Timeout": "50m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBiosBiossettingsCheck_At": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_by_file",
+    "Class": "BiosSettingByFile",
+    "Function": "test_bios_setting_by_file",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "standard_file": [
+        "KD805G7_BIOS.txt"
+      ],
+      "ignore_reg": [
+        ".*Broadcom NetXtreme-E Dual 100Gb OCP 3.0 DSFP Ethernet.*",
+        "^//.*",
+        "^HIICrc32",
+        ".*Mellanox Network Adapter.*"
+      ]
+    }
+  },
+  "QtBiosBiossettingsCheckDpu3Host_At": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_by_file",
+    "Class": "BiosSettingByFile",
+    "Function": "test_bios_setting_by_file",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "standard_file": [
+        "KD805G7_DPU3.txt"
+      ],
+      "ignore_reg": [
+        ".*Broadcom NetXtreme-E Dual 100Gb OCP 3.0 DSFP Ethernet.*",
+        "^//.*",
+        "^HIICrc32",
+        ".*Mellanox Network Adapter.*"
+      ]
+    }
+  },
+  "QtBiosBiossettingsCheckDpu3Dpu_At": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_by_file",
+    "Class": "BiosSettingByFile",
+    "Function": "test_bios_setting_by_file",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "standard_file": [
+        "6Y42B0970201_biossetup_golden.txt"
+      ],
+      "ignore_reg": [
+        ".*Broadcom NetXtreme-E Dual 100Gb OCP 3.0 DSFP Ethernet.*",
+        "^//.*",
+        "^HIICrc32",
+        ".*Mellanox Network Adapter.*"
+      ]
+    }
+  },
+  "QtBiosBiossettingsSet_Default": {
+    "Desc": "BIOS Setup Load Default",
+    "Tags": "BIOS Setup",
+    "Module": "biossetup_test",
+    "Class": "BIOSSETUP",
+    "Function": "test_biossetup_loadefault",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBiosDpu3BiossettingsSet_Default": {
+    "Desc": "BIOS Setup Load Default",
+    "Tags": "BIOS Setup",
+    "Module": "biossetup_test",
+    "Class": "BIOSSETUP",
+    "Function": "test_biossetup_loadefault",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBiosBiossettingsSet": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "set",
+      "sce_tool_name": "SCELNX_64",
+      "bios_setting": [
+        {
+          "setup_question": "MCA error thresh enable",
+          "value": "True"
+        },
+        {
+          "setup_question": "MCA error thresh count",
+          "value": "0xFFE"
+        },
+        {
+          "setup_question": "DRAM Corrected Error Counter Enable",
+          "value": "NoLeakMode"
+        },
+        {
+          "setup_question": "DRAM Corrected Error Counter Start Count",
+          "value": "0xFFFE"
+        },
+        {
+          "setup_question": "PCIe Root Port Corr Err Mask Reg",
+          "value": "0"
+        },
+        {
+          "setup_question": "PCIe Device Corr Err Mask Reg",
+          "value": "0"
+        },
+        {
+          "setup_question": "FRB-2 Timer Policy",
+          "value": "Do Nothing"
+        }
+      ]
+    }
+  },
+  "QtBiosBiossettingsSet_DPUHOST": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "set",
+      "sce_tool_name": "SCELNX_64",
+      "user_password": "/cpwd \"F1%mW@Byt1dance\"",
+      "bios_setting": [
+        {
+          "setup_question": "MCA error thresh enable",
+          "value": "True"
+        },
+        {
+          "setup_question": "MCA error thresh count",
+          "value": "0xFFE"
+        },
+        {
+          "setup_question": "DRAM Corrected Error Counter Enable",
+          "value": "NoLeakMode"
+        },
+        {
+          "setup_question": "DRAM Corrected Error Counter Start Count",
+          "value": "0xFFFE"
+        },
+        {
+          "setup_question": "PCIe Root Port Corr Err Mask Reg",
+          "value": "0"
+        },
+        {
+          "setup_question": "PCIe Device Corr Err Mask Reg",
+          "value": "0"
+        },
+        {
+          "setup_question": "FRB-2 Timer Policy",
+          "value": "Do Nothing"
+        }
+      ]
+    }
+  },
+  "QtBiosBiossettingsCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {
+      "action": "check",
+      "sce_tool_name": "SCELNX_64",
+      "bios_setting": [
+        {
+          "setup_question": "MCA error thresh enable",
+          "value": "True"
+        },
+        {
+          "setup_question": "MCA error thresh count",
+          "value": "FFE"
+        },
+        {
+          "setup_question": "DRAM Corrected Error Counter Enable",
+          "value": "NoLeakMode"
+        },
+        {
+          "setup_question": "DRAM Corrected Error Counter Start Count",
+          "value": "FFFE"
+        },
+        {
+          "setup_question": "PCIe Root Port Corr Err Mask Reg",
+          "value": "0"
+        },
+        {
+          "setup_question": "PCIe Device Corr Err Mask Reg",
+          "value": "0"
+        },
+        {
+          "setup_question": "FRB-2 Timer Policy",
+          "value": "Do Nothing"
+        }
+      ]
+    }
+  },
+    "QtBiosBiossettingsSet_singleSegment": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "set",
+      "sce_tool_name": "SCELNX_64",
+      "user_password": "/cpwd \"F1%mW@Byt1dance\"",
+      "bios_setting": [
+        {
+          "setup_question": "Number of PCI Segments",
+          "value": "1"
+        }
+      ]
+    }
+  },
+    "QtBiosBiossettingsGet_singleSegment": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "check",
+      "sce_tool_name": "SCELNX_64",
+      "user_password": "/cpwd \"F1%mW@Byt1dance\"",
+      "bios_setting": [
+        {
+          "setup_question": "Number of PCI Segments",
+          "value": "1"
+        }
+      ]
+    }
+  },
+    "QtBiosBiossettingsSet_singleSegment_CX7": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "set",
+      "sce_tool_name": "SCELNX_64",
+      "user_password": "",
+      "bios_setting": [
+        {
+          "setup_question": "Number of PCI Segments",
+          "value": "1"
+        }
+      ]
+    }
+  },
+    "QtBiosBiossettingsGet_singleSegment_CX7": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "check",
+      "sce_tool_name": "SCELNX_64",
+      "user_password": "",
+      "bios_setting": [
+        {
+          "setup_question": "Number of PCI Segments",
+          "value": "1 Segment"
+        }
+      ]
+    }
+  },
+    "QtBiosBiossettingsSet_MultiSegment": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "set",
+      "sce_tool_name": "SCELNX_64",
+      "user_password": "/cpwd \"F1%mW@Byt1dance\"",
+      "bios_setting": [
+        {
+          "setup_question": "Number of PCI Segments",
+          "value": "2"
+        }
+      ]
+    }
+  },
+    "QtBiosBiossettingsGet_MultiSegment": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "check",
+      "sce_tool_name": "SCELNX_64",
+      "user_password": "/cpwd \"F1%mW@Byt1dance\"",
+      "bios_setting": [
+        {
+          "setup_question": "Number of PCI Segments",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "QtDpuIntelBiosBiossettingsSet": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "set",
+      "sce_tool_name": "SCELNX_64",
+      "bios_setting": [
+        {
+          "setup_question": "FRB-2 Timer Policy",
+          "value": "Do Nothing"
+        },
+        {
+          "setup_question": "Correctable Error Threshold",
+          "value": "1"
+        },
+        {
+          "setup_question": "Patrol Scrub Interval",
+          "value": "<1>"
+        },
+        {
+          "setup_question": "PCIE Corrected Error Threshold Counter",
+          "value": "Enable"
+        },
+        {
+          "setup_question": "PCIE Corrected Error Threshold",
+          "value": "1"
+        },
+        {
+          "setup_question": "Corrected Error",
+          "value": "Enable"
+        }
+      ]
+    }
+  },
+  "QtDpuIntelBiosBiossettingsCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "check",
+      "sce_tool_name": "SCELNX_64",
+      "bios_setting": [
+        {
+          "setup_question": "FRB-2 Timer Policy",
+          "value": "Do Nothing"
+        },
+        {
+          "setup_question": "Correctable Error Threshold",
+          "value": "1"
+        },
+        {
+          "setup_question": "Patrol Scrub Interval",
+          "value": "<1>"
+        },
+        {
+          "setup_question": "PCIE Corrected Error Threshold Counter",
+          "value": "Enable"
+        },
+        {
+          "setup_question": "PCIE Corrected Error Threshold",
+          "value": "1"
+        },
+        {
+          "setup_question": "Corrected Error",
+          "value": "Enable"
+        }
+      ]
+    }
+  },
+  "QtBiosPprSelCheckAmd": {
+    "Desc": "",
+    "Tags": "BIOS Check",
+    "Module": "ppr_sel_check_amd",
+    "Class": "PprSelCheckAmd",
+    "Function": "test_ppr_sel_amd",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBiosBiossettingsSet_Amtppr": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "set",
+      "sce_tool_name": "SCELNX_64",
+      "bios_setting": [
+        {
+          "setup_question": "DRAM Hard Post Package Repair",
+          "value": "Enabled"
+        },
+        {
+          "setup_question": "DDR Healing BIST",
+          "value": "PMU Mem BIST"
+        },
+        {
+          "setup_question": "PMU Mem BIST Algorithm Select",
+          "value": "By User"
+        },
+        {
+          "setup_question": "PMU Mem BIST Algorithm Bitmask",
+          "value": "20"
+        },
+        {
+          "setup_question": "Algorithm #6",
+          "value": "Enabled"
+        },
+        {
+          "setup_question": "DDR Healing BIST Execution Mode",
+          "value": "Every Boot"
+        },
+        {
+          "setup_question": "DDR Healing BIST Repair Type",
+          "value": "Hard Repair"
+        },
+        {
+          "setup_question": "DRAM Boot Time Post Package Repair",
+          "value": "Enabled"
+        },
+        {
+          "setup_question": "FRB-2 Timer",
+          "value": "Disabled"
+        }
+      ]
+    }
+  },
+  "QtBiosBiossettingsSet_Amtppr_DPUHOST": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "set",
+      "sce_tool_name": "SCELNX_64",
+      "user_password": "/cpwd \"F1%mW@Byt1dance\"",
+      "bios_setting": [
+        {
+          "setup_question": "DRAM Hard Post Package Repair",
+          "value": "Enabled"
+        },
+        {
+          "setup_question": "DDR Healing BIST",
+          "value": "PMU Mem BIST"
+        },
+        {
+          "setup_question": "PMU Mem BIST Algorithm Select",
+          "value": "By User"
+        },
+        {
+          "setup_question": "PMU Mem BIST Algorithm Bitmask",
+          "value": "20"
+        },
+        {
+          "setup_question": "Algorithm #6",
+          "value": "Enabled"
+        },
+        {
+          "setup_question": "DDR Healing BIST Execution Mode",
+          "value": "Every Boot"
+        },
+        {
+          "setup_question": "DDR Healing BIST Repair Type",
+          "value": "Hard Repair"
+        },
+        {
+          "setup_question": "DRAM Boot Time Post Package Repair",
+          "value": "Enabled"
+        },
+        {
+          "setup_question": "FRB-2 Timer",
+          "value": "Disabled"
+        }
+      ]
+    }
+  },
+  "QtBiosBiossettingsCheck_Amtppr": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "check",
+      "sce_tool_name": "SCELNX_64",
+      "bios_setting": [
+        {
+          "setup_question": "DRAM Hard Post Package Repair",
+          "value": "Enabled"
+        },
+        {
+          "setup_question": "DDR Healing BIST",
+          "value": "PMU Mem BIST"
+        },
+        {
+          "setup_question": "PMU Mem BIST Algorithm Select",
+          "value": "By User"
+        },
+        {
+          "setup_question": "PMU Mem BIST Algorithm Bitmask",
+          "value": "20"
+        },
+        {
+          "setup_question": "Algorithm #6",
+          "value": "Enabled"
+        },
+        {
+          "setup_question": "DDR Healing BIST Execution Mode",
+          "value": "Every Boot"
+        },
+        {
+          "setup_question": "DDR Healing BIST Repair Type",
+          "value": "Hard Repair"
+        },
+        {
+          "setup_question": "DRAM Boot Time Post Package Repair",
+          "value": "Enabled"
+        },
+        {
+          "setup_question": "FRB-2 Timer",
+          "value": "Disabled"
+        }
+      ]
+    }
+  },
+  "QtBiosBiossettingsSet_SystemCloakingDisable": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "set",
+      "sce_tool_name": "SCELNX_64",
+      "bios_setting": [
+        {
+          "setup_question": "System Cloaking",
+          "value": "Disabled"
+        }
+       ]
+    }
+  },
+  "QtBiosBiossettingsCheck_SystemCloakingDisable": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "check",
+      "sce_tool_name": "SCELNX_64",
+      "bios_setting": [
+        {
+          "setup_question": "System Cloaking",
+          "value": "Disabled"
+        }
+       ]
+    }
+  },
+  "QtBiosBiossettingsSet_Bdat": {
+    "Desc": "BIOS Setup bdat",
+    "Tags": "BIOS Setup",
+    "Module": "biossetup_test",
+    "Class": "BIOSSETUP",
+    "Function": "test_biossetup_bdat",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBiosBiossettingsCheck_Bdat": {
+    "Desc": "BIOS Setup bdat check",
+    "Tags": "BIOS Setup",
+    "Module": "biossetup_test",
+    "Class": "BIOSSETUP",
+    "Function": "test_biossetup_bdat_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBiosBiossettingsSet_Recoverbdat": {
+    "Desc": "BIOS Setup bdat check",
+    "Tags": "BIOS Setup",
+    "Module": "biossetup_test",
+    "Class": "BIOSSETUP",
+    "Function": "test_biossetup_bdat_recover",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBiosBiossettingsCheck_Recoverbdat": {
+    "Desc": "BIOS Setup bdat check",
+    "Tags": "BIOS Setup",
+    "Module": "biossetup_test",
+    "Class": "BIOSSETUP",
+    "Function": "test_biossetup_bdat_recoverycheck",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBiosBiossettingsSet_At": {
+    "Desc": "BIOS Setup for at",
+    "Tags": "BIOS Setup",
+    "Module": "biossetup_test",
+    "Class": "BIOSSETUP",
+    "Function": "test_biossetup_at",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBiosSet_AVTPower": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "set",
+      "sce_tool_name": "SCELNX_64",
+      "bios_setting": [
+        {
+          "setup_question": "Determinism Enable",
+          "value": "Power"
+        }
+      ]
+    }
+  },
+  "QtBiosCheck_AVTPower": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "check",
+      "sce_tool_name": "SCELNX_64",
+      "bios_setting": [
+        {
+          "setup_question": "Determinism Enable",
+          "value": "Power"
+        }
+      ]
+    }
+  },
+  "QtBiosSet_AVTRecover": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "set",
+      "sce_tool_name": "SCELNX_64",
+      "bios_setting": [
+        {
+          "setup_question": "Determinism Enable",
+          "value": "Performance"
+        }
+      ]
+    }
+  },
+  "QtBiosBiossettingsSet_RecoverpprDPUHOST": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "set",
+      "user_password": "/cpwd \"F1%mW@Byt1dance\"",
+      "sce_tool_name": "SCELNX_64",
+      "bios_setting": [
+        {
+          "setup_question": "DRAM Hard Post Package Repair",
+          "value": "Disabled"
+        },
+        {
+          "setup_question": "DDR Healing BIST",
+          "value": "Disabled"
+        },
+        {
+          "setup_question": "PMU Mem BIST Algorithm Select",
+          "value": "Auto"
+        },
+        {
+          "setup_question": "PMU Mem BIST Algorithm Bitmask",
+          "value": "1FF"
+        },
+        {
+          "setup_question": "Algorithm #6",
+          "value": "Enabled"
+        },
+        {
+          "setup_question": "DDR Healing BIST Execution Mode",
+          "value": "One Time"
+        },
+        {
+          "setup_question": "DDR Healing BIST Repair Type",
+          "value": "Soft Repair"
+        },
+        {
+          "setup_question": "DRAM Boot Time Post Package Repair",
+          "value": "Disabled"
+        },
+        {
+          "setup_question": "FRB-2 Timer",
+          "value": "Disabled"
+        }
+      ]
+    }
+  },
+  "QtBiosCheck_AVTRecover": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "bios_setting_test",
+    "Class": "BiosSettingTest",
+    "Function": "test_bios_setting",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "action": "check",
+      "sce_tool_name": "SCELNX_64",
+      "bios_setting": [
+        {
+          "setup_question": "Determinism Enable",
+          "value": "Performance"
+        }
+      ]
+    }
+  }
+}

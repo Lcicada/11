@@ -1,0 +1,1417 @@
+{
+  "QtDonghuBoxBMCFWUPGRADE": {
+    "Desc": "Donghu BOX BMC FW upgrade",
+    "Tags": "Donghu BOX BMC FW up",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_donghu_box_upgrade",
+    "Timeout": "15m",
+    "Args": [],
+    "Kwargs": {
+      "golden_file_name": "box_bmc_fw_donghu.json"
+    }
+  },
+  "QtDonghuBoxCPLDFWUPGRADE": {
+    "Desc": "Donghu BOX CPLD FW upgrade",
+    "Tags": "Donghu BOX CPLD FW up",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_donghu_box_upgrade",
+    "Timeout": "15m",
+    "Args": [],
+    "Kwargs": {
+      "golden_file_name": "box_cpld_fw_donghu.json"
+    }
+  },
+  "QtDonghuBox6NVmecCPLDFWUPGRADE": {
+    "Desc": "Donghu BOX 6NVME CPLD FW upgrade",
+    "Tags": "Donghu BOX 6NVME CPLD FW up",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_donghu_box_upgrade",
+    "Timeout": "15m",
+    "Args": [],
+    "Kwargs": {
+      "golden_file_name": "box_6nvme_cpld_fw_donghu.json"
+    }
+  },
+  "QtDonghuBox2NVmecCPLDFWUPGRADE": {
+    "Desc": "Donghu BOX 2NVME CPLD FW upgrade",
+    "Tags": "Donghu BOX 2NVME CPLD FW up",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_donghu_box_upgrade",
+    "Timeout": "15m",
+    "Args": [],
+    "Kwargs": {
+      "golden_file_name": "box_2nvme_cpld_fw_donghu.json"
+    }
+  },
+  "QtDonghuBoxFcbCPLDFWUPGRADE": {
+    "Desc": "Donghu BOX FCB CPLD FW upgrade",
+    "Tags": "Donghu BOX FCB CPLD FW up",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_donghu_box_upgrade",
+    "Timeout": "15m",
+    "Args": [],
+    "Kwargs": {
+      "golden_file_name": "box_fcb_cpld_fw_donghu.json"
+    }
+  },
+  "QtDonghuBoxSwPcieSwitchFWUPGRADE": {
+    "Desc": "Donghu BOX SW PCIE SWITCH FW upgrade",
+    "Tags": "Donghu BOX SW PCIE SWITCH FW up",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_donghu_box_upgrade",
+    "Timeout": "50m",
+    "Args": [],
+    "Kwargs": {
+      "golden_file_name": "box_pcie_switch_fw_donghu.json"
+    }
+  },
+  "QtDonghuBoxPcieRetimerFWUPGRADE": {
+    "Desc": "Donghu BOX PCIE RETIMER FW upgrade",
+    "Tags": "Donghu BOX PCIE RETIMER FW up",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_donghu_box_upgrade",
+    "Timeout": "15m",
+    "Args": [],
+    "Kwargs": {
+      "golden_file_name": "box_pcie_retimer_fw_donghu.json"
+    }
+  },
+  "QtSetupDonghuVlanNetwork": {
+    "Desc": "Setup Donghu VLAN network",
+    "Tags": "BOX VLAN network",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_setup_donghu_vlan_network",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "vlan_id": 200,
+      "ip": "192.168.1.1/24",
+      "brd": "192.168.1.255",
+      "dev": "oob_net0"
+    }
+  },
+  "QtBoxSystemCheck_Black_List": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "sys_event",
+    "Class": "SysEvent",
+    "Function": "test_sys_event",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBoxSystemCheck_Black_List_repeat": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "sys_event",
+    "Class": "SysEvent",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_sys_event",
+      "args": [],
+      "kwargs": {}
+    }
+  },
+  "QtBoxSdrCheck": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "check_sdr",
+    "Class": "Checksdr",
+    "Function": "test_sdr_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "ipmitool_cmd": "ipmitool -I lanplus -H {UUT_BMCIP_JOBPROPERTY} -U toutiao -P toutiao!@# -p 8623 sdr list",
+      "golden_file_name": "check_sdr_golden_box.json"
+    }
+  },
+  "QtBoxSdrCheck_DPUSUITEL6": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "check_sdr",
+    "Class": "Checksdr",
+    "Function": "test_sdr_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "ipmitool_cmd": "ipmitool -I lanplus -H {UUT_BMCIP_JOBPROPERTY} -U toutiao -P toutiao!@# -p 8623 sdr list",
+      "golden_file_name": "check_sdr_golden_box_L6.json"
+    }
+  },
+  "QtBoxSdrCheckL6": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "check_sdr",
+    "Class": "Checksdr",
+    "Function": "test_sdr_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "ipmitool_cmd": "ipmitool -I lanplus -H {UUT_BMCIP} -U toutiao -P toutiao!@# -p 8623 sdr list",
+      "golden_file_name": "check_sdr_golden_box_L6.json"
+    }
+  },
+  "QtBoxSdrCheck_repeat": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "check_sdr",
+    "Class": "Checksdr",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_sdr_check",
+      "args": [],
+      "kwargs": {
+        "golden_file_name": "check_sdr_golden_box.json"
+      }
+    }
+  },
+  "QtBoxGpuCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "gpu_check",
+    "Class": "GpuCheck",
+    "Function": "test_gpu_check",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "gpu_check.json"
+    }
+  },
+  "QtBoxSelClear": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "sel_clear",
+    "Class": "SelClear",
+    "Function": "test_sel_clear",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "OOB_mode": {
+        "bmc_env_name": "UUT_BMCIP_JOBPROPERTY",
+        "bmc_user": "toutiao",
+        "bmc_password": "toutiao!@#",
+        "port": "8623"
+      },
+      "pass_flag": "Clearing SEL.  Please allow a few seconds to erase"
+    }
+  },
+  "QtBoxGpuTest_Fielddiag_10h": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "gpu_field_diag",
+    "Class": "GPUFieldDiag",
+    "Function": "test_gpu_fieldiag",
+    "Timeout": "720m",
+    "Args": [],
+    "Kwargs": {
+      "tool_name": "629-24287-XXXX-FLD-40578.tgz",
+      "run_command": "./fieldiag.sh --gpufielddiag --gpu_fd_args=gen5"
+    }
+  },
+  "QtBoxGpuTest_Fielddiag_1.5h": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "gpu_field_diag",
+    "Class": "GPUFieldDiag",
+    "Function": "test_gpu_fieldiag",
+    "Timeout": "240m",
+    "Args": [],
+    "Kwargs": {
+      "tool_name": "629-24287-XXXX-FLD-40578.tgz",
+      "run_command": "./fieldiag.sh --level2 --no_bmc"
+    }
+  },
+  "QtBoxGpuTest_Nvqual_t1": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "nvqual_test",
+    "Class": "NVQualTest",
+    "Function": "test_nvqual",
+    "Timeout": "120m",
+    "Args": [],
+    "Kwargs": {
+      "tool_version": "NVQual_HGX_H20_8-GPU_PS_MP_x86_v01",
+      "timeout": 4200,
+      "item_ID": "1"
+    }
+  },
+  "QtBoxGpuTest_Nvqual_t2": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "nvqual_test",
+    "Class": "NVQualTest",
+    "Function": "test_nvqual",
+    "Timeout": "180m",
+    "Args": [],
+    "Kwargs": {
+      "tool_version": "NVQual_HGX_H20_8-GPU_PS_MP_x86_v01",
+      "timeout": 11000,
+      "item_ID": "2",
+      "loops": "1",
+      "serial_test": "1",
+      "log_cut_pattern": "GPU tests completed"
+    }
+  },
+  "QtBoxGpuTest_Nccl": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "gpu_nccl",
+    "Class": "GpuNccl",
+    "Function": "test_gpu_nccl",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "cuda_bin_path": "/usr/local/cuda/bin",
+      "cuda_lib_path": "/usr/local/cuda/lib64",
+      "install_deb_cmd_list": [
+        "dpkg -i 5.10.135.bsk.business.2-amd64/libnccl2_2.21.5-1+cuda12.4_amd64.deb",
+        "dpkg -i 5.10.135.bsk.business.2-amd64/libnccl2-dbgsym_2.21.5-1+cuda12.4_amd64.deb",
+        "dpkg -i 5.10.135.bsk.business.2-amd64/libnccl-dev_2.21.5-1+cuda12.4_amd64.deb"
+      ],
+      "nccl_cmd": "./5.10.135.bsk.business.2-amd64/nccl_test/all_reduce_perf -b 1g -e 8g -f 2 -g 8",
+      "busbw_limit": 470
+    }
+  },
+  "QtBoxGpuTest_Dcgm": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "nvidia_gpu_dcgm",
+    "Class": "Nvidiagpudcgm",
+    "Function": "test_gpu_dcgm",
+    "Timeout": "180m",
+    "Args": [],
+    "Kwargs": {
+      "pre_step": {
+        "install_rpm_cmd": [
+          "dpkg -i datacenter-gpu-manager_3.3.6_amd64.deb"
+        ],
+        "load_gpu_driver_cmd": [
+          "nv-hostengine"
+        ],
+        "persistence_mode_enable": true,
+        "persistence_mode_after_test_disable": true,
+        "persistence_mode_enable_cmd": "nvidia-smi -pm 1",
+        "persistence_mode_disable_cmd": "nvidia-smi -pm 0",
+        "start_service_cmd": [
+          "nv-fabricmanager"
+        ]
+      },
+      "tool_para": "diag -r 4 -p memtest.test0=true\\;memtest.test1=true\\;memtest.test2=true\\;memtest.test3=true\\;memtest.test4=true\\;memtest.test5=true\\;memtest.test6=true\\;memtest.test7=true\\;memtest.test8=true\\;memtest.test9=true\\;memtest.test10=true\\;memtest.test_duration=3600",
+      "golden_file": "gpu_dcgm_specs_donghu.json"
+    }
+  },
+  "QtBoxGpuTest_Dcgm_nor4": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "nvidia_gpu_dcgm",
+    "Class": "Nvidiagpudcgm",
+    "Function": "test_gpu_dcgm",
+    "Timeout": "180m",
+    "Args": [],
+    "Kwargs": {
+      "pre_step": {
+        "install_rpm_cmd": [
+          "dpkg -i datacenter-gpu-manager_3.3.6_amd64.deb"
+        ],
+        "load_gpu_driver_cmd": [
+          "nv-hostengine"
+        ],
+        "persistence_mode_enable": true,
+        "persistence_mode_after_test_disable": true,
+        "persistence_mode_enable_cmd": "nvidia-smi -pm 1",
+        "persistence_mode_disable_cmd": "nvidia-smi -pm 0",
+        "start_service_cmd": [
+          "nv-fabricmanager"
+        ]
+      },
+      "tool_para": "diag -r memtest -p memtest.test0=true\\;memtest.test1=true\\;memtest.test2=true\\;memtest.test3=true\\;memtest.test4=true\\;memtest.test5=true\\;memtest.test6=true\\;memtest.test7=true\\;memtest.test8=true\\;memtest.test9=true\\;memtest.test10=true\\;memtest.test_duration=3600",
+      "golden_file": "gpu_dcgm_specs_donghu_nor4.json"
+    }
+  },
+  "QtBoxGpuTest_Cuda_P2P_Bandwith": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "cuda_p2p_bandwidth",
+    "Class": "CUDAP2PBandwidth",
+    "Function": "test_cuda_p2p_bandwidth",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "gpu_count": 8,
+      "spec_file": "bandwidth_specs.json"
+    }
+  },
+  "QtBoxGpuTest_Gpu_Bandwith_dtoh": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "gpu_bandwidth",
+    "Class": "GpuBandWidth",
+    "Function": "test_gpu_bandwidth",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "tool_path": "/usr/local/cuda/samples/1_Utilities/bandwidthTest/",
+      "tool_name": "bandwidthTest",
+      "enable_cmd": "nv-fabricmanager",
+      "gpu_count": 8,
+      "mode": "range",
+      "start": 1024000,
+      "end": 102400000,
+      "increment": 1024000,
+      "dtoh": 51.2
+    }
+  },
+  "QtBoxGpuTest_Gpu_Bandwith_dtoh_parallel": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "gpu_bandwidth",
+    "Class": "GpuBandWidth",
+    "Function": "test_gpu_bandwidth",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "tool_path": "/usr/local/cuda/samples/1_Utilities/bandwidthTest/",
+      "tool_name": "bandwidthTest",
+      "enable_cmd": "nv-fabricmanager",
+      "gpu_count": 8,
+      "gpu_parallel": "true",
+      "mode": "range",
+      "start": 1024000,
+      "end": 102400000,
+      "increment": 1024000,
+      "dtoh": null
+    }
+  },
+  "QtBoxGpuTest_Gpu_Bandwith_htod": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "gpu_bandwidth",
+    "Class": "GpuBandWidth",
+    "Function": "test_gpu_bandwidth",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "tool_path": "/usr/local/cuda/samples/1_Utilities/bandwidthTest/",
+      "tool_name": "bandwidthTest",
+      "enable_cmd": "nv-fabricmanager",
+      "gpu_count": 8,
+      "mode": "range",
+      "start": 1024000,
+      "end": 102400000,
+      "increment": 1024000,
+      "htod": 51.2
+    }
+  },
+  "QtBoxGpuTest_Gpu_Bandwith_htod_parallel": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "gpu_bandwidth",
+    "Class": "GpuBandWidth",
+    "Function": "test_gpu_bandwidth",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "tool_path": "/usr/local/cuda/samples/1_Utilities/bandwidthTest/",
+      "tool_name": "bandwidthTest",
+      "enable_cmd": "nv-fabricmanager",
+      "gpu_count": 8,
+      "gpu_parallel": "true",
+      "mode": "range",
+      "start": 1024000,
+      "end": 102400000,
+      "increment": 1024000,
+      "htod": null
+    }
+  },
+  "QtBoxGpuTest_Gpu_Bandwith_dtod": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "gpu_bandwidth",
+    "Class": "GpuBandWidth",
+    "Function": "test_gpu_bandwidth",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "tool_path": "/usr/local/cuda/samples/1_Utilities/bandwidthTest/",
+      "tool_name": "bandwidthTest",
+      "enable_cmd": "nv-fabricmanager",
+      "gpu_count": 8,
+      "mode": "range",
+      "start": 1024000,
+      "end": 102400000,
+      "increment": 1024000,
+      "dtod": 1650
+    }
+  },
+  "QtBoxGpuTest_Gpu_Bandwith_htod_dtoh": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "gpu_bandwidth",
+    "Class": "GpuBandWidth",
+    "Function": "test_gpu_bandwidth",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "tool_path": "/usr/local/cuda/samples/1_Utilities/bandwidthTest/",
+      "tool_name": "bandwidthTest",
+      "enable_cmd": "nv-fabricmanager",
+      "gpu_count": 8,
+      "mode": "range",
+      "start": 1024000,
+      "end": 102400000,
+      "increment": 1024000,
+      "htod_dtoh": 51.2
+    }
+  },
+  "QtBoxGpuTest_Gpu_Bandwith_htod_dtoh_parallel": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "gpu_bandwidth",
+    "Class": "GpuBandWidth",
+    "Function": "test_gpu_bandwidth",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "tool_path": "/usr/local/cuda/samples/1_Utilities/bandwidthTest/",
+      "tool_name": "bandwidthTest",
+      "enable_cmd": "nv-fabricmanager",
+      "gpu_count": 8,
+      "gpu_parallel": "true",
+      "mode": "range",
+      "start": 1024000,
+      "end": 102400000,
+      "increment": 1024000,
+      "htod_dtoh": null
+    }
+  },
+  "QtBoxGpuTest_Gpu_Burn": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "gpu_burn",
+    "Class": "Gpuburntest",
+    "Function": "test_gpu_burn",
+    "Timeout": "3m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBoxGpuTest_Nvvs": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "nvidia_gpu_nvvs",
+    "Class": "NvidiaGpuNvvs",
+    "Function": "test_nvidia_nvvs",
+    "Timeout": "80m",
+    "Args": [],
+    "Kwargs": {
+      "nvidia_enabled": "nvidia-smi -pm 1",
+      "nvidia_disabled": "nvidia-smi -pm 0",
+      "nv_enabled": "nv-hostengine",
+      "nv_disabled": "killall nv-hostengine",
+      "deb_name": "datacenter-gpu-manager_3.3.6_amd64.deb",
+      "nvvs_cmd": "--specifiedtest memtest --parameters 'memtest.test11=true'",
+      "test_time": 3600,
+      "check_process": "ps -aux | grep nv-",
+      "check_process_time": 60
+    }
+  },
+  "QtBoxFanTest_set": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "fan_speed",
+    "Class": "FanSpeed",
+    "Function": "test_set_fan_mode",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "OOB_mode": {
+        "bmc_env_name": "UUT_BMCIP",
+        "bmc_user": "toutiao",
+        "bmc_password": "toutiao!@#",
+        "port": "8623"
+      },
+      "set_fan_mode_cmd": "raw 0x3a 0x25 0xdd 0xb3 0x00 0x01; sleep 1",
+      "get_fan_mode_cmd": "raw 0x3a 0x26 0xdd 0xb3 0x00",
+      "exp_fan_mode": "01"
+    }
+  },
+  "QtBoxFanFunctionSetManual": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "fan_speed",
+    "Class": "FanSpeed",
+    "Function": "test_set_fan_mode",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "OOB_mode": {
+        "bmc_env_name": "UUT_BMCIP_JOBPROPERTY",
+        "bmc_user": "toutiao",
+        "bmc_password": "'toutiao!@#'",
+        "port": "8623"
+      },
+      "set_fan_mode_cmd": "raw 0x3a 0x25 0xdd 0xb3 0x00 0x01; sleep 3",
+      "get_fan_mode_cmd": "raw 0x3a 0x26 0xdd 0xb3 0x00",
+      "exp_fan_mode": "01"
+    }
+  },
+  "QtBoxFanFunctionSetAuto": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "fan_speed",
+    "Class": "FanSpeed",
+    "Function": "test_set_fan_mode",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "OOB_mode": {
+        "bmc_env_name": "UUT_BMCIP_JOBPROPERTY",
+        "bmc_user": "toutiao",
+        "bmc_password": "'toutiao!@#'",
+        "port": "8623"
+      },
+      "set_fan_mode_cmd": "raw 0x3a 0x25 0xdd 0xb3 0x00 0x00; sleep 3",
+      "get_fan_mode_cmd": "raw 0x3a 0x26 0xdd 0xb3 0x00",
+      "exp_fan_mode": "00"
+    }
+  },
+  "QtBoxFanFunctionCheck": {
+    "Desc": "",
+    "Tags": "FAN Function",
+    "Module": "fan_speed",
+    "Class": "FanSpeed",
+    "Function": "test_fan_speed",
+    "Timeout": "25m",
+    "Args": [],
+    "Kwargs": {
+      "OOB_mode": {
+        "bmc_env_name": "UUT_BMCIP_JOBPROPERTY",
+        "bmc_user": "toutiao",
+        "bmc_password": "'toutiao!@#'",
+        "port": "8623"
+      },
+      "sleep_time": 70,
+      "fan_duty_cmd_info": [
+        {
+          "fan_duty": "100",
+          "set_duty_cmd": "raw 0x3a 0x27 0xdd 0xb3 0x00 0xff 100"
+        },
+        {
+          "fan_duty": "20",
+          "set_duty_cmd": "raw 0x3a 0x27 0xdd 0xb3 0x00 0xff 20"
+        },
+        {
+          "fan_duty": "40",
+          "set_duty_cmd": "raw 0x3a 0x27 0xdd 0xb3 0x00 0xff 40"
+        },
+        {
+          "fan_duty": "60",
+          "set_duty_cmd": "raw 0x3a 0x27 0xdd 0xb3 0x00 0xff 60"
+        },
+        {
+          "fan_duty": "80",
+          "set_duty_cmd": "raw 0x3a 0x27 0xdd 0xb3 0x00 0xff 80"
+        },
+        {
+          "fan_duty": "auto",
+          "set_duty_cmd": "raw 0x3a 0x25 0xdd 0xb3 0x00 0x00"
+        }
+      ],
+      "fan_groups": {
+        "FAN_F": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN0_F_Speed",
+            "FAN1_F_Speed",
+            "FAN3_F_Speed",
+            "FAN4_F_Speed",
+            "FAN6_F_Speed",
+            "FAN7_F_Speed",
+            "FAN9_F_Speed",
+            "FAN10_F_Speed",
+            "FAN12_F_Speed",
+            "FAN13_F_Speed"
+          ],
+          "duty2speed": {
+            "20": "3024-4290",
+            "40": "5859-7392",
+            "60": "8289-10989",
+            "80": "10638-14751",
+            "100": "13068-16896",
+            "auto": "2700-16896"
+          }
+        },
+        "FAN_R": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN0_R_Speed",
+            "FAN1_R_Speed",
+            "FAN3_R_Speed",
+            "FAN4_R_Speed",
+            "FAN6_R_Speed",
+            "FAN7_R_Speed",
+            "FAN9_R_Speed",
+            "FAN10_R_Speed",
+            "FAN12_R_Speed",
+            "FAN13_R_Speed"
+          ],
+          "duty2speed": {
+            "20": "2862-4719",
+            "40": "5751-8052",
+            "60": "8613-11319",
+            "80": "11421-14553",
+            "100": "12285-17490",
+            "auto": "2700-15015"
+          }
+        },
+        "8038": {
+          "consistence_limit": 0.2,
+          "fan_list": [
+            "FAN2_Speed",
+            "FAN5_Speed",
+            "FAN8_Speed",
+            "FAN11_Speed",
+            "FAN14_Speed"
+          ],
+          "duty2speed": {
+            "20": "3024-3729",
+            "40": "6102-7491",
+            "60": "9126-11418",
+            "80": "11961-14483",
+            "100": "14688-18711",
+            "auto": "2700-18711"
+          }
+        }
+      }
+    }
+  },
+  "QtBoxBf3NicTest_2h": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "infini_band_nic_test",
+    "Class": "InfiniBandNicTest",
+    "Function": "test_infini_band_nic",
+    "Timeout": "130m",
+    "Args": [],
+    "Kwargs": {
+      "test_seconds": 7200,
+      "device_ids": [
+        "mlx5_0",
+        "mlx5_1",
+        "mlx5_2",
+        "mlx5_3",
+        "mlx5_4",
+        "mlx5_5",
+        "mlx5_6",
+        "mlx5_7"
+      ],
+      "spec": {
+        "BW average[Gb/sec]": 350
+      },
+      "measurment_type": "mean",
+      "Total BW average": 360,
+      "tool_name": "ib_write_bw",
+      "tool_parameter": "-d {device_id} --report_gbits --run_infinitely -D 30 -n 10000 -s 655360 -F -p {port} --qp 4 ",
+      "start_port": 10000,
+      "ifconfig_err_check_enable": "true",
+      "ethtool_err_check_enable": "true",
+      "bypass_attribute": "err_lane"
+    }
+  },
+  "QtBoxPciInfoCheck": {
+    "Desc": "",
+    "Tags": "PCI INFO",
+    "Module": "pcie_test",
+    "Class": "PCIe",
+    "Function": "test_pcie_compare_with_golden",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtBoxBmcTimeCheck_DPUSUITE": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_bmc_time",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "bmc_time_exp": 60,
+      "OOB_mode": {
+        "bmc_env_name": "UUT_BMCIP_JOBPROPERTY",
+        "bmc_user": "toutiao",
+        "bmc_password": "'toutiao!@#'",
+        "port": "8623"
+      }
+    }
+  },
+    "QtBoxBmcTimeCheck": {
+    "Desc": "",
+    "Tags": "BMC INFO",
+    "Module": "bmc_fun_test",
+    "Class": "Bmctest",
+    "Function": "test_bmc_time",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "bmc_time_exp": 60,
+      "OOB_mode": {
+        "bmc_env_name": "UUT_BMCIP",
+        "bmc_user": "toutiao",
+        "bmc_password": "'toutiao!@#'",
+        "port": "8623"
+      }
+    }
+  },
+  "QtBoxPciInfoCheck_repeat": {
+    "Desc": "",
+    "Tags": "PCI INFO",
+    "Module": "pcie_test",
+    "Class": "PCIe",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_pcie_compare_with_golden",
+      "args": [],
+      "kwargs": {}
+    }
+  },
+  "QtSmartHealthCheck_repeat": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "smart_test",
+    "Class": "SmartTest",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_check_smart",
+      "args": [],
+      "kwargs": {
+        "config_file": "smart_test.json"
+      }
+    }
+  },
+  "QtSmartHealthCheck": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "smart_test",
+    "Class": "SmartTest",
+    "Function": "test_check_smart",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "smart_test.json"
+    }
+  },
+  "QtGpuInfoCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "gpu_info_check",
+    "Class": "GpuInfoCheck",
+    "Function": "test_gpu_info",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "sleep_10m": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "time_sleep",
+    "Class": "TimeSleep",
+    "Function": "test_time_sleep",
+    "Timeout": "15m",
+    "Args": [],
+    "Kwargs": {
+      "sleep_second": 600
+    }
+  },
+  "sleep_5m": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "time_sleep",
+    "Class": "TimeSleep",
+    "Function": "test_time_sleep",
+    "Timeout": "7m",
+    "Args": [],
+    "Kwargs": {
+      "sleep_second": 300
+    }
+  },
+  "QtPcieCeCountCheck_H200": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "pcie_ce_count",
+    "Class": "PcieCeCount",
+    "Function": "test_pcie_ce_count",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "sel_cmd": "ipmitool sel elist",
+      "bdf_list": [
+        "0000:03:00.0",
+        "0000:02:00.0",
+		"0000:34:00.0",
+		"0000:2c:02.0",
+		"0000:af:00.0",
+		"0000:ae:00.0",
+		"0000:da:00.0",
+		"0000:d8:01.0",
+		"0001:03:00.0",
+		"0001:02:00.0",
+		"0001:34:00.0",
+		"0001:32:00.0",
+		"0001:a3:00.0",
+		"0001:a2:00.0",
+		"0001:4d:00.0",
+		"0001:d2:01.0"
+      ],
+      "check_cycle_ce": {
+        "enable": false,
+        "sel_cycle_flag": "System Boot Initiated BIOS_Boot_Up | Initiated by power up | Asserted"
+      },
+      "sel_black_list": [
+        "PCIE_Status | Bus Correctable error"
+      ],
+      "count_upper_limit": 10
+    }
+  },
+    "QtPcieCeCountTotalCheck_H200": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "pcie_ce_count",
+    "Class": "PcieCeCount",
+    "Function": "test_pcie_ce_count",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "sel_cmd": "ipmitool sel elist",
+      "bdf_list": [
+        "0000:03:00.0",
+        "0000:02:00.0",
+		"0000:34:00.0",
+		"0000:2c:02.0",
+		"0000:af:00.0",
+		"0000:ae:00.0",
+		"0000:da:00.0",
+		"0000:d8:01.0",
+		"0001:03:00.0",
+		"0001:02:00.0",
+		"0001:34:00.0",
+		"0001:32:00.0",
+		"0001:a3:00.0",
+		"0001:a2:00.0",
+		"0001:4d:00.0",
+		"0001:d2:01.0"
+      ],
+      "check_cycle_ce": {
+        "enable": false,
+        "sel_cycle_flag": "System Boot Initiated BIOS_Boot_Up | Initiated by power up | Asserted"
+      },
+      "sel_black_list": [
+        "PCIE_Status | Bus Correctable error"
+      ],
+      "count_upper_limit": 25
+    }
+  },
+"QtPcieCeCountCheck_H20": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "pcie_ce_count",
+    "Class": "PcieCeCount",
+    "Function": "test_pcie_ce_count",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "sel_cmd": "ipmitool sel elist",
+      "bdf_list": [
+        "0000:03:00.0",
+        "0000:02:00.0",
+		"0000:34:00.0",
+		"0000:2c:02.0",
+		"0000:af:00.0",
+		"0000:ae:00.0",
+		"0000:da:00.0",
+		"0000:d8:01.0",
+		"0001:03:00.0",
+		"0001:02:00.0",
+		"0001:34:00.0",
+		"0001:32:00.0",
+		"0001:a3:00.0",
+		"0001:a2:00.0",
+		"0001:4d:00.0",
+		"0001:d2:01.0"
+      ],
+      "check_cycle_ce": {
+        "enable": false,
+        "sel_cycle_flag": "System Boot Initiated BIOS_Boot_Up | Initiated by power up | Asserted"
+      },
+      "sel_black_list": [
+        "PCIE_Status | Bus Correctable error"
+      ],
+      "count_upper_limit": 10
+    }
+  },
+  "QtPcieCeCountTotalCheck_H20": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "pcie_ce_count",
+    "Class": "PcieCeCount",
+    "Function": "test_pcie_ce_count",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "sel_cmd": "ipmitool sel elist",
+      "bdf_list": [
+        "0000:03:00.0",
+        "0000:02:00.0",
+		"0000:34:00.0",
+		"0000:2c:02.0",
+		"0000:af:00.0",
+		"0000:ae:00.0",
+		"0000:da:00.0",
+		"0000:d8:01.0",
+		"0001:03:00.0",
+		"0001:02:00.0",
+		"0001:34:00.0",
+		"0001:32:00.0",
+		"0001:a3:00.0",
+		"0001:a2:00.0",
+		"0001:4d:00.0",
+		"0001:d2:01.0"
+      ],
+      "check_cycle_ce": {
+        "enable": false,
+        "sel_cycle_flag": "System Boot Initiated BIOS_Boot_Up | Initiated by power up | Asserted"
+      },
+      "sel_black_list": [
+        "PCIE_Status | Bus Correctable error"
+      ],
+      "count_upper_limit": 25
+    }
+  },
+    "QtPcieCeCountCheck_RDMA_H20": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "pcie_ce_count",
+    "Class": "PcieCeCount",
+    "Function": "test_pcie_ce_count",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "sel_cmd": "ipmitool sel elist",
+      "bdf_list": [
+        "0000:5a:00.0",
+        "0000:59:01.1"
+      ],
+      "check_cycle_ce": {
+        "enable": false,
+        "sel_cycle_flag": "System Boot Initiated BIOS_Boot_Up | Initiated by power up | Asserted"
+      },
+      "sel_black_list": [
+        "PCIE_Status | Bus Correctable error"
+      ],
+      "count_upper_limit": 10
+    }
+  },
+    "QtPcieCeCountCheck_RDMA_H200": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "pcie_ce_count",
+    "Class": "PcieCeCount",
+    "Function": "test_pcie_ce_count",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "sel_cmd": "ipmitool sel elist",
+      "bdf_list": [
+        "0000:5a:00.0",
+        "0000:59:01.1"
+      ],
+      "check_cycle_ce": {
+        "enable": false,
+        "sel_cycle_flag": "System Boot Initiated BIOS_Boot_Up | Initiated by power up | Asserted"
+      },
+      "sel_black_list": [
+        "PCIE_Status | Bus Correctable error"
+      ],
+      "count_upper_limit": 10
+    }
+  },
+  "QtBoxBf3NicCableRemove": {
+    "Desc": " ",
+    "Tags": "PromptBox",
+    "Module": "interactive_test",
+    "Class": "Interactive",
+    "Function": "test_bf3nic_cable",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "REMOVE_BOX_BF3_NIC_CABLE": {
+        "device": "BOX",
+        "prompt_name": "BF3_NIC_CABLE",
+        "para": "PlugOut",
+        "sub_para": "",
+        "flag": ""
+      }
+    }
+  },
+  "QtBoxGpuTopoCheck": {
+    "Desc": " ",
+    "Tags": "",
+    "Module": "gpu_topo_check",
+    "Class": "GpuTopo",
+    "Function": "test_gpu_topo",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+    }
+  },
+  "QtBoxModSet": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "box_mode",
+    "Class": "BoxMode",
+    "Function": "test_box_mode",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "pam": "SET",
+      "enable_box_cmd": "ipmitool raw 0x3e 0xb0 0x36 0x01 0x01",
+      "mc_reset_cmd": "ipmitool mc reset cold"
+    }
+  },
+  "QtBoxModGet": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "box_mode",
+    "Class": "BoxMode",
+    "Function": "test_box_mode",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "pam": "GET",
+      "check_mode_cmd": "ipmitool raw 0x3e 0xb0 0x36 0x02",
+      "pass_flag": "01 01"
+    }
+  },
+  "QtBoxSWInfoCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_box_sw_info_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "static_bmc_ip": "192.168.1.10"
+    }
+  },
+  "QtBoxSWFwCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_donghu_box_sw_fw_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+    }
+  },
+  "QtBoxFruCheck": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_donghu_box_fru_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "static_bmc_ip": "192.168.1.10",
+      "golden_file_name": "check_fru_golden.json"
+    }
+  },
+    "QtBoxSWInfoCheck_DPUSUITEL6": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_box_sw_info_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_base_name": "config_base_box_L6.json",
+      "static_bmc_ip": "192.168.1.10"
+    }
+  },
+    "QtBoxSWInfoCheckL6": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_box_sw_info_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_base_name": "config_base_box_L6.json"
+    }
+  },
+  "QtBoxSWFwCheckL6": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_donghu_box_sw_fw_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_base_name": "config_base_box_L6.json"
+    }
+  },
+  "QtBoxFruCheck_DPUSUITEL6": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_donghu_box_fru_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "static_bmc_ip": "192.168.1.10",
+      "config_base_name": "config_base_box_L6.json",
+      "golden_file_name": "L6_box_fru.json"
+    }
+  },
+   "QtBoxFruCheckL6": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "test_check_box",
+    "Class": "BOX",
+    "Function": "test_donghu_box_fru_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_base_name": "config_base_box_L6.json",
+      "golden_file_name": "L6_box_fru.json"
+    }
+  },
+  "QtBoxFruWrite": {
+    "Desc": "Box Fru Write",
+    "Tags": "Box Fru Write",
+    "Module": "fru_write",
+    "Class": "FruWrite",
+    "Function": "test_fru_write",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {
+      "fru_id": "0",
+      "write_method": {
+        "method": "fru_change",
+        "tool_version": "v1.1BS"
+      },
+      "delay_second": 20,
+      "OOB_mode": {
+        "bmc_env_name": "UUT_BMCIP",
+        "bmc_user": "toutiao",
+        "bmc_password": "'toutiao!@#'",
+        "port": "8623"
+      },
+      "is_box": "true",
+      "box_index": 0,
+      "component": "MotherBoard",
+      "fru_field_set": {
+        "Chassis Part Number": {
+          "value": "{cPn}",
+          "need_to_write": 1
+        },
+        "Chassis Serial": {
+          "value": "{cSn}",
+          "need_to_write": 1
+        },
+        "Chassis Extra0": {
+          "value": "{cExtra}",
+          "need_to_write": 0
+        },
+        "Board Mfg": {
+          "value": "{manufacturer}",
+          "need_to_write": 0
+        },
+        "Board Product": {
+          "value": "{bPname}",
+          "need_to_write": 0
+        },
+        "Board Serial": {
+          "value": "{bSn}",
+          "need_to_write": 0
+        },
+        "Board Part Number": {
+          "value": "{bPn}",
+          "need_to_write": 0
+        },
+        "Board Extra0": {
+          "value": "PCBA Ver:{bPcbaVersion}",
+          "need_to_write": 0
+        },
+        "Product Manufacturer": {
+          "value": "{pManufacturer}",
+          "need_to_write": 1
+        },
+        "Product Name": {
+          "value": "{pPname}",
+          "need_to_write": 1
+        },
+        "Product Part Number": {
+          "value": "{pPn}",
+          "need_to_write": 1
+        },
+        "Product Version": {
+          "value": "{pVersion}",
+          "need_to_write": 1
+        },
+        "Product Serial": {
+          "value": "{pSn}",
+          "need_to_write": 1
+        },
+        "Product Asset Tag": {
+          "value": "{pAssetTag}",
+          "need_to_write": 1
+        },
+        "Product Extra0": {
+          "value": "Suite:{pSuite}",
+          "need_to_write": 1
+        }
+      }
+    }
+  },
+    "QtBoxFruWriteOnDPU": {
+    "Desc": "Box Fru Write",
+    "Tags": "Box Fru Write",
+    "Module": "fru_write",
+    "Class": "FruWrite",
+    "Function": "test_fru_write",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {
+      "fru_id": "0",
+      "write_method": {
+        "method": "fru_change",
+        "tool_version": "v1.1BS"
+      },
+      "delay_second": 20,
+      "OOB_mode": {
+        "bmc_env_name": "UUT_BMCIP_JOBPROPERTY",
+        "bmc_user": "toutiao",
+        "bmc_password": "'toutiao!@#'",
+        "port": "8623"
+      },
+      "is_box": "true",
+      "box_index": 0,
+      "component": "MotherBoard",
+      "fru_field_set": {
+        "Chassis Part Number": {
+          "value": "{cPn}",
+          "need_to_write": 1
+        },
+        "Chassis Serial": {
+          "value": "{cSn}",
+          "need_to_write": 1
+        },
+        "Chassis Extra0": {
+          "value": "{cExtra}",
+          "need_to_write": 0
+        },
+        "Board Mfg": {
+          "value": "{manufacturer}",
+          "need_to_write": 0
+        },
+        "Board Product": {
+          "value": "{bPname}",
+          "need_to_write": 0
+        },
+        "Board Serial": {
+          "value": "{bSn}",
+          "need_to_write": 0
+        },
+        "Board Part Number": {
+          "value": "{bPn}",
+          "need_to_write": 0
+        },
+        "Board Extra0": {
+          "value": "PCBA Ver:{bPcbaVersion}",
+          "need_to_write": 0
+        },
+        "Product Manufacturer": {
+          "value": "{pManufacturer}",
+          "need_to_write": 1
+        },
+        "Product Name": {
+          "value": "{pPname}",
+          "need_to_write": 1
+        },
+        "Product Part Number": {
+          "value": "{pPn}",
+          "need_to_write": 1
+        },
+        "Product Version": {
+          "value": "{pVersion}",
+          "need_to_write": 1
+        },
+        "Product Serial": {
+          "value": "{pSn}",
+          "need_to_write": 1
+        },
+        "Product Asset Tag": {
+          "value": "{pAssetTag}",
+          "need_to_write": 1
+        },
+        "Product Extra0": {
+          "value": "Suite:{pSuite}",
+          "need_to_write": 1
+        }
+      }
+    }
+  },
+  "QtBoxMacCheck": {
+    "Desc": "Box Mac check",
+    "Tags": "Box Mac check",
+    "Module": "BoxMac",
+    "Class": "BoxMacTest",
+    "Function": "test_box_mac",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "OOB_mode": {
+        "bmc_env_name": "UUT_BMCIP",
+        "bmc_user": "toutiao",
+        "bmc_password": "'toutiao!@#'",
+        "port": "8623"
+      }
+    }
+  }
+}
+

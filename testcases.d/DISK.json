@@ -1,0 +1,313 @@
+{
+    "QtNvmeInfoCheck": {
+        "Desc": "",
+        "Tags": "DISK NVME INFO",
+        "Module": "test_check_nvme",
+        "Class": "NVME",
+        "Function": "test_nvme_info",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "QtNvmeInfoCheck_repeat": {
+        "Desc": "",
+        "Tags": "DISK NVME INFO",
+        "Module": "test_check_nvme",
+        "Class": "NVME",
+        "Function": "repeat_test",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+           "repeat_type": "duration",
+           "duration": "3m",
+           "interval": "10",
+           "function": "test_nvme_info",
+           "args": [],
+           "kwargs": {}
+        }
+    },
+
+    "HddInfoCheck": {
+        "Desc": "",
+        "Tags": "DISK HDD INFO",
+        "Module": "hdd_test",
+        "Class": "HDD",
+        "Function": "test_checkinfo",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "SsdInfoCheck": {
+        "Desc": "",
+        "Tags": "DISK SSD INFO",
+        "Module": "ssd_test",
+        "Class": "SSD",
+        "Function": "test_checkinfo",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "QtNvmeFormatTest": {
+        "Desc": "",
+        "Tags": "NVME LBA Sizes Format",
+        "Module": "nvme_test",
+        "Class": "NVME",
+        "Function": "test_nvme_format",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {}
+    },
+	"QtSataSsdFormatTest": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "sata_test",
+        "Class": "SataTest",
+        "Function": "test_sata_ssd_format",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "timeout": 300
+        }
+    },
+    "NvmePerf": {
+        "Desc": "NVMe Perf",
+        "Tags": "DISK NVME PERF",
+        "Module": "nvme_perf",
+        "Class": "NVMEFIO",
+        "Function": "test_fio",
+        "Timeout": "24h",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "NvmePerfTest": {
+        "Desc": "NVMe Perf",
+        "Tags": "DISK NVME PERF",
+        "Module": "nvme_perf_test",
+        "Class": "NVMEFIO",
+        "Function": "test_fio",
+        "Timeout": "24h",
+        "Args": [],
+        "Kwargs": {
+            "if_check" : true, 
+            "perf_key": "QTBQC-nvme_perf_test",
+            "fio_config": "QTBQC-nvme_perf_test.json",
+            "core_per_dev": 1
+        }
+    },
+    "HddPerf": {
+        "Desc": "HDD Pef",
+        "Tags": "DISK HDD PERF",
+        "Module": "hdd_perf",
+        "Class": "HDDFIO",
+        "Function": "test_fio",
+        "Timeout": "24h",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "HddPerfTest": {
+        "Desc": "HDD Pef",
+        "Tags": "DISK HDD PERF",
+        "Module": "hdd_perf_test",
+        "Class": "HDDFIO",
+        "Function": "test_fio",
+        "Timeout": "24h",
+        "Args": [],
+        "Kwargs": {
+            "if_check" : true, 
+            "perf_key": "QTBQC-hdd_perf_test",
+            "fio_config": "QTBQC-hdd_perf_test.json",
+            "core_per_dev": 1
+        }
+    },
+    "SsdPerf": {
+        "Desc": "SSD Perf",
+        "Tags": "DISK SSD PERF",
+        "Module": "ssd_perf",
+        "Class": "SSDFIO",
+        "Function": "test_fio",
+        "Timeout": "24h",
+        "Args": [],
+        "Kwargs": {}
+    },
+    "Fio": {
+        "Desc": "Disk Stress",
+        "Tags": "DISK HDD SSD fio stress",
+        "Module": "fio_stress",
+        "Class": "FioTest",
+        "Function": "test_fio",
+        "Timeout": "5h",
+        "Args": [],
+        "Kwargs": {
+            "test_time": "1h"
+        }
+    },
+    "QtFioStressTest5m": {
+        "Desc": "fio stress",
+        "Tags": "DISK fio stress",
+        "Module": "fio_test",
+        "Class": "FioTest",
+        "Function": "test_fiotest",
+        "Timeout": "25m",
+        "Args": [],
+        "Kwargs": {
+	          "item_list": ["write_128k_5m","read_128k_5m","randwrite_4k_5m","randread_4k_5m"],
+	          "fio_base": {},
+            "test_disk_type": "all",
+            "model_bypass_list":["QuadraT1U"]
+	}
+    },
+    "QtFioStressTest5m_BF3DPU": {
+        "Desc": "fio stress",
+        "Tags": "DISK fio stress",
+        "Module": "fio_test",
+        "Class": "FioTest",
+        "Function": "test_fiotest",
+        "Timeout": "25m",
+        "Args": [],
+        "Kwargs": {
+	          "item_list": ["randread_4k_128k_5m_bf3dpu"],
+	          "fio_base": {},
+            "test_disk_type": "all",
+            "model_bypass_list":["QuadraT1U"]
+	}
+    },
+    "QtFioStressTest1h": {
+        "Desc": "fio stress",
+        "Tags": "DISK fio stress",
+        "Module": "fio_test",
+        "Class": "FioTest",
+        "Function": "test_fiotest",
+        "Timeout": "100m",
+        "Args": [],
+        "Kwargs": {
+	          "item_list": ["randread_4k_1h","read_128k_1h","randwrite_4k_1h", "write_128k_1h"],
+	          "fio_base": {},
+            "test_disk_type": "all",
+            "model_bypass_list":["QuadraT1U"]
+	}
+    },
+     "QtFioStressTest2h": {
+        "Desc": "fio stress",
+        "Tags": "DISK fio stress",
+        "Module": "fio_test",
+        "Class": "FioTest",
+        "Function": "test_fiotest",
+        "Timeout": "150m",
+        "Args": [],
+        "Kwargs": {
+	          "item_list": ["randread_4k_2h","read_128k_2h","randwrite_4k_2h","write_128k_2h"],
+	          "fio_base": {},
+            "test_disk_type": "all",
+            "model_bypass_list":["QuadraT1U"]
+	}
+    },   
+     "QtFioStressTest2h_BF3DPU": {
+        "Desc": "fio stress",
+        "Tags": "DISK fio stress",
+        "Module": "fio_test",
+        "Class": "FioTest",
+        "Function": "test_fiotest",
+        "Timeout": "150m",
+        "Args": [],
+        "Kwargs": {
+	          "item_list": ["read_128k_2h_bf3dpu","read_4k_2h_bf3dpu"],
+	          "fio_base": {},
+            "test_disk_type": "all",
+            "model_bypass_list":["QuadraT1U"]
+	}
+    }, 
+    "QtFioStressTest4h": {
+        "Desc": "fio stress",
+        "Tags": "DISK fio stress",
+        "Module": "fio_test",
+        "Class": "FioTest",
+        "Function": "test_fiotest",
+        "Timeout": "280m",
+        "Args": [],
+        "Kwargs": {
+	          "item_list": ["randread_4k_4h", "read_128k_4h","randwrite_4k_4h", "write_128k_4h"],
+	          "fio_base": {},
+            "test_disk_type": "all",
+            "model_bypass_list":["QuadraT1U"]
+		}
+    },
+    "QtFioStressTest6h": {
+        "Desc": "fio stress",
+        "Tags": "DISK fio stress",
+        "Module": "fio_test",
+        "Class": "FioTest",
+        "Function": "test_fiotest",
+        "Timeout": "400m",
+        "Args": [],
+        "Kwargs": {
+	          "item_list": ["write_128k_6h","read_128k_6h","randwrite_4k_6h","randread_4k_6h"],
+	          "fio_base": {},
+            "test_disk_type": "all",
+            "model_bypass_list":["QuadraT1U"]
+		}
+    },
+	"QtFioStressTest8h": {
+        "Desc": "fio stress",
+        "Tags": "DISK fio stress",
+        "Module": "fio_test",
+        "Class": "FioTest",
+        "Function": "test_fiotest",
+        "Timeout": "400m",
+        "Args": [],
+        "Kwargs": {
+	          "item_list": ["write_128k_8h","read_128k_8h","randwrite_4k_8h","randread_4k_8h"],
+	          "fio_base": {},
+            "test_disk_type": "all",
+            "model_bypass_list":["QuadraT1U"]
+		}
+    },
+    "QtByteNvmeMarginTest": {
+        "Desc": "Margin ByteNvme Test",
+        "Tags": "Margin ByteNvme Test",
+        "Module": "margin_bytenvme",
+        "Class": "MarginByteNvme",
+        "Function": "test_margin_bytenvme",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+          "tool_name": "genoa_margin_v1.4_qglf"
+        }
+    },
+      "QtNvmeSeqCheck": {
+        "Desc": "",
+        "Tags": "NVME seq check",
+        "Module": "nvme_test",
+        "Class": "NVME",
+        "Function": "test_NvmeSeqCheck",
+        "Timeout": "5m",
+        "Args": [],
+        "Kwargs": {
+            "OOB_model": {
+                        "bmc_user": "toutiao",
+                        "bmc_password":  "toutiao!@#"
+                    },
+            "token_function": {
+            "open_usb_over_lan": "ipmitool raw 0x32 0xaa 0x03",
+            "close_usb_over_lan": "ipmitool raw 0x32 0xaa 0x02",
+            "delay_time": 2,
+            "virt_usb_port_ip": "169.254.0.20"
+        },
+            "use_redfish_nvmeinfo_method": "on",
+            "get_sn_by_smartctl":"on"
+        }
+    },
+    "QtLavaFeatureCheck": {
+        "Desc": "",
+        "Tags": "",
+        "Module": "nvme_test",
+        "Class": "NVME",
+        "Function": "test_lava_feature",
+        "Timeout": "15m",
+        "Args": [],
+        "Kwargs": {
+            "target_version": "0F02030C",
+            "feature": "0xFE",
+            "target_value": 4
+			  }
+	  }
+}

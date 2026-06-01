@@ -1,0 +1,196 @@
+{
+  "QtBf3Mini_NicModeGet_Nic": {
+    "Desc": " ",
+    "Tags": "",
+    "Module": "bf3_mini",
+    "Class": "Bf3Mini",
+    "Function": "test_bf3_mode_get",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "bf3_index_list": [
+        "0x02",
+        "0x03",
+        "0x04",
+        "0x05"
+      ],
+      "get_bf3_mode_cmd": "ipmitool raw 0x3e 0x69 0x02 {index}",
+      "exp_bf3_mode_status": "00"
+    }
+  },
+  "QtBf3Mini_host_access_Set_En": {
+    "Desc": " ",
+    "Tags": "",
+    "Module": "bf3_mini",
+    "Class": "Bf3Mini",
+    "Function": "test_bf3_mode_set",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "bf3_index_list": [
+        "0x02",
+        "0x03",
+        "0x04",
+        "0x05"
+      ],
+      "set_host_access_cmd": "ipmitool raw 0x3e 0x67 0x01 {index} 0x01"
+    }
+  },
+  "QtBf3Mini_host_access_Get_En": {
+    "Desc": " ",
+    "Tags": "",
+    "Module": "bf3_mini",
+    "Class": "Bf3Mini",
+    "Function": "test_bf3_mode_get",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "bf3_index_list": [
+        "0x02",
+        "0x03",
+        "0x04",
+        "0x05"
+      ],
+      "get_host_access_cmd": "ipmitool raw 0x3e 0x67 0x02 {index}",
+      "exp_host_access_status": "01"
+    }
+  },
+  "QtBf3Mini_host_access_Set_Dis": {
+    "Desc": " ",
+    "Tags": "",
+    "Module": "bf3_mini",
+    "Class": "Bf3Mini",
+    "Function": "test_bf3_mode_set",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "bf3_index_list": [
+        "0x02",
+        "0x03",
+        "0x04",
+        "0x05"
+      ],
+      "set_host_access_cmd": "ipmitool raw 0x3e 0x67 0x01 {index} 0x00"
+    }
+  },
+  "QtBf3Mini_host_access_Get_Dis": {
+    "Desc": " ",
+    "Tags": "",
+    "Module": "bf3_mini",
+    "Class": "Bf3Mini",
+    "Function": "test_bf3_mode_get",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "bf3_index_list": [
+        "0x02",
+        "0x03",
+        "0x04",
+        "0x05"
+      ],
+      "get_host_access_cmd": "ipmitool raw 0x3e 0x67 0x02 {index}",
+      "exp_host_access_status": "00"
+    }
+  },
+  "QtBf3Mini_host_privilege_Set_Dis": {
+    "Desc": " ",
+    "Tags": "",
+    "Module": "bf3_mini",
+    "Class": "Bf3Mini",
+    "Function": "test_bf3_mode_set",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "bf3_index_list": [
+        "0x02",
+        "0x03",
+        "0x04",
+        "0x05"
+      ],
+      "set_extend_host_privilege_cmd": "ipmitool raw 0x3e 0x68 0x01 {index} 0x00"
+    }
+  },
+  "QtBf3Mini_host_privilege_Get_Dis": {
+    "Desc": " ",
+    "Tags": "",
+    "Module": "bf3_mini",
+    "Class": "Bf3Mini",
+    "Function": "test_bf3_mode_get",
+    "Timeout": "10m",
+    "Args": [],
+    "Kwargs": {
+      "bf3_index_list": [
+        "0x02",
+        "0x03",
+        "0x04",
+        "0x05"
+      ],
+      "get_extend_host_privilege_cmd": "ipmitool raw 0x3e 0x68 0x02 {index}",
+      "exp_extend_host_privilege_status": "00"
+    }
+  },
+  "QtNicInfoCheck": {
+    "Desc": "",
+    "Tags": "NIC INFO",
+    "Module": "test_check_nic",
+    "Class": "NIC",
+    "Function": "test_check_nic_info",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtNicInfoCheck_repeat": {
+    "Desc": "",
+    "Tags": "NIC INFO",
+    "Module": "test_check_nic",
+    "Class": "NIC",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_check_nic_info",
+      "args": [],
+      "Kwargs": {}
+    }
+  },
+  "QTNicRdmaTest": {
+    "Desc": "NIC RDMA TEST",
+    "Tags": "NIC RDMA TEST",
+    "Module": "nic_rdma_test",
+    "Class": "NicRdmaTest",
+    "Function": "test_nic_rdma",
+    "Timeout": "120m",
+    "Args": [],
+    "Kwargs": {
+      "test_seconds": 900,
+      "device_ids": [
+        "mlx5_0",
+        "mlx5_1"
+      ],
+      "spec": {
+        "BW average[Gb/sec]": 90
+      },
+      "Total BW average": 90,
+      "tool_name": "ib_write_bw",
+      "tool_parameter": "-d {device_id}  -p {port} -q 8 --report_gbits -F -D 30 --run_infinitely",
+      "start_port": 1000
+    }
+  },
+  "QtNicPortCheck": {
+    "Desc": "Qt Nic Port Check",
+    "Tags": "Qt Nic Port Check",
+    "Module": "nicport_check",
+    "Class": "NicPortCheck",
+    "Function": "test_nic_port_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "100000": [
+        "all"
+      ]
+    }
+  }
+}

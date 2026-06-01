@@ -1,0 +1,31 @@
+{
+	"rn_yunhai_v3_test": {
+		"Version": "v1.0.0",
+		"SequenceList": [
+			"QtSystemConfigCheck",
+			"QtSystemHealthCheck",
+			"QtSystemBiosSet",
+			"QtSystemReboot",
+			"QtSystemBiosSetCheck",
+			"QtSystemReboot",
+			"QtSystemBiosPprNumadefCheck",
+			"QtSystemCpuRaplStress",
+      "QtSystemHbaInit",
+			"QtSystemExpanderInit",
+			"QtSystemAc10Loop",
+			"QtSystemDc8Loop",
+			"QtSystemReboot4Loop",
+			"QtSystemButterfly",
+			"QtSystemATIScan",
+			"QtSystemFioStress",
+			"QtSystemHDDPerf",
+			"QtSystemMixstress4h",
+			"QtSystemSHC",
+			"QtSystemPTATStress",
+			"QtSystemAc3Loop",
+			"QtSystemHealthCheck",
+			"QtSystemConfigCheck",
+			"QtSystemBmcTest_Clear"
+		]
+	}
+}

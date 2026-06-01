@@ -1,0 +1,392 @@
+{
+  "QtSystemSmartCheck_UploadFullFlow": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "smart_test",
+    "Class": "SmartTest",
+    "Function": "test_check_smart",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "smart_whitelist.json",
+      "spec_file": "smart_spec.json",
+      "upload_increase_type": [
+        "full_flow"
+      ],
+      "check_increase_type": []
+    }
+  },
+  "QtSystemSmartCheck_UploadCycleFlow": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "smart_test",
+    "Class": "SmartTest",
+    "Function": "test_check_smart",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "smart_whitelist.json",
+      "spec_file": "smart_spec.json",
+      "upload_increase_type": [
+        "cycle_flow"
+      ],
+      "check_increase_type": [
+        "full_flow"
+      ]
+    }
+  },
+  "QtSystemSmartCheck_FullFlow": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "smart_test",
+    "Class": "SmartTest",
+    "Function": "test_check_smart",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "smart_whitelist.json",
+      "spec_file": "smart_spec.json",
+      "upload_increase_type": [],
+      "check_increase_type": [
+        "full_flow"
+      ]
+    }
+  },
+  "QtSystemSmartCheck_CycleFlow": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "smart_test",
+    "Class": "SmartTest",
+    "Function": "test_check_smart",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "smart_whitelist.json",
+      "spec_file": "smart_spec.json",
+      "upload_increase_type": [],
+      "check_increase_type": [
+        "full_flow",
+        "cycle_flow"
+      ]
+    }
+  },
+	"QtSystemSmartCheck_FullFlow_repeat": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "smart_test",
+    "Class": "SmartTest",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_check_smart",
+      "args": [],
+      "kwargs": {
+      "config_file": "smart_whitelist.json",
+      "spec_file": "smart_spec.json",
+        "upload_increase_type": [],
+        "check_increase_type": [
+          "full_flow"
+        ]
+      }
+    }
+  },
+  "QtSystemSmartCheck_CycleFlow_repeat": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "smart_test",
+    "Class": "SmartTest",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_check_smart",
+      "args": [],
+      "kwargs": {
+      "config_file": "smart_whitelist.json",
+      "spec_file": "smart_spec.json",
+        "upload_increase_type": [],
+        "check_increase_type": [
+          "full_flow",
+          "cycle_flow"
+        ]
+      }
+    }
+  },
+  "QtSystemLogCollect": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "collect_flash_log",
+    "Class": "CollectFlashLog",
+    "Function": "get_flash_log",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {}
+  },
+  "QtSystemBlacklistCheck": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "sys_event",
+    "Class": "SysEvent",
+    "Function": "test_sys_event",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "whitelist.json"
+    }
+  },
+    "QtSystemBlacklistCheck_FU": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "sys_event",
+    "Class": "SysEvent",
+    "Function": "test_sys_event",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "whitelist_cx7_with_bf3mini_l6_fu.json"
+    }
+  },
+  "QtSystemBlacklistCheck_OCP": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "sys_event",
+    "Class": "SysEvent",
+    "Function": "test_sys_event",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "whitelist_ocp.json"
+    }
+  },
+  "QtSystemBlacklistCheck_OCP_FU": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "sys_event",
+    "Class": "SysEvent",
+    "Function": "test_sys_event",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "whitelist_ocp_fu.json"
+    }
+  },
+  "QtSystemBlacklistCheck_QDH": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "sys_event",
+    "Class": "SysEvent",
+    "Function": "test_sys_event",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "whitelist_qdh.json"
+    }
+  },
+  "QtSystemBlacklistCheck_QDH_FU": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "sys_event",
+    "Class": "SysEvent",
+    "Function": "test_sys_event",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "whitelist_qdh_fu.json"
+    }
+  },
+  "QtSystemBlacklistCheck_QDH_DDRTTM": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "sys_event",
+    "Class": "SysEvent",
+    "Function": "test_sys_event",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "whitelist_qdh_ddrttm.json"
+    }
+  },
+  "QtBoxBlacklistCheck": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "sys_event",
+    "Class": "SysEvent",
+    "Function": "test_sys_event",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "whitelist_box.json"
+    }
+  },
+   "QtBoxBlacklistCheck_FU": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "sys_event",
+    "Class": "SysEvent",
+    "Function": "test_sys_event",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "whitelist_box.json"
+    }
+  },
+  "QtSmartnicSystemBlacklistCheck": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "sys_event",
+    "Class": "SysEvent",
+    "Function": "test_sys_event",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "whitelist_dpu.json"
+    }
+  },
+  "QtSystemBlacklistCheck_repeat": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "sys_event",
+    "Class": "SysEvent",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_sys_event",
+      "args": [],
+      "kwargs": {
+        "config_file": "whitelist.json"
+      }
+    }
+  },
+  "QtSmartnicSystemBlacklistCheck_repeat": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "sys_event",
+    "Class": "SysEvent",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_sys_event",
+      "args": [],
+      "kwargs": {
+        "config_file": "whitelist_dpu.json"
+      }
+    }
+  },
+  "QtSystemHealthCheck": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "smart_test",
+    "Class": "SmartTest",
+    "Function": "test_check_smart",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "smart_test.json"
+    }
+  },
+  "QtSystemSmartCheck_First": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "smart_test",
+    "Class": "SmartTest",
+    "Function": "test_check_smart",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "smart_test.json",
+      "upload_increase_type": ["full_flow"],
+      "check_increase_type":["full_flow"]
+    }
+  },
+  "QtSystemSmartCheck": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "smart_test",
+    "Class": "SmartTest",
+    "Function": "test_check_smart",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "smart_test.json"
+    }
+  },
+  "QtSmartnicSystemHealthCheck": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "smart_test",
+    "Class": "SmartTest",
+    "Function": "test_check_smart",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "config_file": "smart_test.json",
+      "need_to_upload": "false"
+    }
+  },
+  "QtSystemHealthCheck_repeat": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "smart_test",
+    "Class": "SmartTest",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_check_smart",
+      "args": [],
+      "kwargs": {
+        "config_file": "smart_test.json"
+      }
+    }
+  },
+  "QtSmartnicSystemHealthCheck_repeat": {
+    "Desc": "",
+    "Tags": "HEALTH INFO",
+    "Module": "smart_test",
+    "Class": "SmartTest",
+    "Function": "repeat_test",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "repeat_type": "duration",
+      "duration": "3m",
+      "interval": "10",
+      "function": "test_check_smart",
+      "args": [],
+      "kwargs": {
+        "config_file": "smart_test.json"
+      }
+    }
+  },
+  "QtSelCheckKeyWord": {
+    "Desc": "",
+    "Tags": "",
+    "Module": "sel_check_key_word",
+    "Class": "SelCheckKeyWord",
+    "Function": "test_sel_check_key_word",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {
+      "key_word": "Critical Interrupt #0xff | Bus Correctable error",
+      "sel_upper_limit": 2
+    }
+  }
+}

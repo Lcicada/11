@@ -1,0 +1,34 @@
+{
+  "quick_verify": {
+    "suite": [
+      "quick"
+    ],
+    "po": [],
+    "pn": [],
+    "sn": [],
+    "testflow": "flow_jiguang_with_dpu_quick_verify.json"
+  },
+  "specified_test": {
+    "suite": [
+      "M23S2-A3CD21"
+    ],
+    "testflow": "flow_jiguang_with_dpu.json"
+  },
+  "bf3_with_bf3mini_l6": {
+    "model": [],
+    "suite": [],
+    "po": [],
+    "pn": [],
+    "sn": ["SK7M363J802","SK7M363J801"],
+    "testflow": "bf3_with_bf3mini_l6_1.0.0_20260330230304.json"
+  },
+  	"JGDHCX7BF3MINI_pt_L6": {
+        "suite": [
+            "JGDHCX7BF3MINI_pt_L6"
+        ],
+        "po": [],
+        "pn": [],
+        "sn": [],
+        "testflow": "JGDHCX7BF3MINI_pt_L6.json"
+    }
+}

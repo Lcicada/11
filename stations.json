@@ -1,0 +1,46 @@
+{
+    "default_normal": {
+        "Version": "v1.0.0",
+        "SequenceList": [
+            "PreTestSeq",
+            "HealthCheck"
+        ]
+    },
+    "QtAt02": {
+        "Version": "v1.0.0",
+        "SequenceList": [
+            "QtSystemFwCheck",
+            "QtSystemFunctionTest",
+            "QtSystemBiosReset",
+            "QtSystemBiosResetCheck",
+            "QtSystemBmcReset",
+            "QtSystemFunctionTest",
+            "QtSystemEepromCheck",
+            "QtSystemFanTest",
+            "QtSystemBmcTest",
+            "QtSystemDiskFormat"
+        ]
+    },
+    "QtPt02": {
+        "Version": "v1.0.0",
+        "SequenceList": [
+            "QtSystemFwCheck",
+            "QtSystemFunctionTest",
+            "QtSystemEepromCheck",
+            "QtSystemFanTest",
+            "QtSystemBmcTest",
+            "QtSystemInteractionTest_Node0",
+            "QtSystemInteractionTest_Node1",
+            "QtSystemSingleNodeAc",
+            "QtSystemOsChcek",
+            "QtSystemFunctionTest"
+        ]
+    },
+    "QtRn02": {
+        "Version": "v1.0.0",
+        "SequenceList": [
+            "PreTestSeq",
+            "PreTestSeq_2"
+        ]
+    }
+}

@@ -1,0 +1,636 @@
+{
+    "BdPtSeq": {
+        "TestItems": [
+            {
+                "LinkSequence": "BdPreTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdRnSeq": {
+        "TestItems": [
+            {
+                "TestItem": "QtCollectUnitInfo",
+                "TestNode": [
+                    0
+                ],
+                "Parallel": false
+            },
+			{
+                "LinkSequence": "BdPreTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdPerfSeq_EVA",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdCommonRn",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdAtSeq": {
+        "TestItems": [
+            {
+                "TestItem": "QtCollectUnitInfo",
+                "TestNode": [
+                    0
+                ],
+                "Parallel": false
+            },
+			{
+                "LinkSequence": "BdPreTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdDuidTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdCommonAt",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdPtSeq_11": {
+        "TestNode": [ 1 ],
+        "TestItems": [
+            {
+                "LinkSequence": "BdPreTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdRnSeq_11": {
+        "TestNode": [ 1 ],
+        "TestItems": [
+            {
+                "LinkSequence": "BdPreTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdPerfSeq_EVA",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdCommonRn",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdAtSeq_11": {
+        "TestNode": [ 1 ],
+        "TestItems": [
+            {
+                "LinkSequence": "BdPreTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdDuidTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdCommonAt",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdPtSeq_12": {
+        "TestNode": [ 1, 2 ],
+        "TestItems": [
+            {
+                "LinkSequence": "BdPreTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdRnSeq_12": {
+        "TestNode": [ 1, 2 ],
+        "TestItems": [
+            {
+                "LinkSequence": "BdPreTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdPerfSeq_EVA",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdCommonRn",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdAtSeq_12": {
+        "TestNode": [ 1, 2 ],
+        "TestItems": [
+            {
+                "LinkSequence": "BdPreTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdDuidTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdCommonAt",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdPtSeq_02": {
+        "TestNode": [ 0, 1 ],
+        "TestItems": [
+            {
+                "LinkSequence": "BdPreTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdRnSeq_02": {
+        "TestNode": [ 0, 1 ],
+        "TestItems": [
+            {
+                "LinkSequence": "BdPreTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdPerfSeq_EVA",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdCommonRn",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdAtSeq_02": {
+        "TestNode": [ 0, 1 ],
+        "TestItems": [
+            {
+                "LinkSequence": "BdPreTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdDuidTest",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdHealthCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdBomCheck",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            },
+            {
+                "LinkSequence": "BdCommonAt",
+                "InheritTestNode": true,
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdPtSeq_Dpu": {
+        "TestItems": [
+            {
+                "LinkSequence": "BdSmartnicFuncTest",
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdRnSeq_Dpu": {
+        "TestItems": [
+            {
+                "LinkSequence": "BdSmartnicFuncTest",
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdAtSeq_Dpu": {
+        "TestItems": [
+            {
+                "LinkSequence": "BdSmartnicFuncTest",
+                "Startbreak": true,
+                "Endbreak": true
+            }
+        ]
+    },
+    "BdPreTest": {
+        "TestItems": [
+            {
+                "TestItem": "BdBmcFruCheck",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdBmcMacCheck",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdBmcFwCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdBiosFwCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdCpuInfoCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdDramInfoCheck",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdDramTopoCheck",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdNvmeInfoCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdHddInfoCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdHddWcCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdSsdInfoCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdNicInfoCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdGpuInfoCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdBatteryFunctionCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdHcuInfoCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdGetGpuDetail",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdCpuFreqCheck",
+                "Parallel": false
+            }
+        ]
+    },
+    "BdHealthCheck": {
+        "TestItems": [
+            {
+                "TestItem": "BdNvmeHealthCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdHddHealthCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdSsdHealthCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdGpuHealthCheck",
+                "Parallel": true
+            },
+            {
+                "TestItem": "BdDiskSmartCheck",
+                "Parallel": false
+            }
+        ]
+    },
+    "BdPerfSeq_EVA": {
+        "TestItems": [
+            {
+                "TestItem": "BdCpuPerfTest",
+                "Timeout": "10m",
+                "Args": [],
+                "Kwargs": {
+                    "if_check": true,
+                    "perf_key": "QTBQC-pi"
+                },
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdDramStreamTest",
+                "Timeout": "10m",
+                "Args": [],
+                "Kwargs": {
+                    "if_check": true,
+                    "perf_key": "QTBQC-stream_bandwidth"
+                },
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdHddPerfTest",
+                "Timeout": "60m",
+                "Args": [],
+                "Kwargs": {
+                    "if_check": true,
+                    "perf_key": "QTBQC-hdd_perf_test",
+                    "fio_config": "QTBQC-hdd_perf_test.json",
+                    "core_per_dev": 1
+                },
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdNvmePerfTest",
+                "Timeout": "90m",
+                "Args": [],
+                "Kwargs": {
+                    "if_check": true,
+                    "perf_key": "QTBQC-nvme_perf_test",
+                    "fio_config": "QTBQC-nvme_perf_test.json",
+                    "core_per_dev": 1
+                },
+                "Parallel": false
+            }
+        ]
+    },
+    "BdCommonRn": {
+        "TestItems": [
+            {
+                "TestItem": "BdBiosRasCheck_rn",
+                "Parallel": false
+            }
+        ]
+    },
+    "BdCommonAt": {
+        "TestItems": [
+            {
+                "TestItem": "BdBiosRasCheck_at",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdBiosNumaCheck",
+                "Parallel": false
+            }
+        ]
+    },
+    "BdSmartnicFuncTest": {
+        "TestItems": [
+            {
+                "TestItem": "BdBmcFruCheck",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdDpuFruCheck",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdBmcMacCheck",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdBatteryFunctionCheck",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdDpuFwTest",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdDpuHwTest",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdSsdHealthCheck",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdNvmeHealthCheck",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdCsSsdCheck",
+                "Parallel": false
+            }
+        ]
+    },
+    "BdBomCheck": {
+        "TestItems": [
+            {
+                "TestItem": "BdComponentCheck",
+                "Parallel": false
+            },
+            {
+                "TestItem": "BdBoardCheck",
+                "Parallel": false
+            }
+        ]
+    },
+    "BdDuidTest": {
+        "TestItems": [
+            {
+                "TestItem": "BdSystemDuidCheck",
+                "Parallel": false
+            }
+        ]
+    }
+}

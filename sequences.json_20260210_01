@@ -1,0 +1,1271 @@
+{
+  "QtSystemConfigCheck_BF3Suite": {
+    "TestItems": [
+      {
+        "TestItem": "QtServerInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtMbInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtMbFwCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtRetimerFwCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBF3HostTopoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtCpuInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtDramInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtNvmeInfoCheck",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtFruInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSmartnicInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtPsuInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBmcSdrCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBatteryFunctionTest",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtPciInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSMBIOSType9Check",
+        "Parallel": false
+      }
+    ]
+  },
+  "QtBoxConfigCheckDHonHOST": {
+    "TestItems": [
+      {
+        "TestItem": "QtNicInfoCheck",
+        "Parallel": false
+      }
+    ]
+  },
+  "QtBoxConfigCheckDHonDPU": {
+    "TestItems": [
+      {
+        "TestItem": "QtSetupDonghuVlanNetwork",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBoxSdrCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemHealthCheckBF3DHFu": {
+    "TestItems": [
+      {
+        "TestItem": "QtSystemBlacklistCheck",
+        "TestNode": [
+          0
+        ],
+        "Kwargs": {
+          "config_file": "whitelist_bf3_dh_bf3mini_fu.json"
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSystemSmartCheck_First",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBoxBlacklistCheck",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtPcieCeCountCheck",
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemHealthCheckBF3DH": {
+    "TestItems": [
+      {
+        "TestItem": "QtSystemBlacklistCheck",
+        "TestNode": [
+          0
+        ],
+        "Kwargs": {
+          "config_file": "whitelist_bf3_dh_bf3mini.json"
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSystemSmartCheck",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtPcieCeCountCheck",
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSmartnicConfigCheck": {
+    "TestItems": [
+      {
+        "TestItem": "QtSmartnicServerInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSmartnicMbInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSmartnicCpuInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSmartnicDramInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSmartnicNvmeInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSmartnicSsdInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSmartnicNicInfoCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSmartnicSdrCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSmartnicBatteryFunctionTest",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSmartnicHealthCheck": {
+    "TestItems": [
+      {
+        "TestItem": "QtSetupDonghuVlanNetwork",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSmartnicSystemBlacklistCheck",
+        "TestNode": [
+          0
+        ],
+        "Kwargs": {
+          "config_file": "whitelist_bf3dpu.json"
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBoxBlacklistCheck",
+        "Parallel": false
+      }
+    ]
+  },
+  "QtBoxFruWriteOnDPU": {
+    "TestItems": [
+      {
+        "TestItem": "QtSetupDonghuVlanNetwork",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBoxFruWrite",
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemBf3miniSetCheck": {
+    "TestItems": [
+      {
+        "TestItem": "QtBf3Mini_NicModeGet_Nic",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBf3Mini_host_access_Get_En",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBf3Mini_host_privilege_Get_Dis",
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemnicStressTest": {
+    "TestItems": [
+      {
+        "TestItem": "QtPciInfoCheck",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QTNicRdmaTest",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false,
+        "Timeout": "20m",
+        "Kwargs": {
+          "test_seconds": 900,
+          "device_ids": [
+            "mlx5_0",
+            "mlx5_1"
+          ],
+          "spec": {
+            "BW average[Gb/sec]": 180
+          },
+          "Total BW average": 180,
+          "tool_name": "ib_write_bw",
+          "tool_parameter": "-d {device_id}  -p {port} -q 8 --report_gbits -F -D 120 --run_infinitely",
+          "start_port": 1000
+        }
+      },
+      {
+        "TestItem": "QtSystemBlacklistCheck",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSmartnicFunctionTest": {
+    "TestItems": [
+      {
+        "TestItem": "QTSmartnicBF3EmmcClear",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QTSmartnicBF3RtcCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBmcUserCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QTSmartnicBF3Config",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QTSmartnicBF3EmmCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QTSmartnicBF3modeCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QTSmartnicBF3PingP0net",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QTSmartnicBF3FlashSwapCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSmartnicMAC_COMPARE_DPU",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSystembf3mac_compare",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSmartnicBF3_host_sn_Check",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemEnableRshim": {
+    "TestItems": [
+      {
+        "TestItem": "QtSmartnicBF3_Bmc_Reset_Check",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSystembf3_Rshim_Check",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSystembf3_ip_set_Check",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSmartnicBiosSet": {
+    "TestItems": [
+      {
+        "TestItem": "QTSmartnicBF3Eccset",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSmartnicDC": {
+    "TestItems": [
+      {
+        "TestItem": "TailStatusCheck",
+        "TestNode": [
+          0
+        ],
+        "Args": [],
+        "Kwargs": {
+          "cycle_type": 1
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "ExecuteCycle",
+        "TestNode": [
+          0
+        ],
+        "Args": [],
+        "Kwargs": {
+          "cycle_type": 1
+        },
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSmartnicPoweronhost": {
+    "TestItems": [
+      {
+        "TestItem": "HeadStatusCheck",
+        "TestNode": [
+          0
+        ],
+        "Args": [],
+        "Kwargs": {
+          "cycle_type": 1
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "SubHeadStatusCheck",
+        "TestNode": [
+          0
+        ],
+        "Args": [],
+        "Kwargs": {
+          "cycle_type": 1
+        },
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSmartnicBiosCheck": {
+    "TestItems": [
+      {
+        "TestItem": "QTSmartnicBF3EccCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSmartnicEmmcCheck": {
+    "TestItems": [
+      {
+        "TestItem": "QTSmartnicBF3EmmCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSmartnicBF3Uart": {
+    "TestItems": [
+      {
+        "TestItem": "QtSmartnicBF3Uart",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemBmcCheck": {
+    "TestItems": [
+      {
+        "TestItem": "QtBmcUserCheck",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBmcSelftestTest",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBmcTime",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBmcMacCheck_Static",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBmcDuidCheck",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBmcGuidCheck",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBmcFunctionCheck_Goldenimage",
+        "TestNode": [
+          1
+        ],
+        "Kwargs": {
+          "bmc_reset_cmd": "ipmitool mc reset cold",
+          "switch_bmc_cmd": "ipmitool raw 0x32 0x8f 0x01 0x02",
+          "sleep_sec": 120,
+          "boot_selector_get_cmd": "ipmitool raw 0x32 0x8f 0x02",
+          "switch_result": "02"
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBmcFunctionCheck_Goldenimage",
+        "TestNode": [
+          1
+        ],
+        "Kwargs": {
+          "bmc_reset_cmd": "ipmitool mc reset cold",
+          "switch_bmc_cmd": "ipmitool raw 0x32 0x8f 0x01 0x01",
+          "sleep_sec": 120,
+          "boot_selector_get_cmd": "ipmitool raw 0x32 0x8f 0x02",
+          "switch_result": "01"
+        },
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemCpuCheck": {
+    "TestItems": [
+      {
+        "TestItem": "QtCpuFunctionTest_Freq",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtCpuFunctionTest_XGMI",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemPsuCheck": {
+    "TestItems": [
+      {
+        "TestItem": "QtPsuFunctionTest_Powerbalance",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemFanCheck": {
+    "TestItems": [
+      {
+        "TestItem": "QtFanInfoCheck",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtFanFunctionSet",
+        "TestNode": [
+          1
+        ],
+        "Kwargs": {
+          "set_fan_mode_cmd": "raw 0x3e 0x2f 0x01; sleep 3",
+          "get_fan_mode_cmd": "raw 0x3e 0x30",
+          "exp_fan_mode": "01"
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtFanFunctionCheck20",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtFanFunctionCheck40",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtFanFunctionCheck60",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtFanFunctionCheck80",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtFanFunctionCheck100",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtFanFunctionSet",
+        "TestNode": [
+          1
+        ],
+        "Kwargs": {
+          "set_fan_mode_cmd": "raw 0x3e 0x2f 0x00; sleep 3",
+          "get_fan_mode_cmd": "raw 0x3e 0x30",
+          "exp_fan_mode": "00"
+        },
+        "Parallel": false
+      }
+    ]
+  },
+  "QtBoxFanCheck": {
+    "TestItems": [
+      {
+        "TestItem": "QtBoxFanFunctionSet",
+        "Kwargs": {
+          "OOB_mode": {
+            "bmc_env_name": "UUT_BMCIP",
+            "bmc_user": "toutiao",
+            "bmc_password": "'toutiao!@#'",
+            "port": "8623"
+          },
+          "set_fan_mode_cmd": "raw 0x3e 0x2f 0x01; sleep 3",
+          "get_fan_mode_cmd": "raw 0x3e 0x30",
+          "exp_fan_mode": "01"
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBoxFanFunctionCheck",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBoxFanFunctionSet",
+        "Kwargs": {
+          "OOB_mode": {
+            "bmc_env_name": "UUT_BMCIP",
+            "bmc_user": "toutiao",
+            "bmc_password": "'toutiao!@#'",
+            "port": "8623"
+          },
+          "set_fan_mode_cmd": "raw 0x3e 0x2f 0x00; sleep 3",
+          "get_fan_mode_cmd": "raw 0x3e 0x30",
+          "exp_fan_mode": "00"
+        },
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemBiosSet_AVT": {
+    "TestItems": [
+      {
+        "TestItem": "QtBiosSet_AVTPower",
+		"TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "LinkSequence": "QtSystemDC"
+      }
+    ]
+  },
+  "QtSystemCpuStressAvtPower": {
+    "TestItems": [
+      {
+        "TestItem": "QtBiosCheck_AVTPower",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtCpuStress_AvtPower",
+        "TestNode": [
+          1
+        ],
+        "Kwargs": {
+          "AVTCMD_tool_path": "AVT/AVT_Linux_NDA_2.10.13/AVTCMD",
+          "power_start": {
+            "200": [
+              "9535",
+              "9A75"
+            ],
+            "240": [
+              "9Y25"
+            ]
+          },
+          "power_end": {
+            "300": [
+              "9535"
+            ],
+            "400": [
+              "9A75"
+            ],
+            "500": [
+              "9Y25"
+            ]
+          },
+          "d_value": 10
+        },
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemBiosSet_defAVT": {
+    "TestItems": [
+      {
+        "TestItem": "QtBiosCheck_AVTRecover",
+		"TestNode": [
+          1
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemNicCheck": {
+    "TestItems": [
+      {
+        "TestItem": "QtNicPortCheck",
+        "TestNode": [
+          0
+        ],
+        "Kwargs": {
+          "1000": [
+            "oob_net0"
+          ],
+          "200000": [
+            "p0",
+            "p1"
+          ],
+          "no_self_check": [
+            "oob_net0"
+          ]
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtNicPortCheck",
+        "TestNode": [
+          1
+        ],
+        "Kwargs": {
+          "200000": [
+            "enp90s0f0np0",
+            "enp90s0f1np1"
+          ]
+        },
+        "Parallel": false
+      }
+    ]
+  },
+  "QtLogClearHost": {
+    "TestItems": [
+      {
+        "TestItem": "QtBmcLogClear",
+        "Parallel": false
+      }
+    ]
+  },
+  "QtLogClearBF3": {
+    "TestItems": [
+      {
+        "TestItem": "QtBmcLogClear",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBoxSelClear",
+        "Parallel": false
+      }
+    ]
+  },
+  "QtHddCheck": {
+    "TestItems": [
+      {
+        "TestItem": "QtNvmeFormatTest",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtLavaFeatureCheck",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtNvmeSeqCheck",
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemBmcSet_Default": {
+    "TestItems": [
+      {
+        "TestItem": "QtBmcBmcsettingsSet_Default",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtMbBmcsettingsSet_Powerpolicy",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSmartnicBmcBiosSet_Default": {
+    "TestItems": [
+      {
+        "TestItem": "QtBmcBmcsettingsSet_Default",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "TailStatusCheck",
+        "TestNode": [
+          0
+        ],
+        "Args": [],
+        "Kwargs": {
+          "cycle_type": 4
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "ExecuteCycle",
+        "TestNode": [
+          0
+        ],
+        "Args": [],
+        "Kwargs": {
+          "cycle_type": 4
+        },
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSmartnicOnlyDC": {
+    "TestItems": [
+      {
+        "TestItem": "ExecuteCycle",
+        "TestNode": [
+          0
+        ],
+        "Args": [],
+        "Kwargs": {
+          "cycle_type": 1
+        },
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemBiosSet_Default": {
+    "TestItems": [
+      {
+        "TestItem": "QtBiosBiossettingsSet_Default",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "LinkSequence": "QtSystemDC"
+      }
+    ]
+  },
+  "QtSystemBiosCheck_Default": {
+    "TestItems": [
+      {
+        "TestItem": "SubHeadStatusCheck",
+        "TestNode": [
+          0
+        ],
+        "Args": [],
+        "Kwargs": {
+          "cycle_type": 1
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBiosBiossettingsCheck_At",
+        "TestNode": [
+          1
+        ],
+        "Kwargs": {
+          "standard_file": [
+            "JiGuangBF3_HOST.txt"
+          ],
+          "ignore_reg": [
+            "^//.*",
+            "^HIICrc32"
+          ]
+        },
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSmartnicCheck_Default": {
+    "TestItems": [
+      {
+        "TestItem": "QTSmartnicBF3BmcCheck",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QTSmartnicBF3EccCheckDefault",
+        "TestNode": [
+          0
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtLogClearHostBoxAgent": {
+    "TestItems": [
+      {
+        "TestItem": "QtBmcLogClear",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBoxSelClear",
+        "TestNode": [
+          1
+        ],
+        "Parallel": false
+      }
+    ]
+  },
+  "QtAmdCpuTurinHsTesting": {
+    "TestItems": [
+      {
+        "TestItem": "QtFanFunctionSet",
+        "Kwargs": {
+          "set_fan_mode_cmd": "raw 0x3e 0x2f 0x01; sleep 3",
+          "get_fan_mode_cmd": "raw 0x3e 0x30",
+          "exp_fan_mode": "01"
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtAmdCpuTurinHsTest",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtFanFunctionSet",
+        "Kwargs": {
+          "set_fan_mode_cmd": "raw 0x3e 0x2f 0x00; sleep 3",
+          "get_fan_mode_cmd": "raw 0x3e 0x30",
+          "exp_fan_mode": "00"
+        },
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemDC": {
+    "TestItems": [
+      {
+        "TestItem": "TailStatusCheck",
+        "TestNode": [
+          1
+        ],
+        "Args": [],
+        "Kwargs": {
+          "cycle_type": 1
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "ExecuteCycle",
+        "Kwargs": {
+          "cycle_type": 1
+        },
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSmartnicBF3DPUOption_SET": {
+    "TestItems": [
+      {
+        "TestItem": "TailStatusCheck",
+        "TestNode": [
+          0
+        ],
+        "Args": [],
+        "Kwargs": {
+          "cycle_type": 1
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSmartnicBF3_DPU_Option",
+        "TestNode": [
+          0
+        ],
+        "Kwargs": {
+          "boot_option_mode": "set"
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "ExecuteCycle",
+        "TestNode": [
+          0
+        ],
+        "Args": [],
+        "Kwargs": {
+          "cycle_type": 1
+        },
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSystemCpuStressAFHC": {
+    "TestItems": [
+      {
+        "TestItem": "QtFanFunctionSet",
+        "Kwargs": {
+          "set_fan_mode_cmd": "raw 0x3e 0x2f 0x01; sleep 3",
+          "get_fan_mode_cmd": "raw 0x3e 0x30",
+          "exp_fan_mode": "01"
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtFanFunctionCheck",
+        "Kwargs": {
+          "OOB_mode": {},
+          "sleep_time": 30,
+          "fan_duty_cmd_info": [
+            {
+              "fan_duty": "100",
+              "set_duty_cmd": "raw 0x3e 0x31 0x00 100"
+            }
+          ],
+          "fan_groups": {
+            "FAN_F": {
+              "consistence_limit": 0.2,
+              "fan_list": [
+                "FAN0_F_Speed",
+                "FAN1_F_Speed",
+                "FAN2_F_Speed",
+                "FAN3_F_Speed"
+              ],
+              "duty2speed": {
+                "100": "14110-19550"
+              }
+            },
+            "FAN_R": {
+              "consistence_limit": 0.2,
+              "fan_list": [
+                "FAN0_R_Speed",
+                "FAN1_R_Speed",
+                "FAN2_R_Speed",
+                "FAN3_R_Speed"
+              ],
+              "duty2speed": {
+                "100": "12325-16675"
+              }
+            }
+          }
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtCpuStress_Afhc",
+        "Parallel": true
+      },
+      {
+        "TestItem": "QtCpuStress_AvtTemp",
+        "Parallel": true
+      },
+      {
+        "TestItem": "QtSystemHealthCheck_repeat",
+        "Timeout": "520m",
+        "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "120m",
+          "interval": "600",
+          "function": "test_check_smart",
+          "args": [],
+          "kwargs": {
+            "config_file": "smart_test.json"
+          }
+        },
+        "Parallel": true
+      },
+      {
+        "TestItem": "QtSystemBlacklistCheck_repeat",
+        "Timeout": "210m",
+        "Kwargs": {
+          "repeat_type": "duration",
+          "duration": "200m",
+          "interval": "600",
+          "function": "test_sys_event",
+          "args": [],
+          "kwargs": {
+            "config_file": "whitelist_afhc.json"
+          }
+        },
+        "Parallel": true
+      },
+      {
+        "TestItem": "QtFanFunctionSet",
+        "Kwargs": {
+          "set_fan_mode_cmd": "raw 0x3e 0x2f 0x00; sleep 3",
+          "get_fan_mode_cmd": "raw 0x3e 0x30",
+          "exp_fan_mode": "00"
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtSystemBlacklistCheck",
+        "Kwargs": {
+          "config_file": "whitelist_afhc.json"
+        },
+        "Parallel": false
+      },
+	  {
+        "TestItem": "QtGpuHealthCheck",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtPcieCeCountCheck",
+        "Parallel": false
+      },
+      {
+        "TestItem": "QtBoxBlacklistCheck",
+        "Parallel": false
+      }
+    ]
+  },
+  "QtSmartnicBF3DPUOption_CHECK": {
+    "TestItems": [
+      {
+        "TestItem": "QtSmartnicBF3_DPU_Option",
+        "TestNode": [
+          0
+        ],
+        "Kwargs": {
+          "boot_option_mode": "check"
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "HeadStatusCheck",
+        "TestNode": [
+          0
+        ],
+        "Args": [],
+        "Kwargs": {
+          "cycle_type": 1
+        },
+        "Parallel": false
+      },
+      {
+        "TestItem": "SubHeadStatusCheck",
+        "TestNode": [
+          0
+        ],
+        "Args": [],
+        "Kwargs": {
+          "cycle_type": 1
+        },
+        "Parallel": false
+      }
+    ]
+  }
+}
