@@ -1,0 +1,67 @@
+2026-09-02 10:54:17,358 - INFO    - base_mw.py         [line:247] - test_flow_end      - Middleware by Caller: run_testcase end Start
+2026-09-02 10:54:17,358 - DEBUG   - base_mw.py         [line:248] - test_flow_end      - Middleware test_flow_end: 
+{
+    "Desc": "",
+    "Version": "20240715",
+    "TurnOn": true,
+    "CheckResult": true,
+    "Module": "upload_test_flow",
+    "Class": "TestFlow",
+    "Function": "test_flow",
+    "Timeout": "30",
+    "Args": [],
+    "Kwargs": {
+        "start_end": false
+    },
+    "QTDesc": "\u603b\u6d4b\u8bd5\u6d41\u7a0b\u7ed3\u675f\u65f6\u4e0a\u4f20\u4fe1\u606f",
+    "ForceTurnOn": false,
+    "ForceCheckResult": false,
+    "name": "test_flow_end"
+}
+2026-09-02 10:54:17,358 - INFO    - upload_test_flow.py [line: 28] - test_flow_end      - env qt_factory_monitor_tools_path = /run/work
+2026-09-02 10:54:17,358 - INFO    - upload_test_flow.py [line: 30] - test_flow_end      - is_L6_test:False, BaseAttr.po:PLACEHOLDER
+2026-09-02 10:54:17,358 - INFO    - upload_test_flow.py [line: 47] - test_flow_end      - test item end, do something...
+2026-09-02 10:54:17,358 - INFO    - upload_test_flow.py [line: 49] - test_flow_end      - caller: "run_testcase end"
+2026-09-02 10:54:17,358 - INFO    - upload_test_flow.py [line: 49] - test_flow_end      - station: "rn"
+2026-09-02 10:54:17,358 - INFO    - upload_test_flow.py [line: 49] - test_flow_end      - final_result: {
+    "starttime": "2026-09-02 10:53:32",
+    "endtime": "2026-09-02 10:54:17",
+    "duration": "0:00:45",
+    "errcode": 0,
+    "fail_list": []
+}
+2026-09-02 10:54:17,358 - INFO    - upload_test_flow.py [line: 49] - test_flow_end      - test_item: [
+    {
+        "SeqId": 3,
+        "Id": 2,
+        "Inst": "QtFlashLogCollect_0",
+        "node_id": 0,
+        "Parent": "",
+        "starttime": "2026-09-02 10:54:07",
+        "endtime": "2026-09-02 10:54:07",
+        "duration": "0:00:00",
+        "errcode": 0,
+        "retstr": "QtFlashLogCollect_0 PASS",
+        "log": "QtFlashLogCollect_0_260902105332",
+        "whiteboard": {},
+        "status": "PASS"
+    }
+]
+2026-09-02 10:54:17,358 - INFO    - upload_test_flow.py [line:392] - test_flow_end      - ======After flow test, check monitor agent status=====
+2026-09-02 10:54:17,358 - INFO    - upload_test_flow.py [line:356] - test_flow_end      - start found db_file in logs_dir:/root/run_qt/qt_code/QT_YUNHAI35.DEB/qt_program/logs/
+2026-09-02 10:54:17,358 - INFO    - upload_test_flow.py [line:360] - test_flow_end      - db_file:/root/run_qt/qt_code/QT_YUNHAI35.DEB/qt_program/logs/ST05468Z807_rn.db
+2026-09-02 10:54:17,358 - INFO    - upload_test_flow.py [line:360] - test_flow_end      - db_file:/root/run_qt/qt_code/QT_YUNHAI35.DEB/qt_program/logs/ST05468Z807_debug.db
+2026-09-02 10:54:17,358 - INFO    - upload_test_flow.py [line:369] - test_flow_end      - Ready copy db file
+2026-09-02 10:54:17,359 - INFO    - upload_test_flow.py [line:373] - test_flow_end      - copy success: /root/run_qt/qt_code/QT_YUNHAI35.DEB/qt_program/logs/ST05468Z807_rn.db -> /root/run_qt/qt_code/QT_YUNHAI35.DEB/test_forbdc_ST05468Z807_rn.db
+2026-09-02 10:54:17,359 - INFO    - upload_test_flow.py [line:369] - test_flow_end      - Ready copy db file
+2026-09-02 10:54:17,359 - INFO    - upload_test_flow.py [line:373] - test_flow_end      - copy success: /root/run_qt/qt_code/QT_YUNHAI35.DEB/qt_program/logs/ST05468Z807_debug.db -> /root/run_qt/qt_code/QT_YUNHAI35.DEB/test_forbdc_ST05468Z807_debug.db
+2026-09-02 10:54:17,359 - DEBUG   - commapi.py         [line: 93] - test_flow_end      - Start run cmd(TO:None): docker ps  --filter "name=bqc-monitor-agent"
+2026-09-02 10:54:17,359 - DEBUG   - commapi.py         [line: 94] - test_flow_end      - 
+>>> docker ps  --filter "name=bqc-monitor-agent"
+2026-09-02 10:54:17,369 - DEBUG   - commapi.py         [line: 96] - test_flow_end      - 
+CONTAINER ID   IMAGE                   COMMAND                  CREATED          STATUS          PORTS     NAMES
+d600819663bc   bqc-app:1.2.17-x86_64   "python -B /opt/bqc-…"   12 seconds ago   Up 12 seconds             bqc-monitor-agent
+>>> Return code: 0
+
+2026-09-02 10:54:17,369 - INFO    - upload_test_flow.py [line:403] - test_flow_end      - bqc docekr:bqc-app:1.2.17-x86_64 is running, status: up , No need to upload db file to remote monitor server
+2026-09-02 10:54:17,369 - INFO    - base_mw.py         [line:265] - test_flow_end      - Middleware by Caller: run_testcase end End

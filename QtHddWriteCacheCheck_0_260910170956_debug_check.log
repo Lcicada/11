@@ -1,0 +1,1288 @@
+2026-09-10 17:10:03,558 - INFO    - base_testcase.py   [line:335] - ######################################################################
+2026-09-10 17:10:03,558 - INFO    - base_testcase.py   [line:332] - Testitem QtHddWriteCacheCheck_0 Starttime: 2026-09-10 17:10:03
+2026-09-10 17:10:03,558 - DEBUG   - base_testcase.py   [line:274] - Start test_item_start_BD by caller QtHddWriteCacheCheck_0
+2026-09-10 17:10:03,558 - WARNING - run_mw.py          [line: 94] - The TurnOn of middleware test_item_start_BD is off, skip!
+2026-09-10 17:10:03,558 - DEBUG   - base_attr.py       [line:1246] - test_item_start_BD return: (0, {})
+2026-09-10 17:10:03,558 - DEBUG   - base_testcase.py   [line:274] - Start test_item_start by caller QtHddWriteCacheCheck_0
+2026-09-10 17:10:03,559 - DEBUG   - run_mw.py          [line:142] - Middleware test_item_start start...
+2026-09-10 17:10:03,560 - DEBUG   - run_mw.py          [line:162] - Middleware test_item_start duration time: 0 s
+2026-09-10 17:10:03,560 - DEBUG   - base_attr.py       [line:1246] - test_item_start return: (0, {'item_result': {'starttime': '2026-09-10 17:10:03', 'endtime': '', 'duration': '', 'errcode': 0, 'retstr': '', 'log': 'QtHddWriteCacheCheck_0_260910170956', 'whiteboard': {}, 'extra': {}, 'Desc': 'Verify every HDD has write cache disabled.', 'Tags': 'HDD write cache', 'Module': 'hdd_write_cache', 'Class': 'HddWriteCache', 'Function': 'test_hdd_write_cache_check', 'Timeout': '5m', 'Args': [], 'Kwargs': {}, 'Version': 'NULL', 'TestNode': [0], 'TestItem': 'QtHddWriteCacheCheck', 'Parallel': False, 'Id': 0, 'SeqId': 0, 'Inst': 'QtHddWriteCacheCheck_0', 'node_id': 0, 'Parent': ''}, 'caller': 'QtHddWriteCacheCheck_0'})
+2026-09-10 17:10:03,560 - DEBUG   - base_testcase.py   [line: 44] - QtHddWriteCacheCheck_0 info: {
+    "Desc": "Verify every HDD has write cache disabled.",
+    "Tags": "HDD write cache",
+    "Module": "hdd_write_cache",
+    "Class": "HddWriteCache",
+    "Function": "test_hdd_write_cache_check",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {},
+    "Version": "NULL",
+    "TestNode": [
+        0
+    ],
+    "TestItem": "QtHddWriteCacheCheck",
+    "Parallel": false,
+    "Id": 0,
+    "SeqId": 0,
+    "Inst": "QtHddWriteCacheCheck_0",
+    "node_id": 0,
+    "Parent": ""
+}
+2026-09-10 17:10:03,560 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): smartctl --scan
+2026-09-10 17:10:03,560 - DEBUG   - commapi.py         [line: 94] - 
+>>> smartctl --scan
+2026-09-10 17:10:03,575 - DEBUG   - commapi.py         [line: 96] - 
+/dev/sda -d scsi # /dev/sda, SCSI device
+/dev/sdb -d scsi # /dev/sdb, SCSI device
+/dev/sdc -d scsi # /dev/sdc, SCSI device
+/dev/sdd -d scsi # /dev/sdd, SCSI device
+/dev/sde -d scsi # /dev/sde, SCSI device
+/dev/sdf -d scsi # /dev/sdf, SCSI device
+/dev/sdg -d scsi # /dev/sdg, SCSI device
+/dev/sdh -d scsi # /dev/sdh, SCSI device
+/dev/sdi -d scsi # /dev/sdi, SCSI device
+/dev/sdj -d scsi # /dev/sdj, SCSI device
+/dev/sdk -d scsi # /dev/sdk, SCSI device
+/dev/sdl -d scsi # /dev/sdl, SCSI device
+/dev/sdm -d scsi # /dev/sdm, SCSI device
+/dev/sdn -d scsi # /dev/sdn, SCSI device
+/dev/sdo -d scsi # /dev/sdo, SCSI device
+/dev/sdp -d scsi # /dev/sdp, SCSI device
+/dev/sdq -d scsi # /dev/sdq, SCSI device
+/dev/sdr -d scsi # /dev/sdr, SCSI device
+/dev/sds -d scsi # /dev/sds, SCSI device
+/dev/sdt -d scsi # /dev/sdt, SCSI device
+/dev/sdu -d scsi # /dev/sdu, SCSI device
+/dev/sdv -d scsi # /dev/sdv, SCSI device
+/dev/sdw -d scsi # /dev/sdw, SCSI device
+/dev/sdx -d scsi # /dev/sdx, SCSI device
+/dev/sdy -d scsi # /dev/sdy, SCSI device
+/dev/sdz -d scsi # /dev/sdz, SCSI device
+/dev/sdaa -d scsi # /dev/sdaa, SCSI device
+/dev/sdab -d scsi # /dev/sdab, SCSI device
+/dev/sdac -d scsi # /dev/sdac, SCSI device
+/dev/sdad -d scsi # /dev/sdad, SCSI device
+/dev/sdae -d scsi # /dev/sdae, SCSI device
+/dev/sdaf -d scsi # /dev/sdaf, SCSI device
+/dev/sdag -d scsi # /dev/sdag, SCSI device
+/dev/sdah -d scsi # /dev/sdah, SCSI device
+/dev/sdai -d scsi # /dev/sdai, SCSI device
+/dev/sdaj -d scsi # /dev/sdaj, SCSI device
+/dev/sdak -d scsi # /dev/sdak, SCSI device
+/dev/sdal -d scsi # /dev/sdal, SCSI device
+/dev/sdam -d scsi # /dev/sdam, SCSI device
+/dev/sdan -d scsi # /dev/sdan, SCSI device
+/dev/sdao -d scsi # /dev/sdao, SCSI device
+/dev/sdap -d scsi # /dev/sdap, SCSI device
+/dev/sdaq -d scsi # /dev/sdaq, SCSI device
+/dev/sdar -d scsi # /dev/sdar, SCSI device
+/dev/sdas -d scsi # /dev/sdas, SCSI device
+/dev/sdat -d scsi # /dev/sdat, SCSI device
+/dev/sdau -d scsi # /dev/sdau, SCSI device
+/dev/sdav -d scsi # /dev/sdav, SCSI device
+/dev/sdaw -d scsi # /dev/sdaw, SCSI device
+/dev/sdax -d scsi # /dev/sdax, SCSI device
+/dev/sday -d scsi # /dev/sday, SCSI device
+/dev/sdaz -d scsi # /dev/sdaz, SCSI device
+/dev/sdba -d scsi # /dev/sdba, SCSI device
+/dev/sdbb -d scsi # /dev/sdbb, SCSI device
+/dev/sdbc -d scsi # /dev/sdbc, SCSI device
+/dev/sdbd -d scsi # /dev/sdbd, SCSI device
+/dev/sdbe -d scsi # /dev/sdbe, SCSI device
+/dev/sdbf -d scsi # /dev/sdbf, SCSI device
+/dev/sdbg -d scsi # /dev/sdbg, SCSI device
+/dev/sdbh -d scsi # /dev/sdbh, SCSI device
+/dev/sdbi -d scsi # /dev/sdbi, SCSI device
+/dev/sdbj -d scsi # /dev/sdbj, SCSI device
+/dev/sdbk -d scsi # /dev/sdbk, SCSI device
+/dev/sdbl -d scsi # /dev/sdbl, SCSI device
+/dev/sdbm -d scsi # /dev/sdbm, SCSI device
+/dev/sdbn -d scsi # /dev/sdbn, SCSI device
+/dev/sdbo -d scsi # /dev/sdbo, SCSI device
+/dev/sdbp -d scsi # /dev/sdbp, SCSI device
+/dev/sdbq -d scsi # /dev/sdbq, SCSI device
+/dev/sdbr -d scsi # /dev/sdbr, SCSI device
+/dev/sdbs -d scsi # /dev/sdbs, SCSI device
+/dev/sdbt -d scsi # /dev/sdbt, SCSI device
+/dev/sdbu -d scsi # /dev/sdbu, SCSI device
+/dev/sdbv -d scsi # /dev/sdbv, SCSI device
+/dev/sdbw -d scsi # /dev/sdbw, SCSI device
+/dev/sdbx -d scsi # /dev/sdbx, SCSI device
+/dev/sdby -d scsi # /dev/sdby, SCSI device
+/dev/sdbz -d scsi # /dev/sdbz, SCSI device
+/dev/sdca -d scsi # /dev/sdca, SCSI device
+/dev/sdcb -d scsi # /dev/sdcb, SCSI device
+/dev/sdcc -d scsi # /dev/sdcc, SCSI device
+/dev/sdcd -d scsi # /dev/sdcd, SCSI device
+/dev/sdce -d scsi # /dev/sdce, SCSI device
+/dev/sdcf -d scsi # /dev/sdcf, SCSI device
+/dev/sdcg -d scsi # /dev/sdcg, SCSI device
+/dev/sdch -d scsi # /dev/sdch, SCSI device
+/dev/sdci -d scsi # /dev/sdci, SCSI device
+/dev/sdcj -d scsi # /dev/sdcj, SCSI device
+/dev/sdck -d scsi # /dev/sdck, SCSI device
+/dev/sdcl -d scsi # /dev/sdcl, SCSI device
+/dev/sdcm -d scsi # /dev/sdcm, SCSI device
+/dev/sdcn -d scsi # /dev/sdcn, SCSI device
+/dev/sdco -d scsi # /dev/sdco, SCSI device
+/dev/sdcp -d scsi # /dev/sdcp, SCSI device
+/dev/sdcq -d scsi # /dev/sdcq, SCSI device
+/dev/sdcr -d scsi # /dev/sdcr, SCSI device
+/dev/sdcs -d scsi # /dev/sdcs, SCSI device
+/dev/sdct -d scsi # /dev/sdct, SCSI device
+/dev/sdcu -d scsi # /dev/sdcu, SCSI device
+/dev/sdcv -d scsi # /dev/sdcv, SCSI device
+/dev/sdcw -d scsi # /dev/sdcw, SCSI device
+/dev/sdcx -d scsi # /dev/sdcx, SCSI device
+/dev/sdcy -d scsi # /dev/sdcy, SCSI device
+/dev/sdcz -d scsi # /dev/sdcz, SCSI device
+/dev/sdda -d scsi # /dev/sdda, SCSI device
+/dev/sddb -d scsi # /dev/sddb, SCSI device
+/dev/sddc -d scsi # /dev/sddc, SCSI device
+/dev/sddd -d scsi # /dev/sddd, SCSI device
+/dev/sdde -d scsi # /dev/sdde, SCSI device
+/dev/sddf -d scsi # /dev/sddf, SCSI device
+/dev/sddg -d scsi # /dev/sddg, SCSI device
+/dev/sddh -d scsi # /dev/sddh, SCSI device
+/dev/nvme0 -d nvme # /dev/nvme0, NVMe device
+/dev/nvme1 -d nvme # /dev/nvme1, NVMe device
+/dev/nvme2 -d nvme # /dev/nvme2, NVMe device
+/dev/nvme3 -d nvme # /dev/nvme3, NVMe device
+/dev/nvme4 -d nvme # /dev/nvme4, NVMe device
+/dev/nvme5 -d nvme # /dev/nvme5, NVMe device
+/dev/nvme6 -d nvme # /dev/nvme6, NVMe device
+>>> Return code: 0
+
+2026-09-10 17:10:03,576 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sda
+2026-09-10 17:10:03,576 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sda
+2026-09-10 17:10:03,579 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sda:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,579 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sda write cache status=off
+2026-09-10 17:10:03,579 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdb
+2026-09-10 17:10:03,579 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdb
+2026-09-10 17:10:03,582 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdb:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,582 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdb write cache status=off
+2026-09-10 17:10:03,582 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdc
+2026-09-10 17:10:03,582 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdc
+2026-09-10 17:10:03,585 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdc:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,585 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdc write cache status=off
+2026-09-10 17:10:03,585 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdd
+2026-09-10 17:10:03,585 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdd
+2026-09-10 17:10:03,586 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdd:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,586 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdd write cache status=off
+2026-09-10 17:10:03,586 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sde
+2026-09-10 17:10:03,586 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sde
+2026-09-10 17:10:03,589 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sde:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,589 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sde write cache status=off
+2026-09-10 17:10:03,589 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdf
+2026-09-10 17:10:03,589 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdf
+2026-09-10 17:10:03,590 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdf:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,590 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdf write cache status=off
+2026-09-10 17:10:03,590 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdg
+2026-09-10 17:10:03,590 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdg
+2026-09-10 17:10:03,596 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdg:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,596 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdg write cache status=off
+2026-09-10 17:10:03,596 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdh
+2026-09-10 17:10:03,596 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdh
+2026-09-10 17:10:03,599 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdh:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,599 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdh write cache status=off
+2026-09-10 17:10:03,599 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdi
+2026-09-10 17:10:03,599 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdi
+2026-09-10 17:10:03,601 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdi:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,601 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdi write cache status=off
+2026-09-10 17:10:03,601 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdj
+2026-09-10 17:10:03,601 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdj
+2026-09-10 17:10:03,611 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdj:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,611 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdj write cache status=off
+2026-09-10 17:10:03,611 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdk
+2026-09-10 17:10:03,611 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdk
+2026-09-10 17:10:03,613 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdk:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,613 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdk write cache status=off
+2026-09-10 17:10:03,613 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdl
+2026-09-10 17:10:03,613 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdl
+2026-09-10 17:10:03,615 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdl:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,615 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdl write cache status=off
+2026-09-10 17:10:03,615 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdm
+2026-09-10 17:10:03,615 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdm
+2026-09-10 17:10:03,618 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdm:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,618 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdm write cache status=off
+2026-09-10 17:10:03,618 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdn
+2026-09-10 17:10:03,618 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdn
+2026-09-10 17:10:03,620 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdn:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,620 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdn write cache status=off
+2026-09-10 17:10:03,620 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdo
+2026-09-10 17:10:03,620 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdo
+2026-09-10 17:10:03,622 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdo:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,622 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdo write cache status=off
+2026-09-10 17:10:03,622 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdp
+2026-09-10 17:10:03,622 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdp
+2026-09-10 17:10:03,630 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdp:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,630 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdp write cache status=off
+2026-09-10 17:10:03,630 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdq
+2026-09-10 17:10:03,630 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdq
+2026-09-10 17:10:03,632 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdq:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,632 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdq write cache status=off
+2026-09-10 17:10:03,632 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdr
+2026-09-10 17:10:03,632 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdr
+2026-09-10 17:10:03,635 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdr:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,635 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdr write cache status=off
+2026-09-10 17:10:03,635 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sds
+2026-09-10 17:10:03,635 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sds
+2026-09-10 17:10:03,638 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sds:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,638 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sds write cache status=off
+2026-09-10 17:10:03,638 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdt
+2026-09-10 17:10:03,638 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdt
+2026-09-10 17:10:03,640 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdt:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,640 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdt write cache status=off
+2026-09-10 17:10:03,640 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdu
+2026-09-10 17:10:03,640 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdu
+2026-09-10 17:10:03,642 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdu:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,642 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdu write cache status=off
+2026-09-10 17:10:03,642 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdv
+2026-09-10 17:10:03,642 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdv
+2026-09-10 17:10:03,645 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdv:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,645 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdv write cache status=off
+2026-09-10 17:10:03,645 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdw
+2026-09-10 17:10:03,645 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdw
+2026-09-10 17:10:03,652 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdw:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,652 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdw write cache status=off
+2026-09-10 17:10:03,652 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdx
+2026-09-10 17:10:03,652 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdx
+2026-09-10 17:10:03,658 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdx:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,658 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdx write cache status=off
+2026-09-10 17:10:03,658 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdy
+2026-09-10 17:10:03,659 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdy
+2026-09-10 17:10:03,660 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdy:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,660 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdy write cache status=off
+2026-09-10 17:10:03,660 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdz
+2026-09-10 17:10:03,660 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdz
+2026-09-10 17:10:03,662 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdz:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,662 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdz write cache status=off
+2026-09-10 17:10:03,662 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdaa
+2026-09-10 17:10:03,662 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdaa
+2026-09-10 17:10:03,664 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdaa:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,664 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdaa write cache status=off
+2026-09-10 17:10:03,664 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdab
+2026-09-10 17:10:03,664 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdab
+2026-09-10 17:10:03,666 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdab:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,666 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdab write cache status=off
+2026-09-10 17:10:03,666 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdac
+2026-09-10 17:10:03,666 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdac
+2026-09-10 17:10:03,668 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdac:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,668 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdac write cache status=off
+2026-09-10 17:10:03,668 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdad
+2026-09-10 17:10:03,668 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdad
+2026-09-10 17:10:03,671 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdad:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,671 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdad write cache status=off
+2026-09-10 17:10:03,671 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdae
+2026-09-10 17:10:03,671 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdae
+2026-09-10 17:10:03,678 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdae:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,679 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdae write cache status=off
+2026-09-10 17:10:03,679 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdaf
+2026-09-10 17:10:03,679 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdaf
+2026-09-10 17:10:03,681 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdaf:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,681 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdaf write cache status=off
+2026-09-10 17:10:03,681 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdag
+2026-09-10 17:10:03,681 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdag
+2026-09-10 17:10:03,683 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdag:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,683 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdag write cache status=off
+2026-09-10 17:10:03,683 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdah
+2026-09-10 17:10:03,683 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdah
+2026-09-10 17:10:03,685 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdah:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,685 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdah write cache status=off
+2026-09-10 17:10:03,685 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdai
+2026-09-10 17:10:03,685 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdai
+2026-09-10 17:10:03,687 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdai:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,687 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdai write cache status=off
+2026-09-10 17:10:03,687 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdaj
+2026-09-10 17:10:03,687 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdaj
+2026-09-10 17:10:03,690 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdaj:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,690 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdaj write cache status=off
+2026-09-10 17:10:03,690 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdak
+2026-09-10 17:10:03,690 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdak
+2026-09-10 17:10:03,691 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdak:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,691 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdak write cache status=off
+2026-09-10 17:10:03,691 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdal
+2026-09-10 17:10:03,691 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdal
+2026-09-10 17:10:03,693 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdal:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,694 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdal write cache status=off
+2026-09-10 17:10:03,694 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdam
+2026-09-10 17:10:03,694 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdam
+2026-09-10 17:10:03,701 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdam:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,701 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdam write cache status=off
+2026-09-10 17:10:03,701 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdan
+2026-09-10 17:10:03,701 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdan
+2026-09-10 17:10:03,703 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdan:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,703 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdan write cache status=off
+2026-09-10 17:10:03,703 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdao
+2026-09-10 17:10:03,703 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdao
+2026-09-10 17:10:03,705 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdao:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,705 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdao write cache status=off
+2026-09-10 17:10:03,705 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdap
+2026-09-10 17:10:03,705 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdap
+2026-09-10 17:10:03,708 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdap:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,708 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdap write cache status=off
+2026-09-10 17:10:03,708 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdaq
+2026-09-10 17:10:03,708 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdaq
+2026-09-10 17:10:03,709 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdaq:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,709 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdaq write cache status=off
+2026-09-10 17:10:03,709 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdar
+2026-09-10 17:10:03,710 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdar
+2026-09-10 17:10:03,716 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdar:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,716 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdar write cache status=off
+2026-09-10 17:10:03,716 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdas
+2026-09-10 17:10:03,716 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdas
+2026-09-10 17:10:03,718 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdas:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,718 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdas write cache status=off
+2026-09-10 17:10:03,718 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdat
+2026-09-10 17:10:03,718 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdat
+2026-09-10 17:10:03,720 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdat:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,720 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdat write cache status=off
+2026-09-10 17:10:03,720 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdau
+2026-09-10 17:10:03,720 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdau
+2026-09-10 17:10:03,722 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdau:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,722 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdau write cache status=off
+2026-09-10 17:10:03,722 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdav
+2026-09-10 17:10:03,722 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdav
+2026-09-10 17:10:03,724 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdav:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,724 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdav write cache status=off
+2026-09-10 17:10:03,724 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdaw
+2026-09-10 17:10:03,724 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdaw
+2026-09-10 17:10:03,727 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdaw:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,727 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdaw write cache status=off
+2026-09-10 17:10:03,727 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdax
+2026-09-10 17:10:03,727 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdax
+2026-09-10 17:10:03,729 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdax:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,729 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdax write cache status=off
+2026-09-10 17:10:03,729 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sday
+2026-09-10 17:10:03,729 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sday
+2026-09-10 17:10:03,731 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sday:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,731 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sday write cache status=off
+2026-09-10 17:10:03,731 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdaz
+2026-09-10 17:10:03,731 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdaz
+2026-09-10 17:10:03,733 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdaz:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,733 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdaz write cache status=off
+2026-09-10 17:10:03,733 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdba
+2026-09-10 17:10:03,733 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdba
+2026-09-10 17:10:03,735 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdba:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,735 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdba write cache status=off
+2026-09-10 17:10:03,735 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbb
+2026-09-10 17:10:03,735 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbb
+2026-09-10 17:10:03,737 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbb:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,737 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbb write cache status=off
+2026-09-10 17:10:03,737 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbc
+2026-09-10 17:10:03,737 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbc
+2026-09-10 17:10:03,739 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbc:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,739 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbc write cache status=off
+2026-09-10 17:10:03,739 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbd
+2026-09-10 17:10:03,739 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbd
+2026-09-10 17:10:03,748 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbd:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,748 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbd write cache status=off
+2026-09-10 17:10:03,748 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbe
+2026-09-10 17:10:03,748 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbe
+2026-09-10 17:10:03,750 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbe:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,750 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbe write cache status=off
+2026-09-10 17:10:03,750 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbf
+2026-09-10 17:10:03,750 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbf
+2026-09-10 17:10:03,756 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbf:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,756 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbf write cache status=off
+2026-09-10 17:10:03,757 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbg
+2026-09-10 17:10:03,757 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbg
+2026-09-10 17:10:03,758 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbg:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,758 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbg write cache status=off
+2026-09-10 17:10:03,758 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbh
+2026-09-10 17:10:03,758 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbh
+2026-09-10 17:10:03,762 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbh:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,762 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbh write cache status=off
+2026-09-10 17:10:03,762 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbi
+2026-09-10 17:10:03,762 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbi
+2026-09-10 17:10:03,763 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbi:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,763 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbi write cache status=off
+2026-09-10 17:10:03,763 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbj
+2026-09-10 17:10:03,763 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbj
+2026-09-10 17:10:03,766 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbj:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,766 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbj write cache status=off
+2026-09-10 17:10:03,766 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbk
+2026-09-10 17:10:03,766 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbk
+2026-09-10 17:10:03,769 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbk:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,769 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbk write cache status=off
+2026-09-10 17:10:03,769 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbl
+2026-09-10 17:10:03,769 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbl
+2026-09-10 17:10:03,772 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbl:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,772 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbl write cache status=off
+2026-09-10 17:10:03,772 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbm
+2026-09-10 17:10:03,772 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbm
+2026-09-10 17:10:03,774 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbm:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,775 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbm write cache status=off
+2026-09-10 17:10:03,775 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbn
+2026-09-10 17:10:03,775 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbn
+2026-09-10 17:10:03,777 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbn:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,777 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbn write cache status=off
+2026-09-10 17:10:03,777 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbo
+2026-09-10 17:10:03,777 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbo
+2026-09-10 17:10:03,780 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbo:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,780 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbo write cache status=off
+2026-09-10 17:10:03,780 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbp
+2026-09-10 17:10:03,780 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbp
+2026-09-10 17:10:03,789 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbp:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,789 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbp write cache status=off
+2026-09-10 17:10:03,789 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbq
+2026-09-10 17:10:03,789 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbq
+2026-09-10 17:10:03,791 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbq:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,791 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbq write cache status=off
+2026-09-10 17:10:03,791 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbr
+2026-09-10 17:10:03,791 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbr
+2026-09-10 17:10:03,793 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbr:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,793 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbr write cache status=off
+2026-09-10 17:10:03,793 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbs
+2026-09-10 17:10:03,793 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbs
+2026-09-10 17:10:03,795 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbs:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,795 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbs write cache status=off
+2026-09-10 17:10:03,795 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbt
+2026-09-10 17:10:03,795 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbt
+2026-09-10 17:10:03,797 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbt:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,797 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbt write cache status=off
+2026-09-10 17:10:03,797 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbu
+2026-09-10 17:10:03,797 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbu
+2026-09-10 17:10:03,798 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbu:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,798 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbu write cache status=off
+2026-09-10 17:10:03,798 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbv
+2026-09-10 17:10:03,798 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbv
+2026-09-10 17:10:03,800 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbv:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,800 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbv write cache status=off
+2026-09-10 17:10:03,800 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbw
+2026-09-10 17:10:03,800 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbw
+2026-09-10 17:10:03,808 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbw:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,808 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbw write cache status=off
+2026-09-10 17:10:03,808 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbx
+2026-09-10 17:10:03,808 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbx
+2026-09-10 17:10:03,812 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbx:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,812 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbx write cache status=off
+2026-09-10 17:10:03,812 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdby
+2026-09-10 17:10:03,812 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdby
+2026-09-10 17:10:03,814 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdby:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,814 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdby write cache status=off
+2026-09-10 17:10:03,814 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdbz
+2026-09-10 17:10:03,814 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdbz
+2026-09-10 17:10:03,816 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdbz:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,816 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdbz write cache status=off
+2026-09-10 17:10:03,816 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdca
+2026-09-10 17:10:03,816 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdca
+2026-09-10 17:10:03,818 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdca:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,818 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdca write cache status=off
+2026-09-10 17:10:03,818 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcb
+2026-09-10 17:10:03,818 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcb
+2026-09-10 17:10:03,820 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcb:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,820 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcb write cache status=off
+2026-09-10 17:10:03,820 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcc
+2026-09-10 17:10:03,821 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcc
+2026-09-10 17:10:03,823 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcc:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,823 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcc write cache status=off
+2026-09-10 17:10:03,823 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcd
+2026-09-10 17:10:03,823 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcd
+2026-09-10 17:10:03,825 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcd:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,825 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcd write cache status=off
+2026-09-10 17:10:03,825 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdce
+2026-09-10 17:10:03,825 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdce
+2026-09-10 17:10:03,827 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdce:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,827 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdce write cache status=off
+2026-09-10 17:10:03,827 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcf
+2026-09-10 17:10:03,827 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcf
+2026-09-10 17:10:03,829 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcf:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,829 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcf write cache status=off
+2026-09-10 17:10:03,829 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcg
+2026-09-10 17:10:03,829 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcg
+2026-09-10 17:10:03,831 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcg:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,831 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcg write cache status=off
+2026-09-10 17:10:03,831 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdch
+2026-09-10 17:10:03,831 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdch
+2026-09-10 17:10:03,833 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdch:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,833 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdch write cache status=off
+2026-09-10 17:10:03,833 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdci
+2026-09-10 17:10:03,833 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdci
+2026-09-10 17:10:03,835 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdci:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,835 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdci write cache status=off
+2026-09-10 17:10:03,835 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcj
+2026-09-10 17:10:03,835 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcj
+2026-09-10 17:10:03,837 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcj:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,837 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcj write cache status=off
+2026-09-10 17:10:03,837 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdck
+2026-09-10 17:10:03,837 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdck
+2026-09-10 17:10:03,839 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdck:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,839 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdck write cache status=off
+2026-09-10 17:10:03,839 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcl
+2026-09-10 17:10:03,839 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcl
+2026-09-10 17:10:03,841 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcl:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,841 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcl write cache status=off
+2026-09-10 17:10:03,841 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcm
+2026-09-10 17:10:03,841 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcm
+2026-09-10 17:10:03,848 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcm:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,848 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcm write cache status=off
+2026-09-10 17:10:03,848 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcn
+2026-09-10 17:10:03,848 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcn
+2026-09-10 17:10:03,856 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcn:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,856 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcn write cache status=off
+2026-09-10 17:10:03,856 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdco
+2026-09-10 17:10:03,856 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdco
+2026-09-10 17:10:03,858 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdco:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,858 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdco write cache status=off
+2026-09-10 17:10:03,858 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcp
+2026-09-10 17:10:03,858 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcp
+2026-09-10 17:10:03,861 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcp:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,861 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcp write cache status=off
+2026-09-10 17:10:03,861 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcq
+2026-09-10 17:10:03,861 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcq
+2026-09-10 17:10:03,867 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcq:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,867 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcq write cache status=off
+2026-09-10 17:10:03,867 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcr
+2026-09-10 17:10:03,867 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcr
+2026-09-10 17:10:03,876 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcr:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,876 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcr write cache status=off
+2026-09-10 17:10:03,876 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcs
+2026-09-10 17:10:03,876 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcs
+2026-09-10 17:10:03,887 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcs:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,887 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcs write cache status=off
+2026-09-10 17:10:03,887 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdct
+2026-09-10 17:10:03,887 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdct
+2026-09-10 17:10:03,890 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdct:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,890 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdct write cache status=off
+2026-09-10 17:10:03,890 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcu
+2026-09-10 17:10:03,890 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcu
+2026-09-10 17:10:03,892 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcu:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,892 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcu write cache status=off
+2026-09-10 17:10:03,892 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcv
+2026-09-10 17:10:03,892 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcv
+2026-09-10 17:10:03,902 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcv:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,902 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcv write cache status=off
+2026-09-10 17:10:03,902 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcw
+2026-09-10 17:10:03,902 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcw
+2026-09-10 17:10:03,904 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcw:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,904 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcw write cache status=off
+2026-09-10 17:10:03,904 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcx
+2026-09-10 17:10:03,904 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcx
+2026-09-10 17:10:03,906 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcx:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,906 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcx write cache status=off
+2026-09-10 17:10:03,906 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcy
+2026-09-10 17:10:03,906 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcy
+2026-09-10 17:10:03,909 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcy:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,909 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcy write cache status=off
+2026-09-10 17:10:03,909 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdcz
+2026-09-10 17:10:03,909 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdcz
+2026-09-10 17:10:03,910 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdcz:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,910 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdcz write cache status=off
+2026-09-10 17:10:03,910 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdda
+2026-09-10 17:10:03,910 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdda
+2026-09-10 17:10:03,912 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdda:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,912 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdda write cache status=off
+2026-09-10 17:10:03,912 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sddb
+2026-09-10 17:10:03,912 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sddb
+2026-09-10 17:10:03,915 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sddb:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,915 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sddb write cache status=off
+2026-09-10 17:10:03,915 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sddc
+2026-09-10 17:10:03,915 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sddc
+2026-09-10 17:10:03,917 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sddc:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,917 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sddc write cache status=off
+2026-09-10 17:10:03,917 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sddd
+2026-09-10 17:10:03,917 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sddd
+2026-09-10 17:10:03,919 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sddd:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,919 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sddd write cache status=off
+2026-09-10 17:10:03,919 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sdde
+2026-09-10 17:10:03,919 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sdde
+2026-09-10 17:10:03,921 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sdde:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,921 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sdde write cache status=off
+2026-09-10 17:10:03,921 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sddf
+2026-09-10 17:10:03,921 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sddf
+2026-09-10 17:10:03,923 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sddf:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,923 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sddf write cache status=off
+2026-09-10 17:10:03,923 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sddg
+2026-09-10 17:10:03,923 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sddg
+2026-09-10 17:10:03,929 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sddg:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,929 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sddg write cache status=off
+2026-09-10 17:10:03,929 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): hdparm -W /dev/sddh
+2026-09-10 17:10:03,929 - DEBUG   - commapi.py         [line: 94] - 
+>>> hdparm -W /dev/sddh
+2026-09-10 17:10:03,931 - DEBUG   - commapi.py         [line: 96] - 
+
+/dev/sddh:
+ write-caching =  0 (off)
+>>> Return code: 0
+
+2026-09-10 17:10:03,931 - INFO    - hdd_write_cache.py [line: 73] - Initial query: /dev/sddh write cache status=off
+2026-09-10 17:10:03,932 - INFO    - hdd_write_cache.py [line:118] - Initial HDD write cache summary: total=112, on=0, off=112, pass=112, fail=0, failed disks=none
+2026-09-10 17:10:03,932 - INFO    - base_testcase.py   [line:339] - Testitem QtHddWriteCacheCheck_0 Endtime: 2026-09-10 17:10:03
+2026-09-10 17:10:03,933 - INFO    - base_testcase.py   [line:343] - Testitem QtHddWriteCacheCheck_0 duration: 0:00:00
+2026-09-10 17:10:03,933 - INFO    - base_testcase.py   [line:443] - Return code: 0
+2026-09-10 17:10:03,933 - INFO    - base_testcase.py   [line:444] - Return result: HDD write cache check test passed
+2026-09-10 17:10:03,933 - DEBUG   - base_testcase.py   [line:274] - Start test_item_end_BD by caller QtHddWriteCacheCheck_0
+2026-09-10 17:10:03,933 - WARNING - run_mw.py          [line: 94] - The TurnOn of middleware test_item_end_BD is off, skip!
+2026-09-10 17:10:03,933 - DEBUG   - base_attr.py       [line:1246] - test_item_end_BD return: (0, {})
+2026-09-10 17:10:03,933 - DEBUG   - base_testcase.py   [line:274] - Start test_item_end by caller QtHddWriteCacheCheck_0
+2026-09-10 17:10:03,933 - DEBUG   - run_mw.py          [line:142] - Middleware test_item_end start...
+2026-09-10 17:10:03,934 - DEBUG   - run_mw.py          [line:162] - Middleware test_item_end duration time: 0 s
+2026-09-10 17:10:03,934 - DEBUG   - base_attr.py       [line:1246] - test_item_end return: (0, {'item_result': {'starttime': '2026-09-10 17:10:03', 'endtime': '2026-09-10 17:10:03', 'duration': '0:00:00', 'errcode': 0, 'retstr': 'HDD write cache check test passed', 'log': 'QtHddWriteCacheCheck_0_260910170956', 'whiteboard': {}, 'extra': {}, 'Desc': 'Verify every HDD has write cache disabled.', 'Tags': 'HDD write cache', 'Module': 'hdd_write_cache', 'Class': 'HddWriteCache', 'Function': 'test_hdd_write_cache_check', 'Timeout': '5m', 'Args': [], 'Kwargs': {}, 'Version': 'NULL', 'TestNode': [0], 'TestItem': 'QtHddWriteCacheCheck', 'Parallel': False, 'Id': 0, 'SeqId': 0, 'Inst': 'QtHddWriteCacheCheck_0', 'node_id': 0, 'Parent': ''}, 'caller': 'QtHddWriteCacheCheck_0'})
+2026-09-10 17:10:03,934 - INFO    - base_testcase.py   [line:335] - ######################################################################

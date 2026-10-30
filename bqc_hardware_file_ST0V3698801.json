@@ -1,0 +1,303 @@
+qemu-system-aarch64 \
+  -M virt \
+  -cpu cortex-a72 \
+  -bios /home/nvme/build_img/QEMU_EFI.fd \
+  -m 15G \
+  -smp 4 \
+  -drive file=/home/nvme/build_img/storage/iso/11_img/disk.img,format=raw,if=virtio \
+  -drive file=/home/nvme/build_img/storage/iso/ubuntu-24.04.4-live-server-arm64.iso,media=cdrom,readonly=on \
+  -boot order=d \
+  -device bochs-display \
+  -device qemu-xhci \
+  -device usb-kbd \
+  -device usb-tablet \
+  -netdev user,id=net0,hostfwd=tcp::4444-:22 \
+  -device virtio-net-pci,netdev=net0 \
+  -serial stdio \
+  -monitor none \
+  -display none \
+  -vnc :2
+
+
+
+{
+    "orderId": "",
+    "serverType": "G220-B6",
+    "combo": "Suite:H22M1-I9DD2M",
+    "manufacturerName": "Inventec",
+    "serverSn": "ST0V3698801",
+    "assetNo": "2026-iv-srv-051817",
+    "components": {
+        "CPU": [
+            {
+                "slot": "CPU0",
+                "modelNumber": "Intel(R) Xeon(R) Platinum 8457C",
+                "originComponentSn": "ABBE8194DB90FDEB",
+                "manufacturer": "Intel(R) Corporation"
+            },
+            {
+                "slot": "CPU1",
+                "modelNumber": "Intel(R) Xeon(R) Platinum 8457C",
+                "originComponentSn": "DE0DA894B5A450A2",
+                "manufacturer": "Intel(R) Corporation"
+            }
+        ],
+        "DRAM": [
+            {
+                "slot": "P0_M0_C0_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3EB2-CWMXJ",
+                "originComponentSn": "80CE04262544C3A0B1",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P0_M1_C2_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3EB2-CWMXJ",
+                "originComponentSn": "80CE04262544C3A1B7",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P0_M2_C4_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3EB2-CWMXJ",
+                "originComponentSn": "80CE04262544C3ADCB",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P0_M3_C6_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3EB2-CWMXJ",
+                "originComponentSn": "80CE04262544C3A0B0",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P1_M0_C0_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3EB2-CWMXJ",
+                "originComponentSn": "80CE04262544C3A179",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P1_M1_C2_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3EB2-CWMXJ",
+                "originComponentSn": "80CE04262544C3A113",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P1_M2_C4_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3EB2-CWMXJ",
+                "originComponentSn": "80CE04262544C3AD45",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P1_M3_C6_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3EB2-CWMXJ",
+                "originComponentSn": "80CE04262544C3ADCE",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            }
+        ],
+        "NIC": [
+            {
+                "manufacturerProductName": "Bytedance CX-6 Dx adapter card, 100GbE OCP3.0, With Host management, Single-port DSFP, Multi Host or Socket Direct, Secure Boot, no Crypto, Thumbscrew -Prime",
+                "modelNumber": "CX623439MS-CDAB_28",
+                "originComponentSn": "MT2626604V9B",
+                "macAddr": {
+                    "NIC": "ec:86:c4:e5:28:14;ec:86:c4:e5:28:17"
+                },
+                "version": {
+                    "FW": "22.35.3502 (BD_0000000003)"
+                },
+                "slot": "MCIO_P0_PE0_A(OCP3.0)",
+                "pcieAddr": "16:00.0",
+                "vid": "15b3",
+                "did": "0189",
+                "svid": "15b3",
+                "sdid": "0189",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s",
+                "manufacturer": ""
+            },
+            {
+                "manufacturerProductName": "Bytedance CX-6 Dx adapter card, 100GbE OCP3.0, With Host management, Single-port DSFP, Multi Host or Socket Direct, Secure Boot, no Crypto, Thumbscrew -Aux[1]",
+                "modelNumber": "CX623439MS-CDAB_28",
+                "originComponentSn": "MT2626604V9B",
+                "macAddr": {
+                    "NIC": "ec:86:c4:e5:28:14;ec:86:c4:e5:28:17"
+                },
+                "version": {
+                    "FW": "22.35.3502 (BD_0000000003)"
+                },
+                "slot": "MCIO_P1_PE2_A(OCP3.0)",
+                "pcieAddr": "b8:00.0",
+                "vid": "15b3",
+                "did": "0189",
+                "svid": "15b3",
+                "sdid": "0189",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s",
+                "manufacturer": ""
+            }
+        ],
+        "NVME": [
+            {
+                "slot": "/dev/nvme0n1",
+                "modelNumber": "SOLIDIGM SSDPF2KX038T1",
+                "originComponentSn": "BTAX609206ER3P8CGN",
+                "version": {
+                    "FW": "9CV10521"
+                },
+                "capacity": "3.84",
+                "vid": "025e",
+                "did": "9008",
+                "svid": "025e",
+                "sdid": "9008",
+                "pcieBw": "x4",
+                "pcieSpeed": "16GT/s",
+                "pcieAddr": "38:00.0",
+                "manufacturer": "25e"
+            }
+        ],
+        "GPU": [],
+        "PSU": [
+            {
+                "manufacturerProductName": "GW-CRPS1300D2WM",
+                "modelNumber": "GW-CRPS1300D2WM",
+                "originComponentSn": "2Q074420197",
+                "consumption": "1300",
+                "version": {
+                    "FW": "00.01.02"
+                },
+                "slot": "BL_PSU0",
+                "manufacturer": "Great Wall"
+            },
+            {
+                "manufacturerProductName": "GW-CRPS1300D2WM",
+                "modelNumber": "GW-CRPS1300D2WM",
+                "originComponentSn": "2Q074420201",
+                "consumption": "1300",
+                "version": {
+                    "FW": "00.01.02"
+                },
+                "slot": "BR_PSU1",
+                "manufacturer": "Great Wall"
+            }
+        ],
+        "MotherBoard": [
+            {
+                "manufacturerProductName": "Yichun MLB",
+                "modelNumber": "1395T3427504",
+                "originComponentSn": "1964RP1474",
+                "version": {
+                    "BIOS": "03.01.02.89.00",
+                    "BMC": "04.12.03",
+                    "CPLD": "3.14",
+                    "VR": {
+                        "CPU0": {
+                            "PVCCIN": "2666_U44_3",
+                            "PVCCFA": "2666_U3_3",
+                            "PVCCINFAON": "2666_U3_3",
+                            "PVCCD": "2666_U1_3"
+                        },
+                        "CPU1": {
+                            "PVCCIN": "2666_U43_3",
+                            "PVCCFA": "2666_U2_3",
+                            "PVCCINFAON": "2666_U2_3",
+                            "PVCCD": "2666_U14_3"
+                        }
+                    }
+                },
+                "pcbaVersion": "PCBA Ver:A29",
+                "manufacturer": "Inventec"
+            }
+        ],
+        "BackPlane": [
+            {
+                "manufacturer": "Inventec",
+                "bManufacturer": "Inventec",
+                "version": {
+                    "CPLD": "2.5"
+                },
+                "bPname": "Front 4U.2 BP",
+                "bPcbaVersion": "A05",
+                "bSn": "1K68PPA0G3",
+                "modelNumber": "1395T3429201"
+            }
+        ],
+        "Fan": [
+            {
+                "slot": "FAN0_Present"
+            },
+            {
+                "slot": "FAN1_Present"
+            },
+            {
+                "slot": "FAN2_Present"
+            },
+            {
+                "slot": "FAN3_Present"
+            },
+            {
+                "slot": "FAN4_Present"
+            },
+            {
+                "slot": "FAN5_Present"
+            }
+        ],
+        "HCU": [
+            {
+                "modelNumber": "",
+                "originComponentSn": "11040026926123003S",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.12.2",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "0",
+                "pcieAddr": "0000:49:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "",
+                "originComponentSn": "11040026926123003S",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.12.2",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "1",
+                "pcieAddr": "0000:4a:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            }
+        ],
+        "HDD": [],
+        "Riser_Card": [],
+        "HBA": [],
+        "GPU_Module_Group": [],
+        "SmartNIC": [],
+        "BOX": []
+    }
+}

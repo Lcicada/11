@@ -1,0 +1,610 @@
+2026-08-31 15:39:57,481 - INFO    - base_testcase.py   [line:335] - ######################################################################
+2026-08-31 15:39:57,481 - INFO    - base_testcase.py   [line:332] - Testitem QtPsuReduandancyTest_PsuSwitch1_0 Starttime: 2026-08-31 15:39:57
+2026-08-31 15:39:57,482 - DEBUG   - base_testcase.py   [line:274] - Start test_item_start_BD by caller QtPsuReduandancyTest_PsuSwitch1_0
+2026-08-31 15:39:57,482 - WARNING - run_mw.py          [line: 94] - The TurnOn of middleware test_item_start_BD is off, skip!
+2026-08-31 15:39:57,482 - DEBUG   - base_attr.py       [line:1246] - test_item_start_BD return: (0, {})
+2026-08-31 15:39:57,482 - DEBUG   - base_testcase.py   [line:274] - Start test_item_start by caller QtPsuReduandancyTest_PsuSwitch1_0
+2026-08-31 15:39:57,482 - DEBUG   - run_mw.py          [line:142] - Middleware test_item_start start...
+2026-08-31 15:39:57,483 - DEBUG   - run_mw.py          [line:162] - Middleware test_item_start duration time: 0 s
+2026-08-31 15:39:57,483 - DEBUG   - base_attr.py       [line:1246] - test_item_start return: (0, {'item_result': {'starttime': '2026-08-31 15:39:57', 'endtime': '', 'duration': '', 'errcode': 0, 'retstr': '', 'log': 'QtPsuReduandancyTest_PsuSwitch1_0_260831153950', 'whiteboard': {}, 'extra': {}, 'Desc': 'PSU Redundancy PSU_switch', 'Tags': 'PSU Redundancy', 'Module': 'psu_redundancy', 'Class': 'PSURedundancy', 'Function': 'test_psu_redundancy', 'Timeout': '20m', 'Args': [], 'Kwargs': {'config': {'cycle_sec': 600, 'on_1': {'index': 0, 'psu_id': 0, 'timeout': 180}, 'off_2': {'index': 1, 'psu_id': 1, 'sleep': 300, 'timeout': 180}, 'on_2': {'index': 1, 'psu_id': 1, 'timeout': 180}, 'off_1': {'index': 0, 'psu_id': 0, 'sleep': 300, 'timeout': 180}}, 'post_action_delay': 5, 'snmp_mode': '380V', 'custom_spec': {'redundancy_lost': False, 'ac_lost': True}}, 'Version': 'NULL', 'TestNode': [0], 'TestItem': 'QtPsuReduandancyTest_PsuSwitch1', 'Parallel': False, 'Id': 0, 'SeqId': 0, 'Inst': 'QtPsuReduandancyTest_PsuSwitch1_0', 'node_id': 0, 'Parent': ''}, 'caller': 'QtPsuReduandancyTest_PsuSwitch1_0'})
+2026-08-31 15:39:57,483 - DEBUG   - base_testcase.py   [line: 44] - QtPsuReduandancyTest_PsuSwitch1_0 info: {
+    "Desc": "PSU Redundancy PSU_switch",
+    "Tags": "PSU Redundancy",
+    "Module": "psu_redundancy",
+    "Class": "PSURedundancy",
+    "Function": "test_psu_redundancy",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {
+        "config": {
+            "cycle_sec": 600,
+            "on_1": {
+                "index": 0,
+                "psu_id": 0,
+                "timeout": 180
+            },
+            "off_2": {
+                "index": 1,
+                "psu_id": 1,
+                "sleep": 300,
+                "timeout": 180
+            },
+            "on_2": {
+                "index": 1,
+                "psu_id": 1,
+                "timeout": 180
+            },
+            "off_1": {
+                "index": 0,
+                "psu_id": 0,
+                "sleep": 300,
+                "timeout": 180
+            }
+        },
+        "post_action_delay": 5,
+        "snmp_mode": "380V",
+        "custom_spec": {
+            "redundancy_lost": false,
+            "ac_lost": true
+        }
+    },
+    "Version": "NULL",
+    "TestNode": [
+        0
+    ],
+    "TestItem": "QtPsuReduandancyTest_PsuSwitch1",
+    "Parallel": false,
+    "Id": 0,
+    "SeqId": 0,
+    "Inst": "QtPsuReduandancyTest_PsuSwitch1_0",
+    "node_id": 0,
+    "Parent": ""
+}
+2026-08-31 15:39:57,483 - INFO    - psu_redundancy.py  [line: 62] - Test spec: {
+    "redundancy_lost": false,
+    "ac_lost": true
+}
+2026-08-31 15:39:57,483 - INFO    - psu_redundancy.py  [line: 74] - Start PSU Redundancy test
+2026-08-31 15:39:57,483 - INFO    - psu_redundancy.py  [line: 75] - Test Config: {
+    "cycle_sec": 600,
+    "on_1": {
+        "index": 0,
+        "psu_id": 0,
+        "timeout": 180
+    },
+    "off_2": {
+        "index": 1,
+        "psu_id": 1,
+        "sleep": 300,
+        "timeout": 180
+    },
+    "on_2": {
+        "index": 1,
+        "psu_id": 1,
+        "timeout": 180
+    },
+    "off_1": {
+        "index": 0,
+        "psu_id": 0,
+        "sleep": 300,
+        "timeout": 180
+    }
+}
+2026-08-31 15:39:57,483 - INFO    - psu_redundancy.py  [line: 93] - Check the current PSU status before executingPower ON/OFF
+2026-08-31 15:39:57,483 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sdr elist
+2026-08-31 15:39:57,483 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sdr elist
+2026-08-31 15:40:00,353 - DEBUG   - commapi.py         [line: 96] - 
+Inlet_Temp       | 01h | ok  | 50.1 | 31 degrees C
+HDD_Inlet1_Temp  | 02h | ok  | 50.2 | 31 degrees C
+MB_Inlet_Temp    | 03h | ok  | 50.3 | 33 degrees C
+CPU0_Temp        | 04h | ok  |  3.1 | 46 degrees C
+P0_DIMM_Temp     | 06h | ok  | 32.1 | 35 degrees C
+CPU0_VR_Temp     | 08h | ok  |  7.21 | 39 degrees C
+PSU0_Temp        | 0Ah | ok  | 10.21 | 38 degrees C
+PSU1_Temp        | 0Bh | ok  | 10.22 | 45 degrees C
+PSU0_Inlet_Temp  | 0Ch | ok  | 10.3 | 37 degrees C
+PSU1_Inlet_Temp  | 0Dh | ok  | 10.4 | 33 degrees C
+PDB_Temp         | 0Eh | ok  | 10.5 | 32 degrees C
+OCP0_Temp        | 0Fh | ok  | 32.3 | 51 degrees C
+OCP0_Opt_Temp    | 10h | ok  | 32.4 | 49 degrees C
+Outlet_Temp      | 11h | ok  | 50.4 | 33 degrees C
+Outlet1_Temp     | 12h | ok  | 50.5 | 36 degrees C
+MB_Outlet_Temp   | 13h | ok  | 50.6 | 37 degrees C
+P0_HBA_Temp      | 14h | ok  | 11.5 | 52 degrees C
+Riser_HBA_Temp   | 15h | ok  | 16.1 | 31 degrees C
+NVMe_Front_Temp  | 16h | ns  | 23.1 | Disabled
+NVMe_F_BP_Temp   | 17h | ns  | 23.3 | Disabled
+M.2_Temp         | 18h | ok  | 23.4 | 36 degrees C
+EXP0_Temp        | 19h | ok  | 11.1 | 57 degrees C
+EXP1_Temp        | 1Ah | ok  | 11.2 | 61 degrees C
+EXP2_Temp        | 1Bh | ok  | 11.3 | 58 degrees C
+HDD_Front_Temp   | 1Ch | ok  |  4.1 | 37 degrees C
+HDD_Mid1_Temp    | 1Dh | ok  |  4.2 | 39 degrees C
+HDD_Mid2_Temp    | 1Eh | ok  |  4.3 | 41 degrees C
+HDD_Rear_Temp    | 1Fh | ok  |  4.4 | 42 degrees C
+HDD_BP0_Temp     | 20h | ok  | 15.8 | 32 degrees C
+HDD_BP1_Temp     | 21h | ok  | 15.9 | 34 degrees C
+HDD_BP2_Temp     | 22h | ok  | 15.10 | 36 degrees C
+HDD_BP3_Temp     | 23h | ok  | 15.11 | 39 degrees C
+HDD_Temp         | 24h | ok  |  4.5 | 42 degrees C
+P12V_STBY        | 31h | ok  |  7.23 | 12.16 Volts
+P3V_BAT          | 32h | ok  |  7.2 | 3.11 Volts
+P3V3_STBY        | 33h | ok  |  7.3 | 3.32 Volts
+P5V_STBY         | 34h | ok  |  7.4 | 5.09 Volts
+SYS_12V          | 35h | ok  |  7.5 | 12.16 Volts
+CPU0_VCORE       | 36h | ok  |  3.3 | 1.81 Volts
+CPU0_DDR_VDDQ0   | 38h | ok  | 32.5 | 1.09 Volts
+CPU0_DDR_VDDQ1   | 39h | ok  | 32.6 | 1.10 Volts
+P12V_CPU0_DIMM   | 3Ch | ok  |  7.6 | 12.35 Volts
+P3V3_HDBP        | 3Eh | ok  |  7.8 | 3.32 Volts
+P5V_HDBP         | 3Fh | ok  |  7.9 | 5.05 Volts
+P12V_HDBP        | 40h | ok  |  7.10 | 12.16 Volts
+P0V9_EXP0        | 41h | ok  |  7.11 | 0.93 Volts
+P0V9_EXP1        | 42h | ok  |  7.12 | 0.93 Volts
+P0V9_EXP2        | 43h | ok  |  7.13 | 0.93 Volts
+P1V5_EXP         | 44h | ok  |  7.14 | 1.47 Volts
+P1V8_EXP         | 45h | ok  |  7.15 | 1.79 Volts
+FAN0_F_Speed     | 51h | ok  | 29.39 | 24339 RPM
+FAN0_R_Speed     | 52h | ok  | 29.40 | 22078 RPM
+FAN1_F_Speed     | 53h | ok  | 29.3 | 24472 RPM
+FAN1_R_Speed     | 54h | ok  | 29.4 | 22078 RPM
+FAN2_F_Speed     | 55h | ok  | 29.5 | 24472 RPM
+FAN2_R_Speed     | 56h | ok  | 29.6 | 22078 RPM
+FAN3_F_Speed     | 57h | ok  | 29.7 | 24339 RPM
+FAN3_R_Speed     | 58h | ok  | 29.8 | 22078 RPM
+FAN4_F_Speed     | 59h | ok  | 29.9 | 24472 RPM
+FAN4_R_Speed     | 5Ah | ok  | 29.10 | 22078 RPM
+FAN5_F_Speed     | 5Bh | ok  | 29.11 | 24472 RPM
+FAN5_R_Speed     | 5Ch | ok  | 29.12 | 22078 RPM
+FAN0_Present     | 5Dh | ok  | 29.13 | Device Present
+FAN1_Present     | 5Eh | ok  | 29.14 | Device Present
+FAN2_Present     | 5Fh | ok  | 29.15 | Device Present
+FAN3_Present     | 60h | ok  | 29.16 | Device Present
+FAN4_Present     | 61h | ok  | 29.17 | Device Present
+FAN5_Present     | 62h | ok  | 29.18 | Device Present
+SYS_FAN_Status   | 63h | ok  | 29.19 | Transition to OK
+FAN0_HD_F_Speed  | 64h | ok  | 29.20 | 14200 RPM
+FAN0_HD_R_Speed  | 65h | ok  | 29.21 | 12200 RPM
+FAN1_HD_F_Speed  | 66h | ok  | 29.22 | 14400 RPM
+FAN1_HD_R_Speed  | 67h | ok  | 29.23 | 12200 RPM
+FAN2_HD_F_Speed  | 68h | ok  | 29.24 | 14300 RPM
+FAN2_HD_R_Speed  | 69h | ok  | 29.25 | 12200 RPM
+FAN3_HD_F_Speed  | 6Ah | ok  | 29.26 | 14400 RPM
+FAN3_HD_R_Speed  | 6Bh | ok  | 29.27 | 12100 RPM
+FAN4_HD_F_Speed  | 6Ch | ok  | 29.28 | 14200 RPM
+FAN4_HD_R_Speed  | 6Dh | ok  | 29.29 | 12200 RPM
+FAN0_HD_Present  | 6Eh | ok  | 29.30 | Device Present
+FAN1_HD_Present  | 6Fh | ok  | 29.31 | Device Present
+FAN2_HD_Present  | 70h | ok  | 29.32 | Device Present
+FAN3_HD_Present  | 71h | ok  | 29.33 | Device Present
+FAN4_HD_Present  | 72h | ok  | 29.34 | Device Present
+HDD_FAN_Status   | 73h | ok  | 29.35 | Transition to OK
+CPU_Power        | 81h | ok  |  3.5 | 96 Watts
+MEM_Power        | 82h | ok  | 32.9 | 9 Watts
+OCP_Pwr          | 83h | ok  | 32.10 | 22 Watts
+NVME_Pwr         | 84h | ns  | 23.5 | Disabled
+PSU0_PIn         | 85h | ok  | 10.6 | 0 Watts
+PSU1_PIn         | 86h | ok  | 10.7 | 1170 Watts
+PSU0_POut        | 87h | ok  | 10.8 | 0 Watts
+PSU1_POut        | 88h | ok  | 10.9 | 1079 Watts
+Total_Power      | 89h | ok  | 10.10 | 1170 Watts
+CPU0_VR_Pwr      | 8Ah | ok  | 10.11 | 114 Watts
+Host_FAN_Power   | 8Ch | ok  | 29.38 | 138 Watts
+P0_DIMM_Pwr      | 8Dh | ok  | 32.11 | 10 Watts
+Riser_Pwr        | 8Fh | ok  | 23.6 | 18 Watts
+HDD_Power        | 90h | ok  | 23.7 | 414 Watts
+EXP_Power        | 91h | ok  | 23.8 | 40 Watts
+HDBP_FAN_Pwr     | 92h | ok  | 23.9 | 270 Watts
+PSU0_IIn         | A1h | ok  | 10.13 | 0 Amps
+PSU1_IIn         | A2h | ok  | 10.14 | 5.16 Amps
+PSU0_IOut        | A3h | ok  | 10.15 | 0 Amps
+PSU1_IOut        | A4h | ok  | 10.16 | 87.75 Amps
+BIOS_Boot_Up     | B0h | ok  | 35.1 | Initiated by power up
+Event_Log        | B6h | ok  |  7.17 | Log area reset/cleared
+BMC_Boot         | B7h | ok  | 38.2 | Initiated by power up
+ACPI_State       | B8h | ok  | 23.10 | S0/G0: working
+PSU0_Supply      | B9h | ok  | 10.17 | Presence detected, Power Supply AC lost
+PSU1_Supply      | BAh | ok  | 10.18 | Presence detected
+Redundant_PSU    | BBh | ok  | 10.19 | Redundancy Lost
+OCP0_Err         | BCh | ok  |  7.18 | 
+P0_HBA_Err       | BDh | ok  | 23.11 | 
+PCIE_Status      | BEh | ok  | 23.12 | 
+CPU0_Status      | BFh | ok  |  3.6 | Presence detected
+CPU0_MEMG0_Hot   | C1h | ok  | 32.13 | 
+P0_C0_D0_Status  | C3h | ok  | 32.15 | 
+P0_C0_D1_Status  | C4h | ns  | 32.16 | Disabled
+P0_C1_D0_Status  | C5h | ok  | 32.17 | 
+P0_C1_D1_Status  | C6h | ns  | 32.18 | Disabled
+P0_C2_D0_Status  | C7h | ok  | 32.19 | 
+P0_C2_D1_Status  | C8h | ns  | 32.20 | Disabled
+P0_C3_D0_Status  | C9h | ns  | 32.21 | Disabled
+P0_C3_D1_Status  | CAh | ns  | 32.22 | Disabled
+P0_C4_D0_Status  | CBh | ok  | 32.23 | 
+P0_C4_D1_Status  | CCh | ns  | 32.24 | Disabled
+P0_C5_D0_Status  | CDh | ok  | 32.25 | 
+P0_C5_D1_Status  | CEh | ns  | 32.26 | Disabled
+P0_C6_D0_Status  | CFh | ok  | 32.27 | 
+P0_C6_D1_Status  | D0h | ns  | 32.28 | Disabled
+P0_C7_D0_Status  | D1h | ns  | 32.29 | Disabled
+P0_C7_D1_Status  | D2h | ns  | 32.30 | Disabled
+M2_0_Status      | E5h | ok  | 23.13 | Drive Present
+M2_1_Status      | E6h | ns  | 23.14 | Disabled
+Boot_Error       | E9h | ok  | 35.4 | 
+>>> Return code: 0
+
+2026-08-31 15:40:00,353 - INFO    - psu_redundancy.py  [line:226] - Record the current sel info
+2026-08-31 15:40:00,353 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel elist
+2026-08-31 15:40:00,353 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel elist
+2026-08-31 15:40:02,850 - DEBUG   - commapi.py         [line: 96] - 
+   1 | 08/29/2026 | 01:06:01 | Event Logging Disabled Event_Log | Log area reset/cleared | Asserted
+   2 | 08/29/2026 | 01:06:07 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+   3 | 08/29/2026 | 01:06:21 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+   4 | 08/29/2026 | 01:06:21 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+   5 | 08/29/2026 | 01:06:43 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+   6 | 08/29/2026 | 01:06:44 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+   7 | 08/29/2026 | 01:06:48 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+   8 | 08/29/2026 | 01:07:10 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+   9 | 08/29/2026 | 01:08:46 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+   a | 08/29/2026 | 01:57:41 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+   b | 08/29/2026 | 01:57:55 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+   c | 08/29/2026 | 01:57:55 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+   d | 08/29/2026 | 01:58:17 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+   e | 08/29/2026 | 01:58:19 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+   f | 08/29/2026 | 01:58:23 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  10 | 08/29/2026 | 01:58:45 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  11 | 08/29/2026 | 02:04:13 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+  12 | 08/29/2026 | 02:27:07 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  13 | 08/29/2026 | 02:27:21 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  14 | 08/29/2026 | 02:27:21 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+  15 | 08/29/2026 | 02:27:43 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  16 | 08/29/2026 | 02:27:47 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  17 | 08/29/2026 | 02:27:51 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  18 | 08/29/2026 | 02:28:13 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  19 | 08/29/2026 | 02:31:35 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+  1a | 08/29/2026 | 02:54:30 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  1b | 08/29/2026 | 02:54:44 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  1c | 08/29/2026 | 02:54:44 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+  1d | 08/29/2026 | 02:55:06 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  1e | 08/29/2026 | 02:55:07 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  1f | 08/29/2026 | 02:55:11 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  20 | 08/29/2026 | 02:55:33 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  21 | 08/29/2026 | 02:57:08 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+  22 | 08/29/2026 | 03:24:41 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  23 | 08/29/2026 | 03:24:55 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  24 | 08/29/2026 | 03:24:55 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+  25 | 08/29/2026 | 03:25:17 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  26 | 08/29/2026 | 03:25:21 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  27 | 08/29/2026 | 03:25:25 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  28 | 08/29/2026 | 03:25:47 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  29 | 08/29/2026 | 03:27:19 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+>>> Return code: 0
+
+2026-08-31 15:40:02,850 - INFO    - psu_redundancy.py  [line:127] - check PSU0 status
+2026-08-31 15:40:02,850 - INFO    - psu_redundancy.py  [line:134] - Record the sel info before executing psu0 on
+2026-08-31 15:40:02,850 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel elist | grep PSU
+2026-08-31 15:40:02,850 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel elist | grep PSU
+2026-08-31 15:40:05,453 - DEBUG   - commapi.py         [line: 96] - 
+
+>>> Return code: 1
+
+2026-08-31 15:40:05,453 - INFO    - psu_redundancy.py  [line:139] - Execute PSU[0] Power ON by MiddleWareRegister.pdu_control
+2026-08-31 15:40:05,453 - DEBUG   - base_testcase.py   [line:274] - Start pdu_control by caller QtPsuReduandancyTest_PsuSwitch1_0
+2026-08-31 15:40:05,453 - DEBUG   - run_mw.py          [line:142] - Middleware pdu_control start...
+2026-08-31 15:40:10,595 - DEBUG   - run_mw.py          [line:162] - Middleware pdu_control duration time: 5 s
+2026-08-31 15:40:10,595 - DEBUG   - base_attr.py       [line:1246] - pdu_control return: (0, {'psu_list': [0], 'ctrl_type': 0, 'caller': 'QtPsuReduandancyTest_PsuSwitch1_0'})
+2026-08-31 15:40:10,595 - INFO    - psu_redundancy.py  [line:142] - Ready to check the PSU Control Result
+2026-08-31 15:40:10,595 - INFO    - psu_redundancy.py  [line:248] - Ready to check the PSU status in elapsed time 180s
+2026-08-31 15:40:10,595 - INFO    - psu_redundancy.py  [line:393] - Check PSU status in sel info
+2026-08-31 15:40:10,595 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel elist | grep PSU
+2026-08-31 15:40:10,595 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel elist | grep PSU
+2026-08-31 15:40:13,209 - DEBUG   - commapi.py         [line: 96] - 
+  34 | 08/31/2026 | 07:40:07 | Power Supply PSU0_Supply | Power Supply AC lost | Deasserted
+  35 | 08/31/2026 | 07:40:07 | Power Supply Redundant_PSU | Fully Redundant | Asserted
+>>> Return code: 0
+
+2026-08-31 15:40:13,209 - INFO    - psu_redundancy.py  [line:463] -   35 | 08/31/2026 | 07:40:07 | Power Supply Redundant_PSU | Fully Redundant | Asserted
+2026-08-31 15:40:13,209 - INFO    - psu_redundancy.py  [line:435] - 34 | 08/31/2026 | 07:40:07 | Power Supply PSU0_Supply | Power Supply AC lost | Deasserted
+2026-08-31 15:40:13,209 - INFO    - psu_redundancy.py  [line:481] - PSU0 check PASS
+2026-08-31 15:40:13,209 - INFO    - psu_redundancy.py  [line:482] - Delete the sel info
+2026-08-31 15:40:13,209 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel delete 53
+2026-08-31 15:40:13,209 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel delete 53
+2026-08-31 15:40:13,254 - DEBUG   - commapi.py         [line: 96] - 
+Deleted entry 53
+>>> Return code: 0
+
+2026-08-31 15:40:13,254 - INFO    - psu_redundancy.py  [line:486] - Deleted entry 53
+2026-08-31 15:40:13,254 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel delete 52
+2026-08-31 15:40:13,254 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel delete 52
+2026-08-31 15:40:13,289 - DEBUG   - commapi.py         [line: 96] - 
+Deleted entry 52
+>>> Return code: 0
+
+2026-08-31 15:40:13,289 - INFO    - psu_redundancy.py  [line:486] - Deleted entry 52
+2026-08-31 15:40:13,289 - INFO    - psu_redundancy.py  [line:264] - The status of PSU0 on: check PASS
+2026-08-31 15:40:13,289 - INFO    - psu_redundancy.py  [line:277] - Execute PSU[0] on pass
+2026-08-31 15:40:13,289 - INFO    - psu_redundancy.py  [line:127] - check PSU1 status
+2026-08-31 15:40:13,289 - INFO    - psu_redundancy.py  [line:134] - Record the sel info before executing psu1 off
+2026-08-31 15:40:13,289 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel elist | grep PSU
+2026-08-31 15:40:13,289 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel elist | grep PSU
+2026-08-31 15:40:15,881 - DEBUG   - commapi.py         [line: 96] - 
+
+>>> Return code: 1
+
+2026-08-31 15:40:15,881 - INFO    - psu_redundancy.py  [line:139] - Execute PSU[1] Power OFF by MiddleWareRegister.pdu_control
+2026-08-31 15:40:15,881 - DEBUG   - base_testcase.py   [line:274] - Start pdu_control by caller QtPsuReduandancyTest_PsuSwitch1_0
+2026-08-31 15:40:15,881 - DEBUG   - run_mw.py          [line:142] - Middleware pdu_control start...
+2026-08-31 15:40:20,996 - DEBUG   - run_mw.py          [line:162] - Middleware pdu_control duration time: 5 s
+2026-08-31 15:40:20,996 - DEBUG   - base_attr.py       [line:1246] - pdu_control return: (0, {'psu_list': [1], 'ctrl_type': 1, 'caller': 'QtPsuReduandancyTest_PsuSwitch1_0'})
+2026-08-31 15:40:20,996 - INFO    - psu_redundancy.py  [line:142] - Ready to check the PSU Control Result
+2026-08-31 15:40:20,996 - INFO    - psu_redundancy.py  [line:248] - Ready to check the PSU status in elapsed time 180s
+2026-08-31 15:40:20,996 - INFO    - psu_redundancy.py  [line:393] - Check PSU status in sel info
+2026-08-31 15:40:20,996 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel elist | grep PSU
+2026-08-31 15:40:20,996 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel elist | grep PSU
+2026-08-31 15:40:23,750 - DEBUG   - commapi.py         [line: 96] - 
+  36 | 08/31/2026 | 07:40:20 | Power Supply PSU1_Supply | Power Supply AC lost | Asserted
+  37 | 08/31/2026 | 07:40:20 | Power Supply Redundant_PSU | Redundancy Lost | Asserted
+>>> Return code: 0
+
+2026-08-31 15:40:23,750 - INFO    - psu_redundancy.py  [line:444] -   37 | 08/31/2026 | 07:40:20 | Power Supply Redundant_PSU | Redundancy Lost | Asserted
+2026-08-31 15:40:23,750 - INFO    - psu_redundancy.py  [line:435] - 36 | 08/31/2026 | 07:40:20 | Power Supply PSU1_Supply | Power Supply AC lost | Asserted
+2026-08-31 15:40:23,750 - INFO    - psu_redundancy.py  [line:481] - PSU1 check PASS
+2026-08-31 15:40:23,750 - INFO    - psu_redundancy.py  [line:482] - Delete the sel info
+2026-08-31 15:40:23,750 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel delete 55
+2026-08-31 15:40:23,750 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel delete 55
+2026-08-31 15:40:23,786 - DEBUG   - commapi.py         [line: 96] - 
+Deleted entry 55
+>>> Return code: 0
+
+2026-08-31 15:40:23,786 - INFO    - psu_redundancy.py  [line:486] - Deleted entry 55
+2026-08-31 15:40:23,786 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel delete 54
+2026-08-31 15:40:23,786 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel delete 54
+2026-08-31 15:40:23,820 - DEBUG   - commapi.py         [line: 96] - 
+Deleted entry 54
+>>> Return code: 0
+
+2026-08-31 15:40:23,820 - INFO    - psu_redundancy.py  [line:486] - Deleted entry 54
+2026-08-31 15:40:23,820 - INFO    - psu_redundancy.py  [line:264] - The status of PSU1 off: check PASS
+2026-08-31 15:40:23,820 - INFO    - psu_redundancy.py  [line:277] - Execute PSU[1] off pass
+2026-08-31 15:40:23,820 - INFO    - psu_redundancy.py  [line:155] - Sleep 300s...
+2026-08-31 15:45:23,820 - INFO    - psu_redundancy.py  [line:127] - check PSU1 status
+2026-08-31 15:45:23,820 - INFO    - psu_redundancy.py  [line:134] - Record the sel info before executing psu1 on
+2026-08-31 15:45:23,820 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel elist | grep PSU
+2026-08-31 15:45:23,820 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel elist | grep PSU
+2026-08-31 15:45:26,326 - DEBUG   - commapi.py         [line: 96] - 
+
+>>> Return code: 1
+
+2026-08-31 15:45:26,326 - INFO    - psu_redundancy.py  [line:139] - Execute PSU[1] Power ON by MiddleWareRegister.pdu_control
+2026-08-31 15:45:26,326 - DEBUG   - base_testcase.py   [line:274] - Start pdu_control by caller QtPsuReduandancyTest_PsuSwitch1_0
+2026-08-31 15:45:26,326 - DEBUG   - run_mw.py          [line:142] - Middleware pdu_control start...
+2026-08-31 15:45:31,431 - DEBUG   - run_mw.py          [line:162] - Middleware pdu_control duration time: 5 s
+2026-08-31 15:45:31,431 - DEBUG   - base_attr.py       [line:1246] - pdu_control return: (0, {'psu_list': [1], 'ctrl_type': 0, 'caller': 'QtPsuReduandancyTest_PsuSwitch1_0'})
+2026-08-31 15:45:31,431 - INFO    - psu_redundancy.py  [line:142] - Ready to check the PSU Control Result
+2026-08-31 15:45:31,431 - INFO    - psu_redundancy.py  [line:248] - Ready to check the PSU status in elapsed time 180s
+2026-08-31 15:45:31,431 - INFO    - psu_redundancy.py  [line:393] - Check PSU status in sel info
+2026-08-31 15:45:31,431 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel elist | grep PSU
+2026-08-31 15:45:31,431 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel elist | grep PSU
+2026-08-31 15:45:33,984 - DEBUG   - commapi.py         [line: 96] - 
+  38 | 08/31/2026 | 07:45:27 | Power Supply PSU1_Supply | Power Supply AC lost | Deasserted
+  39 | 08/31/2026 | 07:45:27 | Power Supply Redundant_PSU | Fully Redundant | Asserted
+>>> Return code: 0
+
+2026-08-31 15:45:33,984 - INFO    - psu_redundancy.py  [line:463] -   39 | 08/31/2026 | 07:45:27 | Power Supply Redundant_PSU | Fully Redundant | Asserted
+2026-08-31 15:45:33,984 - INFO    - psu_redundancy.py  [line:435] - 38 | 08/31/2026 | 07:45:27 | Power Supply PSU1_Supply | Power Supply AC lost | Deasserted
+2026-08-31 15:45:33,984 - INFO    - psu_redundancy.py  [line:481] - PSU1 check PASS
+2026-08-31 15:45:33,984 - INFO    - psu_redundancy.py  [line:482] - Delete the sel info
+2026-08-31 15:45:33,984 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel delete 57
+2026-08-31 15:45:33,984 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel delete 57
+2026-08-31 15:45:34,014 - DEBUG   - commapi.py         [line: 96] - 
+Deleted entry 57
+>>> Return code: 0
+
+2026-08-31 15:45:34,014 - INFO    - psu_redundancy.py  [line:486] - Deleted entry 57
+2026-08-31 15:45:34,014 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel delete 56
+2026-08-31 15:45:34,014 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel delete 56
+2026-08-31 15:45:34,043 - DEBUG   - commapi.py         [line: 96] - 
+Deleted entry 56
+>>> Return code: 0
+
+2026-08-31 15:45:34,043 - INFO    - psu_redundancy.py  [line:486] - Deleted entry 56
+2026-08-31 15:45:34,043 - INFO    - psu_redundancy.py  [line:264] - The status of PSU1 on: check PASS
+2026-08-31 15:45:34,043 - INFO    - psu_redundancy.py  [line:277] - Execute PSU[1] on pass
+2026-08-31 15:45:34,043 - INFO    - psu_redundancy.py  [line:127] - check PSU0 status
+2026-08-31 15:45:34,043 - INFO    - psu_redundancy.py  [line:134] - Record the sel info before executing psu0 off
+2026-08-31 15:45:34,043 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel elist | grep PSU
+2026-08-31 15:45:34,043 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel elist | grep PSU
+2026-08-31 15:45:36,556 - DEBUG   - commapi.py         [line: 96] - 
+
+>>> Return code: 1
+
+2026-08-31 15:45:36,556 - INFO    - psu_redundancy.py  [line:139] - Execute PSU[0] Power OFF by MiddleWareRegister.pdu_control
+2026-08-31 15:45:36,556 - DEBUG   - base_testcase.py   [line:274] - Start pdu_control by caller QtPsuReduandancyTest_PsuSwitch1_0
+2026-08-31 15:45:36,556 - DEBUG   - run_mw.py          [line:142] - Middleware pdu_control start...
+2026-08-31 15:45:41,673 - DEBUG   - run_mw.py          [line:162] - Middleware pdu_control duration time: 5 s
+2026-08-31 15:45:41,673 - DEBUG   - base_attr.py       [line:1246] - pdu_control return: (0, {'psu_list': [0], 'ctrl_type': 1, 'caller': 'QtPsuReduandancyTest_PsuSwitch1_0'})
+2026-08-31 15:45:41,673 - INFO    - psu_redundancy.py  [line:142] - Ready to check the PSU Control Result
+2026-08-31 15:45:41,673 - INFO    - psu_redundancy.py  [line:248] - Ready to check the PSU status in elapsed time 180s
+2026-08-31 15:45:41,673 - INFO    - psu_redundancy.py  [line:393] - Check PSU status in sel info
+2026-08-31 15:45:41,673 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel elist | grep PSU
+2026-08-31 15:45:41,673 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel elist | grep PSU
+2026-08-31 15:45:44,247 - DEBUG   - commapi.py         [line: 96] - 
+  3a | 08/31/2026 | 07:45:40 | Power Supply PSU0_Supply | Power Supply AC lost | Asserted
+  3b | 08/31/2026 | 07:45:40 | Power Supply Redundant_PSU | Redundancy Lost | Asserted
+>>> Return code: 0
+
+2026-08-31 15:45:44,247 - INFO    - psu_redundancy.py  [line:444] -   3b | 08/31/2026 | 07:45:40 | Power Supply Redundant_PSU | Redundancy Lost | Asserted
+2026-08-31 15:45:44,247 - INFO    - psu_redundancy.py  [line:435] - 3a | 08/31/2026 | 07:45:40 | Power Supply PSU0_Supply | Power Supply AC lost | Asserted
+2026-08-31 15:45:44,247 - INFO    - psu_redundancy.py  [line:481] - PSU0 check PASS
+2026-08-31 15:45:44,247 - INFO    - psu_redundancy.py  [line:482] - Delete the sel info
+2026-08-31 15:45:44,247 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel delete 59
+2026-08-31 15:45:44,247 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel delete 59
+2026-08-31 15:45:44,279 - DEBUG   - commapi.py         [line: 96] - 
+Deleted entry 59
+>>> Return code: 0
+
+2026-08-31 15:45:44,279 - INFO    - psu_redundancy.py  [line:486] - Deleted entry 59
+2026-08-31 15:45:44,279 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel delete 58
+2026-08-31 15:45:44,279 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel delete 58
+2026-08-31 15:45:44,390 - DEBUG   - commapi.py         [line: 96] - 
+Deleted entry 58
+>>> Return code: 0
+
+2026-08-31 15:45:44,390 - INFO    - psu_redundancy.py  [line:486] - Deleted entry 58
+2026-08-31 15:45:44,390 - INFO    - psu_redundancy.py  [line:264] - The status of PSU0 off: check PASS
+2026-08-31 15:45:44,390 - INFO    - psu_redundancy.py  [line:277] - Execute PSU[0] off pass
+2026-08-31 15:45:44,390 - INFO    - psu_redundancy.py  [line:155] - Sleep 300s...
+2026-08-31 15:50:44,390 - INFO    - psu_redundancy.py  [line:282] - Turning on all ports at the end
+2026-08-31 15:50:44,390 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel elist
+2026-08-31 15:50:44,390 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel elist
+2026-08-31 15:50:46,936 - DEBUG   - commapi.py         [line: 96] - 
+   1 | 08/29/2026 | 01:06:01 | Event Logging Disabled Event_Log | Log area reset/cleared | Asserted
+   2 | 08/29/2026 | 01:06:07 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+   3 | 08/29/2026 | 01:06:21 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+   4 | 08/29/2026 | 01:06:21 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+   5 | 08/29/2026 | 01:06:43 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+   6 | 08/29/2026 | 01:06:44 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+   7 | 08/29/2026 | 01:06:48 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+   8 | 08/29/2026 | 01:07:10 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+   9 | 08/29/2026 | 01:08:46 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+   a | 08/29/2026 | 01:57:41 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+   b | 08/29/2026 | 01:57:55 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+   c | 08/29/2026 | 01:57:55 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+   d | 08/29/2026 | 01:58:17 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+   e | 08/29/2026 | 01:58:19 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+   f | 08/29/2026 | 01:58:23 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  10 | 08/29/2026 | 01:58:45 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  11 | 08/29/2026 | 02:04:13 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+  12 | 08/29/2026 | 02:27:07 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  13 | 08/29/2026 | 02:27:21 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  14 | 08/29/2026 | 02:27:21 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+  15 | 08/29/2026 | 02:27:43 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  16 | 08/29/2026 | 02:27:47 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  17 | 08/29/2026 | 02:27:51 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  18 | 08/29/2026 | 02:28:13 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  19 | 08/29/2026 | 02:31:35 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+  1a | 08/29/2026 | 02:54:30 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  1b | 08/29/2026 | 02:54:44 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  1c | 08/29/2026 | 02:54:44 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+  1d | 08/29/2026 | 02:55:06 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  1e | 08/29/2026 | 02:55:07 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  1f | 08/29/2026 | 02:55:11 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  20 | 08/29/2026 | 02:55:33 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  21 | 08/29/2026 | 02:57:08 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+  22 | 08/29/2026 | 03:24:41 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  23 | 08/29/2026 | 03:24:55 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  24 | 08/29/2026 | 03:24:55 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+  25 | 08/29/2026 | 03:25:17 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  26 | 08/29/2026 | 03:25:21 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  27 | 08/29/2026 | 03:25:25 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  28 | 08/29/2026 | 03:25:47 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  29 | 08/29/2026 | 03:27:19 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+>>> Return code: 0
+
+2026-08-31 15:50:46,936 - INFO    - psu_redundancy.py  [line:291] - tearDown: Execute all PSU[0, 1] Power on
+2026-08-31 15:50:46,936 - DEBUG   - base_testcase.py   [line:274] - Start pdu_control by caller QtPsuReduandancyTest_PsuSwitch1_0
+2026-08-31 15:50:46,936 - DEBUG   - run_mw.py          [line:142] - Middleware pdu_control start...
+2026-08-31 15:50:52,155 - DEBUG   - run_mw.py          [line:162] - Middleware pdu_control duration time: 6 s
+2026-08-31 15:50:52,155 - DEBUG   - base_attr.py       [line:1246] - pdu_control return: (0, {'psu_list': [0, 1], 'ctrl_type': 0, 'caller': 'QtPsuReduandancyTest_PsuSwitch1_0'})
+2026-08-31 15:50:55,155 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel elist | grep -i psu
+2026-08-31 15:50:55,155 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel elist | grep -i psu
+2026-08-31 15:50:57,722 - DEBUG   - commapi.py         [line: 96] - 
+  3c | 08/31/2026 | 07:50:48 | Power Supply PSU0_Supply | Power Supply AC lost | Deasserted
+  3d | 08/31/2026 | 07:50:48 | Power Supply Redundant_PSU | Fully Redundant | Asserted
+>>> Return code: 0
+
+2026-08-31 15:50:57,722 - INFO    - psu_redundancy.py  [line:302] - Delete the sel info
+2026-08-31 15:50:57,722 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel delete 0x3c
+2026-08-31 15:50:57,722 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel delete 0x3c
+2026-08-31 15:50:57,769 - DEBUG   - commapi.py         [line: 96] - 
+Deleted entry 60
+>>> Return code: 0
+
+2026-08-31 15:50:57,769 - INFO    - psu_redundancy.py  [line:302] - Delete the sel info
+2026-08-31 15:50:57,769 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel delete 0x3d
+2026-08-31 15:50:57,769 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel delete 0x3d
+2026-08-31 15:50:57,805 - DEBUG   - commapi.py         [line: 96] - 
+Deleted entry 61
+>>> Return code: 0
+
+2026-08-31 15:50:57,805 - INFO    - psu_redundancy.py  [line:226] - Record the current sel info
+2026-08-31 15:50:57,805 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): ipmitool sel elist
+2026-08-31 15:50:57,805 - DEBUG   - commapi.py         [line: 94] - 
+>>> ipmitool sel elist
+2026-08-31 15:51:00,321 - DEBUG   - commapi.py         [line: 96] - 
+   1 | 08/29/2026 | 01:06:01 | Event Logging Disabled Event_Log | Log area reset/cleared | Asserted
+   2 | 08/29/2026 | 01:06:07 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+   3 | 08/29/2026 | 01:06:21 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+   4 | 08/29/2026 | 01:06:21 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+   5 | 08/29/2026 | 01:06:43 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+   6 | 08/29/2026 | 01:06:44 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+   7 | 08/29/2026 | 01:06:48 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+   8 | 08/29/2026 | 01:07:10 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+   9 | 08/29/2026 | 01:08:46 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+   a | 08/29/2026 | 01:57:41 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+   b | 08/29/2026 | 01:57:55 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+   c | 08/29/2026 | 01:57:55 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+   d | 08/29/2026 | 01:58:17 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+   e | 08/29/2026 | 01:58:19 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+   f | 08/29/2026 | 01:58:23 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  10 | 08/29/2026 | 01:58:45 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  11 | 08/29/2026 | 02:04:13 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+  12 | 08/29/2026 | 02:27:07 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  13 | 08/29/2026 | 02:27:21 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  14 | 08/29/2026 | 02:27:21 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+  15 | 08/29/2026 | 02:27:43 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  16 | 08/29/2026 | 02:27:47 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  17 | 08/29/2026 | 02:27:51 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  18 | 08/29/2026 | 02:28:13 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  19 | 08/29/2026 | 02:31:35 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+  1a | 08/29/2026 | 02:54:30 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  1b | 08/29/2026 | 02:54:44 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  1c | 08/29/2026 | 02:54:44 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+  1d | 08/29/2026 | 02:55:06 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  1e | 08/29/2026 | 02:55:07 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  1f | 08/29/2026 | 02:55:11 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  20 | 08/29/2026 | 02:55:33 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  21 | 08/29/2026 | 02:57:08 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+  22 | 08/29/2026 | 03:24:41 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  23 | 08/29/2026 | 03:24:55 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  24 | 08/29/2026 | 03:24:55 | System Boot Initiated SYS_Boot | Initiated by hard reset | Asserted
+  25 | 08/29/2026 | 03:25:17 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  26 | 08/29/2026 | 03:25:21 | System ACPI Power State ACPI_State | S5/G2: soft-off | Asserted
+  27 | 08/29/2026 | 03:25:25 | System ACPI Power State ACPI_State | S0/G0: working | Asserted
+  28 | 08/29/2026 | 03:25:47 | System Boot Initiated #0xb0 | Initiated by power up | Asserted
+  29 | 08/29/2026 | 03:27:19 | OS Boot OS_Boot | boot completed - device not specified | Asserted
+>>> Return code: 0
+
+2026-08-31 15:51:00,321 - INFO    - base_testcase.py   [line:339] - Testitem QtPsuReduandancyTest_PsuSwitch1_0 Endtime: 2026-08-31 15:51:00
+2026-08-31 15:51:00,322 - INFO    - base_testcase.py   [line:343] - Testitem QtPsuReduandancyTest_PsuSwitch1_0 duration: 0:11:03
+2026-08-31 15:51:00,322 - INFO    - base_testcase.py   [line:443] - Return code: 0
+2026-08-31 15:51:00,322 - INFO    - base_testcase.py   [line:444] - Return result: PSU Redundancy test passed
+2026-08-31 15:51:00,322 - DEBUG   - base_testcase.py   [line:274] - Start test_item_end_BD by caller QtPsuReduandancyTest_PsuSwitch1_0
+2026-08-31 15:51:00,322 - WARNING - run_mw.py          [line: 94] - The TurnOn of middleware test_item_end_BD is off, skip!
+2026-08-31 15:51:00,322 - DEBUG   - base_attr.py       [line:1246] - test_item_end_BD return: (0, {})
+2026-08-31 15:51:00,322 - DEBUG   - base_testcase.py   [line:274] - Start test_item_end by caller QtPsuReduandancyTest_PsuSwitch1_0
+2026-08-31 15:51:00,322 - DEBUG   - run_mw.py          [line:142] - Middleware test_item_end start...
+2026-08-31 15:51:00,323 - DEBUG   - run_mw.py          [line:162] - Middleware test_item_end duration time: 0 s
+2026-08-31 15:51:00,323 - DEBUG   - base_attr.py       [line:1246] - test_item_end return: (0, {'item_result': {'starttime': '2026-08-31 15:39:57', 'endtime': '2026-08-31 15:51:00', 'duration': '0:11:03', 'errcode': 0, 'retstr': 'PSU Redundancy test passed', 'log': 'QtPsuReduandancyTest_PsuSwitch1_0_260831153950', 'whiteboard': {}, 'extra': {}, 'Desc': 'PSU Redundancy PSU_switch', 'Tags': 'PSU Redundancy', 'Module': 'psu_redundancy', 'Class': 'PSURedundancy', 'Function': 'test_psu_redundancy', 'Timeout': '20m', 'Args': [], 'Kwargs': {'config': {'cycle_sec': 600, 'on_1': {'index': 0, 'psu_id': 0, 'timeout': 180, 'action': 'on'}, 'off_2': {'index': 1, 'psu_id': 1, 'sleep': 300, 'timeout': 180, 'action': 'off'}, 'on_2': {'index': 1, 'psu_id': 1, 'timeout': 180, 'action': 'on'}, 'off_1': {'index': 0, 'psu_id': 0, 'sleep': 300, 'timeout': 180, 'action': 'off'}}, 'post_action_delay': 5, 'snmp_mode': '380V', 'custom_spec': {'redundancy_lost': False, 'ac_lost': True}}, 'Version': 'NULL', 'TestNode': [0], 'TestItem': 'QtPsuReduandancyTest_PsuSwitch1', 'Parallel': False, 'Id': 0, 'SeqId': 0, 'Inst': 'QtPsuReduandancyTest_PsuSwitch1_0', 'node_id': 0, 'Parent': ''}, 'caller': 'QtPsuReduandancyTest_PsuSwitch1_0'})
+2026-08-31 15:51:00,323 - INFO    - base_testcase.py   [line:335] - ######################################################################

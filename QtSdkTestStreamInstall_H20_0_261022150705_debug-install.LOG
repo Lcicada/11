@@ -1,0 +1,310 @@
+2026-10-22 15:07:06,156 - INFO    - base_testcase.py   [line:335] - ######################################################################
+2026-10-22 15:07:06,156 - INFO    - base_testcase.py   [line:332] - Testitem QtSdkTestStreamInstall_H20_0 Starttime: 2026-10-22 15:07:06
+2026-10-22 15:07:06,157 - DEBUG   - base_testcase.py   [line:274] - Start test_item_start_BD by caller QtSdkTestStreamInstall_H20_0
+2026-10-22 15:07:06,157 - WARNING - run_mw.py          [line: 94] - The TurnOn of middleware test_item_start_BD is off, skip!
+2026-10-22 15:07:06,157 - DEBUG   - base_attr.py       [line:1246] - test_item_start_BD return: (0, {})
+2026-10-22 15:07:06,157 - DEBUG   - base_testcase.py   [line:274] - Start test_item_start by caller QtSdkTestStreamInstall_H20_0
+2026-10-22 15:07:06,157 - DEBUG   - run_mw.py          [line:142] - Middleware test_item_start start...
+2026-10-22 15:07:06,158 - DEBUG   - run_mw.py          [line:162] - Middleware test_item_start duration time: 0 s
+2026-10-22 15:07:06,158 - DEBUG   - base_attr.py       [line:1246] - test_item_start return: (0, {'item_result': {'starttime': '2026-10-22 15:07:06', 'endtime': '', 'duration': '', 'errcode': 0, 'retstr': '', 'log': 'QtSdkTestStreamInstall_H20_0_261022150705', 'whiteboard': {}, 'extra': {}, 'Desc': '', 'Tags': 'SDK & TestStream Install', 'Module': 'install_env', 'Class': 'InstallEnv', 'Function': 'test_install_env', 'Timeout': '20m', 'Args': [], 'Kwargs': {'tool_name': 'GPU_ENV_H20.L20', 'command': ['ENVSET.SH'], 'check_gpu_driver_installation_status': False, 'nvidia_fabricmanager_pkg_name': 'nvidia-fabricmanager-535', 'gpu_driver_version': '535.216.03'}, 'Version': 'NULL', 'TestNode': [0], 'TestItem': 'QtSdkTestStreamInstall_H20', 'Parallel': False, 'Id': 0, 'SeqId': 0, 'Inst': 'QtSdkTestStreamInstall_H20_0', 'node_id': 0, 'Parent': ''}, 'caller': 'QtSdkTestStreamInstall_H20_0'})
+2026-10-22 15:07:06,158 - DEBUG   - base_testcase.py   [line: 44] - QtSdkTestStreamInstall_H20_0 info: {
+    "Desc": "",
+    "Tags": "SDK & TestStream Install",
+    "Module": "install_env",
+    "Class": "InstallEnv",
+    "Function": "test_install_env",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {
+        "tool_name": "GPU_ENV_H20.L20",
+        "command": [
+            "ENVSET.SH"
+        ],
+        "check_gpu_driver_installation_status": false,
+        "nvidia_fabricmanager_pkg_name": "nvidia-fabricmanager-535",
+        "gpu_driver_version": "535.216.03"
+    },
+    "Version": "NULL",
+    "TestNode": [
+        0
+    ],
+    "TestItem": "QtSdkTestStreamInstall_H20",
+    "Parallel": false,
+    "Id": 0,
+    "SeqId": 0,
+    "Inst": "QtSdkTestStreamInstall_H20_0",
+    "node_id": 0,
+    "Parent": ""
+}
+2026-10-22 15:07:06,158 - INFO    - install_env.py     [line: 57] - skip check CUDA, NVIDIA driver, and Fabric Manager installation status
+2026-10-22 15:07:06,158 - DEBUG   - base_testcase.py   [line:274] - Start file_download by caller QtSdkTestStreamInstall_H20_0
+2026-10-22 15:07:06,158 - DEBUG   - run_mw.py          [line:142] - Middleware file_download start...
+2026-10-22 15:07:34,520 - DEBUG   - run_mw.py          [line:162] - Middleware file_download duration time: 28 s
+2026-10-22 15:07:34,520 - DEBUG   - base_attr.py       [line:1246] - file_download return: (0, {'GPU_ENV_H20': '/run/work/GPU_ENV_H20.L20/testsh/ENVSET.SH'})
+2026-10-22 15:07:34,520 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): chmod -R 777 /run/work/GPU_ENV_H20.L20
+2026-10-22 15:07:34,520 - DEBUG   - commapi.py         [line: 94] - 
+>>> chmod -R 777 /run/work/GPU_ENV_H20.L20
+2026-10-22 15:07:34,520 - DEBUG   - commapi.py         [line: 96] - 
+
+>>> Return code: 0
+
+2026-10-22 15:07:34,520 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): cd /run/work/GPU_ENV_H20.L20; find . -type f -iname "*.sh" -print0 | xargs -0 dos2unix
+2026-10-22 15:07:34,520 - DEBUG   - commapi.py         [line: 94] - 
+>>> cd /run/work/GPU_ENV_H20.L20; find . -type f -iname "*.sh" -print0 | xargs -0 dos2unix
+2026-10-22 15:07:34,522 - DEBUG   - commapi.py         [line: 96] - 
+dos2unix: converting file ./GPU_ENV_H20.SH to Unix format...
+dos2unix: converting file ./wrapper_20261022T150022.sh to Unix format...
+dos2unix: converting file ./wrapper_20261022T104019.sh to Unix format...
+dos2unix: converting file ./wrapper_20261022T094615.sh to Unix format...
+dos2unix: converting file ./wrapper_20261022T112451.sh to Unix format...
+dos2unix: converting file ./testsh/ENVSTOP_FAB.SH to Unix format...
+dos2unix: converting file ./testsh/ENVSET_NVqual.SH to Unix format...
+dos2unix: converting file ./testsh/ENVSET_FAB.SH to Unix format...
+dos2unix: converting file ./testsh/ENVSET_backup.SH to Unix format...
+dos2unix: converting file ./testsh/ENVSET.SH to Unix format...
+dos2unix: converting file ./testsh/ENVRM.SH to Unix format...
+dos2unix: converting file ./testsh/CHECKGPUTOPO.SH to Unix format...
+dos2unix: converting file ./src/com_func.sh to Unix format...
+>>> Return code: 0
+
+2026-10-22 15:07:34,522 - INFO    - install_env.py     [line: 61] - Downloaded install environment paths: ['/run/work/GPU_ENV_H20.L20/testsh/ENVSET.SH']
+2026-10-22 15:07:34,522 - INFO    - install_env.py     [line: 97] - Ready to execute ENVSET.SH...
+2026-10-22 15:07:34,523 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): chmod 777 /run/work/GPU_ENV_H20.L20/wrapper_20261022T150734.sh
+2026-10-22 15:07:34,523 - DEBUG   - commapi.py         [line: 94] - 
+>>> chmod 777 /run/work/GPU_ENV_H20.L20/wrapper_20261022T150734.sh
+2026-10-22 15:07:34,523 - DEBUG   - commapi.py         [line: 96] - 
+
+>>> Return code: 0
+
+2026-10-22 15:07:34,523 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): cd /run/work/GPU_ENV_H20.L20 && ./wrapper_20261022T150734.sh ENVSET.SH
+2026-10-22 15:07:34,523 - DEBUG   - commapi.py         [line: 94] - 
+>>> cd /run/work/GPU_ENV_H20.L20 && ./wrapper_20261022T150734.sh ENVSET.SH
+2026-10-22 15:07:45,640 - DEBUG   - commapi.py         [line: 96] - 
+Now you can use this script functions in your current env!
+10/22/2026 15:07:34 [[34;1m DEBUG [0m] WORKSPACE: /run/work/GPU_ENV_H20.L20
+2026-10-22 15:07:34 [[0;32mINFO[0m] Main Script: ./wrapper_20261022T150734.sh - Version: v0.0.1
+2026-10-22 15:07:34 [[0;32mINFO[0m] SubprocessRun: testsh/ENVSET.SH 
+2026-10-22 15:07:34 [[0;32mINFO[0m] Do : pre_setup
+2026-10-22 15:07:34 [[0;32mINFO[0m] Cmd: ps aux | grep unattended
+2026-10-22 15:07:34 [[0;32mINFO[0m] Out: 0
+2026-10-22 15:07:34 [[0;32mINFO[0m] chech lsmod | grep mods: 0
+2026-10-22 15:07:34 [[0;32mINFO[0m] Cmd: mst start
+Starting MST (Mellanox Software Tools) driver set
+Loading MST PCI module - Success
+[warn] mst_pciconf is already loaded, skipping
+Create devices
+-W- Missing "lsusb" command, skipping MTUSB devices detection
+Unloading MST PCI module (unused) - Success
+2026-10-22 15:07:34 [[0;32mINFO[0m] Cmd: mst status -v
+MST modules:
+------------
+    MST PCI module is not loaded
+    MST PCI configuration module loaded
+PCI devices:
+------------
+DEVICE_TYPE             MST                           PCI             RDMA            NET                                     NUMA  
+BlueField3(rev:1)       /dev/mst/mt41692_pciconf3     0001:a4:00.0    mlx5_7          net-enP1s114f0np0                       1     
+
+BlueField3(rev:1)       /dev/mst/mt41692_pciconf2     0001:04:00.0    mlx5_6          net-enP1s112f0np0                       1     
+
+BlueField3(rev:1)       /dev/mst/mt41692_pciconf1     0000:a4:00.0    mlx5_5          net-ens110f0np0                         0     
+
+BlueField3(rev:1)       /dev/mst/mt41692_pciconf0     0000:04:00.0    mlx5_4          net-ens108f0np0                         0     
+
+ConnectX7(rev:0)        /dev/mst/mt4129_pciconf1.1    0001:6c:00.1    mlx5_3          net-enP1p108s0f1np1                     1     
+
+ConnectX7(rev:0)        /dev/mst/mt4129_pciconf1      0001:6c:00.0    mlx5_2          net-enP1p108s0f0np0                     1     
+
+ConnectX7(rev:0)        /dev/mst/mt4129_pciconf0.1    0000:65:00.1    mlx5_1          net-enp101s0f1np1                       0     
+
+ConnectX7(rev:0)        /dev/mst/mt4129_pciconf0      0000:65:00.0    mlx5_0          net-enp101s0f0np0                       0     
+
+
+2026-10-22 15:07:34 [[0;32mINFO[0m] Install CUDA,Driver,and NV-FM serice......
+2026-10-22 15:07:34 [[0;32mINFO[0m] 
+------------------------------------------------
+
+2026-10-22 15:07:34 [[0;32mINFO[0m] Do: install_cuda
+2026-10-22 15:07:34 [[0;33mWARN[0m] Already installed cuda!!!
+lrwxrwxrwx 1 root root 21 Oct 22 09:46 /usr/local/cuda -> /usr/local/cuda-12.2/
+2026-10-22 15:07:34 [[0;32mINFO[0m] cuda version info: /usr/local/cuda/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2023 NVIDIA Corporation
+Built on Tue_Aug_15_22:02:13_PDT_2023
+Cuda compilation tools, release 12.2, V12.2.140
+Build cuda_12.2.r12.2/compiler.33191640_0
+2026-10-22 15:07:34 [[0;32mINFO[0m] ---------------before---------------
+2026-10-22 15:07:34 [[0;32mINFO[0m] PATH : /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mellanox/doca/tools/:/opt/QT-BQC
+2026-10-22 15:07:34 [[0;32mINFO[0m] LD_LIBRARY_PATH : 
+2026-10-22 15:07:34 [[0;32mINFO[0m] ---------------after---------------
+2026-10-22 15:07:34 [[0;32mINFO[0m] PATH : /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mellanox/doca/tools/:/opt/QT-BQC:/usr/local/cuda/bin
+2026-10-22 15:07:34 [[0;32mINFO[0m] LD_LIBRARY_PATH : :/usr/local/cuda/lib64
+2026-10-22 15:07:34 [[0;32mINFO[0m] [Pass] - do install_cuda passed!
+2026-10-22 15:07:34 [[0;32mINFO[0m] 
+------------------------------------------------
+
+2026-10-22 15:07:34 [[0;32mINFO[0m] Do: install_sdk - 535.216.03
+2026-10-22 15:07:35 [[0;33mWARN[0m] NVIDIA Driver 535.216.03 already installed, skip.
+2026-10-22 15:07:35 [[0;32mINFO[0m] 
+------------------------------------------------
+
+2026-10-22 15:07:35 [[0;32mINFO[0m] Do  : install_nv_fabricmanager
+2026-10-22 15:07:35 [[0;32mINFO[0m] Cmd : dpkg -i /run/work/GPU_ENV_H20.L20/nvidia-fabricmanager-535_535.216.03-1_amd64.deb
+2026-10-22 15:07:35 [[0;32mINFO[0m] Ret : 0
+2026-10-22 15:07:35 [[0;32mINFO[0m] Out : 
+(Reading database ... 72223 files and directories currently installed.)
+Preparing to unpack .../nvidia-fabricmanager-535_535.216.03-1_amd64.deb ...
+Unpacking nvidia-fabricmanager-535 (535.216.03-1) over (535.216.03-1) ...
+Setting up nvidia-fabricmanager-535 (535.216.03-1) ...
+2026-10-22 15:07:35 [[0;32mINFO[0m] 
+------------------------------------------------
+
+Progress:[0;30;1m [Wait for 5(s)] [0m [0] | 
+Progress:[0;31;1m [Wait for 5(s)] [0m [1] / 
+Progress:[0;32;1m [Wait for 5(s)] [0m [2] - 
+Progress:[0;33;1m [Wait for 5(s)] [0m [3] \ 
+Progress:[0;34;1m [Wait for 5(s)] [0m [4] | 
+2026-10-22 15:07:40 [[0;32mINFO[0m] Do  : install_nv_fabricmanager
+2026-10-22 15:07:40 [[0;32mINFO[0m] Cmd : dpkg -i /run/work/GPU_ENV_H20.L20/nvidia-fabricmanager-dev-535_535.216.03-1_amd64.deb
+2026-10-22 15:07:40 [[0;32mINFO[0m] Ret : 0
+2026-10-22 15:07:40 [[0;32mINFO[0m] Out : 
+(Reading database ... 72223 files and directories currently installed.)
+Preparing to unpack .../nvidia-fabricmanager-dev-535_535.216.03-1_amd64.deb ...
+Unpacking nvidia-fabricmanager-dev-535 (535.216.03-1) over (535.216.03-1) ...
+Setting up nvidia-fabricmanager-dev-535 (535.216.03-1) ...
+Processing triggers for libc-bin (2.36-9+deb12u14) ...
+2026-10-22 15:07:40 [[0;32mINFO[0m] 
+------------------------------------------------
+
+Progress:[0;30;1m [Wait for 5(s)] [0m [0] | 
+Progress:[0;31;1m [Wait for 5(s)] [0m [1] / 
+Progress:[0;32;1m [Wait for 5(s)] [0m [2] - 
+Progress:[0;33;1m [Wait for 5(s)] [0m [3] \ 
+Progress:[0;34;1m [Wait for 5(s)] [0m [4] | 
+2026-10-22 15:07:45 [[0;32mINFO[0m] Cmd: nvidia-smi -pm 1
+Persistence mode is already Enabled for GPU 00000000:03:00.0.
+Persistence mode is already Enabled for GPU 00000000:3A:00.0.
+Persistence mode is already Enabled for GPU 00000000:A3:00.0.
+Persistence mode is already Enabled for GPU 00000000:D4:00.0.
+Persistence mode is already Enabled for GPU 00000001:03:00.0.
+Persistence mode is already Enabled for GPU 00000001:34:00.0.
+Persistence mode is already Enabled for GPU 00000001:A3:00.0.
+Persistence mode is already Enabled for GPU 00000001:D4:00.0.
+All done.
+2026-10-22 15:07:45 [[0;32mINFO[0m] Ret: 0
+2026-10-22 15:07:45 [[0;32mINFO[0m] Cmd: systemctl enable nvidia-fabricmanager
+2026-10-22 15:07:45 [[0;32mINFO[0m] Ret: 0
+2026-10-22 15:07:45 [[0;32mINFO[0m] Cmd: systemctl start nvidia-fabricmanager
+2026-10-22 15:07:45 [[0;32mINFO[0m] Ret: 0
+2026-10-22 15:07:45 [[0;32mINFO[0m] Cmd: systemctl status nvidia-fabricmanager
+● nvidia-fabricmanager.service - NVIDIA fabric manager service
+     Loaded: loaded (/lib/systemd/system/nvidia-fabricmanager.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-10-22 09:48:47 +07; 5h 18min ago
+   Main PID: 19843 (nv-fabricmanage)
+      Tasks: 17 (limit: 629145)
+     Memory: 4.7M
+        CPU: 3.154s
+     CGroup: /system.slice/nvidia-fabricmanager.service
+             └─19843 /usr/bin/nv-fabricmanager -c /usr/share/nvidia/nvswitch/fabricmanager.cfg
+
+Oct 22 09:48:46 debian systemd[1]: Starting nvidia-fabricmanager.service - NVIDIA fabric manager service...
+Oct 22 09:48:47 debian nv-fabricmanager[19843]: Connected to 1 node.
+Oct 22 09:48:47 debian nv-fabricmanager[19843]: Successfully configured all the available NVSwitches to route GPU NVLink traffic. NVLink Peer-to-Peer support will be enabled once the GPUs are successfully registered with the NVLink fabric.
+Oct 22 09:48:47 debian systemd[1]: Started nvidia-fabricmanager.service - NVIDIA fabric manager service.
+2026-10-22 15:07:45 [[0;32mINFO[0m] [Pass] - do install_nv_fabricmanager passed!
+2026-10-22 15:07:45 [[0;32mINFO[0m] Do : post_setup
+2026-10-22 15:07:45 [[0;32mINFO[0m] Cmd: depmod -a
+2026-10-22 15:07:45 [[0;32mINFO[0m] Ret: 0
+2026-10-22 15:07:45 [[0;32mINFO[0m] Reset PATH to origin!
+2026-10-22 15:07:45 [[0;32mINFO[0m] Reset LD_LIBRARY_PATH to origin!
+2026-10-22 15:07:45 [[0;32mINFO[0m] Backup the NV packages to /run/
+2026-10-22 15:07:45 [[0;34mDEBUG[0m] mv /run/work/GPU_ENV_H20.L20/pkg/ /run/
+mv: cannot move '/run/work/GPU_ENV_H20.L20/pkg/' to '/run/pkg': Directory not empty
+2026-10-22 15:07:45 [[0;34mDEBUG[0m] Show pkg tree: ls /run/pkg
+total 0
+drwxrwxrwx 2 root root 60 Oct 22 09:46 cuda
+drwxrwxrwx 2 root root 60 Oct 22 09:46 sdk
+4.4G	/run/pkg
+2026-10-22 15:07:45 [[0;34mDEBUG[0m] Cmd: lsmod | grep nvidia
+nvidia_uvm           1490944  0
+nvidia_drm             77824  0
+nvidia_modeset       1310720  1 nvidia_drm
+nvidia              56786944  46 nvidia_uvm,nvidia_modeset
+drm_kms_helper        311296  5 drm_vram_helper,ast,nvidia_drm
+drm                   630784  8 drm_kms_helper,drm_vram_helper,ast,nvidia,drm_ttm_helper,nvidia_drm,ttm
+2026-10-22 15:07:45 [[0;34mDEBUG[0m] Cmd: dpkg -l | grep nv
+ii  doca-openvswitch-common                2.9.4-0007-25.12-based-3.3.3                  amd64        Open vSwitch common components
+ii  doca-openvswitch-common-dbgsym         2.9.4-0007-25.12-based-3.3.3                  amd64        debug symbols for doca-openvswitch-common
+ii  doca-openvswitch-dev                   2.9.4-0007-25.12-based-3.3.3                  amd64        Open vSwitch OpenFlow development package (library, headers)
+ii  doca-openvswitch-ipsec                 2.9.4-0007-25.12-based-3.3.3                  amd64        Open vSwitch IPsec tunneling support
+ii  doca-openvswitch-pki                   2.9.4-0007-25.12-based-3.3.3                  all          Open vSwitch public key infrastructure dependency package
+ii  doca-openvswitch-switch                2.9.4-0007-25.12-based-3.3.3                  amd64        Open vSwitch switch implementations
+ii  doca-openvswitch-switch-dbgsym         2.9.4-0007-25.12-based-3.3.3                  amd64        debug symbols for doca-openvswitch-switch
+ii  doca-openvswitch-test                  2.9.4-0007-25.12-based-3.3.3                  all          Open vSwitch test package
+ii  doca-openvswitch-testcontroller        2.9.4-0007-25.12-based-3.3.3                  amd64        Simple controller for testing OpenFlow setups
+ii  doca-openvswitch-testcontroller-dbgsym 2.9.4-0007-25.12-based-3.3.3                  amd64        debug symbols for doca-openvswitch-testcontroller
+ii  doca-openvswitch-vtep                  2.9.4-0007-25.12-based-3.3.3                  amd64        Open vSwitch VTEP utilities
+ii  doca-openvswitch-vtep-dbgsym           2.9.4-0007-25.12-based-3.3.3                  amd64        debug symbols for doca-openvswitch-vtep
+ii  dos2unix                               7.4.3-1                                       amd64        convert text file line endings between CRLF and LF
+ii  libndctl6:amd64                        76.1-1                                        amd64        Utility library for managing the libnvdimm subsystem
+ii  libnvme1                               1.3-1+deb12u1                                 amd64        NVMe management library (library)
+ii  libopenvswitch:amd64                   2.17.8-1.2410068                              amd64        Open vSwitch common components
+ii  libtext-iconv-perl:amd64               1.7-8                                         amd64        module to convert between character sets in Perl
+ii  mlnx-nvme-dkms                         24.10.OFED.24.10.4.1.4.1-1                    all          DKMS support for nvme kernel module
+ii  nvidia-fabricmanager-535               535.216.03-1                                  amd64        Fabric Manager for NVSwitch based systems.
+ii  nvidia-fabricmanager-dev-535           535.216.03-1                                  amd64        Fabric Manager API headers and associated library
+ii  nvme-cli                               2.4+really2.3-3                               amd64        NVMe management tool
+ii  openvswitch-datapath-dkms              2.17.8-1.2410068                              all          Open vSwitch datapath module source - DKMS version
+ii  openvswitch-datapath-source            2.17.8-1.2410068                              all          Open vSwitch datapath module source - module-assistant version
+ii  python3-doca-openvswitch               2.9.4-0007-25.12-based-3.3.3                  amd64        Python 3 bindings for Open vSwitch
+ii  python3-psutil                         5.9.4-1+b1                                    amd64        module providing convenience functions for managing processes (Python3)
+ii  task-english                           3.73                                          all          General English environment
+2026-10-22 15:07:45 [[0;32mINFO[0m] Ret : 0
+2026-10-22 15:07:45 [[0;34mDEBUG[0m] Cmd: systemctl status nvidia-fabricmanager
+2026-10-22 15:07:45 [[0;32mINFO[0m] Ret : 0
+● nvidia-fabricmanager.service - NVIDIA fabric manager service
+     Loaded: loaded (/lib/systemd/system/nvidia-fabricmanager.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-10-22 09:48:47 +07; 5h 18min ago
+   Main PID: 19843 (nv-fabricmanage)
+      Tasks: 17 (limit: 629145)
+     Memory: 4.7M
+        CPU: 3.154s
+     CGroup: /system.slice/nvidia-fabricmanager.service
+             └─19843 /usr/bin/nv-fabricmanager -c /usr/share/nvidia/nvswitch/fabricmanager.cfg
+
+Oct 22 09:48:46 debian systemd[1]: Starting nvidia-fabricmanager.service - NVIDIA fabric manager service...
+Oct 22 09:48:47 debian nv-fabricmanager[19843]: Connected to 1 node.
+Oct 22 09:48:47 debian nv-fabricmanager[19843]: Successfully configured all the available NVSwitches to route GPU NVLink traffic. NVLink Peer-to-Peer support will be enabled once the GPUs are successfully registered with the NVLink fabric.
+Oct 22 09:48:47 debian systemd[1]: Started nvidia-fabricmanager.service - NVIDIA fabric manager service.
+2026-10-22 15:07:45 [[0;32mINFO[0m] [Pass] - Passed to install GPU SDK or Driver!
+
+Start Time: 2026-10-22 15:07:34
+[32;1m=====================================================[0m
+[32;1m=  TestTool  : ./wrapper_20261022T150734.sh                 =[0m
+[32;1m=  TestCase  : ENVSET.SH                            =[0m
+[32;1m=  TestParas :                                      =[0m
+[32;1m=  TestResult: PASS                                 =[0m
+[32;1m=====================================================[0m
+End Time  : 2026-10-22 15:07:45
+
+TestCase, Duration: [0;31m0h 0m 11s[0m ([0;31m11[0m secs)
+
+2026-10-22 15:07:45 [[0;32mINFO[0m] ./wrapper_20261022T150734.sh - ENVSET.SH test PASS
+10/22/2026 15:07:45 [[34;1m DEBUG [0m] Script status: END
+-----------------------------------
+STATUS=END
+-----------------------------------
+>>> Return code: 0
+
+2026-10-22 15:07:45,640 - INFO    - base_testcase.py   [line:339] - Testitem QtSdkTestStreamInstall_H20_0 Endtime: 2026-10-22 15:07:45
+2026-10-22 15:07:45,641 - INFO    - base_testcase.py   [line:343] - Testitem QtSdkTestStreamInstall_H20_0 duration: 0:00:39
+2026-10-22 15:07:45,641 - INFO    - base_testcase.py   [line:443] - Return code: 0
+2026-10-22 15:07:45,641 - INFO    - base_testcase.py   [line:444] - Return result: Env install PASS
+2026-10-22 15:07:45,642 - DEBUG   - base_testcase.py   [line:274] - Start test_item_end_BD by caller QtSdkTestStreamInstall_H20_0
+2026-10-22 15:07:45,642 - WARNING - run_mw.py          [line: 94] - The TurnOn of middleware test_item_end_BD is off, skip!
+2026-10-22 15:07:45,642 - DEBUG   - base_attr.py       [line:1246] - test_item_end_BD return: (0, {})
+2026-10-22 15:07:45,642 - DEBUG   - base_testcase.py   [line:274] - Start test_item_end by caller QtSdkTestStreamInstall_H20_0
+2026-10-22 15:07:45,642 - DEBUG   - run_mw.py          [line:142] - Middleware test_item_end start...
+2026-10-22 15:07:45,643 - DEBUG   - run_mw.py          [line:162] - Middleware test_item_end duration time: 0 s
+2026-10-22 15:07:45,643 - DEBUG   - base_attr.py       [line:1246] - test_item_end return: (0, {'item_result': {'starttime': '2026-10-22 15:07:06', 'endtime': '2026-10-22 15:07:45', 'duration': '0:00:39', 'errcode': 0, 'retstr': 'Env install PASS', 'log': 'QtSdkTestStreamInstall_H20_0_261022150705', 'whiteboard': {}, 'extra': {}, 'Desc': '', 'Tags': 'SDK & TestStream Install', 'Module': 'install_env', 'Class': 'InstallEnv', 'Function': 'test_install_env', 'Timeout': '20m', 'Args': [], 'Kwargs': {'tool_name': 'GPU_ENV_H20.L20', 'command': ['ENVSET.SH'], 'check_gpu_driver_installation_status': False, 'nvidia_fabricmanager_pkg_name': 'nvidia-fabricmanager-535', 'gpu_driver_version': '535.216.03'}, 'Version': 'NULL', 'TestNode': [0], 'TestItem': 'QtSdkTestStreamInstall_H20', 'Parallel': False, 'Id': 0, 'SeqId': 0, 'Inst': 'QtSdkTestStreamInstall_H20_0', 'node_id': 0, 'Parent': ''}, 'caller': 'QtSdkTestStreamInstall_H20_0'})
+2026-10-22 15:07:45,643 - INFO    - base_testcase.py   [line:335] - ######################################################################

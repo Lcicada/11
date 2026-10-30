@@ -1,0 +1,129 @@
+2026-09-02 10:53:32,864 - INFO    - base_mw.py         [line:247] - test_flow_start    - Middleware by Caller: run_testcase start Start
+2026-09-02 10:53:32,864 - DEBUG   - base_mw.py         [line:248] - test_flow_start    - Middleware test_flow_start: 
+{
+    "Desc": "",
+    "Version": "20240715",
+    "TurnOn": true,
+    "CheckResult": true,
+    "Module": "upload_test_flow",
+    "Class": "TestFlow",
+    "Function": "test_flow",
+    "Timeout": "30",
+    "Args": [],
+    "Kwargs": {
+        "start_end": true
+    },
+    "QTDesc": "\u603b\u6d4b\u8bd5\u6d41\u7a0b\u5f00\u59cb\u65f6\u4e0a\u4f20\u4fe1\u606f",
+    "ForceTurnOn": false,
+    "ForceCheckResult": false,
+    "name": "test_flow_start"
+}
+2026-09-02 10:53:32,864 - INFO    - upload_test_flow.py [line: 28] - test_flow_start    - env qt_factory_monitor_tools_path = /run/work
+2026-09-02 10:53:32,864 - INFO    - upload_test_flow.py [line: 30] - test_flow_start    - is_L6_test:False, BaseAttr.po:PLACEHOLDER
+2026-09-02 10:53:32,864 - INFO    - upload_test_flow.py [line: 32] - test_flow_start    - *** test flow start ***
+2026-09-02 10:53:32,864 - INFO    - upload_test_flow.py [line:269] - test_flow_start    - ======Before flow test, start factory monitor agent=====
+2026-09-02 10:53:32,864 - DEBUG   - commapi.py         [line: 93] - test_flow_start    - Start run cmd(TO:None): uname -m
+2026-09-02 10:53:32,864 - DEBUG   - commapi.py         [line: 94] - test_flow_start    - 
+>>> uname -m
+2026-09-02 10:53:32,865 - DEBUG   - commapi.py         [line: 96] - test_flow_start    - 
+x86_64
+>>> Return code: 0
+
+2026-09-02 10:53:32,869 - INFO    - upload_test_flow.py [line:255] - test_flow_start    - BQC Monitor Tool Files Loaded:
+{
+    "start_monitor_agent_docker": "/run/work/FACTORY_MONITOR.L01/start_monitor_agent_docker.sh",
+    "site_ip_mapping": "/run/work/FACTORY_MONITOR.L01/site_ip_mapping.json",
+    "bqc_docker_image": "/run/work/FACTORY_MONITOR.L01/bqc_docker_x86_64_v1.2.17.tar.gz"
+}
+2026-09-02 10:53:32,869 - INFO    - upload_test_flow.py [line:288] - test_flow_start    - bqc_docker_image:1.2.17
+2026-09-02 10:53:32,869 - INFO    - upload_test_flow.py [line:231] - test_flow_start    - env kafka_topic_log : f3-cpu-log
+2026-09-02 10:53:32,869 - INFO    - upload_test_flow.py [line:212] - test_flow_start    - site_ip_mapping json_file:/run/work/FACTORY_MONITOR.L01/site_ip_mapping.json
+2026-09-02 10:53:32,869 - INFO    - upload_test_flow.py [line:213] - test_flow_start    - json_data:
+{
+    "global_setting": {
+        "username": "scp_recv",
+        "password": "Ssh+2026]’/[;."
+    },
+    "site": {
+        "sqt": {
+            "main_server_ip": "10.0.1.53",
+            "secondary_server_ip": "10.0.1.52"
+        },
+        "iue": {
+            "ip": "10.0.1.53"
+        },
+        "tao": {
+            "ip": "10.0.1.54"
+        },
+        "imx": {
+            "ip": "10.0.1.55"
+        }
+    }
+}
+2026-09-02 10:53:32,869 - INFO    - upload_test_flow.py [line:294] - test_flow_start    - site name: sqt; main_server_ip: 10.0.1.53; secondary_server_ip: 10.0.1.52
+2026-09-02 10:53:32,869 - INFO    - upload_test_flow.py [line:302] - test_flow_start    - export BQC_MONITOR_SERVER=https://10.0.1.53:443
+2026-09-02 10:53:32,869 - INFO    - upload_test_flow.py [line:303] - test_flow_start    - export BQC_DOCKER_IMAGE=bqc-app:1.2.17-x86_64
+2026-09-02 10:53:32,869 - INFO    - upload_test_flow.py [line:304] - test_flow_start    - export BQC_MONITOR_SERVER_SECONDARY=https://10.0.1.52:443
+2026-09-02 10:53:32,869 - INFO    - upload_test_flow.py [line:305] - test_flow_start    - export BQC_MONITOR_API_KEY=inventec_monitor
+2026-09-02 10:53:32,869 - DEBUG   - commapi.py         [line: 93] - test_flow_start    - Start run cmd(TO:None): docker images
+2026-09-02 10:53:32,869 - DEBUG   - commapi.py         [line: 94] - test_flow_start    - 
+>>> docker images
+2026-09-02 10:53:32,879 - DEBUG   - commapi.py         [line: 96] - test_flow_start    - 
+REPOSITORY   TAG             IMAGE ID       CREATED      SIZE
+bqc-app      1.2.17-x86_64   790086f733e5   9 days ago   427MB
+>>> Return code: 0
+
+2026-09-02 10:53:32,879 - INFO    - upload_test_flow.py [line:314] - test_flow_start    - load docker image:1.2.17-x86_64 success already
+2026-09-02 10:53:32,879 - INFO    - upload_test_flow.py [line:259] - test_flow_start    - start agent now
+2026-09-02 10:53:32,879 - DEBUG   - commapi.py         [line: 93] - test_flow_start    - Start run cmd(TO:None): bash /run/work/FACTORY_MONITOR.L01/start_monitor_agent_docker.sh  /root/run_qt/qt_code/QT_YUNHAI35.DEB/qt_program
+2026-09-02 10:53:32,879 - DEBUG   - commapi.py         [line: 94] - test_flow_start    - 
+>>> bash /run/work/FACTORY_MONITOR.L01/start_monitor_agent_docker.sh  /root/run_qt/qt_code/QT_YUNHAI35.DEB/qt_program
+2026-09-02 10:54:07,336 - DEBUG   - commapi.py         [line: 96] - test_flow_start    - 
+⚠️  A container with the same name is already running; it will be recreated
+   Container name: bqc-monitor-agent
+🛑 Stopping existing container...
+🗑️  Removing existing container...
+========================================================
+  🚀 Starting BQC Monitor Agent (Docker)
+========================================================
+📁 Workspace: /root/run_qt/qt_code/QT_YUNHAI35.DEB/qt_program
+📝 Monitored logs dir: /root/run_qt/qt_code/QT_YUNHAI35.DEB/qt_program/logs
+🧩 Sidecar runtime dir: /root/run_qt/qt_code/QT_YUNHAI35.DEB/qt_program/.monitor_sidecar
+🌐 Monitor server: https://10.0.1.53:443
+🌐 Secondary monitor: https://10.0.1.52:443
+🔐 Monitor TLS verify: false
+📜 Monitor CA cert: 
+🔑 Monitor API key: configured
+🔌 Live Report port: 8899
+🔁 Failover probe count: 3
+🐳 Docker image: bqc-app:1.2.17-x86_64
+📦 Container name: bqc-monitor-agent
+--------------------------------------------------------
+🔍 Checking monitor server connectivity...
+⚠️  [FAIL] primary monitor unreachable: https://10.0.1.53:443 (http=000000)
+✅ [PASS] secondary monitor reachable: https://10.0.1.52:443
+   Server time: 2026-09-02 10:54:05
+--------------------------------------------------------
+📦 Creating container...
+⏳ Checking container status...
+
+✅ Success: BQC Monitor Agent is running
+========================================================
+📦 Container name: bqc-monitor-agent
+📦 Container ID: d600819663bc185e2cb9eed02cb291a82f22840ad3318f57a9878f183059dabd
+📝 View logs: docker logs -f bqc-monitor-agent
+🔍 Live report: http://10.102.148.169:8899/report?watch=1
+⏹️  Stop service: bash /run/work/FACTORY_MONITOR.L01/stop_docker.sh
+========================================================
+>>> Return code: 0
+
+2026-09-02 10:54:07,336 - DEBUG   - commapi.py         [line: 93] - test_flow_start    - Start run cmd(TO:None): docker ps  --filter "name=bqc-monitor-agent"
+2026-09-02 10:54:07,336 - DEBUG   - commapi.py         [line: 94] - test_flow_start    - 
+>>> docker ps  --filter "name=bqc-monitor-agent"
+2026-09-02 10:54:07,346 - DEBUG   - commapi.py         [line: 96] - test_flow_start    - 
+CONTAINER ID   IMAGE                   COMMAND                  CREATED         STATUS         PORTS     NAMES
+d600819663bc   bqc-app:1.2.17-x86_64   "python -B /opt/bqc-…"   2 seconds ago   Up 2 seconds             bqc-monitor-agent
+>>> Return code: 0
+
+2026-09-02 10:54:07,346 - INFO    - upload_test_flow.py [line:338] - test_flow_start    - agent start passed, bqc monitor docker:bqc-app:1.2.17-x86_64 is running, status: up, monitor_work_dir:/root/run_qt/qt_code/QT_YUNHAI35.DEB/qt_program
+2026-09-02 10:54:07,346 - INFO    - base_mw.py         [line:265] - test_flow_start    - Middleware by Caller: run_testcase start End

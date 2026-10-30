@@ -1,0 +1,182 @@
+2026-09-02 10:40:52,343 - INFO    - base_testcase.py   [line:335] - ######################################################################
+2026-09-02 10:40:52,343 - INFO    - base_testcase.py   [line:332] - Testitem QtFactoryMonitorAgentStart_0 Starttime: 2026-09-02 10:40:52
+2026-09-02 10:40:52,343 - DEBUG   - base_testcase.py   [line:274] - Start test_item_start_BD by caller QtFactoryMonitorAgentStart_0
+2026-09-02 10:40:52,343 - WARNING - run_mw.py          [line: 94] - The TurnOn of middleware test_item_start_BD is off, skip!
+2026-09-02 10:40:52,343 - DEBUG   - base_attr.py       [line:1037] - test_item_start_BD return: (0, {})
+2026-09-02 10:40:52,343 - DEBUG   - base_testcase.py   [line:274] - Start test_item_start by caller QtFactoryMonitorAgentStart_0
+2026-09-02 10:40:52,344 - DEBUG   - run_mw.py          [line:142] - Middleware test_item_start start...
+2026-09-02 10:40:52,346 - DEBUG   - run_mw.py          [line:162] - Middleware test_item_start duration time: 0 s
+2026-09-02 10:40:52,346 - ERROR   - run_mw.py          [line: 69] - Middleware test_item_start FAIL
+2026-09-02 10:40:52,346 - DEBUG   - base_attr.py       [line:1037] - test_item_start return: (1, {'item_result': {'starttime': '2026-09-02 10:40:52', 'endtime': '', 'duration': '', 'errcode': 0, 'retstr': '', 'log': 'QtFactoryMonitorAgentStart_0_260902104046', 'whiteboard': {}, 'Desc': 'Factory monitor agent start test', 'Tags': 'Factory monitor agent start test', 'Module': 'factory_monitor_agent', 'Class': 'FactoryMonitorAgent', 'Function': 'test_factory_monitor_agent_start', 'Timeout': '5m', 'Args': [], 'Kwargs': {}, 'Version': 'NULL', 'TestNode': [0], 'TestItem': 'QtFactoryMonitorAgentStart', 'Parallel': False, 'Id': 0, 'SeqId': 0, 'Inst': 'QtFactoryMonitorAgentStart_0', 'node_id': 0, 'Parent': ''}, 'caller': 'QtFactoryMonitorAgentStart_0', 'fail_info': 'Traceback (most recent call last):\n  File "/root/run_qt/qt_code/QT_YUNHAI35.DEB/qt_program/middleware/apps/upload_test_item.py", line 41, in _item_start\n    with open(item_path, "w") as file:\n         ^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: \'/root/run_qt/qt_code/QT_YUNHAI35.DEB/temp/kanban_logs/QtFactoryMonitorAgentStart_0\'\n'})
+2026-09-02 10:40:52,346 - DEBUG   - base_testcase.py   [line: 44] - QtFactoryMonitorAgentStart_0 info: {
+    "Desc": "Factory monitor agent start test",
+    "Tags": "Factory monitor agent start test",
+    "Module": "factory_monitor_agent",
+    "Class": "FactoryMonitorAgent",
+    "Function": "test_factory_monitor_agent_start",
+    "Timeout": "5m",
+    "Args": [],
+    "Kwargs": {},
+    "Version": "NULL",
+    "TestNode": [
+        0
+    ],
+    "TestItem": "QtFactoryMonitorAgentStart",
+    "Parallel": false,
+    "Id": 0,
+    "SeqId": 0,
+    "Inst": "QtFactoryMonitorAgentStart_0",
+    "node_id": 0,
+    "Parent": ""
+}
+2026-09-02 10:40:52,346 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): uname -m
+2026-09-02 10:40:52,346 - DEBUG   - commapi.py         [line: 94] - 
+>>> uname -m
+2026-09-02 10:40:52,347 - DEBUG   - commapi.py         [line: 96] - 
+x86_64
+>>> Return code: 0
+
+2026-09-02 10:40:52,347 - DEBUG   - base_testcase.py   [line:274] - Start file_download by caller QtFactoryMonitorAgentStart_0
+2026-09-02 10:40:52,347 - DEBUG   - run_mw.py          [line:142] - Middleware file_download start...
+2026-09-02 10:40:52,347 - DEBUG   - run_mw.py          [line:162] - Middleware file_download duration time: 0 s
+2026-09-02 10:40:52,347 - DEBUG   - base_attr.py       [line:1037] - file_download return: (0, {'qt_factory_monitor_tools_path': '/run/work'})
+2026-09-02 10:40:52,347 - INFO    - factory_monitor_agent.py [line:167] - env qt_factory_monitor_tools_path= /run/work
+2026-09-02 10:40:52,351 - INFO    - factory_monitor_agent.py [line: 81] - BQC Monitor Tool Files Loaded:
+{
+    "start_monitor_agent_docker": "/run/work/FACTORY_MONITOR.L01/start_monitor_agent_docker.sh",
+    "site_ip_mapping": "/run/work/FACTORY_MONITOR.L01/site_ip_mapping.json",
+    "bqc_docker_image": "/run/work/FACTORY_MONITOR.L01/bqc_docker_x86_64_v1.2.17.tar.gz"
+}
+2026-09-02 10:40:52,351 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): chmod +x /run/work/FACTORY_MONITOR.L01/bqc_docker_x86_64_v1.2.17.tar.gz
+2026-09-02 10:40:52,351 - DEBUG   - commapi.py         [line: 94] - 
+>>> chmod +x /run/work/FACTORY_MONITOR.L01/bqc_docker_x86_64_v1.2.17.tar.gz
+2026-09-02 10:40:52,352 - DEBUG   - commapi.py         [line: 96] - 
+
+>>> Return code: 0
+
+2026-09-02 10:40:52,352 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): chmod +x /run/work/FACTORY_MONITOR.L01/start_monitor_agent_docker.sh
+2026-09-02 10:40:52,352 - DEBUG   - commapi.py         [line: 94] - 
+>>> chmod +x /run/work/FACTORY_MONITOR.L01/start_monitor_agent_docker.sh
+2026-09-02 10:40:52,352 - DEBUG   - commapi.py         [line: 96] - 
+
+>>> Return code: 0
+
+2026-09-02 10:40:52,353 - INFO    - factory_monitor_agent.py [line:188] - bqc_docker_image:1.2.17
+2026-09-02 10:40:52,353 - DEBUG   - base_testcase.py   [line:274] - Start file_download by caller QtFactoryMonitorAgentStart_0
+2026-09-02 10:40:52,353 - DEBUG   - run_mw.py          [line:142] - Middleware file_download start...
+2026-09-02 10:40:52,353 - DEBUG   - run_mw.py          [line:162] - Middleware file_download duration time: 0 s
+2026-09-02 10:40:52,353 - DEBUG   - base_attr.py       [line:1037] - file_download return: (0, {'kafka_topic_log': 'f3-cpu-log'})
+2026-09-02 10:40:52,353 - INFO    - factory_monitor_agent.py [line:196] - env kafka_topic_log: f3-cpu-log
+2026-09-02 10:40:52,353 - INFO    - factory_monitor_agent.py [line: 22] - site_ip_mapping json_file:/run/work/FACTORY_MONITOR.L01/site_ip_mapping.json
+2026-09-02 10:40:52,353 - INFO    - factory_monitor_agent.py [line: 23] - json_data:
+{
+    "global_setting": {
+        "username": "scp_recv",
+        "password": "Ssh+2026]’/[;."
+    },
+    "site": {
+        "sqt": {
+            "main_server_ip": "10.0.1.53",
+            "secondary_server_ip": "10.0.1.52"
+        },
+        "iue": {
+            "ip": "10.0.1.53"
+        },
+        "tao": {
+            "ip": "10.0.1.54"
+        },
+        "imx": {
+            "ip": "10.0.1.55"
+        }
+    }
+}
+2026-09-02 10:40:52,353 - INFO    - factory_monitor_agent.py [line:204] - site name: sqt; main_server_ip: 10.0.1.53; secondary_server_ip: 10.0.1.52
+2026-09-02 10:40:52,353 - INFO    - factory_monitor_agent.py [line:214] - export BQC_MONITOR_SERVER=https://10.0.1.53:443
+2026-09-02 10:40:52,353 - INFO    - factory_monitor_agent.py [line:215] - export BQC_DOCKER_IMAGE=bqc-app:1.2.17-x86_64
+2026-09-02 10:40:52,353 - INFO    - factory_monitor_agent.py [line:216] - export BQC_MONITOR_SERVER_SECONDARY=https://10.0.1.52:443
+2026-09-02 10:40:52,353 - INFO    - factory_monitor_agent.py [line:217] - export BQC_MONITOR_API_KEY=inventec_monitor
+2026-09-02 10:40:52,353 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): docker images
+2026-09-02 10:40:52,353 - DEBUG   - commapi.py         [line: 94] - 
+>>> docker images
+2026-09-02 10:40:52,364 - DEBUG   - commapi.py         [line: 96] - 
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+>>> Return code: 0
+
+2026-09-02 10:40:52,364 - INFO    - factory_monitor_agent.py [line:228] - start load docker image:/run/work/FACTORY_MONITOR.L01/bqc_docker_x86_64_v1.2.17.tar.gz
+2026-09-02 10:40:52,364 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): docker load -i /run/work/FACTORY_MONITOR.L01/bqc_docker_x86_64_v1.2.17.tar.gz
+2026-09-02 10:40:52,364 - DEBUG   - commapi.py         [line: 94] - 
+>>> docker load -i /run/work/FACTORY_MONITOR.L01/bqc_docker_x86_64_v1.2.17.tar.gz
+2026-09-02 10:40:56,099 - DEBUG   - commapi.py         [line: 96] - 
+Loaded image: bqc-app:1.2.17-x86_64
+>>> Return code: 0
+
+2026-09-02 10:40:56,099 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): docker images
+2026-09-02 10:40:56,099 - DEBUG   - commapi.py         [line: 94] - 
+>>> docker images
+2026-09-02 10:40:56,109 - DEBUG   - commapi.py         [line: 96] - 
+REPOSITORY   TAG             IMAGE ID       CREATED      SIZE
+bqc-app      1.2.17-x86_64   790086f733e5   9 days ago   427MB
+>>> Return code: 0
+
+2026-09-02 10:40:56,109 - INFO    - factory_monitor_agent.py [line:233] - load docker image:bqc-app:1.2.17-x86_64 success
+2026-09-02 10:40:56,109 - INFO    - factory_monitor_agent.py [line: 85] - start agent now
+2026-09-02 10:40:56,109 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): bash /run/work/FACTORY_MONITOR.L01/start_monitor_agent_docker.sh  /root/run_qt/qt_code/QT_YUNHAI35.DEB/factory_monitor_log
+2026-09-02 10:40:56,109 - DEBUG   - commapi.py         [line: 94] - 
+>>> bash /run/work/FACTORY_MONITOR.L01/start_monitor_agent_docker.sh  /root/run_qt/qt_code/QT_YUNHAI35.DEB/factory_monitor_log
+2026-09-02 10:41:00,357 - DEBUG   - commapi.py         [line: 96] - 
+========================================================
+  🚀 Starting BQC Monitor Agent (Docker)
+========================================================
+📁 Workspace: /root/run_qt/qt_code/QT_YUNHAI35.DEB/factory_monitor_log
+📝 Monitored logs dir: /root/run_qt/qt_code/QT_YUNHAI35.DEB/factory_monitor_log/logs
+🧩 Sidecar runtime dir: /root/run_qt/qt_code/QT_YUNHAI35.DEB/factory_monitor_log/.monitor_sidecar
+🌐 Monitor server: https://10.0.1.53:443
+🌐 Secondary monitor: https://10.0.1.52:443
+🔐 Monitor TLS verify: false
+📜 Monitor CA cert: 
+🔑 Monitor API key: configured
+🔌 Live Report port: 8899
+🔁 Failover probe count: 3
+🐳 Docker image: bqc-app:1.2.17-x86_64
+📦 Container name: bqc-monitor-agent
+--------------------------------------------------------
+🔍 Checking monitor server connectivity...
+⚠️  [FAIL] primary monitor unreachable: https://10.0.1.53:443 (http=502)
+✅ [PASS] secondary monitor reachable: https://10.0.1.52:443
+   Server time: 2026-09-02 10:40:58
+--------------------------------------------------------
+📦 Creating container...
+⏳ Checking container status...
+
+✅ Success: BQC Monitor Agent is running
+========================================================
+📦 Container name: bqc-monitor-agent
+📦 Container ID: 8904d12a61048658f1e7d6523b9ed0fc76a99dfc5f090f053147a756cf331381
+📝 View logs: docker logs -f bqc-monitor-agent
+🔍 Live report: http://10.102.148.169:8899/report?watch=1
+⏹️  Stop service: bash /run/work/FACTORY_MONITOR.L01/stop_docker.sh
+========================================================
+>>> Return code: 0
+
+2026-09-02 10:41:00,358 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): docker ps  --filter "name=bqc-monitor-agent"
+2026-09-02 10:41:00,358 - DEBUG   - commapi.py         [line: 94] - 
+>>> docker ps  --filter "name=bqc-monitor-agent"
+2026-09-02 10:41:00,367 - DEBUG   - commapi.py         [line: 96] - 
+CONTAINER ID   IMAGE                   COMMAND                  CREATED         STATUS         PORTS     NAMES
+8904d12a6104   bqc-app:1.2.17-x86_64   "python -B /opt/bqc-…"   2 seconds ago   Up 2 seconds             bqc-monitor-agent
+>>> Return code: 0
+
+2026-09-02 10:41:00,367 - INFO    - factory_monitor_agent.py [line:247] - agent start passed, bqc monitor docker:bqc-app:1.2.17-x86_64 is running, status: up, monitor_work_dir:/root/run_qt/qt_code/QT_YUNHAI35.DEB/factory_monitor_log
+2026-09-02 10:41:00,367 - INFO    - base_testcase.py   [line:339] - Testitem QtFactoryMonitorAgentStart_0 Endtime: 2026-09-02 10:41:00
+2026-09-02 10:41:00,369 - INFO    - base_testcase.py   [line:343] - Testitem QtFactoryMonitorAgentStart_0 duration: 0:00:08
+2026-09-02 10:41:00,369 - INFO    - base_testcase.py   [line:443] - Return code: 0
+2026-09-02 10:41:00,369 - INFO    - base_testcase.py   [line:444] - Return result: factory monitor agent start test pass
+2026-09-02 10:41:00,369 - DEBUG   - base_testcase.py   [line:274] - Start test_item_end_BD by caller QtFactoryMonitorAgentStart_0
+2026-09-02 10:41:00,369 - WARNING - run_mw.py          [line: 94] - The TurnOn of middleware test_item_end_BD is off, skip!
+2026-09-02 10:41:00,369 - DEBUG   - base_attr.py       [line:1037] - test_item_end_BD return: (0, {})
+2026-09-02 10:41:00,369 - DEBUG   - base_testcase.py   [line:274] - Start test_item_end by caller QtFactoryMonitorAgentStart_0
+2026-09-02 10:41:00,370 - DEBUG   - run_mw.py          [line:142] - Middleware test_item_end start...
+2026-09-02 10:41:00,370 - DEBUG   - run_mw.py          [line:162] - Middleware test_item_end duration time: 0 s
+2026-09-02 10:41:00,370 - ERROR   - run_mw.py          [line: 69] - Middleware test_item_end FAIL
+2026-09-02 10:41:00,370 - DEBUG   - base_attr.py       [line:1037] - test_item_end return: (1, {'item_result': {'starttime': '2026-09-02 10:40:52', 'endtime': '2026-09-02 10:41:00', 'duration': '0:00:08', 'errcode': 0, 'retstr': 'factory monitor agent start test pass', 'log': 'QtFactoryMonitorAgentStart_0_260902104046', 'whiteboard': {}, 'Desc': 'Factory monitor agent start test', 'Tags': 'Factory monitor agent start test', 'Module': 'factory_monitor_agent', 'Class': 'FactoryMonitorAgent', 'Function': 'test_factory_monitor_agent_start', 'Timeout': '5m', 'Args': [], 'Kwargs': {}, 'Version': 'NULL', 'TestNode': [0], 'TestItem': 'QtFactoryMonitorAgentStart', 'Parallel': False, 'Id': 0, 'SeqId': 0, 'Inst': 'QtFactoryMonitorAgentStart_0', 'node_id': 0, 'Parent': ''}, 'caller': 'QtFactoryMonitorAgentStart_0', 'fail_info': 'Traceback (most recent call last):\n  File "/root/run_qt/qt_code/QT_YUNHAI35.DEB/qt_program/middleware/apps/upload_test_item.py", line 80, in _item_end\n    with open(item_path, "r") as file:\n         ^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: \'/root/run_qt/qt_code/QT_YUNHAI35.DEB/temp/kanban_logs/QtFactoryMonitorAgentStart_0\'\n'})
+2026-09-02 10:41:00,370 - INFO    - base_testcase.py   [line:335] - ######################################################################

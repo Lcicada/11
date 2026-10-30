@@ -1,0 +1,89 @@
+2026-10-22 15:05:34,584 - INFO    - base_testcase.py   [line:335] - ######################################################################
+2026-10-22 15:05:34,584 - INFO    - base_testcase.py   [line:332] - Testitem QtSdkTestStreamInstall_H20_0 Starttime: 2026-10-22 15:05:34
+2026-10-22 15:05:34,585 - DEBUG   - base_testcase.py   [line:274] - Start test_item_start_BD by caller QtSdkTestStreamInstall_H20_0
+2026-10-22 15:05:34,585 - WARNING - run_mw.py          [line: 94] - The TurnOn of middleware test_item_start_BD is off, skip!
+2026-10-22 15:05:34,585 - DEBUG   - base_attr.py       [line:1246] - test_item_start_BD return: (0, {})
+2026-10-22 15:05:34,585 - DEBUG   - base_testcase.py   [line:274] - Start test_item_start by caller QtSdkTestStreamInstall_H20_0
+2026-10-22 15:05:34,585 - DEBUG   - run_mw.py          [line:142] - Middleware test_item_start start...
+2026-10-22 15:05:34,586 - DEBUG   - run_mw.py          [line:162] - Middleware test_item_start duration time: 0 s
+2026-10-22 15:05:34,586 - DEBUG   - base_attr.py       [line:1246] - test_item_start return: (0, {'item_result': {'starttime': '2026-10-22 15:05:34', 'endtime': '', 'duration': '', 'errcode': 0, 'retstr': '', 'log': 'QtSdkTestStreamInstall_H20_0_261022150533', 'whiteboard': {}, 'extra': {}, 'Desc': '', 'Tags': 'SDK & TestStream Install', 'Module': 'install_env', 'Class': 'InstallEnv', 'Function': 'test_install_env', 'Timeout': '20m', 'Args': [], 'Kwargs': {'tool_name': 'GPU_ENV_H20.L20', 'command': ['ENVSET.SH'], 'check_gpu_driver_installation_status': True, 'nvidia_fabricmanager_pkg_name': 'nvidia-fabricmanager-535', 'gpu_driver_version': '535.216.03'}, 'Version': 'NULL', 'TestNode': [0], 'TestItem': 'QtSdkTestStreamInstall_H20', 'Parallel': False, 'Id': 0, 'SeqId': 0, 'Inst': 'QtSdkTestStreamInstall_H20_0', 'node_id': 0, 'Parent': ''}, 'caller': 'QtSdkTestStreamInstall_H20_0'})
+2026-10-22 15:05:34,586 - DEBUG   - base_testcase.py   [line: 44] - QtSdkTestStreamInstall_H20_0 info: {
+    "Desc": "",
+    "Tags": "SDK & TestStream Install",
+    "Module": "install_env",
+    "Class": "InstallEnv",
+    "Function": "test_install_env",
+    "Timeout": "20m",
+    "Args": [],
+    "Kwargs": {
+        "tool_name": "GPU_ENV_H20.L20",
+        "command": [
+            "ENVSET.SH"
+        ],
+        "check_gpu_driver_installation_status": true,
+        "nvidia_fabricmanager_pkg_name": "nvidia-fabricmanager-535",
+        "gpu_driver_version": "535.216.03"
+    },
+    "Version": "NULL",
+    "TestNode": [
+        0
+    ],
+    "TestItem": "QtSdkTestStreamInstall_H20",
+    "Parallel": false,
+    "Id": 0,
+    "SeqId": 0,
+    "Inst": "QtSdkTestStreamInstall_H20_0",
+    "node_id": 0,
+    "Parent": ""
+}
+2026-10-22 15:05:34,586 - INFO    - install_env.py     [line:134] -  checking CUDA, NVIDIA driver, and Fabric Manager installation status.
+2026-10-22 15:05:34,586 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): test -d /usr/local/cuda || test -d /usr/local/cuda-13.0
+2026-10-22 15:05:34,586 - DEBUG   - commapi.py         [line: 94] - 
+>>> test -d /usr/local/cuda || test -d /usr/local/cuda-13.0
+2026-10-22 15:05:34,587 - DEBUG   - commapi.py         [line: 96] - 
+
+>>> Return code: 0
+
+2026-10-22 15:05:34,587 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): command -v nvidia-smi && test "$(nvidia-smi --query-gpu=driver_version --format=csv,noheader | head -n 1)" = 535.216.03
+2026-10-22 15:05:34,587 - DEBUG   - commapi.py         [line: 94] - 
+>>> command -v nvidia-smi && test "$(nvidia-smi --query-gpu=driver_version --format=csv,noheader | head -n 1)" = 535.216.03
+2026-10-22 15:05:34,735 - DEBUG   - commapi.py         [line: 96] - 
+/usr/bin/nvidia-smi
+>>> Return code: 0
+
+2026-10-22 15:05:34,735 - DEBUG   - commapi.py         [line: 93] - Start run cmd(TO:None): dpkg -s nvidia-fabricmanager-535 || dpkg -s nvidia-fabricmanager-dev-535 
+2026-10-22 15:05:34,735 - DEBUG   - commapi.py         [line: 94] - 
+>>> dpkg -s nvidia-fabricmanager-535 || dpkg -s nvidia-fabricmanager-dev-535 
+2026-10-22 15:05:34,739 - DEBUG   - commapi.py         [line: 96] - 
+Package: nvidia-fabricmanager-535
+Status: install ok installed
+Priority: optional
+Section: multiverse/devel
+Installed-Size: 8969
+Maintainer: cudatools <cudatools@nvidia.com>
+Architecture: amd64
+Source: fabricmanager
+Version: 535.216.03-1
+Replaces: nvidia-fabricmanager
+Provides: nvidia-fabricmanager
+Depends: libc6 (>= 2.2.1)
+Conflicts: nvidia-fabricmanager
+Conffiles:
+ /usr/share/nvidia/nvswitch/fabricmanager.cfg 4c72efb0469c6c4458ca296dd0d8e132
+Description: Fabric Manager for NVSwitch based systems.
+ Fabric Manager for NVIDIA NVSwitch based systems.
+>>> Return code: 0
+
+2026-10-22 15:05:34,739 - INFO    - install_env.py     [line:154] - CUDA, NVIDIA driver 535.216.03, and Fabric Manager are already installed; skipping ENVSET download and install.
+2026-10-22 15:05:34,739 - INFO    - base_testcase.py   [line:339] - Testitem QtSdkTestStreamInstall_H20_0 Endtime: 2026-10-22 15:05:34
+2026-10-22 15:05:34,740 - INFO    - base_testcase.py   [line:343] - Testitem QtSdkTestStreamInstall_H20_0 duration: 0:00:00
+2026-10-22 15:05:34,740 - WARNING - base_testcase.py   [line:446] - Return code: 100000
+2026-10-22 15:05:34,740 - WARNING - base_testcase.py   [line:447] - Return result: CUDA, NVIDIA driver, and Fabric Manager already installed
+2026-10-22 15:05:34,740 - DEBUG   - base_testcase.py   [line:274] - Start test_item_end_BD by caller QtSdkTestStreamInstall_H20_0
+2026-10-22 15:05:34,740 - WARNING - run_mw.py          [line: 94] - The TurnOn of middleware test_item_end_BD is off, skip!
+2026-10-22 15:05:34,741 - DEBUG   - base_attr.py       [line:1246] - test_item_end_BD return: (0, {})
+2026-10-22 15:05:34,741 - DEBUG   - base_testcase.py   [line:274] - Start test_item_end by caller QtSdkTestStreamInstall_H20_0
+2026-10-22 15:05:34,741 - DEBUG   - run_mw.py          [line:142] - Middleware test_item_end start...
+2026-10-22 15:05:34,741 - DEBUG   - run_mw.py          [line:162] - Middleware test_item_end duration time: 0 s
+2026-10-22 15:05:34,741 - DEBUG   - base_attr.py       [line:1246] - test_item_end return: (0, {'item_result': {'starttime': '2026-10-22 15:05:34', 'endtime': '2026-10-22 15:05:34', 'duration': '0:00:00', 'errcode': 100000, 'retstr': 'CUDA, NVIDIA driver, and Fabric Manager already installed', 'log': 'QtSdkTestStreamInstall_H20_0_261022150533', 'whiteboard': {}, 'extra': {}, 'Desc': '', 'Tags': 'SDK & TestStream Install', 'Module': 'install_env', 'Class': 'InstallEnv', 'Function': 'test_install_env', 'Timeout': '20m', 'Args': [], 'Kwargs': {'tool_name': 'GPU_ENV_H20.L20', 'command': ['ENVSET.SH'], 'check_gpu_driver_installation_status': True, 'nvidia_fabricmanager_pkg_name': 'nvidia-fabricmanager-535', 'gpu_driver_version': '535.216.03'}, 'Version': 'NULL', 'TestNode': [0], 'TestItem': 'QtSdkTestStreamInstall_H20', 'Parallel': False, 'Id': 0, 'SeqId': 0, 'Inst': 'QtSdkTestStreamInstall_H20_0', 'node_id': 0, 'Parent': ''}, 'caller': 'QtSdkTestStreamInstall_H20_0'})
+2026-10-22 15:05:34,741 - INFO    - base_testcase.py   [line:335] - ######################################################################

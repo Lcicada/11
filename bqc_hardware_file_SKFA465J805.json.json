@@ -1,0 +1,796 @@
+{
+    "orderId": "",
+    "serverType": "G220B-1G1Bxx6",
+    "combo": "Suite:SG10M1-3D4186-EU",
+    "manufacturerName": "Inventec",
+    "serverSn": "SKFA465J805",
+    "assetNo": "2026-iv-srv-029167",
+    "components": {
+        "CPU": [
+            {
+                "slot": "CPU0",
+                "modelNumber": "Intel(R) Xeon(R) Platinum 8457C",
+                "originComponentSn": "D003952E7F8114FA",
+                "manufacturer": "Intel(R) Corporation"
+            },
+            {
+                "slot": "CPU1",
+                "modelNumber": "Intel(R) Xeon(R) Platinum 8457C",
+                "originComponentSn": "D00437A90F00ED81",
+                "manufacturer": "Intel(R) Corporation"
+            }
+        ],
+        "DRAM": [
+            {
+                "slot": "P0_M0_C0_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE03261116308061",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P0_M0_C1_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE032611163080F5",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P0_M1_C2_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE032611163099E4",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P0_M1_C3_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE03261116308188",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P0_M2_C4_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE03261116308060",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P0_M2_C5_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE03261116307E85",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P0_M3_C6_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE03261116307E61",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P0_M3_C7_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE03261116309F21",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P1_M0_C0_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE032611163093C4",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P1_M0_C1_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE03261116309335",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P1_M1_C2_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE032611163093C5",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P1_M1_C3_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE03261116309E75",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P1_M2_C4_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE03261116309332",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P1_M2_C5_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE0326111630932F",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P1_M3_C6_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE03261116309280",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            },
+            {
+                "slot": "P1_M3_C7_D0",
+                "capacity": "32",
+                "modelNumber": "M321R4GA3PB0-CWMXJ",
+                "originComponentSn": "80CE03261116309333",
+                "frequency": "4800 MT/s",
+                "manufacturer": "Samsung"
+            }
+        ],
+        "NIC": [
+            {
+                "manufacturerProductName": "Bytedance CX-6 Dx adapter card, 100GbE OCP3.0, With Host management, Single-port DSFP, Multi Host or Socket Direct, Secure Boot, no Crypto, Thumbscrew -Prime",
+                "modelNumber": "CX623439MS-CDAB_28",
+                "originComponentSn": "MT2611608B1X",
+                "macAddr": {
+                    "NIC": "a4:a6:4e:16:19:6c;a4:a6:4e:16:19:6f"
+                },
+                "version": {
+                    "FW": "22.35.3502 (BD_0000000003)"
+                },
+                "slot": "MCIO_P0_PE1_A(OCP3.0)",
+                "pcieAddr": "27:00.0",
+                "vid": "15b3",
+                "did": "0189",
+                "svid": "15b3",
+                "sdid": "0189",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s",
+                "manufacturer": ""
+            },
+            {
+                "manufacturerProductName": "Bytedance CX-6 Dx adapter card, 100GbE OCP3.0, With Host management, Single-port DSFP, Multi Host or Socket Direct, Secure Boot, no Crypto, Thumbscrew -Aux[1]",
+                "modelNumber": "CX623439MS-CDAB_28",
+                "originComponentSn": "MT2611608B1X",
+                "macAddr": {
+                    "NIC": "a4:a6:4e:16:19:6c;a4:a6:4e:16:19:6f"
+                },
+                "version": {
+                    "FW": "22.35.3502 (BD_0000000003)"
+                },
+                "slot": "MCIO_P1_PE1_A(OCP3.0)",
+                "pcieAddr": "a8:00.0",
+                "vid": "15b3",
+                "did": "0189",
+                "svid": "15b3",
+                "sdid": "0189",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s",
+                "manufacturer": ""
+            }
+        ],
+        "SmartNIC": [],
+        "HCU": [
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "11040026926311005M",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "0",
+                "pcieAddr": "0000:16:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "11040026926311005M",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "1",
+                "pcieAddr": "0000:17:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "110400269263110052",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "2",
+                "pcieAddr": "0000:38:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "110400269263110052",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "3",
+                "pcieAddr": "0000:39:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "11040026926311007N",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "4",
+                "pcieAddr": "0000:49:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "11040026926311007N",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "5",
+                "pcieAddr": "0000:4a:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "11040026926311000Z",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "6",
+                "pcieAddr": "0000:5a:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "11040026926311000Z",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "7",
+                "pcieAddr": "0000:5b:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "11040026926311006R",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "8",
+                "pcieAddr": "0000:98:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "11040026926311006R",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "9",
+                "pcieAddr": "0000:99:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "11040026926311006K",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "10",
+                "pcieAddr": "0000:b8:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "11040026926311006K",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "11",
+                "pcieAddr": "0000:b9:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "11040026926311003N",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "12",
+                "pcieAddr": "0000:c8:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "11040026926311003N",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "13",
+                "pcieAddr": "0000:c9:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "11040026926311007G",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "14",
+                "pcieAddr": "0000:d8:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            },
+            {
+                "modelNumber": "TMS34100-J",
+                "originComponentSn": "11040026926311007G",
+                "version": {
+                    "MCU": "1.18.0f",
+                    "SOC FSBL": "0.13.0",
+                    "SOC Image": "0.0.2"
+                },
+                "slot": "15",
+                "pcieAddr": "0000:d9:00.0",
+                "manufacturer": "Ramaxel",
+                "vid": "1e93",
+                "did": "1004",
+                "svid": "1e93",
+                "sdid": "0000",
+                "pcieBw": "x8",
+                "pcieSpeed": "16GT/s"
+            }
+        ],
+        "NVME": [
+            {
+                "slot": "/dev/nvme0n1",
+                "modelNumber": "INTEL SSDPF2KX038T1",
+                "originComponentSn": "PHAX438208W13P8CGN",
+                "version": {
+                    "FW": "9CV10521"
+                },
+                "capacity": "3.84",
+                "vid": "8086",
+                "did": "9008",
+                "svid": "8086",
+                "sdid": "9008",
+                "pcieBw": "x4",
+                "pcieSpeed": "16GT/s",
+                "pcieAddr": "28:00.0",
+                "manufacturer": "8086"
+            }
+        ],
+        "GPU": [],
+        "PSU": [
+            {
+                "manufacturerProductName": "CRPS1600C2",
+                "modelNumber": "CRPS1600C2",
+                "originComponentSn": "2Q030146988",
+                "consumption": "1600",
+                "version": {
+                    "FW": "00.01.01"
+                },
+                "slot": "BL_PSU0",
+                "manufacturer": "Great Wall"
+            },
+            {
+                "manufacturerProductName": "CRPS1600C2",
+                "modelNumber": "CRPS1600C2",
+                "originComponentSn": "2Q030146987",
+                "consumption": "1600",
+                "version": {
+                    "FW": "00.01.01"
+                },
+                "slot": "BR_PSU1",
+                "manufacturer": "Great Wall"
+            }
+        ],
+        "MotherBoard": [
+            {
+                "manufacturerProductName": "MLB",
+                "modelNumber": "1395T3427504",
+                "originComponentSn": "1965RP0224",
+                "version": {
+                    "BIOS": "03.01.02.88.03",
+                    "BMC": "04.0d.03",
+                    "CPLD": "3.12",
+                    "VR": {
+                        "CPU0": {
+                            "PVCCIN": "2666_U44_3",
+                            "PVCCFA": "2666_U3_3",
+                            "PVCCINFAON": "2666_U3_3",
+                            "PVCCD": "2666_U1_3"
+                        },
+                        "CPU1": {
+                            "PVCCIN": "2666_U43_3",
+                            "PVCCFA": "2666_U2_3",
+                            "PVCCINFAON": "2666_U2_3",
+                            "PVCCD": "2666_U14_3"
+                        }
+                    },
+                    "RETIMER_CARD": [
+                        "6.89.a1.1",
+                        "6.89.a1.1",
+                        "6.89.a1.1",
+                        "6.89.a1.1",
+                        "6.89.a1.1",
+                        "6.89.a1.1",
+                        "6.89.a1.1",
+                        "6.89.a1.1"
+                    ]
+                },
+                "pcbaVersion": "PCBA Ver:A29",
+                "manufacturer": "Inventec"
+            }
+        ],
+        "BackPlane": [
+            {
+                "manufacturer": "Inventec",
+                "bManufacturer": "Inventec",
+                "version": {
+                    "fru_id": "NA",
+                    "CPLD": "2.5"
+                },
+                "bPname": "Front 4U.2 BP",
+                "bPcbaVersion": "A05",
+                "bSn": "1K64PP4554",
+                "modelNumber": "1395T3429201"
+            }
+        ],
+        "Fan": [
+            {
+                "slot": "FAN0_Present"
+            },
+            {
+                "slot": "FAN1_Present"
+            },
+            {
+                "slot": "FAN2_Present"
+            },
+            {
+                "slot": "FAN3_Present"
+            },
+            {
+                "slot": "FAN4_Present"
+            },
+            {
+                "slot": "FAN5_Present"
+            }
+        ],
+        "HDD": [],
+        "Riser_Card": [
+            {
+                "manufacturer": "Inventec",
+                "bManufacturer": "Inventec",
+                "version": {
+                    "fru_id": "NA"
+                },
+                "bPname": "Retimer Riser",
+                "bPcbaVersion": "A04",
+                "bSn": "4F64RP0068",
+                "modelNumber": "1395T3533601"
+            }
+        ],
+        "HBA": [],
+        "GPU_Module_Group": [],
+        "BOX": [
+            {
+                "serverType": "G1Bx-x6",
+                "combo": "H1B-8D1-EU",
+                "manufacturer": "Inventec",
+                "serverSn": "SKFA465J805-0",
+                "version": {
+                    "BMC": "03.34.0b",
+                    "CPLD": "3.3",
+                    "Lan Switch": "1.0.3",
+                    "PCIe Switch": "NA"
+                },
+                "assetNo": "2026-iv-srv-029167-0",
+                "components": {
+                    "PSU": [
+                        {
+                            "version": {
+                                "FW": "00.01.01"
+                            },
+                            "manufacturer": "Great Wall",
+                            "bManufacturer": "Great Wall",
+                            "bPname": "CRPS1300C2",
+                            "modelNumber": "CRPS1300C2",
+                            "bSn": "2Q010210819"
+                        },
+                        {
+                            "version": {
+                                "FW": "00.01.01"
+                            },
+                            "manufacturer": "Great Wall",
+                            "bManufacturer": "Great Wall",
+                            "bPname": "CRPS1300C2",
+                            "modelNumber": "CRPS1300C2",
+                            "bSn": "2Q010210831"
+                        },
+                        {
+                            "version": {
+                                "FW": "00.01.01"
+                            },
+                            "manufacturer": "Great Wall",
+                            "bManufacturer": "Great Wall",
+                            "bPname": "CRPS1300C2",
+                            "modelNumber": "CRPS1300C2",
+                            "bSn": "2Q010210826"
+                        },
+                        {
+                            "version": {
+                                "FW": "00.01.01"
+                            },
+                            "manufacturer": "Great Wall",
+                            "bManufacturer": "Great Wall",
+                            "bPname": "CRPS1300C2",
+                            "modelNumber": "CRPS1300C2",
+                            "bSn": "2Q010210823"
+                        }
+                    ],
+                    "Fan": [
+                        {
+                            "slot": "FAN0_Present"
+                        },
+                        {
+                            "slot": "FAN1_Present"
+                        },
+                        {
+                            "slot": "FAN2_Present"
+                        },
+                        {
+                            "slot": "FAN3_Present"
+                        },
+                        {
+                            "slot": "FAN4_Present"
+                        },
+                        {
+                            "slot": "FAN5_Present"
+                        },
+                        {
+                            "slot": "FAN6_Present"
+                        },
+                        {
+                            "slot": "FAN7_Present"
+                        },
+                        {
+                            "slot": "FAN8_Present"
+                        },
+                        {
+                            "slot": "FAN9_Present"
+                        },
+                        {
+                            "slot": "FAN10_Present"
+                        },
+                        {
+                            "slot": "FAN11_Present"
+                        },
+                        {
+                            "slot": "FAN12_Present"
+                        },
+                        {
+                            "slot": "FAN13_Present"
+                        },
+                        {
+                            "slot": "FAN14_Present"
+                        },
+                        {
+                            "slot": "FAN15_Present"
+                        },
+                        {
+                            "slot": "FAN16_Present"
+                        }
+                    ],
+                    "Carrier_Board": [
+                        {
+                            "manufacturerProductName": "8_GPU_Board",
+                            "modelNumber": "1395T3589701",
+                            "originComponentSn": "QJ63GP0552",
+                            "version": {
+                                "BMC": "03.34.0b",
+                                "CPLD": "3.3",
+                                "Lan Switch": "1.0.3",
+                                "PCIe Switch": "NA"
+                            },
+                            "pcbaVersion": "A09",
+                            "manufacturer": "Inventec"
+                        }
+                    ],
+                    "PDB": [
+                        {
+                            "version": {
+                                "FW": "NA"
+                            },
+                            "manufacturer": "Inventec",
+                            "bManufacturer": "Inventec",
+                            "bPname": "PDB BP",
+                            "bSn": "VE62GP0068",
+                            "modelNumber": "1395T3589001",
+                            "bPcbaVersion": "A01"
+                        }
+                    ],
+                    "Fan_Board": [
+                        {
+                            "version": {
+                                "CPLD": "3.3"
+                            },
+                            "manufacturer": "Inventec",
+                            "bManufacturer": "Inventec",
+                            "bPname": "FAN BP",
+                            "bSn": "QB62GP1004",
+                            "modelNumber": "1395T3589101",
+                            "bPcbaVersion": "A01"
+                        },
+                        {
+                            "version": {
+                                "CPLD": "3.3"
+                            },
+                            "manufacturer": "Inventec",
+                            "bManufacturer": "Inventec",
+                            "bPname": "FAN BP",
+                            "bSn": "QB62GP0626",
+                            "modelNumber": "1395T3589101",
+                            "bPcbaVersion": "A01"
+                        }
+                    ],
+                    "IO_Board": [
+                        {
+                            "version": {
+                                "FW": "NA"
+                            },
+                            "manufacturer": "Inventec",
+                            "bManufacturer": "Inventec",
+                            "bPname": "Box IO",
+                            "bSn": "LU61GP0961",
+                            "modelNumber": "1395T3533803",
+                            "bPcbaVersion": "A02"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
